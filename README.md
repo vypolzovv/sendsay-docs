@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5d9b784f-1275-4258-9d5d-48d411a3b243/deploy-status)](https://app.netlify.com/sites/sendsay-docs/deploys)
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
