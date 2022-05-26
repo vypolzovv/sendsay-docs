@@ -78,7 +78,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'getting-started/getting-started-with-sendsay',
             position: 'left',
             label: 'Tutorial',
           },

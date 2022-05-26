@@ -34,13 +34,14 @@ import unsubscribeInTheNew from "./assets/unsubscribe-from-topic/unsubscribe-fro
 <TabItem value="key1" label="В блочном редакторе" default>
 
 1. Выделите фрагмент текста в письме, к которому хотите прикрепить ссылку, — над ним появятся настройки. Нажмите на иконку цепочки — откроются настройки ссылки.
-2. В протоколе ссылки выберите пункт ```<другой>```, в поле «Ссылка» вставьте функцию PROScript — ```[% param.url_unsub_topic %]```    
+2. В протоколе ссылки выберите пункт ```<другой>```, в поле «Ссылка» вставьте функцию PROScript — ```[% param.url_unsub_topic %]``` <br/>   
 <img src={unsubscribeInTheNew} />
 
 </TabItem>
 <TabItem value="key2" label="В HTML-редакторе">
 
-Вставьте в код строчку ```<a href="[% param.url_unsub_topic %]"> текст ссылки </a>```
+Вставьте в код строчку:<br/>
+```<a href="[% param.url_unsub_topic %]"> текст ссылки </a>```
 
 </TabItem>
 </Tabs>
