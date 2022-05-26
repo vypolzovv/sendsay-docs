@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "import/resolver": {
+      "alias": [
+        ["@site", "./"]
+      ]
+    }
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "createDefaultProgram": true,
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/prop-types": "off"
+  }
+}
