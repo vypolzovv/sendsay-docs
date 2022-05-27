@@ -1,0 +1,18 @@
+{
+  "item.label.Интеграции": {
+    "message": "Integrations",
+    "description": "Navbar item with label Интеграции"
+  },
+  "item.label.Видеоуроки": {
+    "message": "Video lessons",
+    "description": "Navbar item with label Видеоуроки"
+  },
+  "item.label.Перейти в Sendsay": {
+    "message": "Sendsay app",
+    "description": "Navbar item with label Перейти в Sendsay"
+  },
+  "item.label.Sendsay API": {
+    "message": "Sendsay API",
+    "description": "Navbar item with label Sendsay API"
+  }
+}
