@@ -1,0 +1,8 @@
+{
+  "label": "Интеграции с приложениями",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Как настроить взаимодействие Sendsay с внешними системами"
+  }
+}
