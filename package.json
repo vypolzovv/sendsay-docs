@@ -13,9 +13,9 @@
     "write-translations": "docusaurus write-translations --locale en",
     "write-heading-ids": "docusaurus write-heading-ids",
     "pretify": "prettier --check src/**/*.js",
-    "eslint": "eslint --ext .js,.jsx src/ --color",
+    "eslint": "eslint --ext .js,.jsx src/**/* --color",
     "pretify:fix": "prettier --write src/**/*.js",
-    "eslint:fix": "eslint --ext .js,.jsx src/ --color --fix",
+    "eslint:fix": "eslint --ext .js,.jsx src/**/* --color --fix",
     "lint:fix": "yarn pretify:fix && yarn eslint:fix"
   },
   "dependencies": {

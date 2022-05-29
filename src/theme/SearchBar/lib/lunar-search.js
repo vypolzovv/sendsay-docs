@@ -29,11 +29,11 @@ class LunrSearchAdapter {
       url: doc.url,
       _snippetResult: formattedContent
         ? {
-          content: {
-            value: formattedContent,
-            matchLevel: 'full',
-          },
-        }
+            content: {
+              value: formattedContent,
+              matchLevel: 'full',
+            },
+          }
         : null,
       _highlightResult: {
         hierarchy: {
@@ -44,8 +44,8 @@ class LunrSearchAdapter {
             doc.type === 0
               ? null
               : {
-                value: formattedTitle || doc.title,
-              },
+                  value: formattedTitle || doc.title,
+                },
         },
       },
     };
@@ -56,10 +56,10 @@ class LunrSearchAdapter {
     const end = position[0] + length;
     const formattedTitle = `${doc.title.substring(
       0,
-      start,
+      start
     )}<span class="algolia-docsearch-suggestion--highlight">${doc.title.substring(
       start,
-      end,
+      end
     )}</span>${doc.title.substring(end, doc.title.length)}`;
 
     return this.getHit(doc, formattedTitle);
@@ -72,10 +72,10 @@ class LunrSearchAdapter {
       doc.title
     }<br /><i>Keywords: ${doc.keywords.substring(
       0,
-      start,
+      start
     )}<span class="algolia-docsearch-suggestion--highlight">${doc.keywords.substring(
       start,
-      end,
+      end
     )}</span>${doc.keywords.substring(end, doc.keywords.length)}</i>`;
 
     return this.getHit(doc, formattedTitle);
@@ -128,7 +128,7 @@ class LunrSearchAdapter {
     }
     preview += `<span class="algolia-docsearch-suggestion--highlight">${doc.content.substring(
       start,
-      end,
+      end
     )}</span>`;
     preview += doc.content.substring(end, previewEnd);
     if (ellipsesAfter) {

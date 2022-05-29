@@ -159,12 +159,14 @@ const utils = {
    * @return {array}
    */
   flattenAndFlagFirst(object, flag) {
-    const values = this.values(object).map((collection) => collection.map((item, index) => {
-      // eslint-disable-next-line no-param-reassign
-      item[flag] = index === 0;
+    const values = this.values(object).map((collection) =>
+      collection.map((item, index) => {
+        // eslint-disable-next-line no-param-reassign
+        item[flag] = index === 0;
 
-      return item;
-    }));
+        return item;
+      })
+    );
 
     return this.flatten(values);
   },
@@ -209,20 +211,20 @@ const utils = {
    * */
   getHighlightedValue(object, property) {
     if (
-      object._highlightResult
-      && object._highlightResult.hierarchy_camel
-      && object._highlightResult.hierarchy_camel[property]
-      && object._highlightResult.hierarchy_camel[property].matchLevel
-      && object._highlightResult.hierarchy_camel[property].matchLevel !== 'none'
-      && object._highlightResult.hierarchy_camel[property].value
+      object._highlightResult &&
+      object._highlightResult.hierarchy_camel &&
+      object._highlightResult.hierarchy_camel[property] &&
+      object._highlightResult.hierarchy_camel[property].matchLevel &&
+      object._highlightResult.hierarchy_camel[property].matchLevel !== 'none' &&
+      object._highlightResult.hierarchy_camel[property].value
     ) {
       return object._highlightResult.hierarchy_camel[property].value;
     }
     if (
-      object._highlightResult
-      && object._highlightResult
-      && object._highlightResult[property]
-      && object._highlightResult[property].value
+      object._highlightResult &&
+      object._highlightResult &&
+      object._highlightResult[property] &&
+      object._highlightResult[property].value
     ) {
       return object._highlightResult[property].value;
     }
@@ -251,9 +253,9 @@ const utils = {
    * */
   getSnippetedValue(object, property) {
     if (
-      !object._snippetResult
-      || !object._snippetResult[property]
-      || !object._snippetResult[property].value
+      !object._snippetResult ||
+      !object._snippetResult[property] ||
+      !object._snippetResult[property].value
     ) {
       return object[property];
     }
