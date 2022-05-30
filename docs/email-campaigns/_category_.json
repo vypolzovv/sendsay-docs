@@ -3,6 +3,7 @@
   "position": 5,
   "link": {
     "type": "generated-index",
+    "slug": "email-campaigns",
     "description": "Всё про email-рассылки: как создавать выпуски, персонализировать контент и что нужно настраивать дополнительно"
   }
 }

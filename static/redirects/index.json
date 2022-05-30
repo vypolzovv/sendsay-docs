@@ -1,0 +1,442 @@
+[
+  {
+    "to": "/",
+    "from": [
+      "/ru/collections/2054240-начало-работы",
+      "/ru/articles/3459217-начало-работы-в-sendsay"
+    ]
+  },
+  {
+    "to": "/getting-started/glossary",
+    "from": "/ru/articles/3632612-глоссарий"
+  },
+  {
+    "to": "/getting-started/how-to-migrate-to-sendsay",
+    "from": "/ru/articles/как-перейти-в-sendsay-из-другого-сервиса-рассылок"
+  },
+  {
+    "to": "/faq/moderation",
+    "from": "/ru/articles/3310699-почему-выпуск-попал-на-модерацию"
+  },
+  {
+    "to": "/faq/double-opt-in",
+    "from": "/ru/articles/2439881-что-такое-двухэтапная-подписка-double-opt-in"
+  },
+  {
+    "to": "/faq/how-to-copy-a-campaign",
+    "from": "/ru/articles/2439866-как-скопировать-выпуск"
+  },
+  {
+    "to": "/faq/checklist",
+    "from": "/ru/articles/2439931-чек-лист-перед-отправкой-рассылки"
+  },
+  {
+    "to": "/subscribers",
+    "from": "/ru/collections/1410279-работа-с-подписчиками"
+  },
+  {
+    "to": "/subscribers/import-and-export/how-to-import-subscribers",
+    "from": "/ru/articles/3653501-как-импортировать-подписчиков"
+  },
+  {
+    "to": "/subscribers/import-and-export/how-to-prepare-file-for-import",
+    "from": "/ru/articles/2439904-как-подготовить-файл-для-импорта"
+  },
+  {
+    "to": "/subscribers/import-and-export/how-to-export-contacts-in-the-new-interface",
+    "from": "/ru/articles/2439903-как-экспортировать-контакты-в-новом-интерфейсе"
+  },
+  {
+    "to": "/subscribers/import-and-export/how-to-export-data-in-the-legacy-interface",
+    "from": "/ru/articles/4519731-как-экспортировать-контакты-и-данные-подписчиков-в-старом-интерфейсе"
+  },
+  {
+    "to": "/subscribers/lists-and-segments/what-is-list",
+    "from": "/ru/articles/4889144-что-такое-список-контактов"
+  },
+  {
+    "to": "/subscribers/lists-and-segments/what-is-segment",
+    "from": "/ru/articles/5394977-что-такое-сегмент-контактов"
+  },
+  {
+    "to": "/subscribers/contacts/how-to-delete-contacts",
+    "from": "/ru/articles/3352572-как-удалить-контакты-подписчиков"
+  },
+  {
+    "to": "/subscribers/contacts/how-to-delete-contacts-in-the-legacy-interface",
+    "from": "/ru/articles/3371325-как-удалить-контакты-подписчиков-в-старом-интерфейсе"
+  },
+  {
+    "to": "/subscribers/contacts/how-to-restore-deleted-contacts",
+    "from": "/ru/articles/2586223-как-восстановить-удалённые-контакты"
+  },
+  {
+    "to": "/subscribers/contacts/how-to-display-data",
+    "from": "/ru/articles/2439885-как-настроить-отображение-данных-при-просмотре-подписчиков"
+  },
+  {
+    "to": "/subscribers/contacts/contact-status",
+    "from": "/ru/articles/2439882-какие-бывают-статусы-у-контактов"
+  },
+  {
+    "to": "/subscribers/contacts/how-to-activate-inactive-contacts",
+    "from": "/ru/articles/3438592-как-активировать-неподтверждённые-адреса"
+  },
+  {
+    "to": "/subscribers/contacts/stop-lists",
+    "from": "/ru/articles/3797842-стоп-листы"
+  },
+  {
+    "to": "/subscribers/subscriber-data/subscriber-profile",
+    "from": "/ru/articles/2439922-карточка-подписчика"
+  },
+  {
+    "to": "/subscribers/subscriber-data/data-groups",
+    "from": "/ru/articles/2439914-анкеты-и-работа-с-данными"
+  },
+  {
+    "to": "/email-campaigns",
+    "from": "/ru/collections/1411829-email-рассылки"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/how-to-send-email-campaign",
+    "from": "/ru/articles/3477380-как-отправить-массовую-email-рассылку"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/drag-and-drop-editor",
+    "from": "/ru/articles/4112203-как-создать-письмо-в-блочном-редакторе"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/how-to-upload-html-template",
+    "from": "/ru/articles/2439920-как-загрузить-html-шаблон"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/a-b-testing",
+    "from": "/ru/articles/4744702-как-провести-a-b-тестирование"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/topic-subscription",
+    "from": "/ru/articles/6142638-как-настроить-тематическую-подписку"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/send-time-optimization",
+    "from": "/ru/articles/2439918-как-запустить-оптимизацию-времени-рассылки"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/amp-campaign",
+    "from": "/ru/articles/2882295-что-такое-amp-рассылка"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/unsubscribe-from-topic",
+    "from": "/ru/articles/5822843-что-такое-тематическая-отписка"
+  },
+  {
+    "to": "/email-campaigns/create-your-campaign/why-gmail-clips-emails",
+    "from": "/ru/articles/4477642-почему-gmail-обрезает-письма"
+  },
+  {
+    "to": "/email-campaigns/settings/how-to-connect-domain",
+    "from": "/ru/articles/2439897-как-подключить-домен-и-настроить-email-аутентификацию"
+  },
+  {
+    "to": "/email-campaigns/settings/how-to-delegate-subdomain",
+    "from": "/ru/articles/4198852-как-передать-права-на-управление-поддоменом"
+  },
+  {
+    "to": "/email-campaigns/settings/email-authentication",
+    "from": "/ru/articles/5562373-из-чего-состоит-email-аутентификация"
+  },
+  {
+    "to": "/email-campaigns/settings/sender-avatar",
+    "from": "/ru/articles/2743551-как-настроить-аватар-отправителя"
+  },
+  {
+    "to": "/email-campaigns/settings/campaign-footer",
+    "from": "/ru/articles/2690160-футер-в-письме"
+  },
+  {
+    "to": "/email-campaigns/settings/how-to-add-utm",
+    "from": "/ru/articles/2439926-как-добавить-utm-метки-к-ссылкам-в-письме"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-personalize-campaign",
+    "from": "/ru/articles/2439895-как-персонализировать-рассылку"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-use-tilda-data-in-campaigns",
+    "from": "/ru/articles/6115733-как-использовать-данные-из-tilda-в-рассылках-и-сегментах"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-send-multilanguage-email",
+    "from": "/ru/articles/2872141-как-отправить-письмо-на-разных-языках"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-add-qr-code",
+    "from": "/ru/articles/3753377-как-вставить-qr-код-в-письмо"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-add-graph",
+    "from": "/ru/articles/3915091-как-вставить-график-в-письмо"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-add-bar-graph",
+    "from": "/ru/articles/3958856-как-вставить-гистограмму-в-письмо"
+  },
+  {
+    "to": "/email-campaigns/personalization/how-to-add-diagram",
+    "from": "/ru/articles/3557192-как-вставить-в-письмо-круговую-диаграмму"
+  },
+  {
+    "to": "/account-settings/how-to-create-sublogin",
+    "from": [
+      "/ru/collections/3220340-настройки-аккаунта",
+      "/ru/articles/5727677-как-создать-учётную-запись-для-нового-пользователя"
+    ]
+  },
+  {
+    "to": "/other-channels",
+    "from": "/ru/collections/2054250-рассылки-веб-пуш-вконтакте-телеграм-и-смс"
+  },
+  {
+    "to": "/other-channels/web-push/how-to-connect-web-push",
+    "from": "/ru/articles/3530557-как-подключить-веб-пуши-на-сайт"
+  },
+  {
+    "to": "/other-channels/web-push/how-to-create-web-push-campaign",
+    "from": "/ru/articles/3530575-как-отправить-пуш-рассылку"
+  },
+  {
+    "to": "/other-channels/vk/how-to-connect-vk-community",
+    "from": "/ru/articles/3530583-как-подключить-сообщество-вконтакте"
+  },
+  {
+    "to": "/other-channels/vk/how-to-create-vk-campaign",
+    "from": "/ru/articles/3530702-как-отправить-рассылку-вконтакте"
+  },
+  {
+    "to": "/other-channels/telegram/how-to-connect-a-bot",
+    "from": "/ru/articles/5835458-как-подключить-бот-в-телеграме"
+  },
+  {
+    "to": "/other-channels/telegram/how-to-create-a-telegram-campaign",
+    "from": "/ru/articles/5876806-как-отправить-рассылку-в-телеграме"
+  },
+  {
+    "to": "/other-channels/sms/how-to-connect-sms",
+    "from": "/ru/articles/3304779-как-подключить-смс"
+  },
+  {
+    "to": "/statistics/where-to-track-statistics",
+    "from": "/ru/articles/5954154-где-следить-за-статистикой"
+  },
+  {
+    "to": "/statistics/all-about-campaign-reports",
+    "from": "/ru/articles/2439925-всё-про-статистические-отчёты"
+  },
+  {
+    "to": "/forms",
+    "from": "/ru/collections/1411876-формы"
+  },
+  {
+    "to": "/forms/signup-forms",
+    "from": "/ru/articles/3180964-формы-сбора-подписчиков"
+  },
+  {
+    "to": "/forms/data-processing-agreement",
+    "from": "/ru/articles/3309471-как-собирать-согласие-на-обработку-данных"
+  },
+  {
+    "to": "/forms/how-to-conduct-a-poll",
+    "from": "/ru/articles/3543571-как-провести-опрос"
+  },
+  {
+    "to": "/automations",
+    "from": "/ru/collections/1413608-автоматизация-рассылок-и-импорта"
+  },
+  {
+    "to": "/automations/automations-by-event/triggers",
+    "from": "/ru/articles/2439875-автоматизации-по-событиям-триггеры"
+  },
+  {
+    "to": "/automations/automations-by-event/birthday-series",
+    "from": "/ru/articles/5989246-как-настроить-автоматическую-цепочку-из-писем-на-день-рождения"
+  },
+  {
+    "to": "/automations/autoimport/how-to-set-autoimport",
+    "from": "/ru/articles/2439906-как-настроить-автоматический-импорт-из-файла-по-расписанию"
+  },
+  {
+    "to": "/automations/automations-by-time/how-to-create-automation-by-time",
+    "from": "/ru/articles/2439872-как-настроить-автоматическую-рассылку-по-расписанию"
+  },
+  {
+    "to": "/automations/automations-by-time/how-to-automate-confirmation-emails",
+    "from": "/ru/articles/5970291-как-автоматизировать-отправку-писем-подтверждения"
+  },
+  {
+    "to": "/automations/automations-by-time/how-to-automate-birthday-emails",
+    "from": "/ru/articles/5989326-как-автоматически-поздравлять-подписчиков-с-днём-рождения"
+  },
+  {
+    "to": "/automations/automations-by-behaviour/abandoned-cart",
+    "from": "/ru/articles/5989352-как-настроить-автоматизацию-брошенная-корзина"
+  },
+  {
+    "to": "/automations/automations-by-behaviour/browse-abandonment",
+    "from": "/ru/articles/5989278-как-настроить-автоматизацию-брошенный-просмотр"
+  },
+  {
+    "to": "/automations/automations-by-behaviour/product-recommendations",
+    "from": "/ru/articles/6139206-как-настроить-товарные-рекомендации-в-письме"
+  },
+  {
+    "to": "/integrations",
+    "from": "/ru/collections/2054377-интеграция-с-приложениями"
+  },
+  {
+    "to": "/integrations/smtp-gate",
+    "from": "/ru/articles/6064720-отправка-рассылок-через-smtp-гейт"
+  },
+  {
+    "to": "/integrations/integration-with-tilda",
+    "from": "/ru/articles/4561686-интеграция-с-tilda"
+  },
+  {
+    "to": "/integrations/autoimport-from-bitrix",
+    "from": "/ru/articles/6082405-как-настроить-автоматический-импорт-из-битрикса"
+  },
+  {
+    "to": "/integrations/integration-with-amocrm",
+    "from": "/ru/articles/2578665-интеграция-с-amocrm"
+  },
+  {
+    "to": "/integrations/how-to-send-campaigns-from-your-crm",
+    "from": "/ru/articles/3315911-как-отправлять-рассылки-из-своей-crm-системы"
+  },
+  {
+    "to": "/integrations/integration-with-email-on-acid",
+    "from": "/ru/articles/5822046-интеграция-с-email-on-acid"
+  },
+  {
+    "to": "/proscript/proscript-in-a-nutshell",
+    "from": [
+      "/ru/collections/1432714-proscript-язык-программирования-шаблонов",
+      "/ru/articles/2479413-proscript-in-a-nutshell"
+    ]
+  },
+  {
+    "to": "/proscript/extra-sections-in-yml",
+    "from": "/ru/articles/4118456-дополнительные-разделы-в-yml-файле-category-gifts-promo"
+  },
+  {
+    "to": "/proscript/how-to-make-columns-in-html-table",
+    "from": "/ru/articles/3417179-как-сделать-n-колонок-в-html-таблице"
+  },
+  {
+    "to": "/proscript/output-from-yml",
+    "from": "/ru/articles/2594739-обработка-и-вывод-данных-из-yml-файла"
+  },
+  {
+    "to": "/proscript/date-in-proscript",
+    "from": "/ru/articles/2546739-обработка-даты-в-proscript"
+  },
+  {
+    "to": "/proscript/virtual-methods",
+    "from": "/ru/articles/2488468-виртуальные-методы-в-proscript"
+  },
+  {
+    "to": "/proscript/filters-in-proscript",
+    "from": "/ru/articles/2482818-фильтры-модификаторы-в-proscript"
+  },
+  {
+    "to": "/proscript/conditionals",
+    "from": "/ru/articles/2479684-условные-выражения-в-proscript"
+  },
+  {
+    "to": "/proscript/cycles",
+    "from": "/ru/articles/2482573-обработка-циклов-в-proscript"
+  },
+  {
+    "to": "/proscript/access-to-data",
+    "from": "/ru/articles/2479524-доступ-к-анкетным-данным-и-переменным-в-proscript"
+  },
+  {
+    "to": "/videolessons",
+    "from": "/ru/collections/1411793-видеоуроки"
+  },
+  {
+    "to": "/videolessons/subscribers/how-to-import-subscribers",
+    "from": "/ru/articles/2439889-как-импортировать-подписчиков"
+  },
+  {
+    "to": "/videolessons/subscribers/signup-forms",
+    "from": "/ru/articles/2439891-формы-сбора-подписчиков"
+  },
+  {
+    "to": "/videolessons/subscribers/how-to-create-a-segment",
+    "from": "/ru/articles/2439865-как-создать-сегмент-контактов"
+  },
+  {
+    "to": "/videolessons/subscribers/data-groups",
+    "from": "/ru/articles/2439862-анкеты-и-работа-с-данными"
+  },
+  {
+    "to": "/videolessons/subscribers/how-to-export-data",
+    "from": "/ru/articles/2439930-как-экспортировать-базу-с-данными"
+  },
+  {
+    "to": "/videolessons/email-campaigns/drag-and-drop-editor",
+    "from": "/ru/articles/2439886-как-создать-письмо-в-блочном-редакторе"
+  },
+  {
+    "to": "/videolessons/email-campaigns/how-to-personalize-campaigns",
+    "from": "/ru/articles/2439864-как-персонализировать-рассылку"
+  },
+  {
+    "to": "/videolessons/email-campaigns/how-to-create-a-confirmation-email",
+    "from": "/ru/articles/2439929-как-создать-письмо-подтверждения-double-opt-in"
+  },
+  {
+    "to": "/videolessons/email-campaigns/how-to-conduct-a-poll",
+    "from": "/ru/articles/2439871-как-провести-опрос-в-письме-понравился-выпуск-или-нет"
+  },
+  {
+    "to": "/videolessons/email-campaigns/how-to-create-a-campaign-with-attachment",
+    "from": "/ru/articles/2439867-как-сделать-рассылку-с-вложением"
+  },
+  {
+    "to": "/videolessons/automations/how-to-create-welcome-series",
+    "from": "/ru/articles/2439900-как-настроить-приветственную-серию-писем"
+  },
+  {
+    "to": "/videolessons/automations/how-to-automate-confirmation-emails",
+    "from": "/ru/articles/2439924-как-автоматизировать-отправку-писем-подтверждения-double-opt-in"
+  },
+  {
+    "to": "/videolessons/automations/how-to-set-autoimport",
+    "from": "/ru/articles/2439876-как-настроить-автоматический-импорт-из-файла-по-расписанию"
+  },
+  {
+    "to": "/videolessons/automations/how-to-automate-birthday-emails",
+    "from": "/ru/articles/2439928-как-автоматически-поздравлять-подписчиков-с-днём-рождения"
+  },
+  {
+    "to": "/videolessons/automations/how-to-create-birthday-series",
+    "from": "/ru/articles/2439927-как-настроить-автоматическую-цепочку-из-писем-на-день-рождения"
+  },
+  {
+    "to": "/sendsay-api/how-to-unite-requests",
+    "from": [
+      "/ru/articles/4549275-объединение-двух-и-более-запросов-к-stat-uni-в-одну-таблицу",
+      "/ru/collections/2363294-sendsay-api"
+    ]
+  },
+  {
+    "to": "/sendsay-api/basic-stat-uni",
+    "from": "/ru/articles/4065279-базовые-представления-о-получении-статистики-через-stat-uni"
+  },
+  {
+    "to": "/sendsay-api/how-to-send-campaign-with-api",
+    "from": "/ru/articles/4091121-как-отправить-рассылку-через-sendsay-api"
+  }
+]
