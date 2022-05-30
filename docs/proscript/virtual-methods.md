@@ -96,42 +96,42 @@ sidebar_position: 6
 ```
 
 ## Виртуальные методы для работы с массивами
-item
-list
-hash
-push
-pop
-unshift
-shift
-max
-size
-defined
-first
-last
-reverse
-grep
-join
-sort
-nsort
-unique
-import
-merge
-slice
-splice
+- item
+- list
+- hash
+- push
+- pop
+- unshift
+- shift
+- max
+- size
+- defined
+- first
+- last
+- reverse
+- grep
+- join
+- sort
+- nsort
+- unique
+- import
+- merge
+- slice
+- splice
 
 ## Виртуальные методы для работы с объектами
-item
-hash
-size
-each
-keys
-values
-items
-pairs
-list
-exists
-defined
-delete
-import
-sort
-nsort
+- item
+- hash
+- size
+- each
+- keys
+- values
+- items
+- pairs
+- list
+- exists
+- defined
+- delete
+- import
+- sort
+- nsort
