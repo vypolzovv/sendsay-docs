@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 export BUILD_PATH=build-docs
-export RELEASE_NAME=$(git describe --all);
-export MESSAGE=sendsay-docs\ $BUILD_PATH\ $RELEASE_NAME
+export MESSAGE=$(git log -1 --pretty=format:"%s %h %an")
 
 git clone git@github.com:sendsay-ru/sendsay-frontend-builds.git /tmp/sendsay-frontend-builds
 
