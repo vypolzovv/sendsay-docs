@@ -229,5 +229,14 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "Expand sidebar",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "search.placeholder.ready": {
+    "message": "Search"
+  },
+  "search.placeholder.pending": {
+    "message": "Loading..."
+  },
+  "search.result.not.found": {
+    "message": "No results found for query <b>\"{{query}}\"</b>"
   }
 }

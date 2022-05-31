@@ -1,6 +1,12 @@
+import { translate } from '@docusaurus/Translate';
+
 const prefix = 'algolia-docsearch';
 const suggestionPrefix = `${prefix}-suggestion`;
 const footerPrefix = `${prefix}-footer`;
+const resultNotFoundText = translate({
+  id: 'search.result.not.found',
+  message: 'По запросу <b>"{{query}}"</b> ничего не было найдено',
+});
 
 const templates = {
   suggestion: `
@@ -76,7 +82,7 @@ const templates = {
         <div class="${suggestionPrefix}--content ${suggestionPrefix}--no-results">
             <div class="${suggestionPrefix}--title">
                 <div class="${suggestionPrefix}--text">
-                    No results found for query <b>"{{query}}"</b>
+                    ${resultNotFoundText}
                 </div>
             </div>
         </div>

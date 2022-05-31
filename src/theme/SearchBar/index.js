@@ -1,8 +1,9 @@
 import { useHistory } from '@docusaurus/router';
+import { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import classnames from 'classnames';
-import React, { useRef, useCallback, useState } from 'react';
+import React, { useRef, useCallback, useState, useLayoutEffect } from 'react';
 
 function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
   const initialized = useRef(false);
@@ -56,11 +57,11 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
         import('./lib/DocSearch'),
         import('./algolia.css'),
       ]).then(([searchDocs, searchIndex, { default: DocSearch }]) => {
+        setIndexReady(true);
         if (searchDocs.length === 0) {
           return;
         }
         initAlgolia(searchDocs, searchIndex, DocSearch);
-        setIndexReady(true);
       });
       initialized.current = true;
     }
@@ -77,9 +78,13 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
     [isSearchBarExpanded, handleSearchBarToggle]
   );
 
-  if (isClient) {
+  useLayoutEffect(() => {
     loadAlgolia();
-  }
+  }, []);
+
+  const placeholder = indexReady
+    ? translate({ id: 'search.placeholder.ready', message: 'Поиск' })
+    : translate({ id: 'search.placeholder.pending', message: 'Загрузка...' });
 
   return (
     <div className="navbar__search" key="search-box">
@@ -96,7 +101,7 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
       <input
         id="search_input_react"
         type="search"
-        placeholder={indexReady ? 'Search' : 'Loading...'}
+        placeholder={placeholder}
         aria-label="Search"
         className={classnames(
           'navbar__search-input',
