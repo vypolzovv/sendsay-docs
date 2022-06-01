@@ -13,4 +13,4 @@ sidebar_position: 6
 
 Оптимизация по времени запускается в блочном редакторе на этапе отправки: выберите день, в который нужно запустить рассылку, и нажмите «Оптимизировать и отправить».
 
-![How to launch send time optimization](./assets/send-time-optimization/how-to-launch-send-time-optimization.gif) <br/>
+![How to launch send time optimization](/img/email-campaigns/create-your-campaign/send-time-optimization/how-to-launch-send-time-optimization.gif) <br/>

@@ -13,7 +13,7 @@ sidebar_position: 3
 1. Откройте список или сегмент. В правом верхнем углу страницы откройте выпадающий список и выберите «Экспортировать как XLSX» или «Экспортировать как CSV».
 2. Зайдите в журнал заданий — там появилось задание на экспорт выбранного списка или сегмента. Откройте выпадающее меню напротив него и выберите «Загрузить».
 
-![How to export contacts from list](./assets\how-to-export-contacts-in-the-new-interface/how-to-export-contacts-from-list.png) <br/>
+![How to export contacts from list](/img/subscribers/import-and-export\how-to-export-contacts-in-the-new-interface/how-to-export-contacts-from-list.png) <br/>
 
 ## Как экспортировать все контакты одного типа
 1. Зайдите в раздел **Подписчики → Сегменты**, создайте сегмент и выберите тип контактов, который вы хотите экспортировать (email, веб-пуш, смс или CSID).

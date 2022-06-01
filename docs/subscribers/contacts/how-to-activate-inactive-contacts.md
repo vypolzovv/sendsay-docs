@@ -19,7 +19,7 @@ sidebar_position: 6
 
 Чтобы в блочном редакторе прикрепить ссылку к фрагменту текста, в протоколе ссылки выберите пункт `<другой>`:
 
-![Confirmation email](./assets\how-to-activate-inactive-contacts/confirmation-email.gif) <br/>
+![Confirmation email](/img/subscribers/contacts\how-to-activate-inactive-contacts/confirmation-email.gif) <br/>
 
 Как отправить письмо подтверждения:
 - если на один адрес — откройте карточку подписчика, перейдите во вкладку «Контакты» и в выпадающем меню напротив нужного контакта выберите «Отправить письмо подтверждения»

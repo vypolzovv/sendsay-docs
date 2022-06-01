@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
 ---
-import fieldCode from "./assets/how-to-prepare-file-for-import/field-code.png";
-import fileForAutoimport from "./assets/how-to-prepare-file-for-import/file-for-autoimport.png";
-import fileForManualImport from "./assets/how-to-prepare-file-for-import/file-for-manual-import.png";
-import listType from "./assets/how-to-prepare-file-for-import/list-type.png";
+import fieldCode from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/field-code.png";
+import fileForAutoimport from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/file-for-autoimport.png";
+import fileForManualImport from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/file-for-manual-import.png";
+import listType from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/list-type.png";
 
 # Как подготовить файл для импорта
 
@@ -12,7 +12,7 @@ import listType from "./assets/how-to-prepare-file-for-import/list-type.png";
 Файл должен быть формата csv, txt, xlsx или zip.
 
 ## 2. Расположение данных в файле
-На одной строке записываются данные одного подписчика, порядок данных в строках должен быть одинаковым. Требования к первой строке файла различаются в зависимости от того, как вы импортируете контакты — вручную или через автоматизацию по времени. 
+На одной строке записываются данные одного подписчика, порядок данных в строках должен быть одинаковым. Требования к первой строке файла различаются в зависимости от того, как вы импортируете контакты — вручную или через автоматизацию по времени.
 
 
 При автоимпорте в первой строке каждого столбца нужно указать код поля, куда будут записаны данные. Код хранится в анкете напротив самого поля, префикс «anketa» копировать не нужно. Например, для столбца с именами нужно скопировать `base.firstName`:
@@ -59,7 +59,7 @@ pochta2@gmail.com, , Фёдоров, , 02.02.1980
 
 Если вы импортируете контакты без списка, основной контакт нужно выбрать самостоятельно в настройках импорта:
 
-![How to choose list during import](./assets\how-to-prepare-file-for-import/how-to-choose-list-during-import.gif) <br/>
+![How to choose list during import](/img/subscribers/import-and-export\how-to-prepare-file-for-import/how-to-choose-list-during-import.gif) <br/>
 
 ## 5. Формат записи телефонных номеров
 Телефонные номера можно указывать в любом виде — со скобками, пробелами или цифры подряд. В российских номерах код страны указывать необязательно, а если он есть, то допустим в любом виде — 7, +7 или 8. Номера других стран нужно писать в полном виде.

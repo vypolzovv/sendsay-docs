@@ -10,4 +10,4 @@ sidebar_position: 3
 2. Напротив нужного выпуска откройте раскрывающееся меню и нажмите «Создать копию».
 3. Впишите название нового выпуска (придумайте такое название, чтобы не запутаться).
 
-![How to copy a campaign](./assets\how-to-copy-a-campaign/how-to-copy-a-campaign.gif)
+![How to copy a campaign](/img/faq\how-to-copy-a-campaign/how-to-copy-a-campaign.gif)

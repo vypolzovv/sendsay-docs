@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-import webpushElements from "./assets/how-to-create-web-push-campaign/webpush-elements.png";
-import verticalImage from "./assets/how-to-create-web-push-campaign/vertical-image-for-webpush.png";
+import webpushElements from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-elements.png";
+import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-campaign/vertical-image-for-webpush.png";
 
 # Как отправить пуш-рассылку
 
@@ -12,7 +12,7 @@ import verticalImage from "./assets/how-to-create-web-push-campaign/vertical-ima
 
 Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип «Web Push».
 
-![How to create a push campaign](./assets/how-to-create-web-push-campaign/how-to-create-a-push-campaign.gif) <br/>
+![How to create a push campaign](/img/other-channels/web-push/how-to-create-web-push-campaign/how-to-create-a-push-campaign.gif) <br/>
 
 Подготовка выпуска к отправке проходит в четыре шага:
 
@@ -22,7 +22,7 @@ import verticalImage from "./assets/how-to-create-web-push-campaign/vertical-ima
 ## 2. Настройте содержимое
 При создании пуш-рассылки важно учитывать, что все браузеры и операционные системы по-разному показывают уведомления — например, отличается количество символов, картинок и кнопок. С помощью режимов предпросмотра можно проверить, как рассылку увидят пользователи Windows, macOS и Android в браузерах Chrome и Firefox:
 
-![Web push preview mode](./assets/how-to-create-web-push-campaign/webpush-preview-mode.gif) <br/>
+![Web push preview mode](/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode.gif) <br/>
 
 Веб-пуш состоит из следующих элементов:
 

@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-import templateId from "./assets/how-to-automate-confirmation-emails/template-id.png";
-import segmentId from "./assets/how-to-automate-confirmation-emails/segment-id.png";
+import templateId from "/img/automations/automations-by-time/how-to-automate-confirmation-emails/template-id.png";
+import segmentId from "/img/automations/automations-by-time/how-to-automate-confirmation-emails/segment-id.png";
 
 # Как автоматизировать отправку писем подтверждения
 
@@ -19,7 +19,7 @@ import segmentId from "./assets/how-to-automate-confirmation-emails/segment-id.p
 
     Чтобы в блочном редакторе прикрепить ссылку к фрагменту текста, в протоколе ссылки выберите пункт `<другой>`:
 
-![Confirmation email template](./assets\how-to-automate-confirmation-emails/confirmation-email-template.gif) <br/>
+![Confirmation email template](/img/automations/automations-by-time\how-to-automate-confirmation-emails/confirmation-email-template.gif) <br/>
 
 3. Скопируйте ID шаблона — это число в адресной строке браузера:
 
@@ -39,7 +39,7 @@ import segmentId from "./assets/how-to-automate-confirmation-emails/segment-id.p
 
 3. Нажмите «Сохранить».
 
-![Create a segment for confirmation emails](./assets\how-to-automate-confirmation-emails/create-a-segment-for-confirmation-emails.gif) <br/>
+![Create a segment for confirmation emails](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-a-segment-for-confirmation-emails.gif) <br/>
 
 4. Скопируйте ID сегмента в адресной строке браузера:
 
@@ -64,4 +64,4 @@ import segmentId from "./assets/how-to-automate-confirmation-emails/segment-id.p
 ```
 4. Нажмите «Сохранить и активировать».
 
-![Create automation by time](./assets\how-to-automate-confirmation-emails/create-automation-by-time.gif)
+![Create automation by time](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-automation-by-time.gif)

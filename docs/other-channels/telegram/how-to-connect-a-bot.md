@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 ---
-import botToken from "./assets/how-to-connect-a-bot/how-to-copy-the-token.png";
-import deleteBot from "./assets/how-to-connect-a-bot/how-to-delete-a-bot.png";
+import botToken from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-copy-the-token.png";
+import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-delete-a-bot.png";
 
 # Как подключить бот в Телеграме
 
@@ -12,7 +12,7 @@ import deleteBot from "./assets/how-to-connect-a-bot/how-to-delete-a-bot.png";
 ### 1. Составьте файл с контактами
 В качестве контакта в Телеграме используется ID пользователя (это комбинация цифр — отправлять рассылки по нику или номеру телефона нельзя). Айдишники можно скачать в предыдущем сервисе рассылок при переезде в Sendsay, в самом мессенджере их нельзя выгружать.
 
-К контакту можно прикрепить остальную информацию из аккаунта — имя, фамилию и ник. Правила оформления файла для импорта описаны в отдельной статье. 
+К контакту можно прикрепить остальную информацию из аккаунта — имя, фамилию и ник. Правила оформления файла для импорта описаны в отдельной статье.
 
 [Как подготовить файл для импорта](/docs/subscribers/import-and-export/how-to-prepare-file-for-import.md)
 
@@ -31,9 +31,9 @@ import deleteBot from "./assets/how-to-connect-a-bot/how-to-delete-a-bot.png";
 
 ### 2. Подключите бота к Sendsay
 1. Откройте раздел **Подписчики → Telegram** и нажмите на синюю кнопку «Подключить бота».
-2. В появившемся окне вставьте токен и нажмите «Подключить». 
+2. В появившемся окне вставьте токен и нажмите «Подключить».
 
-![How to connect a bot](./assets/how-to-connect-a-bot/how-to-connect-a-bot.gif) <br/>
+![How to connect a bot](/img/other-channels/telegram/how-to-connect-a-bot/how-to-connect-a-bot.gif) <br/>
 
 ## Как удалить бот
 Откройте раздел **Подписчики → Telegram**. Рядом с ботом откройте выпадающий список и нажмите «Удалить».

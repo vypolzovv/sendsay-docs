@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 ---
-import productRecommendations from "./assets/product-recommendations/product-recommendations.png";
-import legacyInterface from "./assets/product-recommendations/legacy-interface.png";
-import howToAddYml from "./assets/product-recommendations/how-to-add-yml.png";
-import ymlUpdate from "./assets/product-recommendations/yml-update.png";
-import templateRestrictions from "./assets/product-recommendations/add-restrictions-to-the-template.png";
-import segmentId from "./assets/product-recommendations/segment-id.png";
+import productRecommendations from "/img/automations/automations-by-behaviour/product-recommendations/product-recommendations.png";
+import legacyInterface from "/img/automations/automations-by-behaviour/product-recommendations/legacy-interface.png";
+import howToAddYml from "/img/automations/automations-by-behaviour/product-recommendations/how-to-add-yml.png";
+import ymlUpdate from "/img/automations/automations-by-behaviour/product-recommendations/yml-update.png";
+import templateRestrictions from "/img/automations/automations-by-behaviour/product-recommendations/add-restrictions-to-the-template.png";
+import segmentId from "/img/automations/automations-by-behaviour/product-recommendations/segment-id.png";
 
 # Как настроить товарные рекомендации в письме
 
@@ -68,7 +68,7 @@ import segmentId from "./assets/product-recommendations/segment-id.png";
     <img src={legacyInterface} alt="Legacy interface" />
 </p>
 
-В предыдущем интерфейсе нужно создать действие по расписанию: 
+В предыдущем интерфейсе нужно создать действие по расписанию:
 1. Откройте раздел **Система → Действия по расписанию**.
 2. В выпадающем меню вместо «Выпуск по расписанию» выберите пункт «Импорт из YML» и нажмите «Создать».
 3. Заполните название действия («Товарные рекомендации») и укажите ссылку на файл.
@@ -177,4 +177,4 @@ import segmentId from "./assets/product-recommendations/segment-id.png";
 4. Нажмите «Сохранить» (в правом нижнем углу).
 5. Нажмите «Активировать» (в правом верхнем углу).
 
-![Create product recommendation automation](./assets\product-recommendations/create-product-recommendation-automation.gif)
+![Create product recommendation automation](/img/automations/automations-by-behaviour/product-recommendations/create-product-recommendation-automation.gif)

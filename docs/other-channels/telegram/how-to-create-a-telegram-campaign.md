@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-import campaignEditor from "./assets/how-to-create-a-telegram-campaign/telegram-campaign-editor.png";
+import campaignEditor from "/img/other-channels/telegram/how-to-create-a-telegram-campaign/telegram-campaign-editor.png";
 
 # Как отправить рассылку в Телеграме
 
@@ -11,7 +11,7 @@ import campaignEditor from "./assets/how-to-create-a-telegram-campaign/telegram-
 
 Чтобы создать выпуск, откройте раздел **Рассылки → Черновики**, нажмите на плюсик и выберите тип «Telegram».
 
-![How to create a Telegram campaign](./assets/how-to-create-a-telegram-campaign/how-to-create-a-telegram-campaign.gif) <br/>
+![How to create a Telegram campaign](/img/other-channels/telegram/how-to-create-a-telegram-campaign/how-to-create-a-telegram-campaign.gif) <br/>
 
 Также вы можете создать шаблон в разделе **Контент → Telegram**, по нему можно отправлять обычные выпуски или рассылки с помощью автоматизаций.
 
@@ -29,7 +29,7 @@ import campaignEditor from "./assets/how-to-create-a-telegram-campaign/telegram-
 
 Чтобы отформатировать текст или привязать к нему ссылку, выделите нужный фрагмент в сообщении — над ним появятся настройки. Клики по ссылкам будут учитываться в статистике только в том случае, если ссылки вшиты в текст и начинаются с http или https (переходы по адресам, которые вставлены в сообщение текстом, не считаются).
 
-![How to add a link](./assets/how-to-create-a-telegram-campaign/how-to-add-a-link.gif) <br/>
+![How to add a link](/img/other-channels/telegram/how-to-create-a-telegram-campaign/how-to-add-a-link.gif) <br/>
 
 ## 3. Отправьте себе тестовую копию (опционально)
 Перед выпуском можно отправить тестовую копию на свой аккаунт, чтобы посмотреть, как выглядит сообщение целиком. Тестовые копии можно отправлять только подписчикам бота, при отправке нужно указать ID подписчика (а не ник) — его можно найти в списке подписчиков телеграм-бота.

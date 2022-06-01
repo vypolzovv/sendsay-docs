@@ -6,21 +6,21 @@ sidebar_position: 2
 ## Как удалить один контакт у подписчика
 Откройте карточку подписчика и нажмите «Удалить из базы».
 
-![How to delete a contact](./assets\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-a-contact.png) <br/>
+![How to delete a contact](/img/subscribers/contacts\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-a-contact.png) <br/>
 
 ## Как удалить несколько контактов
 1. Зайдите в раздел **Подписчики → Инструменты** и выберите инструмент «Массовое удаление».
 2. На открывшейся странице поставьте галочку «Удалить ВСЕХ подписчиков из списка». В поле ниже добавьте контакты, которые хотите удалить.
 3. Поставьте галочку «Да, я действительно хочу удалить подписчиков» и нажмите «Удалить подписчиков».
 
-![How to delete few contacts](./assets\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-few-contacts.png) <br/>
+![How to delete few contacts](/img/subscribers/contacts\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-few-contacts.png) <br/>
 
 ## Как удалить все контакты из группы
 1. Зайдите в раздел **Подписчики → Инструменты** и выберите инструмент «Массовое удаление».
 2. На открывшейся странице поставьте галочку «Удалить ВСЕХ подписчиков группы» и выберите из выпадающего списка группу, которую хотите удалить.
 3. Поставьте галочку «Да, я действительно хочу удалить подписчиков» и нажмите «Удалить подписчиков». Контакты удалятся из базы, а сама группа останется, но будет пустой.
 
-![How to delete all contacts from the group](./assets\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-all-contacts-from-the-group.png) <br/>
+![How to delete all contacts from the group](/img/subscribers/contacts\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-all-contacts-from-the-group.png) <br/>
 
 ## Как удалить недоступные электронные почты
 Электронные адреса блокируются для рассылок в трёх случаях:
@@ -33,7 +33,7 @@ sidebar_position: 2
 2. Поставьте галочки напротив групп недоступных контактов, которые вы хотите удалить.
 3. Нажмите «Удалить из базы».
 
-![How to delete all unavailable email addresses](./assets\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-all-unavailable-email-addresses.png) <br/>
+![How to delete all unavailable email addresses](/img/subscribers/contacts\how-to-delete-contacts-in-the-legacy-interface/how-to-delete-all-unavailable-email-addresses.png) <br/>
 
 ## Как удалить из базы все контакты одного типа
 1. В разделе **Подписчики → Группы** создайте группу: в выпадающем списке «Группа для» выберите тип контактов, которые хотите удалить (например, электронная почта или номер телефона), а в типе группы поставьте «Фильтр».

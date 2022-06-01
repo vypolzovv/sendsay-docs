@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-import emailOnAcidKey from "./assets/integration-with-email-on-acid/email-on-acid-key.png";
+import emailOnAcidKey from "/img/integrations/integration-with-email-on-acid/email-on-acid-key.png";
 
 # Интеграция с Email on Acid
 
@@ -9,11 +9,11 @@ import emailOnAcidKey from "./assets/integration-with-email-on-acid/email-on-aci
 
 Интеграция с [Email on Acid](https://www.emailonacid.com/) позволяет тестировать внешний вид рассылок без тестовых копий — прямо в редакторе, во время создания письма. Если у вас есть аккаунт Email on Acid, подключите его к Sendsay — и в отдельной вкладке предпросмотра появятся превью писем с разных почтовых сервисов и устройств.
 
-![Preview with Email on Acid](./assets\integration-with-email-on-acid/preview-with-email-on-acid.gif) <br/>
+![Preview with Email on Acid](/img/integrations\integration-with-email-on-acid/preview-with-email-on-acid.gif) <br/>
 
 Превью — это скриншот письма в реальных условиях: Email on Acid прогоняет рассылку через выбранные почтовые сервисы, браузеры и смартфоны. Каждое превью можно увеличить, чтобы посмотреть, как в точности будет выглядеть этот вариант письма:
 
-![How preview works](./assets\integration-with-email-on-acid/how-preview-works.gif) <br/>
+![How preview works](/img/integrations\integration-with-email-on-acid/how-preview-works.gif) <br/>
 
 Комбинации браузеров и почтовых сервисов для превью можно выбрать в настройках (об этом ниже). После входа в аккаунт все превью пустые — их нужно обновить (это может занять пару минут).
 

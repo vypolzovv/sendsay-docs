@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 ---
-import diagram from "./assets/how-to-add-diagram/diagram.png";
+import diagram from "/img/email-campaigns/personalization//how-to-add-diagram/diagram.png";
 
 # Как вставить в письмо круговую диаграмму
 Диаграмма генерируется на основе данных подписчика и представляет собой поделенный на части круг с секторами разного размера. Для примера рассмотрим диаграмму, которая сравнивает доли рынка разных стран:
@@ -22,10 +22,10 @@ import diagram from "./assets/how-to-add-diagram/diagram.png";
 Есть два формата записи координат (для наглядности значения каждого сектора выделены тем же цветом, что и сам сектор на диаграмме):
 
 **Запись по строкам (формат bygraph)**<br/>
-![Bygraph format](./assets/how-to-add-diagram/bygraph-format.png) <br/>
+![Bygraph format](/img/email-campaigns/personalization//how-to-add-diagram/bygraph-format.png) <br/>
 
 **Запись по столбцам (формат bypoint)**<br/>
-![Bypoint-format](./assets/how-to-add-diagram/bypoint-format.png) <br/>
+![Bypoint-format](/img/email-campaigns/personalization//how-to-add-diagram/bypoint-format.png) <br/>
 Запомните, какой формат вы выбрали (bygraph или bypoint), — его нужно будет указать при добавлении диаграммы в письмо. У всех получателей диаграммы значения должны быть записаны в одном формате. На внешний вид диаграммы формат не влияет — дело только в удобстве.
 :::tip Важно
 Так как запись занимает несколько строк, данные в поле анкеты нужно загружать только через API. При импорте через интерфейс значения соберутся в одну строку, и при создании диаграммы возникнет ошибка.
@@ -40,7 +40,7 @@ import diagram from "./assets/how-to-add-diagram/diagram.png";
 
 Для наглядности значения каждого сектора выделены тем же цветом, что и сам сектор на диаграмме.
 
-![HTML code for diagram](./assets/how-to-add-diagram/html-code-for-diagram.png) <br/>
+![HTML code for diagram](/img/email-campaigns/personalization//how-to-add-diagram/html-code-for-diagram.png) <br/>
 
 Код для копирования:
 ```

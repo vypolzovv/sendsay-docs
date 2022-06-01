@@ -7,10 +7,10 @@ sidebar_position: 5
 Футер — это блок со ссылкой для отписки в нижней части письма, который автоматически добавляется к каждому письму. Он нужен, чтобы подписчик всегда мог отказаться от получения писем — это обязательное условие легальных рассылок.
 
 По умолчанию футер выглядит вот так: <br/>
-![Footer example](./assets\campaign-footer/footer-example.png)
+![Footer example](/img/email-campaigns/settings\campaign-footer/footer-example.png)
 
 При нажатии на ссылку открывается страница отписки:
-![Unsubscribe page](./assets\campaign-footer/unsubscribe-page.png) <br/>
+![Unsubscribe page](/img/email-campaigns/settings\campaign-footer/unsubscribe-page.png) <br/>
 
 Если подписчик нажмёт «Отписаться», его адрес добавится в стоп-лист «Отписавшиеся самостоятельно» и будет исключаться из будущих рассылок.
 
@@ -27,7 +27,7 @@ sidebar_position: 5
 
 Номер черновика отображается в адресной строке браузера:
 
-![Draft number](./assets\campaign-footer/draft-number.png) <br/>
+![Draft number](/img/email-campaigns/settings\campaign-footer/draft-number.png) <br/>
 
 :::tip Важно
 Второй вариант подключается отдельно — для него нужно заключить дополнительное соглашение.

@@ -13,7 +13,7 @@ sidebar_position: 1
 ## Как подключить сообщество
 Сообщество можно подключить только к одному аккаунту Sendsay. Перед подключением проверьте, разрешена ли отправка сообщений в самом сообществе — по умолчанию она выключена. Это можно сделать в настройках сообщества (раздел **Управление → Сообщения**).
 
-![How to connect VK community](./assets/how-to-connect-vk-community/how-to-connect-vk-community.gif) <br/>
+![How to connect VK community](/img/other-channels/vk/how-to-connect-vk-community/how-to-connect-vk-community.gif) <br/>
 
 В интерфейсе Sendsay:
 1. Откройте раздел **Подписчики → VK**. На открывшейся странице нажмите «Добавить сообщество».

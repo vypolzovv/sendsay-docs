@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 ---
-import copyBitrixSubdomain from "./assets/autoimport-from-bitrix/copy-bitrix-subdomain.png";
+import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-bitrix-subdomain.png";
 
 # Как настроить автоматический импорт из «Битрикса»
 
@@ -15,7 +15,7 @@ import copyBitrixSubdomain from "./assets/autoimport-from-bitrix/copy-bitrix-sub
 1. Перейдите [в предыдущий интерфейс](https://sendsay.ru/account/).
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **Bitrix24**.
 
-![How to create integration with Bitrix](./assets\autoimport-from-bitrix/how-to-create-integration-with-bitrix.gif) <br/>
+![How to create integration with Bitrix](/img/integrations\autoimport-from-bitrix/how-to-create-integration-with-bitrix.gif) <br/>
 
 ## 3. Настройте интеграцию
 После создания интеграции откроется страница настроек.
@@ -30,7 +30,7 @@ import copyBitrixSubdomain from "./assets/autoimport-from-bitrix/copy-bitrix-sub
 
 3. Нажмите «Продолжить».
 
-![How to connect Bitrix](./assets\autoimport-from-bitrix/how-to-connect-bitrix.gif) <br/>
+![How to connect Bitrix](/img/integrations\autoimport-from-bitrix/how-to-connect-bitrix.gif) <br/>
 
 ### Выберите список для подписчиков
 Вы можете создать новый список, выбрать существующий или просто загрузить контакты в базу. Рекомендуем загружать контакты из сторонних систем в списки, чтобы в дальнейшем с ними можно было работать отдельно.

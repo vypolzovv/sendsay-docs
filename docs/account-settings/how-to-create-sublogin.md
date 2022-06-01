@@ -11,11 +11,11 @@ sidebar_position: 1
 3. Настройте доступ — это можно сделать тремя способами: выбрать системную роль (с готовым набором прав), скопировать права другого пользователя или создать роль с нуля. После создания учётной записи права можно отредактировать на странице пользователя.
 4. Нажмите «Добавить пользователя» — на указанную почту придёт письмо с данными для входа.
 
-![Create sublogin](./assets\how-to-create-sublogin/create-sublogin.png)
+![Create sublogin](/img/account-settings/how-to-create-sublogin/create-sublogin.png)
 
 При входе новый пользователь должен нажать «Корпоративный вход» и указать логин основного аккаунта, а также личные логин и пароль.
 
-![Corporate sign in](./assets\how-to-create-sublogin/corporate-signin.gif)
+![Corporate sign in](/img/account-settings/how-to-create-sublogin/corporate-signin.gif)
 
 ### Какие бывают системные роли
 По умолчанию в аккаунте есть пять системных ролей:
@@ -35,7 +35,7 @@ sidebar_position: 1
 
 Права не редактируются, если у пользователя системная роль или учётная запись была создана в старом интерфейсе. В этих случаях вы можете внести изменения и сохранить результат как отдельную роль.
 
-![Manage access](./assets\how-to-create-sublogin/manage-access.gif)
+![Manage access](/img/account-settings/how-to-create-sublogin/manage-access.gif)
 
 Во вкладке **Настройка пользователя** можно настроить дополнительные параметры:
 - IP-адреса, с которых пользователь может войти в аккаунт,

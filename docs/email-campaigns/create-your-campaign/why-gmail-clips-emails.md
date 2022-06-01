@@ -5,7 +5,7 @@ sidebar_position: 9
 # Почему Gmail обрезает письма
 У Gmail есть ограничение для писем — объём html-кода не должен превышать 102 килобайта. Если письмо больше допустимого, сервис его обрезает и добавляет автоматическую ссылку, которая ведёт на полную версию выпуска:
 
-![What is clipping](./assets/why-gmail-clips-emails/what-is-clipping.png) <br/>
+![What is clipping](/img/email-campaigns/create-your-campaign/why-gmail-clips-emails/what-is-clipping.png) <br/>
 
 За размером важно следить: многие подписчики могут не заметить ссылку или просто не кликнуть по ней. Кроме того, если сервис обрезает выпуск, также обрезается та часть, которая считает открытия писем, — поэтому все открытия на Gmail не будут учтены в статистике.
 
@@ -17,7 +17,7 @@ sidebar_position: 9
 
 Все рассылки с одинаковой темой Gmail собирает в цепочку писем, которую сервис считает за одно большое составное письмо:
 
-![Thread with similar subjects](./assets/why-gmail-clips-emails/thread-with-similar-subjects.png) <br/>
+![Thread with similar subjects](/img/email-campaigns/create-your-campaign/why-gmail-clips-emails/thread-with-similar-subjects.png) <br/>
 
 Когда суммарный объём писем в цепочке превышает 102 кб, сообщение обрезается. Чтобы этого избежать, меняйте тему письма или удаляйте предыдущие варианты из почты.
 

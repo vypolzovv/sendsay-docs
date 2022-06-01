@@ -27,7 +27,7 @@ sidebar_position: 3
 
 3. Нажмите «Сохранить».
 
-![Birthday segment](./assets\how-to-automate-birthday-emails/birthday-segment.gif) <br/>
+![Birthday segment](/img/automations/automations-by-time/how-to-automate-birthday-emails/birthday-segment.gif) <br/>
 
 ## 3. Создайте автоматизацию
 Перейдите в раздел **Автоматизации → По времени** и нажмите «Создать автоматизацию». Появится окно с выбором типа автоматизации — выберите «Автоматизация рассылки». Затем:
@@ -37,4 +37,4 @@ sidebar_position: 3
 4. Нажмите «Сохранить» (в правом нижнем углу).
 5. Нажмите «Активировать» (в правом верхнем углу).
 
-![How to create automation by time](./assets\how-to-automate-birthday-emails/how-to-create-automation-by-time.gif) <br/>
+![How to create automation by time](/img/automations/automations-by-time/how-to-automate-birthday-emails/how-to-create-automation-by-time.gif) <br/>

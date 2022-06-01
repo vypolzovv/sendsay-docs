@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
 ---
-import publishPoll from "./assets/how-to-conduct-a-poll/publish-a-poll.png";
-import addPollToTheWebsite from "./assets/how-to-conduct-a-poll/add-poll-to-the-website.png";
-import formId from "./assets/how-to-conduct-a-poll/form-id.png";
+import publishPoll from "/img/forms/how-to-conduct-a-poll/publish-a-poll.png";
+import addPollToTheWebsite from "/img/forms/how-to-conduct-a-poll/add-poll-to-the-website.png";
+import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 
 # Как провести опрос
 
@@ -28,7 +28,7 @@ import formId from "./assets/how-to-conduct-a-poll/form-id.png";
 1. Зайдите в раздел **Анкеты → Опросы и формы** и выберите «Конструктор форм» (если вы до этого не создавали форм) или «Создать форму» (если уже создавали).
 2. Введите название и добавьте нужные поля. В каждую форму автоматически добавляется поле «Email» (оно скроется, если респондент перейдёт в опрос по ссылке из письма).
 
-![Add questions into the form](./assets\how-to-conduct-a-poll/add-questions-into-the-form.gif) <br/>
+![Add questions into the form](/img/forms\how-to-conduct-a-poll/add-questions-into-the-form.gif) <br/>
 
 При настройке формы можно редактировать названия полей — для этого нажмите на карандашик рядом с названием вопроса. Если поле используется в других формах, там оно останется без изменений.
 
@@ -75,7 +75,7 @@ import formId from "./assets/how-to-conduct-a-poll/form-id.png";
 
 2. Вставьте в письмо персонализированную ссылку, чтобы ответы записались нужному подписчику (тогда поле «Email» при переходе в опрос автоматически скроется).
 
-Ссылка для блочного редактора: 
+Ссылка для блочного редактора:
 ```
 [% form_url(id формы) %]
 ```
@@ -95,14 +95,14 @@ import formId from "./assets/how-to-conduct-a-poll/form-id.png";
 4. Добавьте остальные поля.
 5. Нажмите «Сохранить».
 
-![Output format](./assets\how-to-conduct-a-poll/output-format.gif) <br/>
+![Output format](/img/forms\how-to-conduct-a-poll/output-format.gif) <br/>
 
 ### Как выгрузить данные
 1. Зайдите в раздел **Подписчики → Поиск**.
 2. Выберите группу-список, куда добавлялись участники опроса.
 3. Выберите формат вывода, созданный для опроса. Если нужно, выберите формат сортировки: данные сортируются по любому полю формата.
 4. В поле «Тип искомых адресов подписчиков» выберите «Email».
-5. Выберите способ вывода данных: показать сейчас, сохранить на сервере или выслать на email. Вариант «Показать сейчас» обычно используется для тестирования опроса (проверить, записались ли первые ответы) или для небольших групп на несколько десятков адресов — иначе получится огромная таблица, которую нельзя скачать. 
+5. Выберите способ вывода данных: показать сейчас, сохранить на сервере или выслать на email. Вариант «Показать сейчас» обычно используется для тестирования опроса (проверить, записались ли первые ответы) или для небольших групп на несколько десятков адресов — иначе получится огромная таблица, которую нельзя скачать.
 6. Нажмите «Вывести список подписчиков».
 
-![How to download poll data](./assets\how-to-conduct-a-poll/how-to-download-poll-data.gif) <br/>
+![How to download poll data](/img/forms\how-to-conduct-a-poll/how-to-download-poll-data.gif) <br/>

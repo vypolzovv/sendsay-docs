@@ -17,7 +17,7 @@ sidebar_position: 1
 - клиентский идентификатор CSID — в левой части карточки,
 - почту и телефон — во вкладке **Контакты**.
 
-![How to add or remove a contact](./assets\subscriber-profile/how-to-add-or-remove-a-contact.png) <br/>
+![How to add or remove a contact](/img/subscribers/subscriber-data\subscriber-profile/how-to-add-or-remove-a-contact.png) <br/>
 
 Карточка привязана к контактам — подписчик без контактов удаляется, даже если у него есть другие данные. В базе не может быть подписчиков с одинаковыми контактами — поэтому в карточку нельзя добавить контакт, который уже есть у другого подписчика (его надо сначала удалить из старой карточки).
 
@@ -48,18 +48,18 @@ sidebar_position: 1
 В дополнительной анкете мы рекомендуем хранить поля только для социально-демографических данных
 :::
 
-![How to create a field](./assets\subscriber-profile/how-to-create-a-field.gif) <br/>
+![How to create a field](/img/subscribers/subscriber-data\subscriber-profile/how-to-create-a-field.gif) <br/>
 
 Чтобы посмотреть информацию из других анкет, откройте вкладку **Данные** — там можно создать собственный список анкет для отображения данных подписчика. Чтобы отредактировать информацию, наведите курсор на нужное поле и нажмите «Редактировать».
 
-![Data tab](./assets\subscriber-profile/data-tab.gif) <br/>
+![Data tab](/img/subscribers/subscriber-data\subscriber-profile/data-tab.gif) <br/>
 
 [Анкеты и работа с данными](data-groups.md)
 
 ## Как посмотреть, в какие списки и сегменты включены контакты подписчика
 Во вкладке **Списки и сегменты** отображаются все списки и сегменты, в которых участвуют контакты подписчика. Там же можно добавить контакт подписчика в список или удалить его оттуда (в сегмент контакты добавляются автоматически на основе заданных условий).
 
-![Lists and segments tab](./assets\subscriber-profile/lists-and-segments-tab.png) <br/>
+![Lists and segments tab](/img/subscribers/subscriber-data\subscriber-profile/lists-and-segments-tab.png) <br/>
 
 ## Как посмотреть статистику по выпускам
 Во вкладке **Выпуски** можно посмотреть статистику по рассылкам, которые были отправлены подписчику:

@@ -12,6 +12,6 @@ sidebar_position: 3
 4. Зайдите в журнал заданий — там появилось задание «Запрос статистики». Откройте выпадающее меню напротив него и выберите «Загрузить».
 5. Импортируйте этот список в базу — сервис пропустит те контакты, которые уже есть в аккаунте, и добавит только удалённые адреса.
 
-![How to restore deleted contacts](./assets\how-to-restore-deleted-contacts/how-to-restore-deleted-contacts.gif) <br/>
+![How to restore deleted contacts](/img/subscribers/contacts\how-to-restore-deleted-contacts/how-to-restore-deleted-contacts.gif) <br/>
 
 **Читайте также:** [Как импортировать подписчиков](../import-and-export/how-to-import-subscribers.md)

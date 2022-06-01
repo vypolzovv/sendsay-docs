@@ -1,16 +1,16 @@
 ---
 sidebar_position: 1
 ---
-import abandonedCart from "./assets/abandoned-cart/abandoned-cart.png";
-import legacyInterface from "./assets/abandoned-cart/legacy-interface.png";
-import howToAddYml from "./assets/abandoned-cart/how-to-add-yml.png";
-import ymlUpdate from "./assets/abandoned-cart/yml-update.png";
-import abandonedCartTemplate from "./assets/abandoned-cart/abandoned-cart-template.png";
-import step1 from "./assets/abandoned-cart/abandoned-cart-step-1.png";
-import step2 from "./assets/abandoned-cart/abandoned-cart-step-2.png";
-import step3 from "./assets/abandoned-cart/abandoned-cart-step-3.png";
-import dataUpdate from "./assets/abandoned-cart/data-update.png";
-import abandonedCartSegment from "./assets/abandoned-cart/abandoned-cart-segment.png";
+import abandonedCart from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart.png";
+import legacyInterface from "/img/automations/automations-by-behaviour/abandoned-cart/legacy-interface.png";
+import howToAddYml from "/img/automations/automations-by-behaviour/abandoned-cart/how-to-add-yml.png";
+import ymlUpdate from "/img/automations/automations-by-behaviour/abandoned-cart/yml-update.png";
+import abandonedCartTemplate from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart-template.png";
+import step1 from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart-step-1.png";
+import step2 from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart-step-2.png";
+import step3 from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart-step-3.png";
+import dataUpdate from "/img/automations/automations-by-behaviour/abandoned-cart/data-update.png";
+import abandonedCartSegment from "/img/automations/automations-by-behaviour/abandoned-cart/abandoned-cart-segment.png";
 
 # Как настроить автоматизацию «Брошенная корзина»
 

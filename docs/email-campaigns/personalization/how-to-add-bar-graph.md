@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-import barGraph from "./assets/how-to-add-bar-graph/bar-graph.png";
+import barGraph from "/img/email-campaigns/personalization//how-to-add-bar-graph/bar-graph.png";
 
 # Как вставить гистограмму в письмо
 Гистограмма генерируется на основе данных подписчика и представляет собой сравнение данных в виде групп из столбиков. Для примера рассмотрим гистограмму, которая сравнивает статьи расходов в разные периоды времени:
@@ -21,10 +21,10 @@ import barGraph from "./assets/how-to-add-bar-graph/bar-graph.png";
 Есть два формата записи координат (для наглядности значения каждого столбика выделены тем же цветом, что и сам столбик на гистограмме):
 
 **Запись по строкам (формат bygraph)**<br/>
-![Bygraph format](./assets/how-to-add-bar-graph/bygraph-format.png) <br/>
+![Bygraph format](/img/email-campaigns/personalization//how-to-add-bar-graph/bygraph-format.png) <br/>
 
 **Запись по столбцам (формат bypoint)**<br/>
-![Bypoint format](./assets/how-to-add-bar-graph/bypoint-format.png) <br/>
+![Bypoint format](/img/email-campaigns/personalization//how-to-add-bar-graph/bypoint-format.png) <br/>
 
 Запомните, какой формат вы выбрали (bygraph или bypoint), — его нужно будет указать при добавлении гистограммы в письмо. У всех получателей гистограммы значения должны быть записаны в одном формате. На внешний вид гистограммы формат не влияет — дело только в удобстве.
 :::tip Важно
@@ -40,7 +40,7 @@ import barGraph from "./assets/how-to-add-bar-graph/bar-graph.png";
 
 Для наглядности значения каждого столбика выделены тем же цветом, что и сам столбик на гистограмме.
 
-![HTML code for bar graph](./assets/how-to-add-bar-graph/html-code-for-bar-graph.png) <br/>
+![HTML code for bar graph](/img/email-campaigns/personalization//how-to-add-bar-graph/html-code-for-bar-graph.png) <br/>
 Код для копирования:
 ```
 [% params = {

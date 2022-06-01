@@ -5,17 +5,17 @@ sidebar_position: 5
 # Какие бывают статусы у контактов
 У каждого контакта есть статус, который показывает, доступен контакт для рассылки или нет (и почему). Статусы отображаются в карточке подписчика:
 
-![Status in subscriber profile](./assets\contact-status/status-in-subscriber-profile.png) <br/>
+![Status in subscriber profile](/img/subscribers/contacts\contact-status/status-in-subscriber-profile.png) <br/>
 
 Также в разделе **Подписчики → Просмотр подписчиков** контакты можно выводить по статусу — для этого нажмите на выпадающее меню над списком подписчиков и выберите нужный статус.
 
-![Status in View subscribers](./assets\contact-status/status-in-view-subscribers.png) <br/>
+![Status in View subscribers](/img/subscribers/contacts\contact-status/status-in-view-subscribers.png) <br/>
 
 Есть три вида недоступных контактов (при этом один контакт может быть недоступен сразу по нескольким причинам):
 
 ## 1. Контакт находится в стоп-листе
 Стоп-лист — это список контактов, которые исключаются из всех рассылок. В Sendsay есть два стоп-листа:
-- **Отписались от всех рассылок** — сюда попадают контакты, которые отказались от ваших рассылок, и адреса из него нельзя удалять вручную или через API, 
+- **Отписались от всех рассылок** — сюда попадают контакты, которые отказались от ваших рассылок, и адреса из него нельзя удалять вручную или через API,
 - **Заблокированные вручную** — сюда контакты добавляются и удаляются вручную или через API.
 
 [Как работают стоп-листы](./stop-lists.md)
@@ -44,4 +44,4 @@ sidebar_position: 5
 Рекомендуем сбрасывать ошибки только тогда, когда вы уверены, что адрес снова активен. Если разблокировать все контакты подряд, рассылка может улететь в спам или на модерацию.
 :::
 
-![How to reset bounces](./assets\contact-status/how-to-reset-bounces.png) <br/>
+![How to reset bounces](/img/subscribers/contacts\contact-status/how-to-reset-bounces.png) <br/>

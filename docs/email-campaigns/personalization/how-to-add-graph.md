@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 ---
-import graph from "./assets/how-to-add-graph/graph.png";
+import graph from "/img/email-campaigns/personalization//how-to-add-graph/graph.png";
 
 # Как вставить график в письмо
 График генерируется на основе данных подписчика и представляет собой одну или несколько ломаных линий на координатной плоскости. Для примера рассмотрим график, который показывает динамику расходов по разным категориям:
@@ -24,11 +24,11 @@ import graph from "./assets/how-to-add-graph/graph.png";
 
 **Запись по строкам (формат bygraph)**
 
-![Bygraph format](./assets/how-to-add-graph/bygraph-format.png) <br/>
+![Bygraph format](/img/email-campaigns/personalization//how-to-add-graph/bygraph-format.png) <br/>
 
 **Запись по столбцам (формат bypoint)**
 
-![Bypoint format](./assets/how-to-add-graph/bypoint-format.png) <br/>
+![Bypoint format](/img/email-campaigns/personalization//how-to-add-graph/bypoint-format.png) <br/>
 
 Запомните, какой формат вы выбрали (bygraph или bypoint), — его нужно будет указать при добавлении графика в письмо. У всех получателей графика координаты должны быть записаны в одном формате. На внешний вид графика формат не влияет — дело только в удобстве.
 :::tip Важно
@@ -44,14 +44,14 @@ import graph from "./assets/how-to-add-graph/graph.png";
 
 Для наглядности значения каждой линии выделены тем же цветом, что и сама линия на графике.
 
-![HTML code for graph](./assets/how-to-add-graph/html-code-for-graph.png) <br/>
+![HTML code for graph](/img/email-campaigns/personalization//how-to-add-graph/html-code-for-graph.png) <br/>
 
 Код для копирования:
 ```
 [% params = {
    "data_format" => "bygraph",
    "type" => "line",
-   
+
    "title" => "Динамика расходов",
    "xname" => "Кварталы",
    "yname" => "Расходы",

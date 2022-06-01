@@ -28,6 +28,6 @@ sidebar_position: 1
 
 После завершения настройки нажмите кнопку «Сохранить», а затем «Активировать». Если вы хотите провести импорт однократно, активация не обязательна: вместо этого можно раскрыть выпадающее меню рядом с кнопкой «Активировать» и нажать «Выполнить единоразово» — сразу начнётся отправка выпуска.
 
-![How to create automation by time](./assets\how-to-create-automation-by-time/how-to-create-automation-by-time.gif) <br/>
+![How to create automation by time](/img/automations/automations-by-time/how-to-create-automation-by-time/how-to-create-automation-by-time.gif) <br/>
 
 Если вы хотите создать автоматизацию в предыдущем интерфейсе, перейдите в раздел **Система → Действия по расписанию** и в типе (слева от кнопки «Создать») выберите «Выпуск по расписанию». Всё остальное настраивается аналогично.

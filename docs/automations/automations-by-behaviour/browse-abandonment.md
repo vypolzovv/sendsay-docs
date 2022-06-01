@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 ---
-import browseAbandonment from "./assets/browse-abandonment/browse-abandonment.png";
-import legacyInterface from "./assets/browse-abandonment/legacy-interface.png";
-import howToAddYml from "./assets/browse-abandonment/how-to-add-yml.png";
-import ymlUpdate from "./assets/browse-abandonment/yml-update.png";
-import templateRestrictions from "./assets/browse-abandonment/add-restrictions-to-the-template.png";
-import segmentId from "./assets/browse-abandonment/segment-id.png";
+import browseAbandonment from "/img/automations/automations-by-behaviour/browse-abandonment/browse-abandonment.png";
+import legacyInterface from "/img/automations/automations-by-behaviour/browse-abandonment/legacy-interface.png";
+import howToAddYml from "/img/automations/automations-by-behaviour/browse-abandonment/how-to-add-yml.png";
+import ymlUpdate from "/img/automations/automations-by-behaviour/browse-abandonment/yml-update.png";
+import templateRestrictions from "/img/automations/automations-by-behaviour/browse-abandonment/add-restrictions-to-the-template.png";
+import segmentId from "/img/automations/automations-by-behaviour/browse-abandonment/segment-id.png";
 
 # Как настроить автоматизацию «Брошенный просмотр»
 
@@ -68,7 +68,7 @@ import segmentId from "./assets/browse-abandonment/segment-id.png";
     <img src={legacyInterface} alt="Legacy interface" />
 </p>
 
-В предыдущем интерфейсе нужно создать действие по расписанию: 
+В предыдущем интерфейсе нужно создать действие по расписанию:
 1. Откройте раздел **Система → Действия по расписанию**.
 2. В выпадающем меню вместо «Выпуск по расписанию» выберите пункт «Импорт из YML» и нажмите «Создать».
 3. Заполните название действия («Брошенный просмотр») и укажите ссылку на файл.
@@ -162,4 +162,4 @@ import segmentId from "./assets/browse-abandonment/segment-id.png";
 4. Нажмите «Сохранить» (в правом нижнем углу).
 5. Нажмите «Активировать» (в правом верхнем углу).
 
-![Create browse abandonment automation](./assets\browse-abandonment/create-browse-abandonment-automation.gif)
+![Create browse abandonment automation](/img/automations/automations-by-behaviour/browse-abandonment/create-browse-abandonment-automation.gif)

@@ -16,7 +16,7 @@ sidebar_position: 1
 :::tip Важно
 Рекомендуем проверять перед выпуском, правильно ли вы настроили персонализацию. Это можно сделать в режиме предпросмотра — нажмите на любую иконку с изображением гаджетов в верхней части редактора. Слева можно выбрать режим предпросмотра:
 
-![Preview mode for personalization](./assets/how-to-personalize-campaign/preview-mode-for-personalization.png) <br/>
+![Preview mode for personalization](/img/email-campaigns/personalization//how-to-personalize-campaign/preview-mode-for-personalization.png) <br/>
 :::
 
 ## Персонализация в блочном редакторе
@@ -25,7 +25,7 @@ sidebar_position: 1
 - дата рассылки (формат ГГГГ-ММ-ДД),
 - данные пользователя — в этом случае нужно также указать анкету и поле, где они хранятся.
 
-![How to add personal data](./assets/how-to-personalize-campaign/how-to-add-personal-data.gif) <br/>
+![How to add personal data](/img/email-campaigns/personalization//how-to-personalize-campaign/how-to-add-personal-data.gif) <br/>
 
 Также в текст сообщения можно вставить код поля, где хранятся нужные данные, и они автоматически подставятся в письмо. Код можно скопировать в анкете напротив самого поля, выглядит он вот так: ```[% anketa.custom.data %]```
 
@@ -44,21 +44,21 @@ sidebar_position: 1
 3. Откройте вкладку «Персонализация». Выберите поле и значение, которое должно быть у подписчиков, чтобы увидеть эту секцию.
 4. Нажмите «Применить».
 
-![Create section for personalization](./assets/how-to-personalize-campaign/create-section-for-personalization.gif) <br/>
+![Create section for personalization](/img/email-campaigns/personalization//how-to-personalize-campaign/create-section-for-personalization.gif) <br/>
 
 #### 2. Создайте дополнительные варианты
 1. Нажмите на секцию — в левой части экрана откроются её настройки.
 2. Нажмите «Добавить вариант секции». Впишите новое значение поля и нажмите «Применить».
 3. Нажмите на секцию, чтобы перейти к настройке контента, и отредактируйте содержимое.
 
-![Add sections with different data](./assets/how-to-personalize-campaign/add-sections-with-different-data.gif) <br/>
+![Add sections with different data](/img/email-campaigns/personalization//how-to-personalize-campaign/add-sections-with-different-data.gif) <br/>
 
 #### 3. Создайте вариант для подписчиков, у которых поле не заполнено или указано некорректное значение (иначе они не увидят эту секцию)
 1. Нажмите на секцию — в левой части экрана откроются её настройки.
 2. Нажмите «Добавить вариант для получателей у которых не заполнено поле или указаны другие значения».
 3. Нажмите на секцию, чтобы перейти к настройке контента, и отредактируйте содержимое.
 
-![Add section for subscribers without data](./assets/how-to-personalize-campaign/add-section-for-subscribers-without-data.gif) <br/>
+![Add section for subscribers without data](/img/email-campaigns/personalization//how-to-personalize-campaign/add-section-for-subscribers-without-data.gif) <br/>
 ## Персонализация в HTML
 ### Как вставить данные в письмо
 Чтобы вставить данные, скопируйте в код письма (в HTML-редакторе) или в само письмо (в блочном редакторе) значение поля, где они хранятся:

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-import birthdayAutomation from "./assets/birthday-series/birthday-automation.png";
+import birthdayAutomation from "/img/automations/automations-by-event/birthday-series/birthday-automation.png";
 
 # Как настроить автоматическую цепочку из писем на день рождения
 
@@ -32,7 +32,7 @@ import birthdayAutomation from "./assets/birthday-series/birthday-automation.png
     - нажмите «Добавить сдвиг» и впишите «+7 days».
 3. Нажмите «Сохранить».
 
-![Segment for birthdays](./assets/birthday-series/segment-for-birthdays.gif) <br/>
+![Segment for birthdays](/img/automations/automations-by-event/birthday-series/segment-for-birthdays.gif) <br/>
 
 ## 3. Создайте автоматическую рассылку по событиям
 Перейдите в раздел **Автоматизации → По событиям** и нажмите «Создать автоматизацию». В окне с выбором типа автоматизации нажмите «Своя последовательность».
@@ -50,7 +50,7 @@ import birthdayAutomation from "./assets/birthday-series/birthday-automation.png
 
 2. Нажмите «Добавить шаг».
 
-![Step 1](./assets/birthday-series/step-1.gif) <br/>
+![Step 1](/img/automations/automations-by-event/birthday-series/step-1.gif) <br/>
 
 ### Шаг 2
 1. В условии шага выберите:
@@ -63,7 +63,7 @@ import birthdayAutomation from "./assets/birthday-series/birthday-automation.png
 Указывайте московское время в расписании
 :::
 
-![Step 2](./assets/birthday-series/step-2.gif) <br/>
+![Step 2](/img/automations/automations-by-event/birthday-series/step-2.gif) <br/>
 
 ### Шаг 3
 1. В условии шага выберите:
@@ -72,7 +72,7 @@ import birthdayAutomation from "./assets/birthday-series/birthday-automation.png
 
 2. Нажмите «Добавить шаг».
 
-![Step 3](./assets/birthday-series/step-3.gif) <br/>
+![Step 3](/img/automations/automations-by-event/birthday-series/step-3.gif) <br/>
 
 ### Шаг 4
 1. В условии шага выберите:
@@ -81,4 +81,4 @@ import birthdayAutomation from "./assets/birthday-series/birthday-automation.png
 
 2. Сохраните последовательность и активируйте её, нажав на синюю кнопку в правом верхнем углу страницы.
 
-![Step 4](./assets/birthday-series/step-4.gif) <br/>
+![Step 4](/img/automations/automations-by-event/birthday-series/step-4.gif) <br/>

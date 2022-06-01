@@ -1,8 +1,8 @@
 ---
 sidebar_position: 4
 ---
-import amocrmLink from "./assets/integration-with-amocrm/amocrm-link.png";
-import amocrmSubdomain from "./assets/integration-with-amocrm/amocrm-subdomain.png";
+import amocrmLink from "/img/integrations/integration-with-amocrm/amocrm-link.png";
+import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-subdomain.png";
 
 # Интеграция с amoCRM
 
@@ -11,7 +11,7 @@ import amocrmSubdomain from "./assets/integration-with-amocrm/amocrm-subdomain.p
 1. Перейдите [в предыдущий интерфейс](https://sendsay.ru/account/).
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **amoCRM**.
 
-![How to create integration with amoCRM](./assets\integration-with-amocrm/how-to-create-integration-with-amocrm.gif) <br/>
+![How to create integration with amoCRM](/img/integrations\integration-with-amocrm/how-to-create-integration-with-amocrm.gif) <br/>
 
 ### 2. Получите в Sendsay ссылку подключения аккаунта
 После создания интеграции откроется страница настроек. Нажмите «Подключить аккаунт» и скопируйте ссылку для интеграции (она действительна 20 минут):
@@ -31,7 +31,7 @@ import amocrmSubdomain from "./assets/integration-with-amocrm/amocrm-subdomain.p
 5. Введите название интеграции и описание.
 6. Нажмите «Сохранить».
 
-![Integration in amoCRM](./assets\integration-with-amocrm/integration-in-amocrm.gif) <br/>
+![Integration in amoCRM](/img/integrations\integration-with-amocrm/integration-in-amocrm.gif) <br/>
 
 ### 4. Скопируйте данные для настройки интеграции в Sendsay
 1. На странице интеграции перейдите во вкладку **Ключи и доступы**.
@@ -77,7 +77,7 @@ import amocrmSubdomain from "./assets/integration-with-amocrm/amocrm-subdomain.p
 4. Нажмите «Добавить хук» и вставьте ссылку в левое поле. В правом поле выберите событие, при котором подписчик отправится на автоматизацию — подходят только два пункта, «Контакт добавлен» или «Контакт изменён» (можно выбрать оба сразу).
 5. Нажмите «Сохранить».
 
-![From amoCRM into automation](./assets\integration-with-amocrm/from-amocrm-into-automation.gif) <br/>
+![From amoCRM into automation](/img/integrations\integration-with-amocrm/from-amocrm-into-automation.gif) <br/>
 
 ### Как добавлять подписчиков из amoCRM в список
 1. На страницу интеграции в Sendsay перейдите во вкладку **Webhooks**.
@@ -86,7 +86,7 @@ import amocrmSubdomain from "./assets/integration-with-amocrm/amocrm-subdomain.p
 4. Нажмите «Добавить хук» и вставьте ссылку в левое поле. В правом поле выберите событие, при котором подписчик отправится на автоматизацию — подходит только один пункт, «Контакт добавлен».
 5. Нажмите «Сохранить».
 
-![From amoCRM into list](./assets\integration-with-amocrm/from-amocrm-into-list.gif) <br/>
+![From amoCRM into list](/img/integrations\integration-with-amocrm/from-amocrm-into-list.gif) <br/>
 
 ## Как отправлять пользователей из воронки на автоматизацию
 Сейчас эта опция недоступна, но мы работаем над ней.

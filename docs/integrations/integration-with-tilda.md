@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
 ---
-import tildaLink from "./assets/integration-with-tilda/tilda-link.png";
-import howToPublushTildaForm from "./assets/integration-with-tilda/how-to-publish-tilda-form.png";
+import tildaLink from "/img/integrations/integration-with-tilda/tilda-link.png";
+import howToPublushTildaForm from "/img/integrations/integration-with-tilda/how-to-publish-tilda-form.png";
 
 # Интеграция с Tilda
 
@@ -12,7 +12,7 @@ import howToPublushTildaForm from "./assets/integration-with-tilda/how-to-publis
 1. Перейдите [в предыдущий интерфейс](https://sendsay.ru/account/).
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **Tilda**.
 
-![How to create integration with Tilda](./assets\integration-with-tilda/how-to-create-integration-with-tilda.gif) <br/>
+![How to create integration with Tilda](/img/integrations\integration-with-tilda/how-to-create-integration-with-tilda.gif) <br/>
 
 ## 2. Выберите настройки интеграции и получите ссылку
 У интеграции всего три настройки:
@@ -33,14 +33,14 @@ import howToPublushTildaForm from "./assets/integration-with-tilda/how-to-publis
 1. Войдите в аккаунт на Tilda и откройте сайт, откуда вы хотите импортировать подписчиков.
 2. Откройте настройки сайта и перейдите в раздел «Формы». В блоке «Другое» выберите пункт Webhook.
 
-![Tilda webhook](./assets\integration-with-tilda/tilda-webhook.gif) <br/>
+![Tilda webhook](/img/integrations\integration-with-tilda/tilda-webhook.gif) <br/>
 
 3. Вставьте сгенерированную ссылку и нажмите «Добавить». После этого вам предложат подключить ссылку к формам на сайте:
     - если у вас всего одна форма на сайте, нажмите «Добавить»,
     - если на сайте несколько форм, нажмите «Закрыть» и подключите ссылку к нужной форме вручную. Для этого откройте страницу, где находится блок с формой, нажмите на кнопку «Контент» рядом с формой и отметьте галочкой подключенную ссылку.
 4. Нажмите «Сохранить».
 
-![Connect Sendsay link to Tilda](./assets\integration-with-tilda/connect-sendsay-link-to-tilda.gif) <br/>
+![Connect Sendsay link to Tilda](/img/integrations\integration-with-tilda/connect-sendsay-link-to-tilda.gif) <br/>
 
 ## 4. Настройте название формы
 Откройте настройки блока с формой — название указывается под шириной и отступом. Название может включать только следующие символы:
@@ -52,7 +52,7 @@ import howToPublushTildaForm from "./assets/integration-with-tilda/how-to-publis
 Если название содержит другие символы (например, пробел), данные не будут импортироваться вообще
 :::
 
-![How to set form name](./assets\integration-with-tilda/how-to-set-form-name.gif) <br/>
+![How to set form name](/img/integrations\integration-with-tilda/how-to-set-form-name.gif) <br/>
 
 В конце заново опубликуйте страницу с формой, чтобы изменения вступили в силу.
 
@@ -61,12 +61,12 @@ import howToPublushTildaForm from "./assets/integration-with-tilda/how-to-publis
 </p>
 
 ## 5. Протестируйте, всё ли работает
-Заполните форму на сайте и нажмите «Отправить». Затем в Sendsay откройте список, куда добавляются контакты из формы — там должен появиться ваш адрес. 
+Заполните форму на сайте и нажмите «Отправить». Затем в Sendsay откройте список, куда добавляются контакты из формы — там должен появиться ваш адрес.
 
 Другие данные из формы можно посмотреть пока только в предыдущем интерфейсе (но мы работаем над тем, чтобы добавить их в новый):
 1. Откройте карточку подписчика и перейдите в раздел «Данные».
 2. В блоке «Произвольные данные» раскройте секцию tildaforms и найдите блок с названием формы.
 
-![How to test Tilda integration](./assets\integration-with-tilda/how-to-test-tilda-integration.gif) <br/>
+![How to test Tilda integration](/img/integrations\integration-with-tilda/how-to-test-tilda-integration.gif) <br/>
 
 **Читайте также:** [Как использовать данные из Tilda в рассылках и сегментах](/docs/email-campaigns/personalization/how-to-use-tilda-data-in-campaigns.md)

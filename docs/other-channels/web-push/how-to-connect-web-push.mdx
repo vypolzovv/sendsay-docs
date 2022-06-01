@@ -3,10 +3,10 @@ sidebar_position: 1
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import webPush from "./assets/how-to-connect-web-push/web-push.png";
-import widget from "./assets/how-to-connect-web-push/widget.png";
-import signupForm from "./assets/how-to-connect-web-push/webpush-signup-form.png";
-import widgetUnblocks from "./assets/how-to-connect-web-push/how-widget-unblocks-notifications.png";
+import webPush from "/img/other-channels/web-push/how-to-connect-web-push/web-push.png";
+import widget from "/img/other-channels/web-push/how-to-connect-web-push/widget.png";
+import signupForm from "/img/other-channels/web-push/how-to-connect-web-push/webpush-signup-form.png";
+import widgetUnblocks from "/img/other-channels/web-push/how-to-connect-web-push/how-widget-unblocks-notifications.png";
 
 # Как подключить веб-пуши на сайт
 Веб-пуши — это короткие всплывающие сообщения от сайта, которые показываются в браузере или на рабочем столе, даже если сам сайт при этом закрыт.
@@ -37,7 +37,7 @@ import widgetUnblocks from "./assets/how-to-connect-web-push/how-widget-unblocks
 
 ## Установка
 ### Как подключить новый сайт
-1. Откройте раздел **Подписчики → Web push** и нажмите на синюю кнопку «Добавить сайт». В появившемся окне введите адрес сайта и нажмите «Добавить». 
+1. Откройте раздел **Подписчики → Web push** и нажмите на синюю кнопку «Добавить сайт». В появившемся окне введите адрес сайта и нажмите «Добавить».
 
 :::tip Важно
 Чтобы сайт мог отправлять веб-пуши, он должен иметь действующий SSL-сертификат безопасности (это значит, что адрес сайта должен начинаться с https, а не http)
@@ -52,24 +52,24 @@ import widgetUnblocks from "./assets/how-to-connect-web-push/how-widget-unblocks
 Необходимо только в том случае, если вы подключили сайт раньше 24 декабря 2020 года
 :::
 
-Чтобы добавить виджет на сайт, нужно обновить код, который был установлен туда при подключении. Порядок действий зависит от того, в каком интерфейсе вы отправляете пуши — в новом или старом. 
+Чтобы добавить виджет на сайт, нужно обновить код, который был установлен туда при подключении. Порядок действий зависит от того, в каком интерфейсе вы отправляете пуши — в новом или старом.
 
 Обновление кода не затронет ваше общение с клиентами: запланированные выпуски выйдут в срок, и все подписчики останутся в базе.
 
 <Tabs>
     <TabItem value="key1" label="В новом интерфейсе" default>
-        <ol> 
+        <ol>
             <li>
                 В разделе <b> Подписчики → Web Push </b> откройте нужный сайт и перейдите во вкладку <b> Настройка и установка </b>.
             </li>
             <li>
                 Скопируйте код и вставьте его на те страницы, посетителям которых вы предлагаете подписку — вместо кода, который установлен там сейчас.
             </li>
-        </ol> 
+        </ol>
     </TabItem>
     <TabItem value="key2" label="В предыдущем интерфейсе">
     В этом случае нужно добавить сайт к Sendsay в новом интерфейсе, потому что только там можно получить новый код:
-        <ol> 
+        <ol>
             <li>
                 Перейдите в новый интерфейс.
             </li>

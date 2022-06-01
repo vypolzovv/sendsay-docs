@@ -14,10 +14,10 @@ sidebar_position: 4
 Столбец с контактами нельзя удалить или передвинуть
 :::
 
-![How to restore deleted contacts](./assets\how-to-display-data/how-to-add-columns.gif) <br/>
+![How to restore deleted contacts](/img/subscribers/contacts\how-to-display-data/how-to-add-columns.gif) <br/>
 
 Кроме того, в таблице можно регулировать ширину столбцов — для этого зажмите курсор на разделителе и передвиньте его вправо или влево.
 
-![How to change column width](./assets\how-to-display-data/how-to-change-column-width.gif) <br/>
+![How to change column width](/img/subscribers/contacts\how-to-display-data/how-to-change-column-width.gif) <br/>
 
 **Читайте также:** [Анкеты и работа с данными](../subscriber-data/data-groups.md)
