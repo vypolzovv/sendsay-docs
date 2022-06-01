@@ -1,0 +1,1 @@
+export { getTermination } from './getTermination';

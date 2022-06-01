@@ -1,4 +1,8 @@
 {
   "label": "Часто задаваемые вопросы",
-  "position": 2
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "faq"
+  }
 }

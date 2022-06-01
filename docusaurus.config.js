@@ -27,15 +27,17 @@ const config = {
 
   plugins: [
     [
-      'docusaurus-lunr-search', {
+      'docusaurus-lunr-search',
+      {
         languages: ['ru', 'en'],
-        indexBaseUrl: true
+        indexBaseUrl: true,
       },
     ],
     [
-      '@docusaurus/plugin-client-redirects', {
+      '@docusaurus/plugin-client-redirects',
+      {
         redirects: redirectLinks,
-      }
+      },
     ],
   ],
 

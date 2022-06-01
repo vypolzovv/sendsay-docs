@@ -1,6 +1,10 @@
 {
   "label": "Смс-рассылки",
-  "position": 4
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "other-channels/sms"
+  }
 }
 
 

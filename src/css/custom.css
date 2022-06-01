@@ -6,8 +6,8 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #BF2A59;
-  --ifm-color-secondary: #0D0D0D;
+  --ifm-color-primary: #bf2a59;
+  --ifm-color-secondary: #0d0d0d;
   /* --ifm-menu-color: #0D0D0D; */
   --ifm-font-weight-semibold: 600;
   --ifm-code-font-size: 95%;
@@ -17,7 +17,7 @@
 .footer {
   display: flex;
   align-items: center;
-  --ifm-footer-background-color: #E5E7EB;
+  --ifm-footer-background-color: #e5e7eb;
   height: 42px;
 }
 

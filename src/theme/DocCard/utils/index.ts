@@ -1,0 +1,1 @@
+export { getDescriptionObj } from './getDescriptionObj';

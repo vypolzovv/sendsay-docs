@@ -1,4 +1,5 @@
 import lunr from '@generated/lunr.client';
+
 lunr.tokenizer.separator = /[\s\-/]+/;
 
 class LunrSearchAdapter {
@@ -68,9 +69,7 @@ class LunrSearchAdapter {
   getKeywordHit(doc, position, length) {
     const start = position[0];
     const end = position[0] + length;
-    const formattedTitle = `${
-      doc.title
-    }<br /><i>Keywords: ${doc.keywords.substring(
+    const formattedTitle = `${doc.title}<br /><i>Keywords: ${doc.keywords.substring(
       0,
       start
     )}<span class="algolia-docsearch-suggestion--highlight">${doc.keywords.substring(

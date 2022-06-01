@@ -1,4 +1,8 @@
 {
   "label": "Статистика",
-  "position": 7
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "slug": "statistics"
+  }
 }

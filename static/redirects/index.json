@@ -15,6 +15,10 @@
     "from": "/ru/articles/как-перейти-в-sendsay-из-другого-сервиса-рассылок"
   },
   {
+    "to": "/faq",
+    "from": "/ru/collections/1411879-часто-задаваемые-вопросы"
+  },
+  {
     "to": "/faq/moderation",
     "from": "/ru/articles/3310699-почему-выпуск-попал-на-модерацию"
   },
@@ -226,6 +230,10 @@
     "from": "/ru/articles/3304779-как-подключить-смс"
   },
   {
+    "to": "/statistics",
+    "from": "/ru/collections/1413601-статистика"
+  },
+  {
     "to": "/statistics/where-to-track-statistics",
     "from": "/ru/articles/5954154-где-следить-за-статистикой"
   },
@@ -318,11 +326,12 @@
     "from": "/ru/articles/5822046-интеграция-с-email-on-acid"
   },
   {
+    "to": "/proscript",
+    "from": "/ru/collections/1432714-proscript-язык-программирования-шаблонов"
+  },
+  {
     "to": "/proscript/proscript-in-a-nutshell",
-    "from": [
-      "/ru/collections/1432714-proscript-язык-программирования-шаблонов",
-      "/ru/articles/2479413-proscript-in-a-nutshell"
-    ]
+    "from": "/ru/articles/2479413-proscript-in-a-nutshell"
   },
   {
     "to": "/proscript/extra-sections-in-yml",
@@ -425,11 +434,12 @@
     "from": "/ru/articles/2439927-как-настроить-автоматическую-цепочку-из-писем-на-день-рождения"
   },
   {
+    "to": "/sendsay-api",
+    "from": "/ru/collections/2363294-sendsay-api"
+  },
+  {
     "to": "/sendsay-api/how-to-unite-requests",
-    "from": [
-      "/ru/articles/4549275-объединение-двух-и-более-запросов-к-stat-uni-в-одну-таблицу",
-      "/ru/collections/2363294-sendsay-api"
-    ]
+    "from": "/ru/articles/4549275-объединение-двух-и-более-запросов-к-stat-uni-в-одну-таблицу"
   },
   {
     "to": "/sendsay-api/basic-stat-uni",

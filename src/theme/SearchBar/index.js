@@ -37,16 +37,12 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
   const pluginData = usePluginData('docusaurus-lunr-search');
   const getSearchDoc = () =>
     process.env.NODE_ENV === 'production'
-      ? fetch(`${baseUrl}${pluginData.fileNames.searchDoc}`).then((content) =>
-          content.json()
-        )
+      ? fetch(`${baseUrl}${pluginData.fileNames.searchDoc}`).then((content) => content.json())
       : Promise.resolve([]);
 
   const getLunrIndex = () =>
     process.env.NODE_ENV === 'production'
-      ? fetch(`${baseUrl}${pluginData.fileNames.lunrIndex}`).then((content) =>
-          content.json()
-        )
+      ? fetch(`${baseUrl}${pluginData.fileNames.lunrIndex}`).then((content) => content.json())
       : Promise.resolve([]);
 
   const loadAlgolia = () => {

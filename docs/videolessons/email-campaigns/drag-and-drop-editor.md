@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: ''
 ---
 
 # Как создать письмо в блочном редакторе

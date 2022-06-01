@@ -27,20 +27,14 @@ class DocSearch {
     this.input = DocSearch.getInputFromSelector(inputSelector);
     this.queryDataCallback = queryDataCallback || null;
     const autocompleteOptionsDebug =
-      autocompleteOptions && autocompleteOptions.debug
-        ? autocompleteOptions.debug
-        : false;
+      autocompleteOptions && autocompleteOptions.debug ? autocompleteOptions.debug : false;
 
     autocompleteOptions.debug = debug || autocompleteOptionsDebug;
     this.autocompleteOptions = autocompleteOptions;
-    this.autocompleteOptions.cssClasses =
-      this.autocompleteOptions.cssClasses || {};
-    this.autocompleteOptions.cssClasses.prefix =
-      this.autocompleteOptions.cssClasses.prefix || 'ds';
+    this.autocompleteOptions.cssClasses = this.autocompleteOptions.cssClasses || {};
+    this.autocompleteOptions.cssClasses.prefix = this.autocompleteOptions.cssClasses.prefix || 'ds';
     const inputAriaLabel =
-      this.input &&
-      typeof this.input.attr === 'function' &&
-      this.input.attr('aria-label');
+      this.input && typeof this.input.attr === 'function' && this.input.attr('aria-label');
 
     this.autocompleteOptions.ariaLabel =
       this.autocompleteOptions.ariaLabel || inputAriaLabel || 'search input';
@@ -79,10 +73,7 @@ class DocSearch {
       this.handleSelected.bind(null, this.autocomplete.autocomplete)
     );
 
-    this.autocomplete.on(
-      'autocomplete:shown',
-      this.handleShown.bind(null, this.input)
-    );
+    this.autocomplete.on('autocomplete:shown', this.handleShown.bind(null, this.input));
 
     if (enhancedSearchInput) {
       DocSearch.bindSearchBoxEvent();
@@ -145,10 +136,7 @@ class DocSearch {
         query = queryHook(query) || query;
       }
       this.client.search(query).then((hits) => {
-        if (
-          this.queryDataCallback &&
-          typeof this.queryDataCallback === 'function'
-        ) {
+        if (this.queryDataCallback && typeof this.queryDataCallback === 'function') {
           this.queryDataCallback(hits);
         }
         const formattedHits = transformData ? transformData(hits) : hits;
@@ -165,10 +153,7 @@ class DocSearch {
     const hits = clonedHits.map((hit) => {
       if (hit._highlightResult) {
         // eslint-disable-next-line no-param-reassign
-        hit._highlightResult = utils.mergeKeyWithParent(
-          hit._highlightResult,
-          'hierarchy'
-        );
+        hit._highlightResult = utils.mergeKeyWithParent(hit._highlightResult, 'hierarchy');
       }
 
       return utils.mergeKeyWithParent(hit, 'hierarchy');
@@ -179,10 +164,7 @@ class DocSearch {
 
     $.each(groupedHits, (level, collection) => {
       const groupedHitsByLvl1 = utils.groupBy(collection, 'lvl1');
-      const flattenedHits = utils.flattenAndFlagFirst(
-        groupedHitsByLvl1,
-        'isSubCategoryHeader'
-      );
+      const flattenedHits = utils.flattenAndFlagFirst(groupedHitsByLvl1, 'isSubCategoryHeader');
 
       groupedHits[level] = flattenedHits;
     });
@@ -201,22 +183,13 @@ class DocSearch {
           utils.getHighlightedValue(hit, 'lvl5'),
           utils.getHighlightedValue(hit, 'lvl6'),
         ])
-        .join(
-          '<span class="aa-suggestion-title-separator" aria-hidden="true"> › </span>'
-        );
+        .join('<span class="aa-suggestion-title-separator" aria-hidden="true"> › </span>');
       const text = utils.getSnippetedValue(hit, 'content');
       const isTextOrSubcategoryNonEmpty =
-        (subcategory && subcategory !== '') ||
-        (displayTitle && displayTitle !== '');
-      const isLvl1EmptyOrDuplicate =
-        !subcategory || subcategory === '' || subcategory === category;
-      const isLvl2 =
-        displayTitle && displayTitle !== '' && displayTitle !== subcategory;
-      const isLvl1 =
-        !isLvl2 &&
-        subcategory &&
-        subcategory !== '' &&
-        subcategory !== category;
+        (subcategory && subcategory !== '') || (displayTitle && displayTitle !== '');
+      const isLvl1EmptyOrDuplicate = !subcategory || subcategory === '' || subcategory === category;
+      const isLvl2 = displayTitle && displayTitle !== '' && displayTitle !== subcategory;
+      const isLvl1 = !isLvl2 && subcategory && subcategory !== '' && subcategory !== category;
       const isLvl0 = !isLvl1 && !isLvl2;
 
       return {
@@ -259,9 +232,7 @@ class DocSearch {
   }
 
   static getSuggestionTemplate(isSimpleLayout) {
-    const stringTemplate = isSimpleLayout
-      ? templates.suggestionSimple
-      : templates.suggestion;
+    const stringTemplate = isSimpleLayout ? templates.suggestionSimple : templates.suggestion;
     const template = Hogan.compile(stringTemplate);
 
     return (suggestion) => template.render(suggestion);

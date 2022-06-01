@@ -1,4 +1,8 @@
 {
   "label": "Списки и сегменты",
-  "position": 2
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "subscribers/lists-and-segments"
+  }
 }

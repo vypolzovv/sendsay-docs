@@ -1,4 +1,8 @@
 {
   "label": "Sendsay API",
-  "position": 13
+  "position": 13,
+  "link": {
+    "type": "generated-index",
+    "slug": "sendsay-api"
+  }
 }
