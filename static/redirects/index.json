@@ -140,7 +140,10 @@
   },
   {
     "to": "/email-campaigns/settings/how-to-connect-domain",
-    "from": "/ru/articles/2439897-как-подключить-домен-и-настроить-email-аутентификацию"
+    "from": [
+      "/ru/articles/2439897-как-подключить-домен-и-настроить-email-аутентификацию",
+      "/ru/articles/2439897-как-настроить-служебные-заголовки"
+    ]
   },
   {
     "to": "/email-campaigns/settings/how-to-delegate-subdomain",
