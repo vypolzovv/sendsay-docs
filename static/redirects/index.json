@@ -2,8 +2,11 @@
   {
     "to": "/",
     "from": [
+      "/ru",
       "/ru/collections/2054240-начало-работы",
-      "/ru/articles/3459217-начало-работы-в-sendsay"
+      "/ru/articles/3459217-начало-работы-в-sendsay",
+      "/collections/2054240-getting-started",
+      "/articles/3459217-getting-started-with-sendsay"
     ]
   },
   {
@@ -12,7 +15,10 @@
   },
   {
     "to": "/getting-started/how-to-migrate-to-sendsay",
-    "from": "/ru/articles/как-перейти-в-sendsay-из-другого-сервиса-рассылок"
+    "from": [
+      "/ru/articles/как-перейти-в-sendsay-из-другого-сервиса-рассылок",
+      "/articles/3654273-how-to-migrate-your-contacts-and-templates-from-another-platform-to-sendsay"
+    ]
   },
   {
     "to": "/faq",
@@ -36,15 +42,24 @@
   },
   {
     "to": "/subscribers",
-    "from": "/ru/collections/1410279-работа-с-подписчиками"
+    "from": [
+      "/ru/collections/1410279-работа-с-подписчиками",
+      "/collections/1410279-audiences"
+    ]
   },
   {
     "to": "/subscribers/import-and-export/how-to-import-subscribers",
-    "from": "/ru/articles/3653501-как-импортировать-подписчиков"
+    "from": [
+      "/ru/articles/3653501-как-импортировать-подписчиков",
+      "/articles/3653501-how-to-import-subscribers"
+    ]
   },
   {
     "to": "/subscribers/import-and-export/how-to-prepare-file-for-import",
-    "from": "/ru/articles/2439904-как-подготовить-файл-для-импорта"
+    "from": [
+      "/ru/articles/2439904-как-подготовить-файл-для-импорта",
+      "/articles/2439904-how-to-format-the-import-file"
+    ]
   },
   {
     "to": "/subscribers/import-and-export/how-to-export-contacts-in-the-new-interface",
@@ -100,15 +115,24 @@
   },
   {
     "to": "/email-campaigns",
-    "from": "/ru/collections/1411829-email-рассылки"
+    "from": [
+      "/ru/collections/1411829-email-рассылки",
+      "/collections/1411829-emails"
+    ]
   },
   {
     "to": "/email-campaigns/create-your-campaign/how-to-send-email-campaign",
-    "from": "/ru/articles/3477380-как-отправить-массовую-email-рассылку"
+    "from": [
+      "/ru/articles/3477380-как-отправить-массовую-email-рассылку",
+      "/articles/3477380-how-to-create-a-regular-email-campaign"
+    ]
   },
   {
     "to": "/email-campaigns/create-your-campaign/drag-and-drop-editor",
-    "from": "/ru/articles/4112203-как-создать-письмо-в-блочном-редакторе"
+    "from": [
+      "/ru/articles/4112203-как-создать-письмо-в-блочном-редакторе",
+      "/articles/4112203-how-to-create-an-email-in-the-drag-and-drop-editor"
+    ]
   },
   {
     "to": "/email-campaigns/create-your-campaign/how-to-upload-html-template",
@@ -202,15 +226,24 @@
   },
   {
     "to": "/other-channels",
-    "from": "/ru/collections/2054250-рассылки-веб-пуш-вконтакте-телеграм-и-смс"
+    "from": [
+      "/ru/collections/2054250-рассылки-веб-пуш-вконтакте-телеграм-и-смс",
+      "/collections/2054250-web-push-and-sms"
+    ]
   },
   {
     "to": "/other-channels/web-push/how-to-connect-web-push",
-    "from": "/ru/articles/3530557-как-подключить-веб-пуши-на-сайт"
+    "from": [
+      "/ru/articles/3530557-как-подключить-веб-пуши-на-сайт",
+      "/articles/3530557-how-to-add-web-push-notifications-to-your-website"
+    ]
   },
   {
     "to": "/other-channels/web-push/how-to-create-web-push-campaign",
-    "from": "/ru/articles/3530575-как-отправить-пуш-рассылку"
+    "from": [
+      "/ru/articles/3530575-как-отправить-пуш-рассылку",
+      "/articles/3530575-how-to-create-a-web-push-campaign"
+    ]
   },
   {
     "to": "/other-channels/vk/how-to-connect-vk-community",
@@ -230,7 +263,10 @@
   },
   {
     "to": "/other-channels/sms/how-to-connect-sms",
-    "from": "/ru/articles/3304779-как-подключить-смс"
+    "from": [
+      "/ru/articles/3304779-как-подключить-смс",
+      "/articles/3304779-how-to-activate-bulk-sms"
+    ]
   },
   {
     "to": "/statistics",
@@ -246,11 +282,17 @@
   },
   {
     "to": "/forms",
-    "from": "/ru/collections/1411876-формы"
+    "from": [
+      "/ru/collections/1411876-формы",
+      "/collections/1411876-signup-forms"
+    ]
   },
   {
     "to": "/forms/signup-forms",
-    "from": "/ru/articles/3180964-формы-сбора-подписчиков"
+    "from": [
+      "/ru/articles/3180964-формы-сбора-подписчиков",
+      "/articles/3180964-how-to-create-a-signup-form"
+    ]
   },
   {
     "to": "/forms/data-processing-agreement",
