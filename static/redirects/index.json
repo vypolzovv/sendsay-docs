@@ -130,6 +130,7 @@
   {
     "to": "/email-campaigns/create-your-campaign/drag-and-drop-editor",
     "from": [
+      "/ru/articles/2498320-десять-возможностей-блочного-редактора-писем",
       "/ru/articles/4112203-как-создать-письмо-в-блочном-редакторе",
       "/articles/4112203-how-to-create-an-email-in-the-drag-and-drop-editor"
     ]
@@ -255,7 +256,10 @@
   },
   {
     "to": "/other-channels/telegram/how-to-connect-a-bot",
-    "from": "/ru/articles/5835458-как-подключить-бот-в-телеграме"
+    "from": [
+      "/ru/articles/5835458-как-подключить-бот-в-телеграме",
+      "/ru/articles/5835458-как-подключить-телеграм-бот"
+    ]
   },
   {
     "to": "/other-channels/telegram/how-to-create-a-telegram-campaign",
@@ -316,11 +320,17 @@
   },
   {
     "to": "/automations/autoimport/how-to-set-autoimport",
-    "from": "/ru/articles/2439906-как-настроить-автоматический-импорт-из-файла-по-расписанию"
+    "from": [
+      "/ru/articles/2439906-как-настроить-автоматический-импорт-из-файла-по-расписанию",
+      "/ru/articles/2439906-как-настроить-и-запустить-импорт-подписчиков-по-расписанию"
+    ]
   },
   {
     "to": "/automations/automations-by-time/how-to-create-automation-by-time",
-    "from": "/ru/articles/2439872-как-настроить-автоматическую-рассылку-по-расписанию"
+    "from": [
+      "/ru/articles/2439872-как-настроить-автоматическую-рассылку-по-расписанию",
+      "/ru/articles/2439872-как-создать-автоматическую-рассылку-по-расписанию"
+    ]
   },
   {
     "to": "/automations/automations-by-time/how-to-automate-confirmation-emails",
