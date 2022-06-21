@@ -1,0 +1,150 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Начало работы": {
+    "message": "Начало работы",
+    "description": "The label for category Начало работы in sidebar docs"
+  },
+  "sidebar.docs.category.Часто задаваемые вопросы": {
+    "message": "Часто задаваемые вопросы",
+    "description": "The label for category Часто задаваемые вопросы in sidebar docs"
+  },
+  "sidebar.docs.category.Работа с подписчиками": {
+    "message": "Работа с подписчиками",
+    "description": "The label for category Работа с подписчиками in sidebar docs"
+  },
+  "sidebar.docs.category.Работа с подписчиками.link.generated-index.description": {
+    "message": "Как импортировать контакты, работать с данными и сегментировать аудиторию",
+    "description": "The generated-index page description for category Работа с подписчиками in sidebar docs"
+  },
+  "sidebar.docs.category.Импорт и экспорт данных": {
+    "message": "Импорт и экспорт данных",
+    "description": "The label for category Импорт и экспорт данных in sidebar docs"
+  },
+  "sidebar.docs.category.Списки и сегменты": {
+    "message": "Списки и сегменты",
+    "description": "The label for category Списки и сегменты in sidebar docs"
+  },
+  "sidebar.docs.category.Контакты": {
+    "message": "Контакты",
+    "description": "The label for category Контакты in sidebar docs"
+  },
+  "sidebar.docs.category.Подписчики": {
+    "message": "Подписчики",
+    "description": "The label for category Подписчики in sidebar docs"
+  },
+  "sidebar.docs.category.Настройка аккаунта": {
+    "message": "Настройка аккаунта",
+    "description": "The label for category Настройка аккаунта in sidebar docs"
+  },
+  "sidebar.docs.category.Email-рассылки": {
+    "message": "Email-рассылки",
+    "description": "The label for category Email-рассылки in sidebar docs"
+  },
+  "sidebar.docs.category.Email-рассылки.link.generated-index.description": {
+    "message": "Всё про email-рассылки: как создавать выпуски, персонализировать контент и что нужно настраивать дополнительно",
+    "description": "The generated-index page description for category Email-рассылки in sidebar docs"
+  },
+  "sidebar.docs.category.Создание выпуска": {
+    "message": "Создание выпуска",
+    "description": "The label for category Создание выпуска in sidebar docs"
+  },
+  "sidebar.docs.category.Настройки": {
+    "message": "Настройки",
+    "description": "The label for category Настройки in sidebar docs"
+  },
+  "sidebar.docs.category.Персонализация": {
+    "message": "Персонализация",
+    "description": "The label for category Персонализация in sidebar docs"
+  },
+  "sidebar.docs.category.Рассылки веб-пуш, ВКонтакте, Телеграм и смс": {
+    "message": "Рассылки веб-пуш, ВКонтакте, Телеграм и смс",
+    "description": "The label for category Рассылки веб-пуш, ВКонтакте, Телеграм и смс in sidebar docs"
+  },
+  "sidebar.docs.category.Рассылки веб-пуш, ВКонтакте, Телеграм и смс.link.generated-index.description": {
+    "message": "Как подключать и отправлять рассылки во всех каналах, кроме почты",
+    "description": "The generated-index page description for category Рассылки веб-пуш, ВКонтакте, Телеграм и смс in sidebar docs"
+  },
+  "sidebar.docs.category.Веб-пуши": {
+    "message": "Веб-пуши",
+    "description": "The label for category Веб-пуши in sidebar docs"
+  },
+  "sidebar.docs.category.Рассылки ВКонтакте": {
+    "message": "Рассылки ВКонтакте",
+    "description": "The label for category Рассылки ВКонтакте in sidebar docs"
+  },
+  "sidebar.docs.category.Рассылки в Телеграме": {
+    "message": "Рассылки в Телеграме",
+    "description": "The label for category Рассылки в Телеграме in sidebar docs"
+  },
+  "sidebar.docs.category.Смс-рассылки": {
+    "message": "Смс-рассылки",
+    "description": "The label for category Смс-рассылки in sidebar docs"
+  },
+  "sidebar.docs.category.Статистика": {
+    "message": "Статистика",
+    "description": "The label for category Статистика in sidebar docs"
+  },
+  "sidebar.docs.category.Формы": {
+    "message": "Формы",
+    "description": "The label for category Формы in sidebar docs"
+  },
+  "sidebar.docs.category.Формы.link.generated-index.description": {
+    "message": "Как собирать новых подписчиков",
+    "description": "The generated-index page description for category Формы in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматизация рассылок и импорта": {
+    "message": "Автоматизация рассылок и импорта",
+    "description": "The label for category Автоматизация рассылок и импорта in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматизация рассылок и импорта.link.generated-index.description": {
+    "message": "Как настраивать автоматизации по событиям и по времени",
+    "description": "The generated-index page description for category Автоматизация рассылок и импорта in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматизация по событиям": {
+    "message": "Автоматизация по событиям",
+    "description": "The label for category Автоматизация по событиям in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматический импорт по расписанию": {
+    "message": "Автоматический импорт по расписанию",
+    "description": "The label for category Автоматический импорт по расписанию in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматическая рассылка по расписанию": {
+    "message": "Автоматическая рассылка по расписанию",
+    "description": "The label for category Автоматическая рассылка по расписанию in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматизации по поведению пользователей на сайте": {
+    "message": "Автоматизации по поведению пользователей на сайте",
+    "description": "The label for category Автоматизации по поведению пользователей на сайте in sidebar docs"
+  },
+  "sidebar.docs.category.Интеграции с приложениями": {
+    "message": "Интеграции с приложениями",
+    "description": "The label for category Интеграции с приложениями in sidebar docs"
+  },
+  "sidebar.docs.category.Интеграции с приложениями.link.generated-index.description": {
+    "message": "Как настроить взаимодействие Sendsay с внешними системами",
+    "description": "The generated-index page description for category Интеграции с приложениями in sidebar docs"
+  },
+  "sidebar.docs.category.PROScript — язык программирования шаблонов": {
+    "message": "PROScript — язык программирования шаблонов",
+    "description": "The label for category PROScript — язык программирования шаблонов in sidebar docs"
+  },
+  "sidebar.docs.category.Видеоуроки": {
+    "message": "Видеоуроки",
+    "description": "The label for category Видеоуроки in sidebar docs"
+  },
+  "sidebar.docs.category.Видеоуроки.link.generated-index.description": {
+    "message": "Быстрый способ познакомиться с Sendsay",
+    "description": "The generated-index page description for category Видеоуроки in sidebar docs"
+  },
+  "sidebar.docs.category.Автоматизация рассылок": {
+    "message": "Автоматизация рассылок",
+    "description": "The label for category Автоматизация рассылок in sidebar docs"
+  },
+  "sidebar.docs.category.Sendsay API": {
+    "message": "Sendsay API",
+    "description": "The label for category Sendsay API in sidebar docs"
+  }
+}

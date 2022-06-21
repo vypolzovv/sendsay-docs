@@ -3,7 +3,6 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const redirectLinks = require('./static/redirects/index.json');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -30,13 +29,13 @@ const config = {
       'docusaurus-lunr-search',
       {
         languages: ['ru', 'en'],
-        indexBaseUrl: true,
+        excludeRoutes: require('./config/searchExcludeRoutes.json'),
       },
     ],
     [
       '@docusaurus/plugin-client-redirects',
       {
-        redirects: redirectLinks,
+        redirects: require('./config/redirects.json'),
       },
     ],
   ],
@@ -71,11 +70,13 @@ const config = {
             position: 'left',
             label: 'Интеграции',
             activeBaseRegex: 'integrations/*',
+            displayedLocale: 'ru',
           },
           {
             to: '/videolessons',
             label: 'Видеоуроки',
             position: 'left',
+            displayedLocale: 'ru',
           },
           {
             href: 'https://app.sendsay.ru',
