@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 import birthdayAutomation from "/img/automations/automations-by-event/birthday-series/birthday-automation.png";
 

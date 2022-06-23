@@ -89,4 +89,4 @@ import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-su
 ![From amoCRM into list](/img/integrations\integration-with-amocrm/from-amocrm-into-list.gif) <br/>
 
 ## Как отправлять пользователей из воронки на автоматизацию
-Сейчас эта опция недоступна, но мы работаем над ней.
+Мы ещё работаем над этим разделом статьи.

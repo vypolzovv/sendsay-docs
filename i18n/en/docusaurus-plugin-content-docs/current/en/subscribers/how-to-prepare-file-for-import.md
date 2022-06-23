@@ -39,12 +39,12 @@ If you create a file for a manual import, field codes are unnecessary, as the fi
 ## 3. Data separator
 In Excel, paste your data into the spreadsheet. In other file types, separate the data with commas, semicolons or tabs. Check that you use the same separator in each line.
 ```
-pochta1@gmail.com, Иван, Иванов, Москва, 01.01.1970
+email1@gmail.com, Peter, Jones, Atlanta, 01.01.1970
 ```
 
 If some subscriber data is missing, place two consecutive separators (spaces between symbols are optional).
 ```
-pochta2@gmail.com, , Фёдоров, , 02.02.1980
+email2@gmail.com, , Williams, , 02.02.1980
 ```
 
 ## 4. Primary contact
@@ -72,7 +72,7 @@ Phone numbers can include parentheses and spaces or contain digits only. For Rus
 ## 6. Import errors
 If you do not want to import a particular subscriber, type # at the beginning of the line.
 ```
-#pochta5@gmail.com, Пётр, Петров, Новгород, 01.01.1989
+#email5@gmail.com, Andrew, Prats, New York, 01.01.1989
 ```
 
 You can skip columns during the import. The subscriber will not be imported, if the contacts contain typos or the data does not correspond to the field format. If several subscribers share one contact, only the last of them will be uploaded.

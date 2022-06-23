@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 2
 ---
 
 # Доступ к анкетным данным и переменным в PROScript

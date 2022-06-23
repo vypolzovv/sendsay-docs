@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 10
 ---
 
 # Дополнительные разделы в YML-файле (category, gifts, promo)

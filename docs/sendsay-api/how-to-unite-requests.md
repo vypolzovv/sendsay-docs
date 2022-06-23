@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Объединение результатов двух и более запросов к stat.uni в одну таблицу

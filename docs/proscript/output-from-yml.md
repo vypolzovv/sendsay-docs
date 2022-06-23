@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 8
 ---
 
 # Обработка и вывод данных из YML-файла
