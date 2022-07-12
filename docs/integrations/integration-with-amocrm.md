@@ -3,6 +3,7 @@ sidebar_position: 4
 ---
 import amocrmLink from "/img/integrations/integration-with-amocrm/amocrm-link.png";
 import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-subdomain.png";
+import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pipeline-data-in-sendsay.png";
 
 # Интеграция с amoCRM
 
@@ -34,7 +35,7 @@ import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-su
 ![Integration in amoCRM](/img/integrations\integration-with-amocrm/integration-in-amocrm.gif) <br/>
 
 ### 4. Скопируйте данные для настройки интеграции в Sendsay
-1. На странице интеграции перейдите во вкладку **Ключи и доступы**.
+1. На странице установленной интеграции перейдите во вкладку **Ключи и доступы**.
 2. Скопируйте секретный ключ, нажав на два прямоугольника справа, и вставьте его в соответствующее поле на странице интеграции в Sendsay.
 3. По очереди скопируйте ID интеграции и код авторизации в Sendsay.
 4. Скопируйте поддомен из адреса вашего amoCRM в адресной строке:
@@ -89,4 +90,19 @@ import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-su
 ![From amoCRM into list](/img/integrations\integration-with-amocrm/from-amocrm-into-list.gif) <br/>
 
 ## Как отправлять пользователей из воронки на автоматизацию
-Мы ещё работаем над этим разделом статьи.
+1. На странице интеграции в Sendsay перейдите во вкладку **Воронка**.
+2. Выберите автоматизацию, на которую вы хотите отправлять контакты из amoCRM, и нажмите «Сгенерировать ссылку». Скопируйте ссылку.
+3. В аккаунте amoCRM откройте нужную сделку в разделе **Сделки** и в правом верхнем углу нажмите «Настроить».
+4. На нужном шаге наведите мышку на свободную ячейку и во всплывающем окне нажмите «Отправить webhook».
+5. В поле «Укажите URL» вставьте ссылку интеграции из Sendsay.
+6. Нажмите «Готово».
+
+![From pipeline into automation](/img/integrations/integration-with-amocrm/from-pipeline-into-automation.gif) <br/>
+
+Подписчики будут передаваться в Sendsay, но в новом интерфейсе у них будет виден только почтовый адрес. Другие данные можно посмотреть только в предыдущем интерфейсе:
+1. Откройте карточку подписчика и перейдите в раздел «Данные».
+2. В блоке «Произвольные данные» раскройте секции amocrm_leads и amocrm_contact.
+
+<p align="center">
+    <img src={pipelineDataInSendsay} alt="Pipelnie data in Sendsay" />
+</p>

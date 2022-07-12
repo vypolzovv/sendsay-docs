@@ -40,11 +40,11 @@ sidebar_position: 4
 ```
 В зависимости от условия можно выводить разные ссылки:
 ```
-[% IF условие %] 
+[% IF условие %]
 <a href="example.com" текст ссылки >
-[% ELSE %] 
+[% ELSE %]
 <a href="example-2.com" другой текст ссылки >
-[% END %] 
+[% END %]
 ```
 А можно внутри одной ссылки подставлять разные адреса:
 ```
@@ -55,13 +55,13 @@ sidebar_position: 4
 В некоторых случаях может быть удобнее использовать конструкцию SWITCH/CASE:
 ```
 [% SWITCH anketa.base.city %]
-[%   CASE 'Воронеж' %]
+[%   CASE "Воронеж" %]
        ...
-[%   CASE ['Москва', 'Петербург'] %]   
+[%   CASE ["Москва", "Петербург"] %]
        ...
-[%   CASE someobject.keys() %]          
+[%   CASE someobject.keys() %]
        ...
-[%   CASE DEFAULT %]                       
+[%   CASE DEFAULT %]
        ...
 [% END %]
 ```
