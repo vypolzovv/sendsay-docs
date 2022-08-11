@@ -13,15 +13,19 @@ A campaign is an email message that you send to a group of subscribers. To get s
 Then, follow six steps to prepare the campaign:
 
 ## 1. Select a list of recipients
+
 First, choose your audience: it can be a list, a segment or a file. To add a link to the file with contacts, open the drop-down list and select the last option **From file (Express campaign)**. Make sure that all email addresses in the file are confirmed.
 
 ![Express campaign](/img/email-campaigns/create-your-campaign/how-to-send-email-campaign//express-campaign-en.gif) <br/>
 
 ## 2. Add a sender and a subject
+
 A sender consists of “From” name and email address. When you create an account, your primary email address automatically becomes the sender, unless it’s a free address on [Mail.ru](https://mail.ru), [Gmail.com](https://gmail.com), or [Yandex.ru](https://yandex.ru). These email addresses can’t be used as senders, because it contradicts the DMARC policies of these domains and our anti-spam policy.
 
 ## 3. Design your email
+
 There are three ways to create an email:
+
 - design content blocks in the drag-and-drop editor
 - compose HTML code in the HTML editor
 - use template or upload an HTML file in the template gallery
@@ -37,6 +41,7 @@ AMP email contains elements that allow recipients to interact with content witho
 You can attach up to ten files to the email. The size of each should be no more than 5 MB. You can personalize your email content: for example, address your subscribers by name or include other subscriber data in the campaign.
 
 ## 4. Send test emails
+
 Each email client displays email content in a slightly different way, so we recommend you send test emails first. For this, create mailboxes on the most popular domains (Gmail, Hotmail, Outlook, Yahoo).
 
 :::tip Note
@@ -46,9 +51,11 @@ Free account allows you to send only one test copy to the primary email address
 ![Test copy](/img/email-campaigns/create-your-campaign/how-to-send-email-campaign/test-copy-en.png) <br/>
 
 ## 5. Configure extra settings (optional)
+
 UTM codes help to analyze subscriber behavior, click map and campaign efficiency in Google Analytics and Yandex.Metriсa. You can also configure the transfer of additional data to personalize your web pages for subscribers.
 
 ## 6. Select a delivery type
+
 There are four ways to send a regular email:
 
 **Immediate delivery.**

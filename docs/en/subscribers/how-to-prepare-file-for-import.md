@@ -3,6 +3,7 @@ id: en-how-to-prepare-file-for-import
 slug: /exclude-from-search/subscribers/en-how-to-prepare-file-for-import
 sidebar_position: 2
 ---
+
 import fieldCode from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/field-code-en.png";
 import fileForAutoimport from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/file-for-autoimport-en.png";
 import fileForManualImport from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/file-for-manual-import-en.png";
@@ -12,6 +13,7 @@ import chooseListDuringImport from "/img/subscribers/import-and-export/how-to-pr
 # How to format the import file
 
 ## 1. File formats
+
 Supported file formats are csv, txt, xlsx or zip.
 
 ## 2. File content
@@ -37,17 +39,21 @@ If you create a file for a manual import, field codes are unnecessary, as the fi
 </p>
 
 ## 3. Data separator
+
 In Excel, paste your data into the spreadsheet. In other file types, separate the data with commas, semicolons or tabs. Check that you use the same separator in each line.
+
 ```
 pochta1@gmail.com, Иван, Иванов, Москва, 01.01.1970
 ```
 
 If some subscriber data is missing, place two consecutive separators (spaces between symbols are optional).
+
 ```
 pochta2@gmail.com, , Фёдоров, , 02.02.1980
 ```
 
 ## 4. Primary contact
+
 Spreadsheet must have one column with a contact that is mandatory for every subscriber. It is called the primary contact, and it can be an email address, a phone number, CSID or Telegram user ID.
 
 :::tip Note
@@ -67,10 +73,13 @@ If you import subscribers without the list, select the primary contact in the im
 </p>
 
 ## 5. Phone number formatting
+
 Phone numbers can include parentheses and spaces or contain digits only. For Russian numbers, the country code is optional: it can be written as 7, +7 or 8, or it can be skipped. For non-Russian numbers, a country code is a must.
 
 ## 6. Import errors
+
 If you do not want to import a particular subscriber, type # at the beginning of the line.
+
 ```
 #pochta5@gmail.com, Пётр, Петров, Новгород, 01.01.1989
 ```

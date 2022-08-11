@@ -13,10 +13,10 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations --locale en",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pretify": "prettier --check src/ ./*.js",
+    "pretify": "prettier -c src *.js **/*.md **/*.mdx",
     "lint": "yarn pretify && yarn eslint",
     "eslint": "eslint src/ ",
-    "pretify:fix": "prettier --write src/ ./*.js",
+    "pretify:fix": "yarn pretify -w",
     "eslint:fix": "yarn eslint --fix",
     "lint:fix": "yarn pretify:fix && yarn eslint:fix"
   },

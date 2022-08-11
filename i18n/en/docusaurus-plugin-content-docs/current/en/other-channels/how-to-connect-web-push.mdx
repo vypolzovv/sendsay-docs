@@ -3,31 +3,32 @@ id: en-how-to-connect-web-push
 slug: /other-channels/web-push/how-to-connect-web-push
 sidebar_position: 1
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import webPush from "/img/other-channels/web-push/how-to-connect-web-push/web-push-en.png";
-import widget from "/img/other-channels/web-push/how-to-connect-web-push/widget-en.png";
-import signupForm from "/img/other-channels/web-push/how-to-connect-web-push/signup-form-en.png";
-import widgetUnblocks from "/img/other-channels/web-push/how-to-connect-web-push/widget-unblocks-en.png";
+import webPush from '/img/other-channels/web-push/how-to-connect-web-push/web-push-en.png';
+import widget from '/img/other-channels/web-push/how-to-connect-web-push/widget-en.png';
+import signupForm from '/img/other-channels/web-push/how-to-connect-web-push/signup-form-en.png';
+import widgetUnblocks from '/img/other-channels/web-push/how-to-connect-web-push/widget-unblocks-en.png';
 
 # How to add web push notifications to your website
 
 Web push notifications are short pop-up messages from a website that subscribers receive in the browser or on the desktop even if the website is closed.
 
 <p align="center">
-    <img src={webPush} alt="Web push" />
+  <img src={webPush} alt="Web push" />
 </p>
 
 Site visitors can subscribe to your notifications in a signup widget:
 
 <p align="center">
-    <img src={widget} alt="Signup widget" />
+  <img src={widget} alt="Signup widget" />
 </p>
 
 When a site visitor clicks **Sign up**, the browser signup form opens in the browser. To receive notifications from your site, the visitor has to click **Allow**:
 
 <p align="center">
-    <img src={signupForm} alt="Browser signup form" />
+  <img src={signupForm} alt="Browser signup form" />
 </p>
 
 This second form enables the subscription but usually browsers hide it or don't show it at all because of the settings. The widget cannot be hidden, so it helps your base of push subscribers grow faster.
@@ -35,10 +36,11 @@ This second form enables the subscription but usually browsers hide it or don't 
 Besides, the widget suggests subscription even to the visitors who have already blocked your notifications. Once a visitor allows them, the widget helps unblock them with additional notification (widget design may be different in various browsers):
 
 <p align="center">
-    <img src={widgetUnblocks} alt="Browser signup form" />
+  <img src={widgetUnblocks} alt="Browser signup form" />
 </p>
 
 ## Setup
+
 ### How to connect a new site
 
 1. Navigate to **Subscribers → Web Push** and click **Add site**. In the **New Web Push subscription** dialog, enter your site address and then click **Add**.
@@ -70,6 +72,7 @@ Following steps depend on the interface you use (legacy or the new one).
 <TabItem value="key2" label="In the legacy interface">
 
 In this case, connect the website to Sendsay in the new interface to get the new code:
+
 1. Open the new interface.
 2. Navigate to the Subscribers → Web Push and click Add site. In the **New Web Push** subscription dialog, enter your site address and then click **Add**.
 3. Copy the code and insert it into the page where you want to offer a subscription (instead of the current code).
@@ -82,26 +85,34 @@ After the update, you can continue working with push notifications in the legacy
 ## Advanced Settings
 
 ### Signup widget
+
 To configure the widget, navigate to **Subscribers → Web Push**, click on the site address and open the **Signup widget** tab. You can edit the following widget settings:
+
 - text and design (i. e. heading, text, button text and color, icon)
 - behavior (i. e. when the site visitors see the widget)
 - display frequency (how often one visitor will see the widget)
 
 ### Show signup form on click
+
 Browser signup form can also be opened on click of any element on the page. For this, place an attribute `data-sendsay-webpush-subscribe` to the tag of the corresponding element.
 
 ### Web push settings
+
 A push campaign has three settings that you can configure in the **Installation and settings** tab or when you create the campaign.
 
 #### Time to live
+
 Web push notifications are delivered when subscribers are online. Time to live is a time span while the system is waiting for unavailable subscribers to connect (12 hours by default).
 
 When setting the delivery period, consider the time after which the web push notification will no longer be relevant. Do not set large values if the notification is time-related. For example, your subscribers won't be happy to receive a notification about the completed webinar or invalid promo code. If the notification doesn't have a time frame, and, for example, you want to inform users about the new material on your site, set a longer period to reach as many visitors as possible.
 
 #### Web push behaviour
+
 There are two options:
+
 - show notification for a set time interval (8-20 seconds in various browsers)
 - show notification until the user closes it (default option)
 
 #### Icon
+
 We recommend you to set up the icon right away so that subscribers see who sent the notification. If you don't upload any image, the Sendsay logo will remain in the notifications.

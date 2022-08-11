@@ -1,6 +1,7 @@
 ---
 sidebar_position: 4
 ---
+
 import amocrmLink from "/img/integrations/integration-with-amocrm/amocrm-link.png";
 import amocrmSubdomain from "/img/integrations/integration-with-amocrm/amocrm-subdomain.png";
 import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pipeline-data-in-sendsay.png";
@@ -8,13 +9,16 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 # Интеграция с amoCRM
 
 ## Как подключить аккаунт
+
 ### 1. Создайте интеграцию в Sendsay
+
 1. Перейдите [в предыдущий интерфейс](https://sendsay.ru/account/).
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **amoCRM**.
 
 ![How to create integration with amoCRM](/img/integrations\integration-with-amocrm/how-to-create-integration-with-amocrm.gif) <br/>
 
 ### 2. Получите в Sendsay ссылку подключения аккаунта
+
 После создания интеграции откроется страница настроек. Нажмите «Подключить аккаунт» и скопируйте ссылку для интеграции (она действительна 20 минут):
 
 <p align="center">
@@ -24,7 +28,9 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 Не закрывайте это окно — здесь нужно будет заполнить остальные поля для подключения.
 
 ### 3. Создайте интеграцию в amoCRM
+
 В соседней вкладке войдите в аккаунт amoCRM и создайте интеграцию:
+
 1. В аккаунте amoCRM откройте раздел **Настройки → Интеграции** и нажмите «Создать интеграцию».
 2. Во всплывающем окне нажмите «Создать» рядом с пунктом **Внешняя интеграция**.
 3. В поле «Ссылка для перенаправления» вставьте ссылку интеграции из Sendsay.
@@ -35,6 +41,7 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 ![Integration in amoCRM](/img/integrations\integration-with-amocrm/integration-in-amocrm.gif) <br/>
 
 ### 4. Скопируйте данные для настройки интеграции в Sendsay
+
 1. На странице установленной интеграции перейдите во вкладку **Ключи и доступы**.
 2. Скопируйте секретный ключ, нажав на два прямоугольника справа, и вставьте его в соответствующее поле на странице интеграции в Sendsay.
 3. По очереди скопируйте ID интеграции и код авторизации в Sendsay.
@@ -47,17 +54,22 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 5. Нажмите «Создать авторизацию».
 
 ## Как настроить импорт данных из amoCRM в Sendsay
+
 На странице интеграции откройте вкладку «Импорт из amoCRM» и укажите настройки для загрузки контактов.
 
 ### Выберите список для подписчиков
+
 Вы можете создать новый список, выбрать существующий или просто загрузить контакты в базу. Рекомендуем загружать контакты из сторонних систем в списки, чтобы в дальнейшем с ними можно было работать отдельно.
 
 ### Выберите переменные для загрузки
+
 Поставьте галочки рядом с данными, которые вы хотите импортировать (почта загружается по умолчанию):
+
 - имя и фамилия (они импортируются в одно поле — «Имя»),
 - телефон — его можно импортировать как дополнительный контакт, чтобы отправлять смс-рассылки, или в другое поле в анкете.
 
 ### Загрузите контакты или создайте действие по расписанию
+
 Есть два варианта загрузки контактов:
 
 **1. Импортировать один раз** — для этого нужно нажать «Загрузить адреса из AmoCRM».
@@ -69,9 +81,11 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 :::
 
 ## Как передавать контакты из amoCRM в список или в автоматизацию
+
 Если автоимпорт позволяет загружать данные максимум несколько раз в сутки, то адреса электронных почт (без остальной информации) можно передавать в Sensday сразу после того, как они появляются или редактируются в amoCRM. Их можно либо отправлять на автоматизацию, либо добавлять в список. Рассмотрим оба варианта.
 
 ### Как отправлять подписчиков из amoCRM на автоматизацию
+
 1. На страницу интеграции в Sendsay перейдите во вкладку **Webhooks**.
 2. Выберите автоматизацию, на которую вы хотите отправлять контакты из amoCRM, и нажмите «Сгенерировать ссылку». Скопируйте ссылку.
 3. В аккаунте amoCRM откройте раздел **Настройки → Интеграции** и нажмите «Web hooks».
@@ -81,6 +95,7 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 ![From amoCRM into automation](/img/integrations\integration-with-amocrm/from-amocrm-into-automation.gif) <br/>
 
 ### Как добавлять подписчиков из amoCRM в список
+
 1. На страницу интеграции в Sendsay перейдите во вкладку **Webhooks**.
 2. Выберите список, в который будут добавляться новые контакты из amoCRM, и нажмите «Сгенерировать ссылку». Скопируйте ссылку.
 3. В аккаунте amoCRM откройте раздел **Настройки → Интеграции** и нажмите «Web hooks».
@@ -90,6 +105,7 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 ![From amoCRM into list](/img/integrations\integration-with-amocrm/from-amocrm-into-list.gif) <br/>
 
 ## Как отправлять пользователей из воронки на автоматизацию
+
 1. На странице интеграции в Sendsay перейдите во вкладку **Воронка**.
 2. Выберите автоматизацию, на которую вы хотите отправлять контакты из amoCRM, и нажмите «Сгенерировать ссылку». Скопируйте ссылку.
 3. В аккаунте amoCRM откройте нужную сделку в разделе **Сделки** и в правом верхнем углу нажмите «Настроить».
@@ -100,6 +116,7 @@ import pipelineDataInSendsay from "/img/integrations/integration-with-amocrm/pip
 ![From pipeline into automation](/img/integrations/integration-with-amocrm/from-pipeline-into-automation.gif) <br/>
 
 Подписчики будут передаваться в Sendsay, но в новом интерфейсе у них будет виден только почтовый адрес. Другие данные можно посмотреть только в предыдущем интерфейсе:
+
 1. Откройте карточку подписчика и перейдите в раздел «Данные».
 2. В блоке «Произвольные данные» раскройте секции amocrm_leads и amocrm_contact.
 

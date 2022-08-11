@@ -5,10 +5,13 @@ sidebar_position: 1
 ---
 
 # Getting started with Sendsay
+
 Sendsay is a platform that helps you communicate with clients. Here you can send campaigns, store subscriber data and track statistics. There are five communication channels: email, SMS, web push notifications, Viber and VK. However, you can send emails and messages only to your subscribers.
 
 ## Subscribers
+
 Each subscriber has a profile with contacts, personal data, and email campaign reports. There are three ways to add subscribers:
+
 - manual import
 - signup forms
 - automatic import from your CRM via API
@@ -16,7 +19,9 @@ Each subscriber has a profile with contacts, personal data, and email campaign r
 To store subscriber data, you must have consent from your clients. Your client database cannot not be purchased or scraped; it should be your own original database. Our system recognizes bad mailing lists and blocks them (or you will be asked to confirm that your entire database was collected by you).
 
 ## Lists and segments
+
 To send campaigns to different groups of recipients, you can create lists and segments of contacts:
+
 - in a list, you can add and delete members
 - in a segment, you can set up conditions for selecting members automatically
 
@@ -35,6 +40,7 @@ There are four types of campaigns:
 **Automated campaign** consists of one or more emails sent to a subscriber when triggered by a specific condition, date or subscriber activity (for example, a welcome series).
 
 You can also create an A/B testing campaign and send different versions of the email to compare how changes impact opens, clicks and conversion. There are two ways to use the results of the test:
+
 - choose the most effective variation and send it to the remaining audience,
 - find out what works best for your audience to plan future campaigns.
 

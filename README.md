@@ -3,61 +3,70 @@
 # How to translate a new article
 
 There is a couple of pathes for each translated file:
-| Name  	|  Pattern 	| Usage |
-|---	|---	|--- |
-|  Hidden url	|   `/exclude-from-search`/folder-path/`en-`file-name	| docs/ |
-|  Actual shorten url	|   /folder-path/file-name	| i18n/ |
-|  Actual full url	|   `/en`/folder-path/file-name	| config/|
-|  Sidebar file id	|   `en`/shorten-folder-path/`en-`file-name	| sidebars.js |
+| Name | Pattern | Usage |
+|--- |--- |--- |
+| Hidden url | `/exclude-from-search`/folder-path/`en-`file-name | docs/ |
+| Actual shorten url | /folder-path/file-name | i18n/ |
+| Actual full url | `/en`/folder-path/file-name | config/|
+| Sidebar file id | `en`/shorten-folder-path/`en-`file-name | sidebars.js |
 
 <br>
 
 ### Notice:
-  Despite of the fact that we omit excessive folders for en locale in sidebar, we must keep the path full:
 
+Despite of the fact that we omit excessive folders for en locale in sidebar, we must keep the path full:
 
-| Name  	|  Pattern 	| Usage |
-|---	|---	|--- |
-|  url 	|   /en/other-channels`/sms`/how-to-connect-url	|  |
-|  folder-path 	|  other-channels`/sms`/how-to-connect-sms	| ru sidebar <br> docs/ <br> i18n/|
-|  shorten-folder-path 	|   other-channels/how-to-connect-sms	| en sidebar <br> docs/en/ <br> i18n/**/en/ |
+| Name                | Pattern                                     | Usage                                       |
+| ------------------- | ------------------------------------------- | ------------------------------------------- |
+| url                 | /en/other-channels`/sms`/how-to-connect-url |                                             |
+| folder-path         | other-channels`/sms`/how-to-connect-sms     | ru sidebar <br> docs/ <br> i18n/            |
+| shorten-folder-path | other-channels/how-to-connect-sms           | en sidebar <br> docs/en/ <br> i18n/\*\*/en/ |
 
 <br>
 
 ## Steps:
 
-1) Prepare markdown file with correct translation
-2) Place the file in `docs/en/` *(in corresponding folder)* and create correct header:
+1. Prepare markdown file with correct translation
+2. Place the file in `docs/en/` _(in corresponding folder)_ and create correct header:
+
 ```
 ---
   id: en-file-name
   slug: /exclude-from-search/folder-path/en-file-name
 ---
 ```
-3) Duplicate the file to `i18n/en/docusaurus-plugin-content-docs/current/en` and create correct header:
+
+3. Duplicate the file to `i18n/en/docusaurus-plugin-content-docs/current/en` and create correct header:
+
 ```
 ---
   id: en-file-name
   slug: /folder-path/file-name      (without en prefix here)
 ---
 ```
-4) Change corresponding file from `i18n/en/docusaurus-plugin-content-docs/current/` that follows 'ru' locale folder structure
+
+4. Change corresponding file from `i18n/en/docusaurus-plugin-content-docs/current/` that follows 'ru' locale folder structure
+
 ```.html
 ---
 (delete) hide_title: true
 (paste) slug: /exclude-from-search/file-name
 ---
 ```
-5) Add correct url of the file to `config/translatedLinks.json`
+
+5. Add correct url of the file to `config/translatedLinks.json`
+
 ```
 [
   ...
   "/en/folder-path/file-name"
 ]
 ```
-6) Add the file into `sidebars.js` to display in sidebar
+
+6. Add the file into `sidebars.js` to display in sidebar
 
 This [doc](https://docusaurus.io/docs/sidebar/items#category-shorthand) might help
+
 ```
 'docs-en': [
   ...

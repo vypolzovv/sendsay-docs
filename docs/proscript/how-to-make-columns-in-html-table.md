@@ -33,7 +33,7 @@ sidebar_position: 9
 
 		<td></td>
 
-		[% x=x+1 %]  
+		[% x=x+1 %]
 
 	[% END %]
 

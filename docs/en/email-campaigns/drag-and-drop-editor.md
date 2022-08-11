@@ -11,9 +11,11 @@ The drag-and-drop editor is a visual email builder where you can design emails u
 To create an email in the drag-and-drop editor, follow these five steps:
 
 ## 1. Select a template
+
 In the drag-and-drop editor, you can create emails from scratch or use templates. There are two types of templates:
 
 **Basic template** is a set of content blocks designed for the purpose of the campaign type. There are six basic templates:
+
 - welcome email
 - product catalog
 - informational email
@@ -28,6 +30,7 @@ Any email can be saved as a template. Templates are stored on the **Content** pa
 ![How to select a template](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/how-to-select-a-template-en.gif) <br/>
 
 ## 2. Add sections
+
 Email consists of sections. Each section has three settings:
 
 **Style** sets the background color or image for the whole section and for the central content block.
@@ -41,7 +44,9 @@ Click a section to open the settings. At the same time, three icons will appear 
 ![How to move a section](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/how-to-move-a-section-en.gif) <br/>
 
 ## 3. Add elements
+
 There are seven types of elements in the drag-and-drop editor:
+
 - text
 - images
 - buttons
@@ -63,16 +68,20 @@ If there are any layout errors in the HTML block, other elements can be displaye
 :::
 
 ## 4. Configure your email settings
+
 You can configure text, link and button color as well as the email background in the **General settings**. Pay attention that the email background is left-aligned because some email clients cannot properly center it. Background can be centered only in the section settings (in the **Style** tab).
 
 ![General settings](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/general-settings-en.png) <br/>
 
 ## 5. Open your email in the preview mode
+
 In the preview mode, you can:
+
 - see how an email will be displayed on different devices (computer, tablet and smartphone)
 - check the work of personalization and PROScript functions
 
 To open the preview mode, click any device icon at the top of the drag-and-drop editor and select one of the following options:
+
 - Show the letter for subscriber with no personalization data
 - Show the letter with data from specific subscriber (you will have to enter the subscriber's email address)
 - Show all specified personalization options

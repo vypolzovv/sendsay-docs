@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 ---
+
 import emailOnAcidKey from "/img/integrations/integration-with-email-on-acid/email-on-acid-key.png";
 
 # Интеграция с Email on Acid
@@ -18,6 +19,7 @@ import emailOnAcidKey from "/img/integrations/integration-with-email-on-acid/ema
 Комбинации браузеров и почтовых сервисов для превью можно выбрать в настройках (об этом ниже). После входа в аккаунт все превью пустые — их нужно обновить (это может занять пару минут).
 
 ## Как настроить интеграцию
+
 Интеграция доступна для аккаунтов Email on Acid с тарифом Premium или выше. Вы также можете зарегистрировать бесплатную пробную версию — она будет действительна 7 дней, но там можно обновить превью всего 5 раз.
 
 1. Перейдите в раздел **Настройки системы → Интеграции** (он открывается через меню аккаунта) и в блоке «Интеграция с Email on Acid» нажмите «Подключить аккаунт».
@@ -31,6 +33,7 @@ import emailOnAcidKey from "/img/integrations/integration-with-email-on-acid/ema
 3. Вставьте API-ключ и введите пароль от аккаунта Email on Acid. Нажмите «Подключить аккаунт».
 
 После подключения на странице интеграции можно выбрать браузеры и почтовые устройства — всего больше 70 сочетаний:
+
 - браузеры (Chrome, Edge, Firefox),
 - смартфоны и планшеты (iPhone, iPad, Pixel, Samsung),
 - почтовые сервисы (Gmail, Mail.Ru, Outlook, AOL, Yahoo, Office 365, Google Workspace и другие),
