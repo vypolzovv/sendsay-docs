@@ -1,10 +1,8 @@
 {
-  "extends": [
-    "prettier",
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "env": {
+    "browser": true
+  },
+  "extends": ["prettier", "airbnb", "airbnb-typescript", "plugin:@typescript-eslint/recommended"],
   "plugins": ["prettier"],
   "parserOptions": {
     "createDefaultProgram": true,
@@ -20,6 +18,8 @@
     "import/prefer-default-export": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-restricted-exports": "off",
     "react/function-component-definition": [
       2,
       {
@@ -28,6 +28,16 @@
     ],
     "react/jsx-no-useless-fragment": "off",
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
     "operator-linebreak": "off",
     "react/jsx-one-expression-per-line": "off",
     "object-curly-newline": "off",
