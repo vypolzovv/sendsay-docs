@@ -27,5 +27,5 @@ deploy:
     skip_cleanup: true
     script: bin/deploy.sh
     on:
-      branch: stable
+      tags: true
 before_script: export NODE_OPTIONS=–max_old_space_size=4096
