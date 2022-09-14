@@ -14,10 +14,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-.iframe-hidden {
-  display: none !important;
-}
-
 .footer {
   display: flex;
   align-items: center;

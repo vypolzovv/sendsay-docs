@@ -1,4 +1,4 @@
-import { getTermination } from '../../../utils';
+import { getTermination } from '../../utils';
 
 const MESSAGE_FORMS = ['статья', 'статьи', 'статей'];
 
