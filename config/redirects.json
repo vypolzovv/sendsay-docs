@@ -315,10 +315,6 @@
     "from": "/ru/articles/2439875-автоматизации-по-событиям-триггеры"
   },
   {
-    "to": "/automations/automations-by-event/birthday-series",
-    "from": "/ru/articles/5989246-как-настроить-автоматическую-цепочку-из-писем-на-день-рождения"
-  },
-  {
     "to": "/automations/autoimport/how-to-set-autoimport",
     "from": [
       "/ru/articles/2439906-как-настроить-автоматический-импорт-из-файла-по-расписанию",

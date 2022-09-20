@@ -15,7 +15,3 @@ sidebar_position: 5
     allowfullscreen
 >
 </iframe>
-
-У нас есть отдельная статья про то, как настроить эту автоматизацию в новом интерфейсе:
-
-[Как настроить автоматическую цепочку из писем на день рождения](/docs/automations/automations-by-event/birthday-series.md)
