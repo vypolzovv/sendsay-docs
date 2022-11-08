@@ -1,0 +1,39 @@
+name: Deploy
+on:
+  push:
+    tags:
+      - v**
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: CI
+      FORCE_COLOR: 1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Setup git
+        run: |
+          git config --global user.email "services@iprojects.ru"
+          git config --global user.name "sendsay-cat"
+
+      - name: Setup ssh-key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SENDSAY_CAT_KEY }}
+
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+
+      - name: Deploy
+        run: yarn deploy
