@@ -1,0 +1,27 @@
+name: Check PR
+on: [pull_request]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    env:
+      FORCE_COLOR: 1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+
+      - name: Eslint
+        run: yarn eslint
+
+      - name: Prettier
+        run: yarn pretify
