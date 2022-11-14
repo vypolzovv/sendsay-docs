@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-import publishPoll from "/img/forms/how-to-conduct-a-poll/publish-a-poll.png";
-import addPollToTheWebsite from "/img/forms/how-to-conduct-a-poll/add-poll-to-the-website.png";
-import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
+import publishPoll from '/img/forms/how-to-conduct-a-poll/publish-a-poll.png';
+import addPollToTheWebsite from '/img/forms/how-to-conduct-a-poll/add-poll-to-the-website.png';
+import formId from '/img/forms/how-to-conduct-a-poll/form-id.png';
 
 # Как провести опрос
 
@@ -34,7 +34,7 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 1. Зайдите в раздел **Анкеты → Опросы и формы** и выберите «Конструктор форм» (если вы до этого не создавали форм) или «Создать форму» (если уже создавали).
 2. Введите название и добавьте нужные поля. В каждую форму автоматически добавляется поле «Email» (оно скроется, если респондент перейдёт в опрос по ссылке из письма).
 
-![Add questions into the form](/img/forms\how-to-conduct-a-poll/add-questions-into-the-form.gif) <br/>
+   ![Add questions into the form](/img/forms\how-to-conduct-a-poll/add-questions-into-the-form.gif) <br/>
 
 При настройке формы можно редактировать названия полей — для этого нажмите на карандашик рядом с названием вопроса. Если поле используется в других формах, там оно останется без изменений.
 
@@ -46,22 +46,31 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 
 - страница с формой (нужна, если вы публикуете опрос не на сайте),
 - страница после заполнения формы,
-- письмо подтверждения, чтобы после респонденты могли подтвердить адрес и ответы,
+- письмо подтверждения, чтобы после прохождения опроса респонденты могли подтвердить адрес и ответы,
 - страница после подтверждения данных,
 - письмо благодарности (опционально) — отправляется после опроса или подтверждения данных.
+
+Если вы хотите [отправить опрос ссылкой в письме](#отправить-ссылкой-в-письме), эти параметры обязательны:
+
+- письмо подтверждения,
+- страница после подтверждения данных.
 
 :::tip Важно
 У новых подписчиков при подтверждении ответов активируется подписка на рассылку
 :::
 
-Создайте группу-список для участников опроса, чтобы позже с ними можно было работать отдельно (в новом интерфейсе он тоже будет отображаться — как список подписчиков). Когда вы добавите нужные изменения, нажмите кнопку «Сохранить».
+На шаге «Добавить в группу» cоздайте группу-список для участников опроса — так вы сможете работать с ними отдельно. В новом интерфейсе она будет отображаться как «Список подписчиков».
+
+[Как добавить контакты в список](/docs/subscribers/lists-and-segments/what-is-list.md#как-добавить-контакты-в-список)
+
+Когда добавите нужные изменения, нажмите кнопку «Сохранить».
 
 ## 4. Опубликуйте опрос
 
 Когда опрос готов, активируйте его, чтобы ответы сохранялись в сервисе.
 
 <p align="center">
-    <img src={publishPoll} alt="Publish the poll" />
+  <img src={publishPoll} alt="Publish the poll" />
 </p>
 
 Опрос можно опубликовать двумя способами:
@@ -70,9 +79,9 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 
 1. На странице формы нажмите на «Получить форму» и скопируйте код (убедитесь, что код формы выбран стандартный, а не Email).
 
-<p align="center">
-    <img src={addPollToTheWebsite} alt="Add poll to the website" />
-</p>
+   <p align="center">
+     <img src={addPollToTheWebsite} alt="Add poll to the website" />
+   </p>
 
 2. Вставьте код на нужную страницу вашего сайта.
 
@@ -80,9 +89,9 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 
 1. Скопируйте ID формы (число в адресной строке браузера).
 
-<p align="center">
-    <img src={formId} alt="Form ID" />
-</p>
+   <p align="center">
+     <img src={formId} alt="Form ID" />
+   </p>
 
 2. Вставьте в письмо персонализированную ссылку, чтобы ответы записались нужному подписчику (тогда поле «Email» при переходе в опрос автоматически скроется).
 
@@ -100,7 +109,7 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 
 ## 5. Выгрузите ответы
 
-Чтобы выгрузить ответы, нужно сначала создать формат вывода — указать в нём поля, из которых будут выводиться данные.
+В отчёте вы увидите id ответов. Чтобы их выгрузить, нужно сначала создать формат вывода — указать в нём поля, из которых будут выводиться данные.
 
 ### Как создать формат вывода
 
@@ -110,7 +119,7 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 4. Добавьте остальные поля.
 5. Нажмите «Сохранить».
 
-![Output format](/img/forms\how-to-conduct-a-poll/output-format.gif) <br/>
+   ![Output format](/img/forms\how-to-conduct-a-poll/output-format.gif) <br/>
 
 ### Как выгрузить данные
 
@@ -121,4 +130,4 @@ import formId from "/img/forms/how-to-conduct-a-poll/form-id.png";
 5. Выберите способ вывода данных: показать сейчас, сохранить на сервере или выслать на email. Вариант «Показать сейчас» обычно используется для тестирования опроса (проверить, записались ли первые ответы) или для небольших групп на несколько десятков адресов — иначе получится огромная таблица, которую нельзя скачать.
 6. Нажмите «Вывести список подписчиков».
 
-![How to download poll data](/img/forms\how-to-conduct-a-poll/how-to-download-poll-data.gif) <br/>
+   ![How to download poll data](/img/forms\how-to-conduct-a-poll/how-to-download-poll-data.gif) <br/>
