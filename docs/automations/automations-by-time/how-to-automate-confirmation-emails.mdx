@@ -2,8 +2,8 @@
 sidebar_position: 2
 ---
 
-import templateId from "/img/automations/automations-by-time/how-to-automate-confirmation-emails/template-id.png";
-import segmentId from "/img/automations/automations-by-time/how-to-automate-confirmation-emails/segment-id.png";
+import templateId from '/img/automations/automations-by-time/how-to-automate-confirmation-emails/template-id.png';
+import segmentId from '/img/automations/automations-by-time/how-to-automate-confirmation-emails/segment-id.png';
 
 # Как автоматизировать отправку писем подтверждения
 
@@ -21,19 +21,18 @@ import segmentId from "/img/automations/automations-by-time/how-to-automate-conf
    - в блочном редакторе — `[% param.url_confirm %]`
    - в HTML-редакторе — `<a href="[% param.url_confirm %]"> текст ссылки </a>`
 
-   Чтобы в блочном редакторе прикрепить ссылку к фрагменту текста, в протоколе ссылки выберите пункт `<другой>`:
-
-![Confirmation email template](/img/automations/automations-by-time\how-to-automate-confirmation-emails/confirmation-email-template.gif) <br/>
+   Чтобы в блочном редакторе прикрепить ссылку к фрагменту текста, в протоколе ссылки выберите пункт `<другой>`:<br/><br/>
+   ![Confirmation email template](/img/automations/automations-by-time\how-to-automate-confirmation-emails/confirmation-email-template.gif) <br/>
 
 3. Скопируйте ID шаблона — это число в адресной строке браузера:
 
 <p align="center">
-    <img src={templateId} alt="Template ID" />
+  <img src={templateId} alt="Template ID" />
 </p>
 
 ## 2. Создайте сегмент
 
-Создайте сегмент для неподтверждённых подписчиков, которые не получали ваши письма подтверждения:
+Создайте сегмент для неподтверждeнных подписчиков, которые не получали ваши письма подтверждения:
 
 1. Зайдите в раздел **Подписчики → Сегменты** и создайте сегмент. В поле «Тип» укажите «Email» для почты.
 2. В новом сегменте перейдите во вкладку **Настройка условий**. В редакторе условий нажмите на плюсик и поставьте следующие значения:
@@ -43,21 +42,20 @@ import segmentId from "/img/automations/automations-by-time/how-to-automate-conf
 
    Если у вас несколько писем подтверждения, просто скопируйте последнюю строку столько раз, чтобы выбрать все шаблоны.
 
-3. Нажмите «Сохранить».
-
-![Create a segment for confirmation emails](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-a-segment-for-confirmation-emails.gif) <br/>
+3. Нажмите «Сохранить».<br/><br/>
+   ![Create a segment for confirmation emails](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-a-segment-for-confirmation-emails.gif) <br/>
 
 4. Скопируйте ID сегмента в адресной строке браузера:
 
 <p align="center">
-    <img src={segmentId} alt="Segment ID" />
+  <img src={segmentId} alt="Segment ID" />
 </p>
 
 ## 3. Создайте действие по расписанию
 
 Чтобы создать действие по расписанию, нужно перейти [в предыдущий интерфейс](https://sendsay.ru/account/).
 
-Перейдите в раздел **Система → Действия по расписанию**. В типе (слева от кнопки «Создать») выберите «API-запрос». Затем:
+Перейдите в раздел **Система → Действия по расписанию**. Далее выберите «API-запрос». Затем:
 
 1. Введите название.
 2. Настройте расписание, когда вы хотите отправлять письмо.
@@ -72,6 +70,5 @@ import segmentId from "/img/automations/automations-by-time/how-to-automate-conf
 }
 ```
 
-4. Нажмите «Сохранить и активировать».
-
-![Create automation by time](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-automation-by-time.gif)
+4. Нажмите «Сохранить и активировать».<br/><br/>
+   ![Create automation by time](/img/automations/automations-by-time/how-to-automate-confirmation-emails/create-automation-by-time.gif)
