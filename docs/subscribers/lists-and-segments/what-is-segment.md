@@ -11,11 +11,12 @@ sidebar_position: 2
 Один контакт может как входить сразу в неограниченное количество списков и сегментов, так и не попадать ни в один из них. В сегменте рядом с кнопкой «Создать выпуск» есть выпадающее меню — там можно:
 
 - экспортировать контакты в файл формата .csv или .xls,
-- удалить все контакты из базы,
+- создать копию сегмента,
 - отправить неподтверждённым email-контактам письма подтверждения,
-- активировать неподтверждённые email-контакты.
+- удалить подписчиков сегмента из базы,
+- удалить сегмент.
 
-![What is segment](/img/subscribers/lists-and-segments\what-is-segment/what-is-segment.png) <br/>
+  ![What is segment](/img/subscribers/lists-and-segments/what-is-segment/what-is-segment.png) <br/>
 
 ## Как создать сегмент
 
@@ -28,7 +29,7 @@ sidebar_position: 2
    - web push — это числовой идентификатор, который создаётся, когда посетитель сайта подписывается на пуш-рассылку.
 4. Нажмите «Создать сегмент».
 
-![How to create a segment](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-segment.gif) <br/>
+   ![How to create a segment](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-segment.gif) <br/>
 
 ## Как настроить сегмент
 
@@ -41,7 +42,7 @@ sidebar_position: 2
 - подписчики, которые соответствуют (или не соответствуют) каждому условию из сегмента (то есть всем из списка одновременно),
 - подписчики, которые соответствуют (или не соответствуют) любому условию из сегмента (хотя бы одному из списка).
 
-![How to set conditions in a segment](/img/subscribers/lists-and-segments\what-is-segment/how-to-set-conditions-in-a-segment.png) <br/>
+  ![How to set conditions in a segment](/img/subscribers/lists-and-segments\what-is-segment/how-to-set-conditions-in-a-segment.png) <br/>
 
 Условия задаются по строкам, всего их может быть сколько угодно. Условия можно объединять в группы — для этого нужно нажать на три точки слева от строки и нажать «Добавить группу условий».
 
@@ -81,7 +82,7 @@ sidebar_position: 2
 
 4. Нажмите «Сохранить».
 
-![How to create a condition](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-condition.gif) <br/>
+   ![How to create a condition](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-condition.gif) <br/>
 
 ### 2. Проверьте участников сегмента
 
