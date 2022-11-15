@@ -30,7 +30,7 @@ sidebar_position: 2
 
 [Формы сбора подписчиков](/docs/forms/signup-forms.md)
 
-[Как провести опрос](/docs/forms/how-to-conduct-a-poll.md)
+[Как провести опрос](/docs/forms/how-to-conduct-a-poll.mdx)
 
 ## Как создать анкету
 

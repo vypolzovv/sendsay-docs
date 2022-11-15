@@ -66,4 +66,4 @@ sidebar_position: 1
 
 [Форма сбора подписчиков](/docs/forms/signup-forms.md)
 
-[Как провести опрос](/docs/forms/how-to-conduct-a-poll.md)
+[Как провести опрос](/docs/forms/how-to-conduct-a-poll.mdx)
