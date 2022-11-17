@@ -63,6 +63,7 @@ const config = {
         logo: {
           alt: 'Sendsay docs',
           src: 'img/logo.svg',
+          className: 'no-border',
         },
         items: [
           {

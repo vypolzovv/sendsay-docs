@@ -2,7 +2,6 @@ import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
-import { getInfimaActiveClassName } from '@theme/NavbarItem/utils';
 
 const DefaultNavbarItemDesktop = ({ className, isDropdownItem = false, ...props }) => {
   const element = (
@@ -42,7 +41,12 @@ const DefaultNavbarItem = ({
   }
 
   return (
-    <Comp {...props} activeClassName={props.activeClassName ?? getInfimaActiveClassName(mobile)} />
+    <Comp
+      {...props}
+      activeClassName={
+        props.activeClassName ?? (mobile ? 'menu__link--active' : 'navbar__link--active')
+      }
+    />
   );
 };
 
