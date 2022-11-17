@@ -1,0 +1,113 @@
+---
+sidebar_position: 11
+---
+
+# Прехедер письма: что это, какие бывают и как их создать
+
+Прехедер — небольшой текстовый блок, который видит получатель в почтовом ящике после имени отправителя и темы письма.
+
+![Preheaders](\img\email-campaigns\create-your-campaign\preheader\preheaders.jpg) <br/>
+
+## Виды прехедеров и&nbsp;как их&nbsp;добавить
+
+### Видимый
+
+Отображается в&nbsp;списке входящих писем после темы письма и&nbsp;в&nbsp;самом письме. Выбирайте видимый прехедер, если его текст не&nbsp;выбивается из&nbsp;общей стилистики письма и&nbsp;не&nbsp;портит шаблон. Если прехедер короткий, то&nbsp;к&nbsp;нему может подтянуться текст из&nbsp;письма. Чтобы этого избежать, сделайте тему или прехедер длиннее, или добавьте пробелы в&nbsp;код.
+
+![Visible-preheader](\img\email-campaigns\create-your-campaign\preheader\visible-preheader.jpg)<br/>
+
+Чтобы добавить видимый прехедер в&nbsp;блочном редакторе Sendsay, во&nbsp;вкладке **Контент** выберите **HTML-блок** и&nbsp;перетащите его в&nbsp;начало письма. Далее перейдите в&nbsp;настройки HTML-блока, укажите отступ со&nbsp;всех сторон 0&nbsp;и&nbsp;добавьте код ниже:
+
+```
+<div id="preheader" style="color: #000; font-size: 16px; background-color: #;">
+	Видимый
+	<div id="preheader_indents" style="font-size: 0; line-height: 0;">
+	     <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌</span>
+	     <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+	</div>
+</div>
+```
+
+![Html](\img\email-campaigns\create-your-campaign\preheader\html.jpg) <br/>
+
+### Невидимый
+
+Виден в&nbsp;списке входящих писем после темы письма, но&nbsp;не&nbsp;в&nbsp;самом письме. Невидимый прехедер можно использовать, если нужно, чтобы:
+
+- письмо начиналось с&nbsp;баннера или фразы без прехедера,
+- шапка письма была только с&nbsp;логотипом.
+
+![Hidden-preheader](\img\email-campaigns\create-your-campaign\preheader\hidden-preheader.jpg) <br/>
+
+**Код для HTML-редактора:**
+
+```
+<div id="preheader" style="font-size: 0; line-height: 0;">
+	Невидимый прехедер
+	<div id="preheader_indents">
+	     <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
+	     <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+	</div>
+</div>
+```
+
+### Скрытый
+
+Такой прехедер не&nbsp;виден нигде&nbsp;&mdash; ни&nbsp;в&nbsp;списке входящих писем после темы письма, ни&nbsp;в&nbsp;самом письме. Если в&nbsp;письме не&nbsp;нужен прехедер, и&nbsp;вы&nbsp;не&nbsp;хотите, чтобы на&nbsp;его место подтягивалась другая информация из&nbsp;письма, скройте прехедер.
+
+![No-preheader](\img\email-campaigns\create-your-campaign\preheader\no-preheader.jpg) <br/>
+
+**Чтобы добавить скрытый прехедер, используйте код:**
+
+```
+<div id="preheader" style="font-size: 0; line-height: 0;">
+	 <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
+	 <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+</div>
+```
+
+:::tip Важно
+Чтобы проверить корректно&nbsp;ли отображается прехедер, отправьте себе тестовую копию письма.
+:::
+
+## 6&nbsp;примеров хороших прехедеров
+
+### 1. Лаконичный прехедер
+
+![Short-preheaders](\img\email-campaigns\create-your-campaign\preheader\short-preheaders.jpg) <br/>
+
+Оптимальная длина прехедера 40-130&nbsp;символов. Длина будет зависеть от&nbsp;почтового клиента, поэтому идеального размера не&nbsp;существует.
+
+Если ваши подписчики в&nbsp;основном открывают письма с&nbsp;мобильных устройств, то&nbsp;прехедер лучше сделать короче и&nbsp;написать важную информацию в&nbsp;начале.
+
+![Mobile-preheaders](\img\email-campaigns\create-your-campaign\preheader\mobile-preheaders.jpg) <br/>
+
+### 2. Прехедер с&nbsp;призывом
+
+![CTA-preheaders](\img\email-campaigns\create-your-campaign\preheader\cta-preheaders.jpg) <br/>
+
+СTA должен быть коротким, простым или обещающим выгоду. Призыв к&nbsp;действию может побудить больше людей открыть письмо.
+
+### 3. Прехедер не&nbsp;повторяет тему письма
+
+![No-subject-line](\img\email-campaigns\create-your-campaign\preheader\no-subject-line.jpg) <br/>
+
+Прехедер и&nbsp;тема письма должны дополнять друг друга, а&nbsp;не&nbsp;копировать. Прехедер&nbsp;&mdash; это возможность расширить тему с&nbsp;помощью новых интересных деталей.
+
+### 4. Прехедер содержит персонализацию
+
+![Personalization](\img\email-campaigns\create-your-campaign\preheader\personalization.jpg) <br/>
+
+Личное обращение может привлечь внимание и&nbsp;повысить открываемость писем.
+
+### 5. Прехедер вызывает любопытство
+
+![Curious-preheaders](\img\email-campaigns\create-your-campaign\preheader\curious-preheaders.jpg) <br/>
+
+Нарушение ожиданий, необычные вопросы или обещание подарка в&nbsp;письме&nbsp;&mdash; все это также поможет заинтересовать получателей и&nbsp;потом открыть письмо.
+
+### 6. Прехедер с&nbsp;эмодзи
+
+![Emoji](\img\email-campaigns\create-your-campaign\preheader\emoji.jpg) <br/>
+
+Это поможет выделить письмо среди других отправителей и&nbsp;вызвать интерес. Также вместо слова или фразы можно использовать эмодзи, чтобы сократить длину прехедера. Главное&nbsp;&mdash; не&nbsp;переборщить и&nbsp;не&nbsp;сделать весь прехедер из&nbsp;смайликов.
