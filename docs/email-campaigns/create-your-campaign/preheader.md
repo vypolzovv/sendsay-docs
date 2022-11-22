@@ -19,9 +19,9 @@ sidebar_position: 11
 Чтобы добавить видимый прехедер в&nbsp;блочном редакторе Sendsay, во&nbsp;вкладке **Контент** выберите **HTML-блок** и&nbsp;перетащите его в&nbsp;начало письма. Далее перейдите в&nbsp;настройки HTML-блока, укажите отступ со&nbsp;всех сторон 0&nbsp;и&nbsp;добавьте код ниже:
 
 ```
-<div id="preheader" style="color: #000; font-size: 16px; background-color: #;">
+<div id="preheader" style="color: #fff; font-size: 16px; background-color: #000;">
 	Видимый
-	<div id="preheader_indents" style="font-size: 0; line-height: 0;">
+	<div id="preheader_indents" style="font-size:0;line-height:0;">
 	     <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌</span>
 	     <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
 	</div>
@@ -42,7 +42,7 @@ sidebar_position: 11
 **Код для HTML-редактора:**
 
 ```
-<div id="preheader" style="font-size: 0; line-height: 0;">
+<div id="preheader" style="font-size:0;line-height:0;">
 	Невидимый прехедер
 	<div id="preheader_indents">
 	     <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
@@ -60,7 +60,7 @@ sidebar_position: 11
 **Чтобы добавить скрытый прехедер, используйте код:**
 
 ```
-<div id="preheader" style="font-size: 0; line-height: 0;">
+<div id="preheader" style="font-size:0;line-height:0;">
 	 <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
 	 <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
 </div>
