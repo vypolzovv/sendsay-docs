@@ -43,13 +43,13 @@ If you create a file for a manual import, field codes are unnecessary, as the fi
 In Excel, paste your data into the spreadsheet. In other file types, separate the data with commas, semicolons or tabs. Check that you use the same separator in each line.
 
 ```
-pochta1@gmail.com, Иван, Иванов, Москва, 01.01.1970
+pochta1@gmail.com, Иван, Иванов, Москва, 1970.01.21
 ```
 
 If some subscriber data is missing, place two consecutive separators (spaces between symbols are optional).
 
 ```
-pochta2@gmail.com, , Фёдоров, , 02.02.1980
+pochta2@gmail.com, , Фёдоров, , 1980.02.14
 ```
 
 ## 4. Primary contact
@@ -72,7 +72,13 @@ If you import subscribers without the list, select the primary contact in the im
     <img src={chooseListDuringImport} alt="How to choose list during import" />
 </p>
 
-## 5. Phone number formatting
+## 5. Date and phone number formatting
+
+Dates are entered in YYYYY.MM.DD format. For example, for the date "July 1, 1993" the entry would be:
+
+```
+1993.07.01
+```
 
 Phone numbers can include parentheses and spaces or contain digits only. For Russian numbers, the country code is optional: it can be written as 7, +7 or 8, or it can be skipped. For non-Russian numbers, a country code is a must.
 
@@ -81,7 +87,7 @@ Phone numbers can include parentheses and spaces or contain digits only. For Rus
 If you do not want to import a particular subscriber, type # at the beginning of the line.
 
 ```
-#pochta5@gmail.com, Пётр, Петров, Новгород, 01.01.1989
+#pochta5@gmail.com, Пётр, Петров, Новгород, 1989.01.01
 ```
 
 You can skip columns during the import. The subscriber will not be imported, if the contacts contain typos or the data does not correspond to the field format. If several subscribers share one contact, only the last of them will be uploaded.
