@@ -6,6 +6,7 @@ sidebar_position: 2
 
 import webpushElements from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-elements-en.png";
 import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-campaign/vertical-image-for-webpush.png";
+import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode.gif"
 
 # How to create a web push campaign
 
@@ -25,7 +26,9 @@ You can send notifications to subscribers from one website.
 
 When you create your push campaign, keep in mind that all browsers and operating systems display push notifications differently. For example, character limit along with the amount of images and buttons may vary, depending on the user device. In the preview mode, you can check how your campaign will appear in Chrome and Firefox browsers for Windows, macOS and Android users.
 
-![How to create a push campaign](/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode-en.gif) <br/>
+<p align="center">
+    <img src={webPushPreviewMode} alt="Web push preview mode" />
+</p>
 
 A web push notification consists of the following elements:
 
@@ -74,6 +77,10 @@ There are two options:
 ### Enable Google Analytics and Yandex.Metriсa for link tracking
 
 Use UTM codes that help you analyze subscriber behavior, click map and campaign efficiency in Google Analytics and Yandex.Metriсa.
+
+:::tip NOTE
+You can also track the delivery, open rate, unique clicks and other metrics for each campaign under **Reports → Regular campaigns**.
+:::
 
 ### Add custom parameters
 

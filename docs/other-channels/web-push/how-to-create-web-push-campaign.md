@@ -4,6 +4,7 @@ sidebar_position: 2
 
 import webpushElements from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-elements.png";
 import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-campaign/vertical-image-for-webpush.png";
+import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode.gif"
 
 # Как отправить пуш-рассылку
 
@@ -11,7 +12,7 @@ import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-c
 
 [Как подключить веб-пуши на сайт](./how-to-connect-web-push.mdx)
 
-Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип «Web Push».
+Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите пункт «Web Push».
 
 ![How to create a push campaign](/img/other-channels/web-push/how-to-create-web-push-campaign/how-to-create-a-push-campaign.gif) <br/>
 
@@ -25,7 +26,9 @@ import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-c
 
 При создании пуш-рассылки важно учитывать, что все браузеры и операционные системы по-разному показывают уведомления — например, отличается количество символов, картинок и кнопок. С помощью режимов предпросмотра можно проверить, как рассылку увидят пользователи Windows, macOS и Android в браузерах Chrome и Firefox:
 
-![Web push preview mode](/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode.gif) <br/>
+<p align="center">
+    <img src={webPushPreviewMode} alt="Web push preview mode" />
+</p>
 
 Веб-пуш состоит из следующих элементов:
 
@@ -74,9 +77,13 @@ import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-c
 
 ### Отслеживание кликов в Google Analytics и Яндекс.Метрике
 
-Клики отслеживаются с помощью UTM-меток — они нужны для анализа поведения подписчиков, карты кликов и эффективности рассылки в Google Analytics и Яндекс.Метрике.
+Клики можно отслеживать в сторонних системах аналитики с помощью UTM-меток. Они нужны для анализа поведения подписчиков, карты кликов и эффективности рассылки в Google Analytics и Яндекс.Метрике.
 
 [Как добавить UTM-метки в письмо](/docs/email-campaigns/settings/how-to-add-utm.md)
+
+:::tip Важно
+Ослеживать показатели доставки, открытий, кликов и других параметров каждого выпуска можно также в разделе **Статистика → Массовые рассылки**.
+:::
 
 ### Передача дополнительных данных
 
