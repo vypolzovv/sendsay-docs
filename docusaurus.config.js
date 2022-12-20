@@ -48,6 +48,8 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: ({ docPath }) =>
+            `https://github.com/sendsay-ru/sendsay-docs/edit/stable/docs/${docPath}`,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
