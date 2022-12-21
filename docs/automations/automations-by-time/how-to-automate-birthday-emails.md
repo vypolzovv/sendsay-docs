@@ -10,9 +10,9 @@ sidebar_position: 3
 
 Откройте раздел **Контент** и создайте шаблон письма с поздравлением.
 
-[Как создать письмо в блочном редакторе](/docs/email-campaigns/create-your-campaign/drag-and-drop-editor.md)
+[Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)
 
-[Как загрузить HTML-шаблон](/docs/email-campaigns/create-your-campaign/how-to-upload-html-template.md)
+[Как загрузить HTML-шаблон](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-upload-html-template)
 
 ## 2. Создайте сегмент для именинников
 
@@ -38,6 +38,6 @@ sidebar_position: 3
 2. В пункте «Письмо для рассылки» нажмите «Использовать готовое письмо» и выберите созданный шаблон.
 3. Настройте периодичность и время, когда вы хотите отправлять письмо.
 
-[Как создать автоматическую рассылку по расписанию](/docs/automations/automations-by-time/how-to-create-automation-by-time.mdx)
+[Как создать автоматическую рассылку по расписанию](https://docs.sendsay.ru/automations/automations-by-time/how-to-create-automation-by-time)
 
 После завершения настройки нажмите «Активировать». Вы можете сразу активировать автоматизацию, отложить запуск или указать интервал, когда автоматизация будет работать. Если вы хотите провести импорт однократно, активация не обязательна: вместо этого нажать на кнопку «Действия» (рядом с «Активировать») и в выпадающем меню выбрать «Выполнить единоразово» — сразу начнётся отправка выпуска.

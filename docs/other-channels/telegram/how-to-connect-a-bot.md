@@ -17,7 +17,7 @@ import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-
 
 К контакту можно прикрепить остальную информацию из аккаунта — имя, фамилию и ник. Правила оформления файла для импорта описаны в отдельной статье.
 
-[Как подготовить файл для импорта](/docs/subscribers/import-and-export/how-to-prepare-file-for-import.md)
+[Как подготовить файл для импорта](https://docs.sendsay.ru/subscribers/import-and-export/how-to-prepare-file-for-import)
 
 ### 2. Напишите в службу поддержки
 

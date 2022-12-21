@@ -16,4 +16,4 @@ sidebar_position: 3
 
 ![How to restore deleted contacts](/img/subscribers/contacts\how-to-restore-deleted-contacts/how-to-restore-deleted-contacts.gif) <br/>
 
-**Читайте также:** [Как импортировать подписчиков](../import-and-export/how-to-import-subscribers.md)
+**Читайте также:** [Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers)

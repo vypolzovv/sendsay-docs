@@ -17,4 +17,4 @@ description: ''
 
 В базе знаний есть отдельная статья про формы:
 
-[Формы сбора подписчиков](/docs/forms/signup-forms.md)
+[Формы сбора подписчиков](https://docs.sendsay.ru/forms/signup-forms)

@@ -15,4 +15,4 @@ description: ''
 >
 </iframe>
 
-**Читайте также:** [Что такое сегмент контактов](/docs/subscribers/lists-and-segments/what-is-segment.md)
+**Читайте также:** [Что такое сегмент контактов](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment)

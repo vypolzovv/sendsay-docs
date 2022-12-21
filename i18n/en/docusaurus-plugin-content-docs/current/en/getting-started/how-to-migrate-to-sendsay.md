@@ -16,7 +16,7 @@ There are two ways to add new subscribers:
 
 A signup form is shown to the site visitors so that they could leave contacts and subscribe to your campaigns. Create forms and add them to the pages of your website where you offer subscription.
 
-[How to create a signup form](../forms/signup-forms.md)
+[How to create a signup form](https://docs.sendsay.ru/en/forms/signup-forms)
 
 ### Integrations with other systems
 
@@ -30,7 +30,7 @@ The number of subscribers is limited by your billing plan. To know your limits, 
 
 Transfer is a good reason to clean your contacts. We recommend leaving blocked subscribers (hard bounces) and unsubscribes in your current email service. Import other contacts into lists. Transfer unconfirmed subscribers into a separate list as well so you could send them confirmation emails later.
 
-[How to import subscribers](../subscribers/how-to-import-subscribers.md)
+[How to import subscribers](https://docs.sendsay.ru/en/subscribers/import-and-export/how-to-import-subscribers)
 
 Role-based addresses (e. g. info@, list@, hello@, support@, sales@) should also be confirmed. If your B2B clients have role-based addresses, please contact us via chat, and we will help you activate them.
 
@@ -98,4 +98,4 @@ To start email authentication, open the account menu, navigate to **System setti
 
 To order full email authentication, please contact us via chat. This option is performed by our specialists, so it is charged separately (contact your manager to find out pricing details).
 
-**Read also:** [How to create a regular email campaign](../email-campaigns/how-to-send-email-campaign.md)
+**Read also:** [How to create a regular email campaign](https://docs.sendsay.ru/en/email-campaigns/create-your-campaign/how-to-send-email-campaign)

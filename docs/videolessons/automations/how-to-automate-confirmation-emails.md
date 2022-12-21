@@ -18,4 +18,4 @@ sidebar_position: 2
 
 У нас есть отдельная статья про то, как настроить эту автоматизацию в новом интерфейсе:
 
-[Как автоматизировать отправку писем подтверждения](/docs/automations/automations-by-time/how-to-automate-confirmation-emails.mdx)
+[Как автоматизировать отправку писем подтверждения](https://docs.sendsay.ru/automations/automations-by-time/how-to-automate-confirmation-emails)

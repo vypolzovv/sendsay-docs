@@ -10,7 +10,7 @@ import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-p
 
 Выпуск веб-пушей — это сообщение, отправленное от сайта тем посетителям, которые дали согласие на получение рассылок. Чтобы отправить пуш-рассылку, нужно сначала подключить веб-пуши на сайт.
 
-[Как подключить веб-пуши на сайт](./how-to-connect-web-push.mdx)
+[Как подключить веб-пуши на сайт](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push)
 
 Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите пункт «Web Push».
 
@@ -79,7 +79,7 @@ import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-p
 
 Клики можно отслеживать в сторонних системах аналитики с помощью UTM-меток. Они нужны для анализа поведения подписчиков, карты кликов и эффективности рассылки в Google Analytics и Яндекс.Метрике.
 
-[Как добавить UTM-метки в письмо](/docs/email-campaigns/settings/how-to-add-utm.md)
+[Как добавить UTM-метки в письмо](https://docs.sendsay.ru/email-campaigns/settings/how-to-add-utm)
 
 :::tip Важно
 Ослеживать показатели доставки, открытий, кликов и других параметров каждого выпуска можно также в разделе **Статистика → Массовые рассылки**.

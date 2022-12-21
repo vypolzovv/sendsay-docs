@@ -18,4 +18,4 @@ sidebar_position: 4
 
 У нас есть отдельная статья про то, как настроить эту автоматизацию в новом интерфейсе:
 
-[Как автоматически поздравлять подписчиков с днём рождения](/docs/automations/automations-by-time/how-to-automate-birthday-emails.md)
+[Как автоматически поздравлять подписчиков с днём рождения](https://docs.sendsay.ru/automations/automations-by-time/how-to-automate-birthday-emails)

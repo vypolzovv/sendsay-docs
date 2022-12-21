@@ -48,12 +48,12 @@ Sendsay — это платформа для коммуникации с кли�
 
 **Читайте также:**
 
-[Как импортировать подписчиков](../subscribers/import-and-export/how-to-import-subscribers.md)
+[Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers)<br/>
 
-[Как отправить массовую email-рассылку](../email-campaigns/create-your-campaign/how-to-send-email-campaign.md)
+[Как отправить массовую email-рассылку](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-send-email-campaign)<br/>
 
-[Как подключить веб-пуши на сайт](../other-channels/web-push/how-to-connect-web-push.mdx)
+[Как подключить веб-пуши на сайт](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push)<br/>
 
-[Как подключить сообщество ВКонтакте](../other-channels/vk/how-to-connect-vk-community.md)
+[Как подключить сообщество ВКонтакте](https://docs.sendsay.ru/other-channels/vk/how-to-connect-vk-community)<br/>
 
-[Как подключить смс](../other-channels/sms/how-to-connect-sms.md)
+[Как подключить смс](https://docs.sendsay.ru/other-channels/sms/how-to-connect-sms)

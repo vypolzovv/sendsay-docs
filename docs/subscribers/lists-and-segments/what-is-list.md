@@ -50,7 +50,7 @@ sidebar_position: 1
 
 Если вы импортируете контакты не в список, его можно выбрать в настройках импорта — на шаге «Добавление подписчиков» откройте выпадающее меню под пунктом «Куда добавить подписчиков?» и выберите нужный список (или создайте новый).
 
-[Как импортировать подписчиков](../import-and-export/how-to-import-subscribers.md)
+[Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers)
 
 ![How to select list during import](/img/subscribers/lists-and-segments\what-is-list/how-to-select-list-during-import.png) <br/>
 
@@ -58,12 +58,12 @@ sidebar_position: 1
 
 Импортировать контакты в список можно также автоматически в указанное время. Для этого в разделе **Автоматизации → По времени** нажмите «Создать автоматизацию» и выберите «Автоматизация импорта». Список нужно указать в настройках импорта.
 
-[Как настроить автоматический импорт по расписанию](/docs/automations/autoimport/how-to-set-autoimport.mdx)
+[Как настроить автоматический импорт по расписанию](https://docs.sendsay.ru/automations/autoimport/how-to-set-autoimport)
 
 ### Через форму или опрос
 
 Если вы создаёте форму в новом интерфейсе, на седьмом шаге поставьте галочку «Добавлять заполнивших форму в список» и выберите нужный список (или создайте новый).
 
-[Форма сбора подписчиков](/docs/forms/signup-forms.md)
+[Форма сбора подписчиков](https://docs.sendsay.ru/forms/signup-forms)
 
-[Как провести опрос](/docs/forms/how-to-conduct-a-poll.mdx)
+[Как провести опрос](https://docs.sendsay.ru/forms/how-to-conduct-a-poll)

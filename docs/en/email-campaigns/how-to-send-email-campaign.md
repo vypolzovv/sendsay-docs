@@ -30,7 +30,7 @@ There are three ways to create an email:
 - compose HTML code in the HTML editor
 - use template or upload an HTML file in the template gallery
 
-[How to create an email in the drag-and-drop editor](./drag-and-drop-editor.md)
+[How to create an email in the drag-and-drop editor](https://docs.sendsay.ru/en/email-campaigns/create-your-campaign/drag-and-drop-editor)
 
 ![How to design an email](/img/email-campaigns/create-your-campaign/how-to-send-email-campaign/how-to-design-an-email-en.png) <br/>
 

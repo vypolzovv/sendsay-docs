@@ -15,4 +15,4 @@ description: ''
 >
 </iframe>
 
-Этот материал также есть в виде статьи: [Как импортировать подписчиков](/docs/subscribers/import-and-export/how-to-import-subscribers.md)
+Этот материал также есть в виде статьи: [Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers)

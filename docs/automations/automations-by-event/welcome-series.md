@@ -14,7 +14,7 @@ sidebar_position: 2
 В приветственной серии не идёт речи о письме подтверждения — его можно настроить в настройках формы сбора подписчиков
 :::
 
-[Форма сбора подписчиков](/docs/forms/signup-forms.md)
+[Форма сбора подписчиков](https://docs.sendsay.ru/forms/signup-forms)
 
 Приветственную серию можно создать двумя способами:
 использовать готовый сценарий, который включает в себя одно событие, запускающее цепочку писем через заданные интервалы времени,
@@ -26,7 +26,7 @@ sidebar_position: 2
 
 Перед настройкой автоматической последовательности создайте все шаблоны для писем — это можно сделать в разделе **Контент**.
 
-[Как создать письмо в блочном редакторе](/docs/email-campaigns/create-your-campaign/drag-and-drop-editor.md)
+[Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)
 
 ### 2. Создайте автоматизацию
 
@@ -46,7 +46,7 @@ sidebar_position: 2
 Если контакт добавляется без подтверждения, на него нельзя ничего отправлять, кроме писем подтверждения, через которые их владельцы смогут подтвердить согласие на рассылку
 :::
 
-[Как автоматизировать отправку писем подтверждения](../automations-by-time/how-to-automate-confirmation-emails.mdx)
+[Как автоматизировать отправку писем подтверждения](https://docs.sendsay.ru/automations/automations-by-time/how-to-automate-confirmation-emails)
 
 ### 4. Настройте цепочку писем
 
@@ -77,7 +77,7 @@ sidebar_position: 2
 
 Перед настройкой автоматической последовательности создайте все шаблоны для писем — это можно сделать в разделе **Контент**.
 
-[Как создать письмо в блочном редакторе](/docs/email-campaigns/create-your-campaign/drag-and-drop-editor.md)
+[Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)
 
 ### 2. Создайте сегменты для проверки условий в автоматизации
 
@@ -93,7 +93,7 @@ sidebar_position: 2
 
 Создать сегмент можно в разделе **Подписчики → Сегменты**.
 
-[Как создать сегмент](/docs/subscribers/lists-and-segments/what-is-segment.md#как-создать-сегмент)
+[Как создать сегмент](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment#как-создать-сегмент)
 
 #### Сегмент «Открыли приветственные письма»
 

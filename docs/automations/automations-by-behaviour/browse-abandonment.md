@@ -106,9 +106,9 @@ import segmentId from "/img/automations/automations-by-behaviour/browse-abandonm
 
 Откройте раздел Контент и создайте шаблон рассылки.
 
-[Как создать письмо в блочном редакторе](/docs/email-campaigns/create-your-campaign/drag-and-drop-editor.md)
+[Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)
 
-[Как загрузить HTML-шаблон](/docs/email-campaigns/create-your-campaign/how-to-upload-html-template.md)
+[Как загрузить HTML-шаблон](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-upload-html-template)
 
 С брошенным просмотром стоит быть аккуратным, чтобы не перенасытить пользователя напоминаниями и не присылать ему письма с товарами слишком часто. Поэтому при создании шаблона стоит поставить ограничение — письмо не будет отправляться подписчикам, которые уже получали от вас рассылки за выбранный период. Для этого в блоке **Действия с получателями** поставьте галочку «Подписчики, получившие много писем» и укажите период.
 

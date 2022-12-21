@@ -52,10 +52,10 @@ You can also сonfigure integration with any other system via API instead of cre
 
 **Read also:**
 
-[How to import subscribers](../subscribers/how-to-import-subscribers.md)
+[How to import subscribers](https://docs.sendsay.ru/en/subscribers/import-and-export/how-to-import-subscribers)<br/>
 
-[How to create a regular email campaign](../email-campaigns/how-to-send-email-campaign.md)
+[How to create a regular email campaign](https://docs.sendsay.ru/en/email-campaigns/create-your-campaign/how-to-send-email-campaign)<br/>
 
-[How to add web push notifications to your website](../other-channels/how-to-connect-web-push.mdx)
+[How to add web push notifications to your website](https://docs.sendsay.ru/en/other-channels/web-push/how-to-connect-web-push)<br/>
 
-[How to activate bulk SMS](../other-channels/how-to-connect-sms.md)
+[How to activate bulk SMS](https://docs.sendsay.ru/en/other-channels/sms/how-to-connect-sms)

@@ -96,4 +96,4 @@ You can skip columns during the import. The subscriber will not be imported, if 
 If you import subscribers’ countries, they must be written in Russian, otherwise they will not be imported
 :::
 
-**Read also:** [How to configure import settings](./how-to-import-subscribers.md#2-configure-import-settings)
+**Read also:** [How to configure import settings](https://docs.sendsay.ru/en/subscribers/import-and-export/how-to-import-subscribers#2-configure-import-settings)

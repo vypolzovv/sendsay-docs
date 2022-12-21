@@ -95,7 +95,7 @@ FOREACH не принимает объекты, поэтому их следуе
 [% END %]
 ```
 
-[Условные выражения в PROScript](/docs/proscript/conditionals.md)
+[Условные выражения в PROScript](https://docs.sendsay.ru/proscript/conditionals)
 
 ### Функции и фильтры
 

@@ -18,4 +18,4 @@ sidebar_position: 3
 
 У нас есть отдельная статья про то, как настроить эту автоматизацию в новом интерфейсе:
 
-[Как настроить автоматический импорт из файла по расписанию](/docs/automations/autoimport/how-to-set-autoimport.mdx)
+[Как настроить автоматический импорт из файла по расписанию](https://docs.sendsay.ru/automations/autoimport/how-to-set-autoimport)

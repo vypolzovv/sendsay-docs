@@ -17,4 +17,4 @@ description: ''
 
 В базе знаний есть отдельная статья про анкеты:
 
-[Анкеты и работа с данными](/docs/subscribers/subscriber-data/data-groups.md)
+[Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)

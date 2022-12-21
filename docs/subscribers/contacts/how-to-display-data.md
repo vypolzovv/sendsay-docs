@@ -22,4 +22,4 @@ sidebar_position: 4
 
 ![How to change column width](/img/subscribers/contacts\how-to-display-data/how-to-change-column-width.gif) <br/>
 
-**Читайте также:** [Анкеты и работа с данными](../subscriber-data/data-groups.md)
+**Читайте также:** [Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)

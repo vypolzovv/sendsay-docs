@@ -17,4 +17,4 @@ description: ''
 
 Этот материал также есть в виде статьи:
 
-[Как создать письмо в блочном редакторе](/docs/email-campaigns/create-your-campaign/drag-and-drop-editor.md)
+[Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)

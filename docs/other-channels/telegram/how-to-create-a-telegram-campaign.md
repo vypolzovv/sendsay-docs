@@ -8,7 +8,7 @@ import campaignEditor from "/img/other-channels/telegram/how-to-create-a-telegra
 
 Рассылка в Телеграме — это сообщение, отправленное через бота. Чтобы отправить рассылку в Телеграме, нужно сначала подключить бота к Sendsay.
 
-[Как подключить бот в Телеграме](./how-to-connect-a-bot.md)
+[Как подключить бот в Телеграме](https://docs.sendsay.ru/other-channels/telegram/how-to-connect-a-bot)
 
 Чтобы создать выпуск, откройте раздел **Рассылки → Черновики**, нажмите на плюсик и выберите тип «Telegram».
 
@@ -44,7 +44,7 @@ import campaignEditor from "/img/other-channels/telegram/how-to-create-a-telegra
 
 Клики отслеживаются с помощью UTM-меток — они нужны для анализа поведения подписчиков, карты кликов и эффективности рассылки в Google Analytics и Яндекс.Метрике.
 
-[Как добавить UTM-метки в письмо](/docs/email-campaigns/settings/how-to-add-utm.md)
+[Как добавить UTM-метки в письмо](https://docs.sendsay.ru/email-campaigns/settings/how-to-add-utm)
 
 ### Передача дополнительных данных
 

@@ -17,4 +17,4 @@ description: ''
 
 В базе знаний есть отдельная статья про персонализацию:
 
-[Как персонализировать рассылку](/docs/email-campaigns/personalization/how-to-personalize-campaign.md)
+[Как персонализировать рассылку](https://docs.sendsay.ru/email-campaigns/personalization/how-to-personalize-campaign)

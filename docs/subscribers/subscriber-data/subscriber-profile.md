@@ -30,13 +30,13 @@ sidebar_position: 1
 - основной контакт уже есть в сервисе → все новые данные записываются в существующую карточку подписчика поверх старой информации,
 - совпадает не основной контакт → новые данные из строки записываются в новую карточку, а у остальных подписчиков этот контакт удаляется.
 
-[Как импортировать подписчиков](../import-and-export/how-to-import-subscribers.md)
+[Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers)
 
 ## Как изменить статус контакта
 
 Во вкладке **Контакты** у каждого контакта отображается статус, который показывает, доступен он для рассылки или нет.
 
-[Какие бывают статусы у контактов](../contacts/contact-status.md)
+[Какие бывают статусы у контактов](https://docs.sendsay.ru/subscribers/contacts/contact-status)
 
 Чтобы изменить статус, откройте выпадающее меню напротив нужного контакта — там можно:
 
@@ -62,7 +62,7 @@ sidebar_position: 1
 
 ![Data tab](/img/subscribers/subscriber-data\subscriber-profile/data-tab.gif) <br/>
 
-[Анкеты и работа с данными](data-groups.md)
+[Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)
 
 ## Как посмотреть, в какие списки и сегменты включены контакты подписчика
 
