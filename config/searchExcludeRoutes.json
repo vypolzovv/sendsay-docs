@@ -1,3 +1,4 @@
 [
-  "exclude-from-search/**/*"
+  "exclude-from-search/**",
+  "ecom/**"
 ]

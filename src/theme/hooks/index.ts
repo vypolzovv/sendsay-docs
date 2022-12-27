@@ -1,0 +1,1 @@
+export { useResctrictedPath } from './useResctrictedPath';
