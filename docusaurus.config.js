@@ -4,6 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const trackingID = process.env.GOOGLE_TAG_MANAGER_ID;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'База знаний Sendsay',
@@ -54,10 +56,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: {
-          trackingID: process.env.GOOGLE_TAG_MANAGER_ID,
-          anonymizeIP: true,
-        },
+        gtag: trackingID
+          ? {
+              trackingID,
+              anonymizeIP: true,
+            }
+          : undefined,
         sitemap: {
           ignorePatterns: require('./config/sitemapIgnorePatterns'),
         },
