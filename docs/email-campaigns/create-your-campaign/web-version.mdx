@@ -1,0 +1,136 @@
+---
+sidebar_position: 12
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+import noName from '/img/email-campaigns/create-your-campaign/web-version/no-name-in-web-version.jpg';
+
+# Веб-версия письма
+
+Веб-версия письма — вариант электронного письма, которое открывается в браузере в виде отдельной страницы.
+
+![Web version example](\img\email-campaigns\create-your-campaign\web-version\web-version-example.jpg) <br/>
+
+Веб-версию рекомендуется добавлять, потому что почтовые сервисы могут отображать письмо по-своему и&nbsp;не&nbsp;показывать какие-то элементы, у&nbsp;подписчика могут быть отключены картинки в&nbsp;почте. Также благодаря веб-версии подписчики смогут поделиться ссылкой на&nbsp;письмо в&nbsp;социальных сетях или мессенджерах, добавлять письмо в&nbsp;закладки.
+
+Адрес веб-версии письма создаётся командой `[% param.issue_archive_url %]`.
+
+## Ограничение в&nbsp;веб-версии
+
+Веб-версия письма отображается без персонализации.
+
+<p align="center">
+  <img src={noName} alt="No name in web version" />
+</p>
+
+Если вам необходимы веб-версии писем с&nbsp;персональными данными, то&nbsp;нужно настроить хранение данных персонализации, напишите в&nbsp;службу поддержки через чат на&nbsp;сайте. Данные персонализации будут доступны 30&nbsp;дней.
+
+Все остальное в&nbsp;веб-версии будет идентично письму и&nbsp;представлено со&nbsp;всеми изображениями, видео, кнопками, gif-анимацией, ссылками для отписки и&nbsp;другими элементами.
+
+## Где и&nbsp;как разместить блок с&nbsp;веб-версией
+
+Добавляйте ссылку на&nbsp;веб-версию в&nbsp;шапку письма&nbsp;&mdash; так подписчикам сразу будет понятно, как посмотреть письмо, если оно не&nbsp;загружается.
+
+![Link in header](\img\email-campaigns\create-your-campaign\web-version\link-in-header.jpg) <br/>
+
+Также ссылка на&nbsp;веб-версию может быть в&nbsp;подвале письма, например в&nbsp;блоке со&nbsp;ссылками на&nbsp;соцсети или в&nbsp;блоке с&nbsp;отпиской.
+
+![Link in footer](\img\email-campaigns\create-your-campaign\web-version\link-in-footer.jpg) <br/>
+
+Ссылку на&nbsp;веб-версию можно использовать в&nbsp;письме, которое создано в&nbsp;блочном редакторе Sendsay или HTML-редакторе. Чтобы добавить ссылку, скопируйте код:
+
+```
+<a href="[% param.issue_archive_url %]">Читать в браузере</a>
+```
+
+При отправке сервер преобразует команду `[% param.issue_archive_url %]` в адрес веб-страницы, и в письме получится полноценная ссылка.
+
+**Примеры фраз для ссылки на&nbsp;веб-версию:**
+
+- Если письмо не&nbsp;загружается, попробуйте через браузер
+- Смотреть в&nbsp;браузере &rarr;
+- Веб-версия
+- Если письмо отображается некорректно или без картинок, откройте веб-версию
+
+## Как добавить ссылку на&nbsp;веб-версию и&nbsp;прехедер в&nbsp;письме
+
+Если в&nbsp;письме будут добавлены прехедер и&nbsp;ссылка на&nbsp;веб-версию, то&nbsp;отправьте себе тестовое письмо, чтобы проверить корректность отображения этих элементов. Если этого не&nbsp;сделать, то&nbsp;в&nbsp;почтовом ящике сразу после темы письма подписчик может увидеть &laquo;Посмотреть веб-версию&raquo; вместо прехедера.
+
+![Wrong web version](\img\email-campaigns\create-your-campaign\web-version\wrong-web-version.jpg) <br/>
+
+[Прехедер письма: что это, какие бывают и как их создать](https://docs.sendsay.ru/email-campaigns/create-your-campaign/preheader)
+
+Чтобы в&nbsp;блочном редакторе Sendsay добавить прехедер определенного вида и&nbsp;ссылку на&nbsp;веб-версию, разместите в&nbsp;начале письма HTML-блок и&nbsp;используйте код ниже.
+
+![HTML-block for web version](\img\email-campaigns\create-your-campaign\web-version\html-block-for-web-version.jpg) <br/>
+
+Скопируйте также код ниже, если письмо в&nbsp;HTML-редакторе.
+
+<Tabs>
+<TabItem value="key1" label="Видимый прехедер">
+
+```
+<div id="preheader">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">
+        Видимый
+      </td>
+      <td style="font-size:0;line-height:0;">
+        <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
+      </td>
+    </tr>
+  </table>
+</div>
+```
+
+</TabItem>
+<TabItem value="key2" label="Невидимый прехедер">
+
+```
+<div id="preheader">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="font-size:0;line-height:0;">
+        Невидимый
+      </td>
+      <td style="font-size:0;line-height:0;">
+        <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
+      </td>
+    </tr>
+  </table>
+</div>
+```
+
+</TabItem>
+<TabItem value="key3" label="Скрытый прехедер">
+
+```
+<div id="preheader">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="font-size:0;line-height:0;">
+        <span>‌&#10240;&#10240;&#10240;‌&#10240;&#10240;‌&#10240;‌&#10240;&#10240;‌&#10240;‌‌</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
+      </td>
+    </tr>
+  </table>
+</div>
+```
+
+</TabItem>
+</Tabs>
