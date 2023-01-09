@@ -3,9 +3,10 @@ sidebar_position: 1
 ---
 
 import botToken from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-copy-the-token.png";
+import connectBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-connect-a-bot.gif";
 import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-delete-a-bot.png";
 
-# Как подключить бот в Телеграме
+# Как подключить бота в Телеграме
 
 В Sendsay можно отправлять рассылки в Телеграме через бота. Сообщения придут тем подписчикам, которые начали диалог с ботом после его подключения к Sendsay. Бот можно подключить только к одному аккаунту Sendsay.
 
@@ -23,7 +24,7 @@ import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-
 
 Напишите нам, что хотите перенести базу подписчиков телеграм-бота в Sendsay, к сообщению приложите файл с контактами.
 
-## Как подключить бот
+## Как подключить бота
 
 ### 1. Скопируйте токен для доступа к боту в Телеграме
 
@@ -40,12 +41,36 @@ import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-
 1. Откройте раздел **Подписчики → Telegram** и нажмите на синюю кнопку «Подключить бота».
 2. В появившемся окне вставьте токен и нажмите «Подключить».
 
-![How to connect a bot](/img/other-channels/telegram/how-to-connect-a-bot/how-to-connect-a-bot.gif) <br/>
+  <p align="center">
+    <img src={connectBot} alt="How to connect a bot" />
+  </p>
 
-## Как удалить бот
+## Как удалить бота
 
 Откройте раздел **Подписчики → Telegram**. Рядом с ботом откройте выпадающий список и нажмите «Удалить».
 
 <p align="center">
     <img src={deleteBot} alt="How to delete a bot" />
 </p>
+
+## Как объединить в&nbsp;карточке подписчика email и&nbsp;контакт в&nbsp;Телеграме
+
+Объединение контактов&nbsp;&mdash; это возможность дополнить анкетные данные подписчика для того, чтобы связываться по&nbsp;еще одному каналу и&nbsp;персонализировать рассылки.
+
+Чтобы объединить email и&nbsp;контакт в&nbsp;Телеграме в&nbsp;одной карточке, нужно чтобы подписчик перешел в&nbsp;бот по&nbsp;специальной ссылке. Когда подписчик перейдет из&nbsp;письма в&nbsp;бот и&nbsp;подпишется на&nbsp;него, контакты свяжутся. Если это произойдет, в&nbsp;карточке подписчика появится отметка о&nbsp;подписке на&nbsp;указанный бот в&nbsp;Телеграме.
+
+![Telegram bot](\img\other-channels\telegram\how-to-connect-a-bot\telegram-bot.jpg) <br/>
+
+Для этого отправьте email-рассылку и&nbsp;добавьте в&nbsp;письмо ссылку с&nbsp;дополнительными параметрами:
+
+```
+?start=[% param.issue.id %]-[% param.letter.id %]-[% anketa.member.id %]
+```
+
+В&nbsp;итоге ссылка на&nbsp;бот в&nbsp;Телеграме будет выглядеть так:
+
+```
+<a href="https://t.me/example_bot?start=[% param.issue.id %]-[% param.letter.id %]-[% anketa.member.id %]">Подписаться в Telegram</a>
+```
+
+Вместо `example_bot` впишите название нужного бота.
