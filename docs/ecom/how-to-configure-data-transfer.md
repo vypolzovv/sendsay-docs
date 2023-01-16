@@ -67,18 +67,18 @@ sidebar_label: 'Инструкция для разработчиков'
 
 | ID  | Статус                                              | Status                                                                |
 | :-- | :-------------------------------------------------- | :-------------------------------------------------------------------- |
-| 0   | Заказ Оформлен (создан,принят)                      | Order Placed (created, accepted)                                      |
-| 1   | Заказ Оплачен                                       | Order has been paid                                                   |
-| 2   | Заказ Принят в работу (сборка, комплектация)        | Order Accepted for work (assembly, packaging)                         |
-| 3   | Доставка                                            | Delivery                                                              |
-| 4   | Доставка: присвоен трек-номер                       | Delivery: track number assigned                                       |
-| 5   | Доставка: передан в доставку                        | Delivery: the order has been submitted for delivery                   |
-| 6   | Доставка: отправлен                                 | Delivery: shipped                                                     |
-| 7   | Доставка: поступил в пункт-выдачи / передан курьеру | Delivery: received at the point of issue / handed over to the courier |
-| 8   | Доставка: получен                                   | Delivery: received                                                    |
-| 9   | Заказ Отменен: отмена заказа                        | Order Canceled: order cancellation                                    |
-| 10  | Заказ Отменен: возврат заказа                       | Order Canceled: return order                                          |
-| 11  | Заказ Изменен: обновление заказа                    | Order Changed: order update                                           |
+| 1   | Заказ Оформлен (создан,принят)                      | Order Placed (created, accepted)                                      |
+| 2   | Заказ Оплачен                                       | Order has been paid                                                   |
+| 3   | Заказ Принят в работу (сборка, комплектация)        | Order Accepted for work (assembly, packaging)                         |
+| 4   | Доставка                                            | Delivery                                                              |
+| 5   | Доставка: присвоен трек-номер                       | Delivery: track number assigned                                       |
+| 6   | Доставка: передан в доставку                        | Delivery: the order has been submitted for delivery                   |
+| 7   | Доставка: отправлен                                 | Delivery: shipped                                                     |
+| 8   | Доставка: поступил в пункт-выдачи / передан курьеру | Delivery: received at the point of issue / handed over to the courier |
+| 9   | Доставка: получен                                   | Delivery: received                                                    |
+| 10  | Заказ Отменен: отмена заказа                        | Order Canceled: order cancellation                                    |
+| 11  | Заказ Отменен: возврат заказа                       | Order Canceled: return order                                          |
+| 12  | Заказ Изменен: обновление заказа                    | Order Changed: order update                                           |
 
 ### Структура ssec-события
 
@@ -421,6 +421,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
     [
       {
         "transaction_id": "x1", // обязательно
+        "transaction_status": 1, // обязательно
         "transaction_dt": "2022-07-25 23:25:13", // необязательно
         "payment_dt": "2022-07-25 23:25:13", //необязательно
         "delivery_dt": "2022-07-25 23:25:13", //необязательно
@@ -440,6 +441,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 ```
+
+При создании заказа указание значения параметра `transaction_status = 1` обязательно. В случае отсуствия или передачи других значений не будет создано триггерное событие "новый заказ".
 
 Ключ `"update": 1` действует только для существующего заказа с номером `transaction_id`. Если такого заказа нет, запрос вернёт сообщение об ошибке.
 
