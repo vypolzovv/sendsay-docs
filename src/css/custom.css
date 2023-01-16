@@ -9,15 +9,27 @@
   --ifm-color-primary: #bf2a59;
   --ifm-color-secondary: #0d0d0d;
   /* --ifm-menu-color: #0D0D0D; */
+  --ifm-footer-background-color: #e5e7eb;
+  --ifm-link-visited-color: #86198f;
   --ifm-font-weight-semibold: 600;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+.markdown a[target='_blank'] {
+  background-image: url('/img/externalLink.svg');
+  background-position: bottom 51% right 0;
+  background-repeat: no-repeat;
+  padding-right: 1rem;
+}
+
+.markdown a:visited {
+  color: var(--ifm-link-visited-color);
+}
+
 .footer {
   display: flex;
   align-items: center;
-  --ifm-footer-background-color: #e5e7eb;
   height: 42px;
 }
 

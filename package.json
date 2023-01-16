@@ -8,6 +8,7 @@
     "start:en": "docusaurus start --locale en",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
+    "swiz": "docusaurus swizzle @docusaurus/theme-classic --typescript",
     "deploy": "./bin/deploy.sh",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
