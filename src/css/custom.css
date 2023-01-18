@@ -37,7 +37,8 @@
   font-weight: var(--ifm-font-weight-normal);
 }
 
-img:not(.no-border) {
+img:not(.no-border),
+video:not(.no-border) {
   outline: 1px solid var(--ifm-color-emphasis-300);
   outline-offset: -1px;
 }

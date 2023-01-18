@@ -27,6 +27,7 @@
         "namedComponents": "arrow-function"
       }
     ],
+    "no-restricted-exports": "off",
     "react/jsx-no-useless-fragment": "off",
     "@typescript-eslint/indent": "off",
     "no-confusing-arrow": "off",
