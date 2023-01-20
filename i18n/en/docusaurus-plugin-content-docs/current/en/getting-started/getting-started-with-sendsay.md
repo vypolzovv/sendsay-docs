@@ -50,6 +50,10 @@ You can send campaigns only to those who agreed to receive your emails, otherwis
 
 You can also сonfigure integration with any other system via API instead of creating campaigns in the Sendsay interface. In this case you can choose what data to transfer and what tools to use.
 
+## Sendsay application for Windows
+
+Sendsay has a desktop application with full functionality of the service to work in the Windows operating system - you can download and install it free of charge on your computer. Go to [installation page](https://sendsay.com/about/ustanovka-sendsay) — there you will also find the installation guide.
+
 **Read also:**
 
 [How to import subscribers](https://docs.sendsay.ru/en/subscribers/import-and-export/how-to-import-subscribers)<br/>
