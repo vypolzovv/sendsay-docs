@@ -42,15 +42,16 @@ sidebar_label: 'Инструкция для разработчиков'
 | :------------------------------- | :--------------------- | :--------------------- | :------------- | :----------- |
 | id                               | product.id             | String                 |                |              |
 | name                             | product.name           | String                 |                |              |
-| picture_url                      | product.picture_url    | Array(String)          |                |              |
+| picture                          | product.picture        | Array(String)          |                |              |
 | url                              | product.url            | String                 |                |              |
-| is_available                     | product.is_available   | UInt8                  |                |              |
+| available                        | product.available      | UInt8                  |                |              |
 | category_paths                   | product.category_paths | Array(String)          |                |              |
 | category_id                      | product.category_id    | Int64                  |                |              |
 | description                      | product.description    | String                 |                |              |
 | vendor                           | product.vendor         | String                 |                |              |
 | model                            | product.model          | String                 |                |              |
 | type                             | product.type           | String                 |                |              |
+| price                            | product.price          | Nullable(Decimal64(2)) |                |              |
 | old_price                        | product.old_price      | Nullable(Decimal64(2)) |                |              |
 | category                         | category               | String                 |                |              |
 | transaction_id                   | transaction.id         | String                 | Заказ, корзина |              |
@@ -89,11 +90,11 @@ Ssec-события всегда передаются в Sendsay как масс
   {
     "id": "product1",  //обязательно
     "description": "description",
-    "is_available": 1 | 0,
+    "available": 1 | 0,
     "model": "model",
     "name": "name",
     "old_price": 5.99,
-    "picture_url": [""],
+    "picture": [""],
     "price":  7.88,
     "url": "url",
     "vendor": "vendor",
@@ -261,11 +262,11 @@ curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACC
 --data-raw '[{
   "id": 1111,
   "description": "description",
-  "is_available": 1,
+  "available": 1,
   "model": "model",
   "name": "name",
   "old_price": 5.99,
-  "picture_url": ["https://domain.com/image.jpg"],
+  "picture": ["https://domain.com/image.jpg"],
   "price":  7.88,
   "url": "url",
   "vendor": "vendor",
@@ -310,11 +311,11 @@ curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACC
     {
       "id": "product1", //обязательно
       "description": "description",
-      "is_available": 1 | 0,
+      "available": 1 | 0,
       "model": "model",
       "name": "name",
       "old_price": 5.99,
-      "picture_url": [],
+      "picture": [],
       "price": 7.88,
       "url": "url",
       "vendor": "vendor"
@@ -327,11 +328,11 @@ curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACC
       {
         "id": "product1", //обязательно
         "description": "description",
-        "is_available": 1 | 0,
+        "available": 1 | 0,
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture_url": [],
+        "picture": [],
         "price": 7.88,
         "url": "url",
         "vendor": "vendor"
@@ -476,7 +477,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
       {
         "description": "description",
         "id": "product1", //обязательно
-        "is_available": 1 | 0,
+        "available": 1 | 0,
         "model": "model",
         "name": "name",
         "old_price": 5.99,
@@ -532,7 +533,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
       {
         "description": "description",
         "id": "product1", //обязательно
-        "is_available": 1 | 0,
+        "available": 1 | 0,
         "model": "model",
         "name": "name",
         "old_price": 5.99,
@@ -588,7 +589,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
       {
         "description": "description",
         "id": "product1", //обязательно
-        "is_available": 1 | 0,
+        "available": 1 | 0,
         "model": "model",
         "name": "name",
         "old_price": 5.99,
@@ -644,7 +645,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
       {
         "description": "description",
         "id": "product1", //обязательно
-        "is_available": 1 | 0,
+        "available": 1 | 0,
         "model": "model",
         "name": "name",
         "old_price": 5.99,
