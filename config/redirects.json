@@ -42,10 +42,7 @@
   },
   {
     "to": "/subscribers",
-    "from": [
-      "/ru/collections/1410279-работа-с-подписчиками",
-      "/collections/1410279-audiences"
-    ]
+    "from": ["/ru/collections/1410279-работа-с-подписчиками", "/collections/1410279-audiences"]
   },
   {
     "to": "/subscribers/import-and-export/how-to-import-subscribers",
@@ -115,10 +112,7 @@
   },
   {
     "to": "/email-campaigns",
-    "from": [
-      "/ru/collections/1411829-email-рассылки",
-      "/collections/1411829-emails"
-    ]
+    "from": ["/ru/collections/1411829-email-рассылки", "/collections/1411829-emails"]
   },
   {
     "to": "/email-campaigns/create-your-campaign/how-to-send-email-campaign",
@@ -286,10 +280,7 @@
   },
   {
     "to": "/forms",
-    "from": [
-      "/ru/collections/1411876-формы",
-      "/collections/1411876-signup-forms"
-    ]
+    "from": ["/ru/collections/1411876-формы", "/collections/1411876-signup-forms"]
   },
   {
     "to": "/forms/signup-forms",

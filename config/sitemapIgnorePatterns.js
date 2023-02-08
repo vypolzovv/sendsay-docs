@@ -1,1 +1,1 @@
-module.exports = require('./searchExcludeRoutes.json')
+module.exports = require('./searchExcludeRoutes.json');
