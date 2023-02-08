@@ -1,0 +1,13 @@
+.VideoWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  max-height: 720px;
+}
+
+.VideoWrapper video,
+.VideoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

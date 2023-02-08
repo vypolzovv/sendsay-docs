@@ -38,7 +38,8 @@
 }
 
 img:not(.no-border),
-video:not(.no-border) {
+video:not(.no-border),
+iframe:not(.no-border) {
   outline: 1px solid var(--ifm-color-emphasis-300);
   outline-offset: -1px;
 }
