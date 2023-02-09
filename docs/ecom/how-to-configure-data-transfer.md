@@ -153,40 +153,22 @@ Ssec-события всегда передаются в Sendsay как масс
 
 Все события можно добавлять, используя Sendsay API. Это будет полезно для добавления или обновления данных о совершенных заказах, а также при добавлении событий, которые не относятся к действиям ваших клиентов, например «появление товара в продаже» или «изменение стоимости товара».
 
-Стоит понимать, что если данные добавляются через наш JS-трекер, то они сопровождаются информацией о том, к какой рассылке и письму мы аттрибуцируем данное событие. В случае добавления данных через API, события не будут относится ни к какому выпуску.
+Для отправки событий модуля "Продажи" используется отдельный эндпоинт:
 
-#### Добавление событий по одному (member.set)
-
-```json
-{
-  "action": "member.set",
-  "email": "АДРЕС_ПОДПИСЧИКА",
-  "addr_type": "email",
-  "datakey": [
-    [
-      "ssec",
-      "set",
-      [
-        {...}
-      ]
-    ]
-  ]
-}
+```
+https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID
 ```
 
-#### Добавление заказа через member.set
+Пример API-запроса:
 
-```json
-{
-  "action": "member.set",
-  "email": "АДРЕС_ПОДПИСЧИКА",
-  "addr_type": "email",
-  "datakey": [
-    [
-      "ssec",
-      "set",
-      [
+```bash
+curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: sendsay apikey=API_KEY' \
+--data-raw '[
         {
+          "email": "АДРЕС_ПОДПИСЧИКА",
+          "addr_type": "email",
           "transaction_id": "x1",
           "transaction_dt": "2022-07-25 23:25:13",
           "transaction_sum": 11.98,
@@ -209,36 +191,7 @@ Ssec-события всегда передаются в Sendsay как масс
           "event_type": 1,
           "update": 1
         }
-      ]
-    ]
-  ]
-}
-```
-
-#### Добавление событий пачкой (member.import)
-
-```json
-{
-  "action": "member.import",
-  "users.list": {
-    "caption": [
-      {
-        "datakey": "member.email",
-        "mode": "set"
-      },
-      {
-        "datakey": "ssec",
-        "mode": "set"
-      }
-    ],
-    "rows": [
-      [ "адрес_подписчика", [{ ... }] ],
-      [ "адрес_подписчика", [{ ... }] ]
-    ]
-  },
-  "charset": "utf-8",
-  "addr_type": "email"
-}
+      ]'
 ```
 
 ### Добавление обезличенных событий
@@ -248,11 +201,7 @@ Ssec-события всегда передаются в Sendsay как масс
 | 13  | PRODUCT_ISA           | Товар появился              |
 | 15  | PRODUCT_PRICE_CHANGED | Стоимость товара изменилась |
 
-Для отправки обезличенных данных используется отдельный эндпоинт:
-
-```
-https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID
-```
+При отправке обезличенных данных не нужно указывать `email` & `addr_type`
 
 Пример API-запроса:
 
