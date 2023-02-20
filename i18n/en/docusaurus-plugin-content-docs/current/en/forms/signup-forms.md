@@ -36,6 +36,10 @@ You can add content blocks to pop-ups and widgets only while the bars have a fix
 
 For each form, you need to configure design and behavior (where and how the form is shown to the site visitors). In the form editor you can add, change or delete content blocks by dragging them across the screen. You can also use the preview mode to see how the form will be displayed on different devices.
 
+:::tip NOTE
+If you use a form with an image, upload images up **to 1 MB**, so you don't lose display speed.
+:::
+
 All the form types have two mandatory elements that can’t be removed: the field for the email address and the **Sign up** button. You can add fields to the form from the left column of the editor. New fields can’t be created in the form editor.
 
 ## 3. Set additional emails and pages (optional)

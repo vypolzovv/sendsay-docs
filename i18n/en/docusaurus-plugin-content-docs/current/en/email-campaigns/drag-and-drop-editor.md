@@ -61,6 +61,10 @@ To add an element, click and drag it to the corresponding section. If you want t
 
 Each element has its own settings. Click the element to open it.
 
+:::tip NOTE
+There are restrictions on uploading images to the template. **600 px** - maximum image width, because this is the maximum width of the email. There is also a restriction of image weight: images up **to 1 MB** can be used without loss in display speed.
+:::
+
 ![Element settings](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/element-settings-en.gif) <br/>
 
 :::tip Note
