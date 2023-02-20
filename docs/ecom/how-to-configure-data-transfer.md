@@ -66,20 +66,20 @@ sidebar_label: 'Инструкция для разработчиков'
 
 #### Статусы заказа
 
-| ID  | Статус                                              | Status                                                                |
-| :-- | :-------------------------------------------------- | :-------------------------------------------------------------------- |
-| 1   | Заказ Оформлен (создан,принят)                      | Order Placed (created, accepted)                                      |
-| 2   | Заказ Оплачен                                       | Order has been paid                                                   |
-| 3   | Заказ Принят в работу (сборка, комплектация)        | Order Accepted for work (assembly, packaging)                         |
-| 4   | Доставка                                            | Delivery                                                              |
-| 5   | Доставка: присвоен трек-номер                       | Delivery: track number assigned                                       |
-| 6   | Доставка: передан в доставку                        | Delivery: the order has been submitted for delivery                   |
-| 7   | Доставка: отправлен                                 | Delivery: shipped                                                     |
-| 8   | Доставка: поступил в пункт-выдачи / передан курьеру | Delivery: received at the point of issue / handed over to the courier |
-| 9   | Доставка: получен                                   | Delivery: received                                                    |
-| 10  | Заказ Отменен: отмена заказа                        | Order Canceled: order cancellation                                    |
-| 11  | Заказ Отменен: возврат заказа                       | Order Canceled: return order                                          |
-| 12  | Заказ Изменен: обновление заказа                    | Order Changed: order update                                           |
+| ID  | Статус                                              |
+| :-- | :-------------------------------------------------- |
+| 1   | Заказ Оформлен (создан,принят)                      |
+| 2   | Заказ Оплачен                                       |
+| 3   | Заказ Принят в работу (сборка, комплектация)        |
+| 4   | Доставка                                            |
+| 5   | Доставка: присвоен трек-номер                       |
+| 6   | Доставка: передан в доставку                        |
+| 7   | Доставка: отправлен                                 |
+| 8   | Доставка: поступил в пункт-выдачи / передан курьеру |
+| 9   | Доставка: получен                                   |
+| 10  | Заказ Отменен: отмена заказа                        |
+| 11  | Заказ Отменен: возврат заказа                       |
+| 12  | Заказ Изменен: обновление заказа                    |
 
 ### Структура ssec-события
 
@@ -156,13 +156,15 @@ Ssec-события всегда передаются в Sendsay как масс
 Для отправки событий модуля "Продажи" используется отдельный эндпоинт:
 
 ```
-https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID
+https://ssec.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID
 ```
+
+ACCOUNT_ID надо заменить идентификатор (логин) вашего аккаунта Sendsay (не email).
 
 Пример API-запроса:
 
 ```bash
-curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
+curl --location --request POST 'https://ssec.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: sendsay apikey=API_KEY' \
 --data-raw '[
@@ -206,7 +208,7 @@ curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACC
 Пример API-запроса:
 
 ```bash
-curl --location --request GET 'https://api.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
+curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: sendsay apikey=API_KEY' \
 --data-raw '[{
