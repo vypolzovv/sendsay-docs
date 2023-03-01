@@ -1,10 +1,9 @@
-import autocomplete from 'autocomplete.js';
-import $ from 'autocomplete.js/zepto';
 import Hogan from 'hogan.js';
-
 import LunrSearchAdapter from './lunar-search';
+import autocomplete from 'autocomplete.js';
 import templates from './templates';
 import utils from './utils';
+import $ from 'autocomplete.js/zepto';
 
 class DocSearch {
   constructor({
@@ -12,6 +11,7 @@ class DocSearch {
     searchIndex,
     inputSelector,
     debug = false,
+    baseUrl = '/',
     queryDataCallback = null,
     autocompleteOptions = {
       debug: false,
@@ -28,20 +28,19 @@ class DocSearch {
     this.queryDataCallback = queryDataCallback || null;
     const autocompleteOptionsDebug =
       autocompleteOptions && autocompleteOptions.debug ? autocompleteOptions.debug : false;
-
+    // eslint-disable-next-line no-param-reassign
     autocompleteOptions.debug = debug || autocompleteOptionsDebug;
     this.autocompleteOptions = autocompleteOptions;
     this.autocompleteOptions.cssClasses = this.autocompleteOptions.cssClasses || {};
     this.autocompleteOptions.cssClasses.prefix = this.autocompleteOptions.cssClasses.prefix || 'ds';
     const inputAriaLabel =
       this.input && typeof this.input.attr === 'function' && this.input.attr('aria-label');
-
     this.autocompleteOptions.ariaLabel =
       this.autocompleteOptions.ariaLabel || inputAriaLabel || 'search input';
 
     this.isSimpleLayout = layout === 'simple';
 
-    this.client = new LunrSearchAdapter(searchDocs, searchIndex);
+    this.client = new LunrSearchAdapter(searchDocs, searchIndex, baseUrl);
 
     if (enhancedSearchInput) {
       this.input = DocSearch.injectSearchBox(this.input);
@@ -58,7 +57,6 @@ class DocSearch {
     ]);
 
     const customHandleSelected = handleSelected;
-
     this.handleSelected = customHandleSelected || this.handleSelected;
 
     // We prevent default link clicking if a custom handleSelected is defined
@@ -83,14 +81,12 @@ class DocSearch {
   static injectSearchBox(input) {
     input.before(templates.searchBox);
     const newInput = input.prev().prev().find('input');
-
     input.remove();
-
     return newInput;
   }
 
   static bindSearchBoxEvent() {
-    $('.searchbox [type="reset"]').on('click', () => {
+    $('.searchbox [type="reset"]').on('click', function () {
       $('input#docsearch').focus();
       $(this).addClass('hide');
       autocomplete.autocomplete.setVal('');
@@ -99,7 +95,6 @@ class DocSearch {
     $('input#docsearch').on('keyup', () => {
       const searchbox = document.querySelector('input#docsearch');
       const reset = document.querySelector('.searchbox [type="reset"]');
-
       reset.className = 'searchbox__reset';
       if (searchbox.value.length === 0) {
         reset.className += ' hide';
@@ -116,7 +111,6 @@ class DocSearch {
    */
   static getInputFromSelector(selector) {
     const input = $(selector).filter('input');
-
     return input.length ? $(input[0]) : null;
   }
 
@@ -136,12 +130,13 @@ class DocSearch {
         query = queryHook(query) || query;
       }
       this.client.search(query).then((hits) => {
-        if (this.queryDataCallback && typeof this.queryDataCallback === 'function') {
+        if (this.queryDataCallback && typeof this.queryDataCallback == 'function') {
           this.queryDataCallback(hits);
         }
-        const formattedHits = transformData ? transformData(hits) : hits;
-
-        callback(DocSearch.formatHits(formattedHits));
+        if (transformData) {
+          hits = transformData(hits) || hits;
+        }
+        callback(DocSearch.formatHits(hits));
       });
     };
   }
@@ -155,17 +150,14 @@ class DocSearch {
         // eslint-disable-next-line no-param-reassign
         hit._highlightResult = utils.mergeKeyWithParent(hit._highlightResult, 'hierarchy');
       }
-
       return utils.mergeKeyWithParent(hit, 'hierarchy');
     });
 
     // Group hits by category / subcategory
     let groupedHits = utils.groupBy(hits, 'lvl0');
-
     $.each(groupedHits, (level, collection) => {
       const groupedHitsByLvl1 = utils.groupBy(collection, 'lvl1');
       const flattenedHits = utils.flattenAndFlagFirst(groupedHitsByLvl1, 'isSubCategoryHeader');
-
       groupedHits[level] = flattenedHits;
     });
     groupedHits = utils.flattenAndFlagFirst(groupedHits, 'isCategoryHeader');
@@ -211,19 +203,15 @@ class DocSearch {
 
   static formatURL(hit) {
     const { url, anchor } = hit;
-
     if (url) {
       const containsAnchor = url.indexOf('#') !== -1;
-
       if (containsAnchor) return url;
-      if (anchor) return `${hit.url}#${hit.anchor}`;
-
+      else if (anchor) return `${hit.url}#${hit.anchor}`;
       return url;
-    }
-    if (anchor) return `#${hit.anchor}`;
-
+    } else if (anchor) return `#${hit.anchor}`;
+    /* eslint-disable */
     console.warn('no anchor nor url for : ', JSON.stringify(hit));
-
+    /* eslint-enable */
     return null;
   }
 
@@ -234,7 +222,6 @@ class DocSearch {
   static getSuggestionTemplate(isSimpleLayout) {
     const stringTemplate = isSimpleLayout ? templates.suggestionSimple : templates.suggestion;
     const template = Hogan.compile(stringTemplate);
-
     return (suggestion) => template.render(suggestion);
   }
 
@@ -267,7 +254,6 @@ class DocSearch {
         ? 'algolia-autocomplete-right'
         : 'algolia-autocomplete-left';
     const autocompleteWrapper = $('.algolia-autocomplete');
-
     if (!autocompleteWrapper.hasClass(alignClass)) {
       autocompleteWrapper.addClass(alignClass);
     }

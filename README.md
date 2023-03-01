@@ -1,5 +1,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5d9b784f-1275-4258-9d5d-48d411a3b243/deploy-status)](https://app.netlify.com/sites/sendsay-docs/deploys)
 
+# Links
+
+[List of changes in swizzled components](https://sendsay.fibery.io/%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_app/Dev-Swizzled-components-630)
+
+<br>
+
 # How to translate a new article
 
 There is a couple of pathes for each translated file:

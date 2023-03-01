@@ -30,9 +30,7 @@ const utils = {
       return object;
     }
     const newObject = $.extend({}, object, object[property]);
-
     delete newObject[property];
-
     return newObject;
   },
   /*
@@ -68,13 +66,11 @@ const utils = {
    */
   groupBy(collection, property) {
     const newCollection = {};
-
     $.each(collection, (index, item) => {
       if (item[property] === undefined) {
         throw new Error(`[groupBy]: Object has no key ${property}`);
       }
       let key = item[property];
-
       if (typeof key === 'string') {
         key = key.toLowerCase();
       }
@@ -85,7 +81,6 @@ const utils = {
       }
       newCollection[key].push(item);
     });
-
     return newCollection;
   },
   /*
@@ -115,18 +110,15 @@ const utils = {
    */
   flatten(array) {
     const results = [];
-
     array.forEach((value) => {
       if (!Array.isArray(value)) {
         results.push(value);
-
         return;
       }
       value.forEach((subvalue) => {
         results.push(subvalue);
       });
     });
-
     return results;
   },
   /*
@@ -163,11 +155,9 @@ const utils = {
       collection.map((item, index) => {
         // eslint-disable-next-line no-param-reassign
         item[flag] = index === 0;
-
         return item;
       })
     );
-
     return this.flatten(values);
   },
   /*
@@ -181,14 +171,12 @@ const utils = {
    */
   compact(array) {
     const results = [];
-
     array.forEach((value) => {
       if (!value) {
         return;
       }
       results.push(value);
     });
-
     return results;
   },
   /*
@@ -208,7 +196,7 @@ const utils = {
    * @param {object} object Hit object returned by the Algolia API
    * @param {string} property Object key to look for
    * @return {string}
-   * */
+   **/
   getHighlightedValue(object, property) {
     if (
       object._highlightResult &&
@@ -228,7 +216,6 @@ const utils = {
     ) {
       return object._highlightResult[property].value;
     }
-
     return object[property];
   },
   /*
@@ -250,7 +237,7 @@ const utils = {
    * @param {object} object Hit object returned by the Algolia API
    * @param {string} property Object key to look for
    * @return {string}
-   * */
+   **/
   getSnippetedValue(object, property) {
     if (
       !object._snippetResult ||
@@ -267,7 +254,6 @@ const utils = {
     if (['.', '!', '?'].indexOf(snippet[snippet.length - 1]) === -1) {
       snippet = `${snippet}…`;
     }
-
     return snippet;
   },
   /*

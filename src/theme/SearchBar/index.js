@@ -1,30 +1,31 @@
+import React, { useRef, useCallback, useState } from 'react';
+import classnames from 'classnames';
 import { useHistory } from '@docusaurus/router';
 import { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { usePluginData } from '@docusaurus/useGlobalData';
-import classnames from 'classnames';
-import React, { useRef, useCallback, useState, useLayoutEffect } from 'react';
-
-function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
+import useIsBrowser from '@docusaurus/useIsBrowser';
+const Search = (props) => {
   const initialized = useRef(false);
   const searchBarRef = useRef(null);
   const [indexReady, setIndexReady] = useState(false);
   const history = useHistory();
-  const { siteConfig = {}, isClient = false } = useDocusaurusContext();
+  const { siteConfig = {} } = useDocusaurusContext();
+  const isBrowser = useIsBrowser();
   const { baseUrl } = siteConfig;
   const initAlgolia = (searchDocs, searchIndex, DocSearch) => {
     new DocSearch({
       searchDocs,
       searchIndex,
+      baseUrl,
       inputSelector: '#search_input_react',
       // Override algolia's default selection event, allowing us to do client-side
       // navigation and avoiding a full page refresh.
       handleSelected: (_input, _event, suggestion) => {
-        const url = baseUrl + suggestion.url;
+        const url = suggestion.url || '/';
         // Use an anchor tag to parse the absolute url into a relative url
         // Alternatively, we can use new URL(suggestion.url) but its not supported in IE
         const a = document.createElement('a');
-
         a.href = url;
         // Algolia use closest parent element id #__docusaurus when a h1 page title does not have an id
         // So, we can safely remove it. See https://github.com/facebook/docusaurus/issues/1828 for more details.
@@ -50,14 +51,14 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
       Promise.all([
         getSearchDoc(),
         getLunrIndex(),
-        import('./lib/DocSearch'),
+        import('./DocSearch'),
         import('./algolia.css'),
       ]).then(([searchDocs, searchIndex, { default: DocSearch }]) => {
-        setIndexReady(true);
         if (searchDocs.length === 0) {
           return;
         }
         initAlgolia(searchDocs, searchIndex, DocSearch);
+        setIndexReady(true);
       });
       initialized.current = true;
     }
@@ -69,14 +70,14 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
         searchBarRef.current.focus();
       }
 
-      handleSearchBarToggle && handleSearchBarToggle(!isSearchBarExpanded);
+      props.handleSearchBarToggle && props.handleSearchBarToggle(!props.isSearchBarExpanded);
     },
-    [isSearchBarExpanded, handleSearchBarToggle]
+    [props.isSearchBarExpanded]
   );
 
-  useLayoutEffect(() => {
+  if (isBrowser) {
     loadAlgolia();
-  }, []);
+  }
 
   const placeholder = indexReady
     ? translate({ id: 'search.placeholder.ready', message: 'Поиск' })
@@ -88,7 +89,7 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
         aria-label="expand searchbar"
         role="button"
         className={classnames('search-icon', {
-          'search-icon-hidden': isSearchBarExpanded,
+          'search-icon-hidden': props.isSearchBarExpanded,
         })}
         onClick={toggleSearchIconClick}
         onKeyDown={toggleSearchIconClick}
@@ -101,8 +102,8 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
         aria-label="Search"
         className={classnames(
           'navbar__search-input',
-          { 'search-bar-expanded': isSearchBarExpanded },
-          { 'search-bar': !isSearchBarExpanded }
+          { 'search-bar-expanded': props.isSearchBarExpanded },
+          { 'search-bar': !props.isSearchBarExpanded }
         )}
         onClick={loadAlgolia}
         onMouseOver={loadAlgolia}
@@ -113,6 +114,6 @@ function Search({ isSearchBarExpanded, handleSearchBarToggle }) {
       />
     </div>
   );
-}
+};
 
 export default Search;
