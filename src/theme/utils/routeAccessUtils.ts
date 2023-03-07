@@ -1,10 +1,12 @@
 import { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import {
   ResctrictedAccessItems,
-  ResctrictedAccessItem,
   ResctrictedAccessStatus,
   PropSidebarItemType,
   RestrictedHref,
+  ResctrictedAccessItem,
+  ResctrictedAccessStorageKeys,
+  AllowedRoutesOptions,
 } from '../types';
 import { ResctrictedAccessStorage } from './ResctrictedAccessStorage';
 import { HIDDEN_CATEGORIES_LABELS } from '../constants';
@@ -12,26 +14,24 @@ import { HIDDEN_CATEGORIES_LABELS } from '../constants';
 const getRoutesFromStorage = (): ResctrictedAccessItems =>
   ResctrictedAccessStorage.getJSON<ResctrictedAccessItems>() ?? {};
 
-interface AllowedRoutesOptions {
-  isNewAccessToRoute: boolean;
-  isStorageAllowed: boolean;
-}
-
-export const getAllowedRoutes = (
-  routeHref: string,
-  { isNewAccessToRoute, isStorageAllowed }: AllowedRoutesOptions
-) => {
+export const getAllowedRoutes = (options?: AllowedRoutesOptions) => {
+  const { isStorageAllowed, type, newRouteHref } = options ?? {};
   const previouslyAccessed: ResctrictedAccessItems = isStorageAllowed ? getRoutesFromStorage() : {};
 
-  if (!isNewAccessToRoute) {
+  if (!newRouteHref) {
     return previouslyAccessed;
   }
 
+  const storeKey =
+    type === PropSidebarItemType.Category
+      ? ResctrictedAccessStorageKeys.Categories
+      : ResctrictedAccessStorageKeys.Articles;
+
   return {
     ...previouslyAccessed,
-    categories: {
-      ...(previouslyAccessed.categories ?? {}),
-      [routeHref]: ResctrictedAccessStatus.Allowed,
+    [storeKey]: {
+      ...(previouslyAccessed[storeKey] ?? {}),
+      [newRouteHref]: ResctrictedAccessStatus.Allowed,
     },
   };
 };
@@ -42,8 +42,8 @@ export const checkAllowedRoutes = (allowedRoutes: ResctrictedAccessItems, routeH
   }
 
   return Object.values(allowedRoutes).reduce(
-    (acc: boolean, type: ResctrictedAccessItem) =>
-      acc || type[routeHref] === ResctrictedAccessStatus.Allowed,
+    (acc: boolean, routes: ResctrictedAccessItem) =>
+      acc || routes[routeHref] === ResctrictedAccessStatus.Allowed,
     false
   );
 };

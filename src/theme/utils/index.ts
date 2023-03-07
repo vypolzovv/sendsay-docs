@@ -6,3 +6,4 @@ export {
   checkAllowedRoutes,
 } from './routeAccessUtils';
 export { ResctrictedAccessStorage } from './ResctrictedAccessStorage';
+export { getAllowedCardItems } from './getAllowedCardItems';

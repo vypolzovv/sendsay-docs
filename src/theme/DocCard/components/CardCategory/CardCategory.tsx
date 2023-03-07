@@ -2,8 +2,9 @@ import React from 'react';
 import type { PropSidebarItemCategory } from '@docusaurus/plugin-content-docs';
 import { findFirstCategoryLink } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
-import { getDescriptionObj } from '../../utils';
 import { CardLayout } from '../CardLayout';
+import { getDescriptionObj } from '../../utils';
+import { getAllowedCardItems } from '../../../utils/getAllowedCardItems';
 
 interface CardCategoryProps {
   item: PropSidebarItemCategory;
@@ -16,7 +17,7 @@ const CardCategory = ({ item }: CardCategoryProps) => {
     return null;
   }
 
-  const count = item.items.length;
+  const count = getAllowedCardItems(item.items).length;
   const descriptionText = getDescriptionObj(count);
 
   return (

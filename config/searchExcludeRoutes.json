@@ -1,1 +1,6 @@
-["/exclude-from-search/**", "/ecom/**"]
+[
+  "/exclude-from-search/**",
+  "/ecom/**",
+  "/automations/automations-by-event/welcome-series",
+  "/videolessons/automations/how-to-create-welcome-series"
+]

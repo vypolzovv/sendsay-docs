@@ -6,6 +6,15 @@
 
 <br>
 
+# How to restrict access to an _article_ or _category_:
+
+1. add `restrictedAccessHref` custom prop in `_category_.json` or article header<br>
+   _value should be uniq across all docs_
+2. add full route to `config/restrictedAccessRoutes.json` <br>
+   _to exclude it from search_
+
+<br>
+
 # How to translate a new article
 
 There is a couple of pathes for each translated file:
