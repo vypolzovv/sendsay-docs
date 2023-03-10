@@ -92,6 +92,8 @@ Content-Type
 550 5.0.0 Email has permanent delivery errors <br/>
 550 5.0.0 Email is in the account stoplist <br/>
 
+[SMTP-коды: подборка и описание](https://docs.sendsay.ru/integrations/smtp-reply-codes)
+
 Посмотреть 100 последних ошибок в SMTP-гейте можно в АПИ-консоли с помощью запроса:
 
 ```
