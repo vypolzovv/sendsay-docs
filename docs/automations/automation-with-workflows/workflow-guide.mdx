@@ -1,0 +1,141 @@
+---
+sidebar_position: 2
+---
+
+import secondStepOfTheWorkflow from '/img/automations/automation-with-workflows/workflow-guide/second-step-of-the-workflow.png';
+
+# Гайд по работе со сценариями
+
+Сценарии запускают автоматические цепочки — последовательные действия системы, которые реагируют на какое-либо Событие или Действие подписчика. Например, когда пользователь подтвердил свою подписку на&nbsp;рассылку, ему автоматически приходит приветственная цепочка писем&nbsp;&mdash; чтобы познакомить нового подписчика с&nbsp;компанией и&nbsp;её&nbsp;услугами.
+
+Главное преимущество автоматических рассылок&nbsp;&mdash; это экономия времени: достаточно настроить сценарий один раз, а&nbsp;дальше он&nbsp;будет работать без вашего участия. Сделать это можно в&nbsp;редакторе сценариев:
+
+![Workflow creation](/img/automations/automation-with-workflows/workflow-guide/workflow-creation.jpg) <br/>
+
+[Что такое сценарий и как его создать](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation)
+
+## Как настроить и активировать сценарий
+
+1. Чтобы начать работу со&nbsp;сценарием, перейдите на&nbsp;его страницу и&nbsp;нажмите кнопку «Редактировать»:
+
+   ![Edit workflow](/img/automations/automation-with-workflows/workflow-guide/edit-workflow.png)
+
+2. Выберите Стартовое событие: в&nbsp;первом блоке можно выбрать одно или несколько Событий с помощью кнопки «+&nbsp;Добавить». Когда одно из&nbsp;них сработает, подписчик попадёт в&nbsp;сценарий.
+
+   Например, в&nbsp;качестве Стартового может быть событие **Изменение данных подписчика**: когда его данные изменятся, он&nbsp;сразу попадёт в&nbsp;сценарий.
+
+3. Под Стартовым событием нажмите на&nbsp;кнопку плюса `+` и&nbsp;добавьте в&nbsp;сценарий нужные блоки Событий, Действий, Условий, Таймеров или Сценариев:
+
+<p align="center">
+  <img src={secondStepOfTheWorkflow} alt="Second step of the workflow" />
+</p>
+
+4. Когда сценарий готов, нажмите синюю кнопку &laquo;Сохранить&raquo; в&nbsp;правом верхнем углу визуального редактора:
+
+   ![How to save the workflow](/img/automations/automation-with-workflows/workflow-guide/how-to-save-the-workflow.png)
+   Затем выйдите из&nbsp;редактора, нажав стрелочку `←` в&nbsp;верхнем левом углу.
+
+5. Активируйте сценарий на&nbsp;его странице, нажав зелёную кнопку &laquo;Активировать&raquo;:
+
+   ![How to activate the workflow](/img/automations/automation-with-workflows/workflow-guide/how-to-activate-the-workflow.png)
+   Если необходимо отредактировать сценарий, нажмите кнопку &laquo;Остановить&raquo;. После этого отредактируйте сценарий, сохраните и&nbsp;активируйте его снова.
+
+   :::tip Важно
+   Редактировать активный сценарий, по&nbsp;которому уже идут подписчики,&nbsp;&mdash; **нежелательно**. Это может привести к&nbsp;ошибкам прохождения сценария его участниками.
+   :::
+
+6. Протестируйте сценарий перед запуском. Это необязательный пункт, но&nbsp;так вы&nbsp;убедитесь, что сценарий работает так, как вы&nbsp;ожидаете.
+
+   Чтобы проверить корректность работы сценария, используйте собственный email-адрес. Для этого необходимо добавить его в&nbsp;базу контактов.
+
+   [Как протестировать сценарий](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation/#как-протестировать-сценарий)
+
+7. Включите приём подписчиков, чтобы они начали попадать в&nbsp;сценарий после того, как сработает Стартовое событие:
+
+   ![How to turn on subscriber reception](/img/automations/automation-with-workflows/workflow-guide/how-to-turn-on-subscriber-reception.png)
+
+8. Отключите повторные прохождения&nbsp;&mdash; если нужно, чтобы участники сценария прошли его только один раз:
+
+   ![How to turn off-re-passing](/img/automations/automation-with-workflows/workflow-guide/how-to-turn-off-re-passing.png)
+
+## Как приостановить приём участников
+
+Чтобы новые участники не&nbsp;попадали в&nbsp;сценарий, можно приостановить их&nbsp;приём. При этом текущие участники пройдут сценарий до&nbsp;конца.
+
+Для этого на&nbsp;странице сценария отключите пункт **Принимать подписчиков**:
+
+![Suspension the reception of workflow members](/img/automations/automation-with-workflows/workflow-guide/suspension-the-reception-of-workflow-members.png)
+
+## Как включить повторные прохождения
+
+Чтобы участники сценария могли заново его проходить, включите пункт **Повторные прохождения** на&nbsp;странице сценария:
+
+![How to enable re-passes](/img/automations/automation-with-workflows/workflow-guide/how-to-enable-re-passes.png)
+
+## Как вручную добавить или исключить участников сценария
+
+Если нужно добавить новых участников, список или сегмент в&nbsp;сценарий, это можно сделать вручную. В&nbsp;таком случае они проигнорируют Стартовое событие и&nbsp;сразу попадут на&nbsp;второй шаг сценария.
+
+:::tip Важно
+Добавлять новых участников можно только в&nbsp;активный сценарий.
+:::
+
+Кроме того, из&nbsp;сценария можно вручную исключить конкретные контакты, список или сегмент, а&nbsp;также всех участников сценария сразу. Если исключить участников, они принудительно закончат прохождение сценария на&nbsp;том шаге, где они были в&nbsp;текущий момент.
+
+Чтобы добавить или исключить участников сценария:
+
+1. На&nbsp;странице сценария нажмите кнопку &laquo;Действия&raquo; и&nbsp;выберите пункт **Управление участниками**:
+
+   ![Member Management](/img/automations/automation-with-workflows/workflow-guide/member-management.png)
+
+2. В&nbsp;появившемся окне выберите нужную вкладку&nbsp;&mdash; добавить или исключить участников:
+
+   ![Member Management](/img/automations/automation-with-workflows/workflow-guide/member-management-1.png)
+
+3. Выберите нужное действие:
+
+   - **указать вручную**, если хотите добавить или исключить конкретных участников сценария. Затем введите нужные адреса контактов;
+   - **список или сегмент**, если хотите добавить или исключить всех участников одной группы. Выберите нужный канал и&nbsp;конкретный список/сегмент, либо пункт **Создать список** — и создайте список, не выходя из редактора;
+   - **всех участников**, если хотите исключить из&nbsp;сценария всех текущих участников.
+
+4. Нажмите синюю кнопку &laquo;Добавить&raquo; или &laquo;Исключить&raquo; в&nbsp;зависимости от&nbsp;выбранного действия.
+
+## Как создать копию сценария
+
+Скопировать сценарий можно двумя способами:
+
+- На&nbsp;странице сценария нажмите на&nbsp;кнопку &laquo;Действия&raquo; и&nbsp;выберите пункт **Создать копию**:
+
+  ![How to make a copy](/img/automations/automation-with-workflows/workflow-guide/how-to-make-a-copy.png)
+
+  В&nbsp;появившемся окне введите новое название и&nbsp;нажмите кнопку &laquo;Создать копию&raquo;. После этого копия будет доступна в&nbsp;разделе **Автоматизации &rarr; Сценарии**.
+
+- Выберите нужный сценарий из&nbsp;списка в&nbsp;разделе **Автоматизации → Сценарии**, нажмите на кнопку «Редактировать» и&nbsp;выберите пункт **Копировать**:
+
+  ![How to make a copy](/img/automations/automation-with-workflows/workflow-guide/how-to-make-a-copy-1.png)
+
+  В&nbsp;появившемся окне переименуйте копию и&nbsp;нажмите кнопку &laquo;Создать копию&raquo;.
+
+Если вы&nbsp;создадите копию активного сценария, эта копия будет неактивна. В&nbsp;новом сценарии будут доступны все блоки исходного сценария, но&nbsp;не&nbsp;будет участников.
+
+## Как удалить сценарий
+
+Если удалить сценарий, он&nbsp;досрочно завершится для всех участников на&nbsp;том шаге, на&nbsp;котором они были в&nbsp;момент удаления.
+
+:::tip Важно
+Удалённый сценарий невозможно восстановить.
+:::
+
+Удалить сценарий можно двумя способами:
+
+- На&nbsp;странице сценария с&nbsp;помощью пункта **Удалить** у&nbsp;кнопки &laquo;Действия&raquo;:
+
+  ![How to delete the workflow](/img/automations/automation-with-workflows/workflow-guide/how-to-delete-the-workflow.png)
+
+- В&nbsp;списке сценариев с&nbsp;помощью пункта **Удалить** у&nbsp;кнопки &laquo;Редактировать&raquo;:
+
+  ![How to delete the workflow](/img/automations/automation-with-workflows/workflow-guide/how-to-delete-the-workflow-1.png)
+
+Если вы&nbsp;хотите удалить сразу несколько сценариев, перейдите в&nbsp;список сценариев, выделите галочками нужные и&nbsp;нажмите кнопку &laquo;Удалить&raquo;:
+
+![How to delete several workflows](/img/automations/automation-with-workflows/workflow-guide/how-to-delete-several-workflows.png)
