@@ -570,7 +570,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "old_price": 5.99,
         "picture": [],
         "price": 7.88,
-        "ur"l: "url",
+        "url": "url",
         "vendor": "vendor"
       }
     ],
