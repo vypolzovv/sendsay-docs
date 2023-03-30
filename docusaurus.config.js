@@ -4,7 +4,8 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const trackingID = process.env.GOOGLE_TAG_MANAGER_ID;
+const analyticsId = process.env.GTM_ANALYTICS_ID;
+const scriptsId = process.env.GTM_SCRIPTS_ID;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -56,12 +57,13 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag: trackingID
-          ? {
-              trackingID,
-              anonymizeIP: true,
-            }
-          : undefined,
+        gtag:
+          analyticsId || scriptsId
+            ? {
+                trackingID: [analyticsId, scriptsId],
+                anonymizeIP: true,
+              }
+            : undefined,
         sitemap: {
           ignorePatterns: require('./config/sitemapIgnorePatterns'),
         },

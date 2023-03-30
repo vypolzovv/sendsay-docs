@@ -10,7 +10,8 @@ jobs:
     env:
       NODE_ENV: CI
       FORCE_COLOR: 1
-      GOOGLE_TAG_MANAGER_ID: ${{ secrets.GOOGLE_TAG_MANAGER_ID }}
+      GTM_SCRIPTS_ID: ${{ secrets.GTM_SCRIPTS_ID }}
+      GTM_ANALYTICS_ID: ${{ secrets.GTM_ANALYTICS_ID }}
 
     steps:
       - name: Checkout
