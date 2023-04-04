@@ -4,8 +4,5 @@
     "link": {
       "type": "generated-index",
       "slug": "ecom"
-    },
-    "customProps": {
-      "restrictedAccessHref": "ecom"
     }
   }
