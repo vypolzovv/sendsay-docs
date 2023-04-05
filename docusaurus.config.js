@@ -41,6 +41,12 @@ const config = {
         redirects: require('./config/redirects.json'),
       },
     ],
+    [
+      'docusaurus-plugin-yandex-metrica',
+      {
+        counterID: '5230714',
+      },
+    ],
   ],
 
   presets: [
