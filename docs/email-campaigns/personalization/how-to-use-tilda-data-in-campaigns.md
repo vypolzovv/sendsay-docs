@@ -22,7 +22,7 @@ sidebar_position: 2
 4. Укажите следующие данные:
    - вместо «Строка» выберите «Объект»,
    - введите название анкеты (например, «Формы из Tilda»),
-   - в поле label введите tildaforms.
+   - в поле label введите `tildaforms`
 5. Нажмите «Добавить».
 
 ![Create data group for tilda](/img/email-campaigns/personalization//how-to-use-tilda-data-in-campaigns/create-data-group-for-tilda.gif) <br/>
