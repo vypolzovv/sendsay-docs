@@ -12,6 +12,8 @@ jobs:
       FORCE_COLOR: 1
       GTM_SCRIPTS_ID: ${{ secrets.GTM_SCRIPTS_ID }}
       GTM_ANALYTICS_ID: ${{ secrets.GTM_ANALYTICS_ID }}
+      GTM_LANDING_GROUP_COUNTER_ID: ${{ secrets.GTM_LANDING_GROUP_COUNTER_ID }}
+      YANDEX_METRICA_COUNTER_ID: ${{ secrets.YANDEX_METRICA_COUNTER_ID }}
 
     steps:
       - name: Checkout

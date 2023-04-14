@@ -4,8 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-const analyticsId = process.env.GTM_ANALYTICS_ID;
-const scriptsId = process.env.GTM_SCRIPTS_ID;
+const plugins = require('./plugins');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -27,33 +26,13 @@ const config = {
     locales: ['ru', 'en'],
   },
 
-  plugins: [
-    [
-      'docusaurus-lunr-search',
-      {
-        languages: ['ru', 'en'],
-        excludeRoutes: require('./config/searchExcludeRoutes.json'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: require('./config/redirects.json'),
-      },
-    ],
-    [
-      'docusaurus-plugin-yandex-metrica',
-      {
-        counterID: '5230714',
-      },
-    ],
-  ],
+  plugins,
 
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
@@ -63,23 +42,16 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        gtag:
-          analyticsId || scriptsId
-            ? {
-                trackingID: [analyticsId, scriptsId],
-                anonymizeIP: true,
-              }
-            : undefined,
         sitemap: {
           ignorePatterns: require('./config/sitemapIgnorePatterns'),
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       navbar: {
         logo: {
           alt: 'Sendsay docs',
@@ -127,7 +99,7 @@ const config = {
       colorMode: {
         disableSwitch: true,
       },
-    }),
+    },
 };
 
 module.exports = config;
