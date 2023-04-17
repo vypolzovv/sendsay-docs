@@ -1,0 +1,91 @@
+---
+sidebar_position: 13
+---
+
+import timer from '/img/email-campaigns/create-your-campaign/countdown-timer/timer.gif';
+import mediumBlueTimer from '/img/email-campaigns/create-your-campaign/countdown-timer/medium-blue-timer.gif';
+import smallGrayTimer from '/img/email-campaigns/create-your-campaign/countdown-timer/small-grey-timer.gif';
+import largeTransparentTimer from '/img/email-campaigns/create-your-campaign/countdown-timer/large-transparent-timer.gif';
+import mediumBlackTimer from '/img/email-campaigns/create-your-campaign/countdown-timer/medium-black-timer.gif';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Как добавить таймер обратного отсчёта в письмо
+
+Таймер обратного отсчета — это счётчик, который показывает, сколько времени осталось до&nbsp;события. Например, таймер в&nbsp;письме может сообщать, через сколько начнется какое-то мероприятие&nbsp;или сколько времени осталось до&nbsp;конца распродажи:
+
+<p align="center">
+  <img src={timer} alt="Timer" />
+</p>
+
+Динамическая смена цифр мгновенно привлекает внимание подписчиков. Кроме того, таймеры помогают создать в&nbsp;письмах эффект срочности и&nbsp;напомнить клиенту о&nbsp;том, что времени осталось немного и&nbsp;стоит поспешить. А&nbsp;ограниченные по&nbsp;времени предложения, в&nbsp;свою очередь, побуждают пользователей к&nbsp;покупкам.
+
+Чтобы добавить таймер в&nbsp;письмо:
+
+1. Используйте команду подстановки `[% countdown("size", "dt", "color") %]`, где:
+
+   - `countdown` &mdash; параметр отсчёта времени **до&nbsp;события**. Если необходимо считать время **от&nbsp;события**, используйте значение `countup`;
+   - `size` &mdash; значение размера счётчика. Здесь нужно указать параметр `small`, `medium` или `large` (маленький, средний или большой счётчик);
+   - `dt` &mdash; дата и&nbsp;время события в&nbsp;формате `2015-09-15T13:42`;
+   - `color` &mdash; значение цвета. Выбрать можно среди параметров `black`, `gray`, `blue` или `transparent` (чёрный, серый, синий или прозрачный).<br/><br/>
+
+   :::tip Важно
+   Таймер отобразится пустым, если в&nbsp;отсчёте времени **от&nbsp;события** указать дату и&nbsp;время в&nbsp;будущем.
+   :::
+
+2. Укажите нужные параметры в&nbsp;команде подстановки через запятую после их&nbsp;значения. Например:
+
+   - `[% countdown("size", "medium", "dt", "2023-05-15T13:42", "color", "blue") %]`
+
+   <p align="center">
+     <img src={mediumBlueTimer} alt="Medium blue timer" />
+   </p>
+
+   - `[% countup("size", "small", "dt", "2023-02-15T13:42", "color", "gray") %]`
+
+   <p align="center">
+     <img src={smallGrayTimer} alt="Small gray timer" />
+   </p>
+
+   - `[% countdown("size", "large", "dt", "2023-05-15T13:42", "color", "transparent") %]`
+
+   <p align="center">
+     <img src={largeTransparentTimer} alt="Large transparent timer" />
+   </p>
+
+   - `[% countdown("size", "medium", "dt", "2023-05-15T13:42", "color", "black") %]`
+
+   <p align="center">
+     <img src={mediumBlackTimer} alt="Medium black timer" />
+   </p>
+
+   При отправке письма сервер преобразует команду подстановки в&nbsp;таймер.
+
+3. Добавьте таймер в&nbsp;письмо.
+
+  <Tabs>
+  <TabItem value="key1" label="В блочном редакторе" default>
+
+    Перетащите HTML-блок в&nbsp;нужное место и&nbsp;укажите в&nbsp;нём получившуюся команду подстановки.
+
+    ![How to add a countdown timer](/img/email-campaigns/create-your-campaign/countdown-timer/how-to-add-a-countdown-timer.gif)
+
+    [Как создать письмо в блочном редакторе](https://docs.sendsay.ru/email-campaigns/create-your-campaign/drag-and-drop-editor)
+
+  </TabItem>
+  <TabItem value="key2" label="В HTML-редакторе">
+
+    В&nbsp;нужном месте письма добавьте таблицу и&nbsp;укажите в&nbsp;ней получившуюся команду подстановки:
+    ```
+    <tr>
+      <td>
+        [% countdown("size", "medium", "dt", "2023-05-15T13:42", "color", "blue") %]
+      </td>
+    </tr>
+    ```
+    ![How to add a countdown timer](/img/email-campaigns/create-your-campaign/countdown-timer/how-to-add-a-countdown-timer1.gif)
+
+    [Как загрузить HTML-шаблон](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-upload-html-template)
+
+  </TabItem>
+  </Tabs>
