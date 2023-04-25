@@ -8,6 +8,8 @@ sidebar_position: 1
 
 Sendsay is a platform that helps you communicate with clients. Here you can send campaigns, store subscriber data and track statistics. There are five communication channels: email, SMS, web push notifications, Viber and VK. However, you can send emails and messages only to your subscribers.
 
+Our platform is included in the Unified Register of Russian programs for electronic computers and databases. In accordance with the state policy of import substitution, Sendsay is a full-fledged analogue of foreign services.
+
 ## Subscribers
 
 Each subscriber has a profile with contacts, personal data, and email campaign reports. There are three ways to add subscribers:
