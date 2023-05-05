@@ -1,0 +1,498 @@
+---
+sidebar_position: 3
+---
+
+import startEvent from '/img/automations/automation-with-workflows/workflow-blocks/start-event.png';
+import startEvent1 from '/img/automations/automation-with-workflows/workflow-blocks/start-event1.png';
+import subscriberOpenedEmail from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-opened-the-email.png';
+import changeSubscriberData from '/img/automations/automation-with-workflows/workflow-blocks/change-of-subscriber-data.png';
+import clickOnLink from '/img/automations/automation-with-workflows/workflow-blocks/click-on-the-link.png';
+import subscriptionConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/subscription-confirmation.png';
+import subscriberAddedUnconfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-unconfirmed.png';
+import subscriberAddedConfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-confirmed.png';
+import targetPageOpening from '/img/automations/automation-with-workflows/workflow-blocks/target-page-opening.png';
+import formConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/form-confirmation.png';
+import formFilling from '/img/automations/automation-with-workflows/workflow-blocks/form-filling.png';
+import unsubscribeFromEverything from '/img/automations/automation-with-workflows/workflow-blocks/unsubscribe-from-everything.png';
+import unsubscribeFromSender from '/img/automations/automation-with-workflows/workflow-blocks/unsubscribe-from-the-sender.png';
+import turnOffFallback from '/img/automations/automation-with-workflows/workflow-blocks/turn-off-the-fallback.png';
+import actions from '/img/automations/automation-with-workflows/workflow-blocks/actions.png';
+import howConfigureActions from '/img/automations/automation-with-workflows/workflow-blocks/how-to-configure-the-actions.png';
+import emailTheSubscriber from '/img/automations/automation-with-workflows/workflow-blocks/email-the-subscriber.png';
+import addToTheList from '/img/automations/automation-with-workflows/workflow-blocks/add-to-the-list.png';
+import changeValueGuestionnaireField from '/img/automations/automation-with-workflows/workflow-blocks/change-value-of-the-questionnaire-field.png';
+import howFillInField from '/img/automations/automation-with-workflows/workflow-blocks/how-to-fill-in-the-field.png';
+import changingByTheKey from '/img/automations/automation-with-workflows/workflow-blocks/changing-by-the-key.png';
+import delist from '/img/automations/automation-with-workflows/workflow-blocks/delist.png';
+import callWebhook from '/img/automations/automation-with-workflows/workflow-blocks/call-webhook.png';
+import sendSms from '/img/automations/automation-with-workflows/workflow-blocks/send-sms.png';
+import sendWebPush from '/img/automations/automation-with-workflows/workflow-blocks/send-web-push.png';
+import split from '/img/automations/automation-with-workflows/workflow-blocks/split.png';
+import listSplit from '/img/automations/automation-with-workflows/workflow-blocks/list-split.png';
+import dataSplit from '/img/automations/automation-with-workflows/workflow-blocks/data-split.png';
+import timers from '/img/automations/automation-with-workflows/workflow-blocks/timers.png';
+import passedTime from '/img/automations/automation-with-workflows/workflow-blocks/passed-time.png';
+import exactTime from '/img/automations/automation-with-workflows/workflow-blocks/exact-time.png';
+import workflow from '/img/automations/automation-with-workflows/workflow-blocks/workflow.png';
+import switchAnotherWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/switch-to-another-workflow.png';
+import getOutOfWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/get-out-of-the-workflow.png';
+import createSeveralBranches from '@site/static/video/automations/automation-with-workflows/workflow-blocks/createSeveralBranches.mp4';
+import Video from '@site/src/components/Video';
+
+# Блоки в редакторе сценариев
+
+Сценарий состоит из цепочки блоков, которые последовательно запускаются в фоновом режиме. Какие блоки есть в сценариях:
+
+- [События](#события),
+- [Действия](#действия),
+- [Таймеры](#таймеры),
+- [Разделение](#разделение),
+- [Сценарий](#сценарий).
+
+[Что такое сценарий и как его создать](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation)
+
+## События
+
+**Событие**&nbsp;&mdash; это действие, которое система может отследить. События наступают в&nbsp;результате действий подписчика: если он&nbsp;открыл письмо, кликнул по&nbsp;ссылке или достиг целевой страницы на&nbsp;сайте. Сценарий реагирует на&nbsp;События: они могут запускать его или быть одним из&nbsp;шагов.
+
+### Стартовые события
+
+Каждый сценарий начинается со&nbsp;Стартового события, которое запускает в&nbsp;работу всю цепочку: как только подписчик его выполнит, он&nbsp;попадёт в&nbsp;сценарий. В&nbsp;редакторе сценариев этот блок появляется автоматически, его нельзя удалить или заменить другим:
+
+<p align="center">
+  <img width="50%" src={startEvent} alt="Start event" />
+</p>
+
+Какие бывают Стартовые события:
+
+- Подписчик открыл email,
+- Изменение данных подписчика,
+- Клик по&nbsp;ссылке,
+- Подтверждение подписки,
+- Подписчик добавлен неподтверждённым,
+- Подписчик добавлен подтверждённым,
+- Открытие целевой страницы,
+- Подтверждение формы,
+- Заполнение формы,
+- Отписка от&nbsp;всего,
+- Отписка от&nbsp;отправителя.
+
+Не&nbsp;все Стартовые события могут быть обычными шагами в&nbsp;сценарии. Например, События **Подписчик добавлен неподтверждённым** и&nbsp;**Подписчик добавлен подтверждённым** можно найти только в&nbsp;блоке Стартового события:
+
+<p align="center">
+  <img width="50%" src={startEvent1} alt="Start event" />
+</p>
+
+### Виды Событий в сценариях
+
+**Подписчик открыл email** ([описание в API](https://sendsay.ru/api/api.html#Чтения-письма))&nbsp;&mdash; подписчик открыл письмо, отправленное по&nbsp;любому или указанному шаблону.
+
+<p align="center">
+  <img width="50%" src={subscriberOpenedEmail} alt="Subscriber opened the email" />
+</p>
+
+Здесь есть две группы шаблонов: можно указать, что сценарий будет реагировать на&nbsp;открытие письма, отправленного в&nbsp;качестве [массовой рассылки](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-send-email-campaign). Либо сценарий будет реагировать только на&nbsp;письма, участвующие в&nbsp;текущем сценарии. При выборе шаблона вы&nbsp;увидите его превью.
+
+:::tip Важно
+Если Событие **Подписчик открыл email** указано Стартовым, в&nbsp;качестве шаблона можно выбрать только письмо, отправленное вне сценария обычным способом.
+:::
+
+При выборе События **Подписчик открыл email** можно создать шаблон письма, не&nbsp;выходя из&nbsp;редактора. Для этого в&nbsp;списке шаблонов выберите пункт **Создать шаблон**. Также можно отслеживать открытия указанного письма в&nbsp;других сценариях&nbsp;— для этого проставьте галочку в&nbsp;чекбоксе.
+
+**Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть три варианта:
+
+<p align="center">
+  <img width="50%" src={changeSubscriberData} alt="Change of subscriber data" />
+</p>
+
+- **Список**&nbsp;&mdash; Событие наступит, когда подписчик покинет или присоединится к&nbsp;указанному списку в&nbsp;результате изменения данных. При выборе этого варианта можно создать список, не&nbsp;выходя из&nbsp;редактора: для этого выберите пункт **Создать список**.
+- **Значение поля анкеты**&nbsp;&mdash; сработает, если изменились данные в&nbsp;анкете подписчика. При этом неважно, что именно изменилось&nbsp;&mdash; главное, что новые данные отличаются от&nbsp;предыдущих.
+- **Значения поля и&nbsp;данные анкеты (точное)**&nbsp;&mdash; произойдёт, когда данные в&nbsp;анкете подписчика изменятся на&nbsp;указанное значение.
+
+  [Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)
+
+**Клик по&nbsp;ссылке** ([описание в&nbsp;API](https://sendsay.ru/api/api.html#Клик-по-ссылке))&nbsp;&mdash; Событие наступит, когда подписчик кликнет по&nbsp;указанной ссылке в&nbsp;письме, отправленном в&nbsp;сценарии.
+
+<p align="center">
+  <img width="50%" src={clickOnLink} alt="click on the link" />
+</p>
+
+Если это Событие добавлено в&nbsp;качестве Стартового, то&nbsp;оно отреагирует на&nbsp;клик по&nbsp;ссылке в&nbsp;массовой рассылке, отправленной обычным способом,&nbsp;&mdash; после этого подписчик попадет в&nbsp;сценарий.
+
+**Подтверждение подписки** ([описание в API](https://sendsay.ru/api/api.html#Подтверждение-регистрации))&nbsp;&mdash; произойдёт, когда пользователь подтвердит свою подписку через письмо подтверждения ([Double Opt-In](https://docs.sendsay.ru/getting-started/glossary#d)).
+
+<p align="center">
+  <img width="50%" src={subscriptionConfirmation} alt="Subscription confirmation" />
+</p>
+
+:::tip Важно
+Неподтверждённым адресам можно отправлять только письма подтверждения, однако в&nbsp;интерфейсе редактора сценариев такое письмо нельзя отправить.
+
+[Как активировать неподтверждённые адреса](https://docs.sendsay.ru/subscribers/contacts/how-to-activate-inactive-contacts)
+:::
+
+**Подписчик добавлен неподтверждённым** ([описание в API](https://sendsay.ru/api/api.html#Новая-регистрация-без-подтверждения))&nbsp;&mdash; наступит, когда пользователь попадёт в&nbsp;базу контактов без согласия на&nbsp;рассылку&nbsp;&mdash; например, через импорт. Это Событие можно добавить в&nbsp;сценарий только как Стартовое.
+
+<p align="center">
+  <img width="50%" src={subscriberAddedUnconfirmed} alt="Subscriber added unconfirmed" />
+</p>
+
+**Подписчик добавлен подтверждённым** ([описание в API](https://sendsay.ru/api/api.html#Новая-регистрация-с-подтверждением))&nbsp;&mdash; сработает, когда подписчика добавят в&nbsp;базу контактов уже подтверждённым (с&nbsp;согласием на&nbsp;рассылку).
+
+<p align="center">
+  <img width="50%" src={subscriberAddedConfirmed} alt="Subscriber added confirmed" />
+</p>
+
+Событие **Подписчик добавлен подтверждённым** можно указать только в&nbsp;блоке Стартовое событие&nbsp;&mdash; например, в&nbsp;сценарии приветственной цепочки.
+
+[Как настроить приветственную серию писем: пошаговая инструкция](https://docs.sendsay.ru/automations/automation-with-workflows/welcome-series-with-workflow)
+
+**Открытие целевой страницы** ([описание в API](https://sendsay.ru/api/api.html#Целевая-страница-достигнута))&nbsp;&mdash; Событие произойдёт, если подписчик посетит страницу сайта, на&nbsp;которой размещен **код универсального счётчика**. С&nbsp;помощью такого счётчика можно отслеживать посетителей сайта и&nbsp;путь подписчиков, которые перешли на&nbsp;сайт из&nbsp;email-рассылок.
+
+<p align="center">
+  <img width="50%" src={targetPageOpening} alt="Target page opening" />
+</p>
+
+**Подтверждение формы** ([описание в API](https://sendsay.ru/api/api.html#Форма-подтверждена))&nbsp;&mdash; Событие сработает, когда пользователь перейдёт по&nbsp;ссылке из&nbsp;письма-подтверждения, подтвердив тем самым заполнение формы подписки на&nbsp;сайте.
+
+<p align="center">
+  <img width="50%" src={formConfirmation} alt="Form confirmation" />
+</p>
+
+**Заполнение формы** ([описание в API](https://sendsay.ru/api/api.html#Форма-заполнена))&nbsp;&mdash; произойдёт, если посетитель сайта заполнит указанную форму и&nbsp;отправит свои данные в&nbsp;систему.
+
+<p align="center">
+  <img width="50%" src={formFilling} alt="Form filling" />
+</p>
+
+[Формы сбора подписчиков](https://docs.sendsay.ru/forms/signup-forms)
+
+**Отписка от&nbsp;всего** ([описание в API](https://sendsay.ru/api/api.html#Отписка-от-всего))&nbsp;&mdash; наступит, когда подписчик отпишется от&nbsp;всех рассылок кликом по&nbsp;ссылке &laquo;Отписаться&raquo; внутри письма.
+
+<p align="center">
+  <img width="50%" src={unsubscribeFromEverything} alt="Unsubscribe from everything" />
+</p>
+
+После наступления События подписчик попадёт в&nbsp;стоп-лист **Отписались от&nbsp;всех рассылок** и&nbsp;больше не&nbsp;будет получать письма.
+
+[Стоп-листы](https://docs.sendsay.ru/subscribers/contacts/stop-lists)
+
+**Отписка от&nbsp;отправителя** ([описание в API](https://sendsay.ru/api/api.html#Отписка-по-отправителю))&nbsp;&mdash; подписчик отписался от&nbsp;одного из&nbsp;отправителей (любого или конкретного). Чтобы подключить отписку от&nbsp;отправителя, напишите в&nbsp;техподдержку.
+
+<p align="center">
+  <img width="50%" src={unsubscribeFromSender} alt="Unsubscribe from the sender" />
+</p>
+
+[Стоп-лист по отправителю](https://docs.sendsay.ru/email-campaigns/create-your-campaign/topic-subscription/#стоп-лист-по-отправителю)
+
+### Как настроить блок Событий
+
+**Если нужно отследить одно из&nbsp;нескольких Событий**, в&nbsp;блок можно добавить несколько Событий, которые будут работать по&nbsp;логике **ИЛИ**. Тогда подписчик перейдёт к&nbsp;следующему шагу сценария при наступлении одного из&nbsp;вариантов:
+
+![How to track an event](/img/automations/automation-with-workflows/workflow-blocks/how-to-track-an-event.png)
+
+Чтобы отследить одно из&nbsp;нескольких Событий:
+
+1. Добавьте нужный блок События.
+2. В&nbsp;этом&nbsp;же блоке нажмите кнопку &laquo;Добавить&raquo; и&nbsp;выберите другой вариант События.
+3. Если необходимо, добавьте ещё одно или несколько Событий, повторив пункт&nbsp;2.<br/><br/>
+   ![How to track an event](/img/automations/automation-with-workflows/workflow-blocks/how-to-track-an-event1.gif)
+
+**Если нужно добавить последовательное наступление Событий**, добавьте два блока подряд с&nbsp;помощью кнопки плюса `+`, указав в&nbsp;каждом нужное Событие. Это может понадобиться, например, когда нужно отреагировать каким-то действием на&nbsp;то, что подписчик открыл два письма:
+
+![How to add a sequence of events](/img/automations/automation-with-workflows/workflow-blocks/how-to-add-a-sequence-of-events.png)
+
+### Разветвления Событий в сценарии
+
+Сценарий может идти не&nbsp;последовательно, а&nbsp;с&nbsp;разветвлением вариантов Событий. Например, если необходимо разбить базу на&nbsp;списки, можно отправить письмо-опрос с&nbsp;несколькими вариантами ответов и&nbsp;несколькими ссылками. В&nbsp;зависимости от&nbsp;того, по&nbsp;какой ссылке кликнет подписчик, он&nbsp;попадёт в&nbsp;тот или иной список:
+
+![Branching events](/img/automations/automation-with-workflows/workflow-blocks/branching-events.png)
+
+### Запасной вариант
+
+Чтобы участники сценария не&nbsp;&laquo;застревали&raquo; на&nbsp;полпути, существует запасной вариант. Например, если подписчик не&nbsp;совершил никаких действий, то&nbsp;сможет пройти дальше по&nbsp;сценарию спустя указанное в&nbsp;запасном варианте время. Его можно настроить:
+
+![Fallback](/img/automations/automation-with-workflows/workflow-blocks/fallback.png)
+
+Запасной вариант можно отключить с&nbsp;помощью переключателя:
+
+<p align="center">
+  <img width="50%" src={turnOffFallback} alt="Turn off the fallback" />
+</p>
+
+### Дополнительные варианты Событий
+
+Чтобы разветвить сценарий, существуют дополнительные варианты Событий, которые работают по&nbsp;логике **ИЛИ**. То&nbsp;есть сработать может **только один вариант**: Событие в&nbsp;основном блоке или в&nbsp;любом из&nbsp;дополнительных. Так, при наступлении указанного в&nbsp;варианте События, подписчик начнёт двигаться по&nbsp;ветке именно этого варианта.
+
+Если в&nbsp;сценарий добавить два одинаковых варианта Событий, **приоритет будет у&nbsp;того, что расположен левее** в&nbsp;основном блоке цепочки. Например, здесь подписчики будут попадать в&nbsp;список &laquo;Активные&raquo;:
+
+![Further option](/img/automations/automation-with-workflows/workflow-blocks/further-option.png)
+
+Чтобы создать в&nbsp;сценарии несколько веток в&nbsp;зависимости от&nbsp;действий подписчика:
+
+1. Добавьте блок с&nbsp;нужным Событием.
+2. Справа от&nbsp;блока нажмите кнопку плюса `+` и&nbsp;добавьте ещё один блок, указав другое Событие.
+3. Под каждым блоком Событий нажмите кнопку плюса `+` и&nbsp;разместите блоки необходимых действий.<br/><br/>
+   <Video src={createSeveralBranches} />
+
+## Действия
+
+Блок Действий позволяет настроить последовательное выполнение действий системы в&nbsp;автоматических сценариях. Например, отправить email, добавить участника сценария в&nbsp;список или изменить данные подписчика.
+
+<p align="center">
+  <img width="50%" src={actions} alt="Actions" />
+</p>
+
+Какие бывают Действия:
+
+- Отправить подписчику email,
+- Добавить в&nbsp;список,
+- Изменить данные подписчика,
+- Исключить из&nbsp;списка,
+- Вызвать Webhook,
+- Отправить SMS,
+- Отправить Web Push уведомление.
+
+**Если в&nbsp;сценарии нужно выполнить несколько действий подряд**, их&nbsp;можно добавить в&nbsp;одном блоке с&nbsp;помощью кнопки &laquo;Добавить&raquo;,&nbsp;&mdash; тогда каждое Действие сработает по&nbsp;очереди. Например, можно сначала исключить подписчиков из&nbsp;одного списка, а&nbsp;затем добавить в&nbsp;другой:
+
+<p align="center">
+  <img width="50%" src={howConfigureActions} alt="How to configure the actions" />
+</p>
+
+### Виды Действий в сценариях
+
+**Отправить подписчику email** ([описание в API](https://sendsay.ru/api/api.html#Выслать-письмо))&nbsp;&mdash; система отправит письмо участнику сценария по&nbsp;указанному шаблону:
+
+<p align="center">
+  <img width="50%" src={emailTheSubscriber} alt="Email the subscriber" />
+</p>
+
+:::tip Важно
+В&nbsp;шаблоне должны быть заполнены поля **Адрес отправителя** и&nbsp;**Тема письма**, иначе письмо не&nbsp;отправится.
+:::
+
+**Добавить в&nbsp;список** ([описание в API](https://sendsay.ru/api/api.html#Внести-в-группу-список))&nbsp;&mdash; подписчик будет добавлен в&nbsp;указанный список, если его там ещё нет.
+
+<p align="center">
+  <img width="50%" src={addToTheList} alt="Add to the list" />
+</p>
+
+[Что такое список контактов](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-list)
+
+**Изменить данные подписчика** ([описание в API](https://sendsay.ru/api/api.html#Изменить-данные))&nbsp;&mdash; данные подписчика изменятся на&nbsp;указанные. Здесь есть два формата изменения данных:
+
+- **Изменить значение поля анкеты**&nbsp;&mdash; при выборе этого действия изменятся данные выбранного поля в&nbsp;анкете.
+
+  <p align="center">
+    <img
+      width="50%"
+      src={changeValueGuestionnaireField}
+      alt="Change value of the questionnaire field"
+    />
+  </p>
+
+  Если указанное поле в&nbsp;анкете уже заполнено, можно оставить текущее значение, заменить его на&nbsp;новое или объединить оба значения. В&nbsp;случае, когда указанное поле в&nbsp;анкете не&nbsp;заполнено, система может оставить его пустым или \*аполнить новым значением.
+
+  Например, в&nbsp;анкетах участников сценария необходимо заполнить город проживания, когда у&nbsp;некоторых подписчиков это поле уже заполнено. Тогда нужно выбрать такие настройки блока Действий:
+
+  <p align="center">
+    <img width="50%" src={howFillInField} alt="How to fill in the field" />
+  </p>
+
+- **Изменить данные по&nbsp;ключу**&nbsp;&mdash; при выборе этого действия изменится значение указанного поля по&nbsp;ключу данных:
+
+  <p align="center">
+    <img width="50%" src={changingByTheKey} alt="Changing by the key" />
+  </p>
+
+  Чтобы обновить значение поля при выборе этого пункта, введите или выберите нужный ключ, затем добавьте новое значение и нажмите кнопку &laquo;Сохранить&raquo;.
+
+**Исключить из&nbsp;списка** ([описание в API](https://sendsay.ru/api/api.html#Удалить-из-группы-списка))&nbsp;&mdash; система исключит участника сценария из&nbsp;выбранного списка, если он&nbsp;в&nbsp;него входит.
+
+<p align="center">
+  <img width="50%" src={delist} alt="Delist" />
+</p>
+
+**Вызвать Webhook** ([описание в API](https://sendsay.ru/api/api.html#Вызвать-внешнюю-ссылку))&nbsp;&mdash; используется для отправки данных в&nbsp;сторонний сервис,&nbsp;&mdash; например, в&nbsp;CRM-систему. С&nbsp;помощью этого Действия можно отследить изменения статусов писем и&nbsp;получать уведомления о&nbsp;Событиях в&nbsp;реальном времени. Например, когда подписчик открыл email, перешёл по&nbsp;ссылке, заполнил форму или отписался от&nbsp;рассылки.
+
+<p align="center">
+  <img width="50%" src={callWebhook} alt="Call webhook" />
+</p>
+
+Когда участник сценария окажется на&nbsp;шаге **Вызвать Webhook**, сервер Sendsay отправит HTTP-запрос методом `GET` на&nbsp;указанный вами URL-адрес. После этого данные отправятся на&nbsp;этот URL-адрес в&nbsp;указанном формате. Если необходимо передать данные участника сценария, нужно указать в&nbsp;URL-адресе [команду подстановки ProScript](https://docs.sendsay.ru/proscript/access-to-data/).
+
+**Отправить SMS** ([описание в API](https://sendsay.ru/api/api.html#Выслать-письмо))&nbsp;&mdash; система отправит смс-сообщение по&nbsp;указанному шаблону на&nbsp;его телефонный номер.
+
+<p align="center">
+  <img width="50%" src={sendSms} alt="Send the SMS" />
+</p>
+
+:::tip Важно
+Чтобы участники сценария получали смс, необходимо, чтобы у&nbsp;них был контакт типа телефон. Если контакт не&nbsp;указан, сообщение не&nbsp;отправится, а&nbsp;подписчик перейдёт на&nbsp;следующий шаг сценария.
+:::
+
+Отправить смс-сообщение участнику сценария можно только в&nbsp;том случае, если у&nbsp;вас подключена такая опция за&nbsp;дополнительную плату.
+
+[Как подключить смс](https://docs.sendsay.ru/other-channels/sms/how-to-connect-sms)
+
+**Отправить Web Push уведомление** ([описание в API](https://sendsay.ru/api/api.html#Выслать-письмо))&nbsp;&mdash; система отправит в&nbsp;браузер подписчика веб-пуш по&nbsp;выбранному шаблону.
+
+<p align="center">
+  <img width="50%" src={sendWebPush} alt="Send web push" />
+</p>
+
+:::tip Важно
+Чтобы участники сценария получали веб-пуши, необходимо, чтобы у&nbsp;них был контакт типа веб-пуш&mdash; числовой идентификатор, который присваивается посетителю сайта после подписки на&nbsp;пуш-рассылку. Если такого контакта нет, сообщение не&nbsp;отправится, а&nbsp;подписчик перейдёт на&nbsp;следующий шаг сценария.
+:::
+
+Отправить веб-пуш участникам сценария можно, если у&nbsp;вас подключена и&nbsp;настроена такая опция.
+
+[Как подключить веб-пуши на&nbsp;сайт](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push)
+
+### Мультиканальные сценарии
+
+Если у&nbsp;ваших подписчиков есть несколько контактов&nbsp;&mdash; например, email-адрес, номер телефона и&nbsp;веб-пуш&mdash; вам доступны мультиканальные сценарии общения. Например, вы&nbsp;можете отправить в&nbsp;сценарии email, а&nbsp;тем, кто за&nbsp;пять дней так и&nbsp;не&nbsp;открыл письмо&nbsp;&mdash; отправить смс:
+
+![Multichannel workflows](/img/automations/automation-with-workflows/workflow-blocks/multichannel-workflows.png)
+
+В&nbsp;случае, если какого-то из&nbsp;этих контактов у&nbsp;подписчика не&nbsp;указано&nbsp;&mdash; отправка соответствующего сообщения не&nbsp;произойдет, а&nbsp;подписчик просто продвинется дальше по&nbsp;сценарию.
+
+## Таймеры
+
+Блок Таймеры помогает отложить прохождение следующего шага сценария до&nbsp;определенного времени. Продолжительность этой паузы можно настроить.
+
+Какие Таймеры бывают:
+
+- Прошло время,
+- Наступила дата и&nbsp;время.
+
+<p align="center">
+  <img width="50%" src={timers} alt="Timers" />
+</p>
+
+Например, с помощью этого блока можно указать время задержки для отправки следующего письма в&nbsp;приветственной цепочке писем:
+
+![Timer in welcome series](/img/automations/automation-with-workflows/workflow-blocks/timer-in-welcome-series.png)
+
+Чтобы настроить время задержки для следующего шага сценария, нажмите плюс `+` под блоком Действия или События и&nbsp;выберите нужный Таймер, настроив в&nbsp;нём время.
+
+### Виды Таймеров
+
+**Прошло время** ([описание в API](https://sendsay.ru/api/api.html#Прошло-временя))&nbsp;&mdash; при выборе этого пункта следующий блок в&nbsp;сценарии сработает после указанного в&nbsp;настройках времени.
+
+<p align="center">
+  <img width="50%" src={passedTime} alt="Passed time" />
+</p>
+
+Например, необходимо, чтобы участник перешёл на&nbsp;следующий шаг сценария спустя 24&nbsp;часа после того, как откроет указанную ссылку:
+
+![Passed time](/img/automations/automation-with-workflows/workflow-blocks/passed-time1.gif)
+
+:::tip Важно
+Таймер **Прошло время** не&nbsp;сработает в&nbsp;приостановленном сценарии, а&nbsp;после паузы и&nbsp;повторной активации может сработать сразу или через некоторое время&nbsp;&mdash; это зависит от&nbsp;установленного времени задержки. Если активировать сценарий, который долго стоял на&nbsp;паузе, Таймер может вовсе не&nbsp;сработать.
+:::
+
+Например, в&nbsp;сценарии настроена отправка письма спустя 2&nbsp;часа после совершенного Действия или События. Если приостановить сценарий на&nbsp;30&nbsp;минут, следующий шаг для участника сценария наступит через оставшееся время&nbsp;&mdash; 1,5&nbsp;часа. В&nbsp;случае, когда сценарий приостановили на&nbsp;5&nbsp;часов, письмо отправится сразу после активации.
+
+**Наступление даты и&nbsp;времени** ([описание в API](https://sendsay.ru/api/api.html#Точное-время))&nbsp;&mdash; следующий шаг сценария наступит в&nbsp;указанное время. Здесь можно настроить конкретное время, дату или день недели:
+
+<p align="center">
+  <img width="50%" src={exactTime} alt="Exact time" />
+</p>
+
+- **Время**&nbsp;&mdash; участники сценария перейдут на&nbsp;следующий шаг после наступления установленного времени. Если участники сценария попадут на&nbsp;этот блок после указанного времени, то&nbsp;следующий шаг в&nbsp;сценарии для них наступит уже на&nbsp;следующий день.
+- **Дата**&nbsp;&mdash; следующий шаг для участников сценария наступит при наступлении установленной даты и&nbsp;времени. Если участники сценария попадут на&nbsp;этот блок после указанной даты, то&nbsp;следующий шаг для них не&nbsp;наступит и&nbsp;они &laquo;застрянут&raquo; на&nbsp;предыдущем шаге сценария.
+- **День недели**&nbsp;&mdash; следующий шаг сценария сработает в&nbsp;указанный день и&nbsp;время раз в&nbsp;неделю. Например, если установить время задержки на&nbsp;15:00&nbsp;во вторник, то&nbsp;участники сценария перейдут на&nbsp;следующий шаг в&nbsp;ближайший вторник в&nbsp;15:00. В&nbsp;случае, когда участники сценария попадут на&nbsp;этот блок после указанного времени и&nbsp;дня недели, то&nbsp;следующий шаг в&nbsp;сценарии для них наступит уже на&nbsp;следующей неделе.
+
+:::tip Важно
+Таймер **Наступление даты и&nbsp;времени** реагирует на&nbsp;наступление указанного времени по&nbsp;Москве (GMT+3).
+:::
+
+Таким образом можно накопить контакты желающих принять участие в&nbsp;каком-то мероприятии и&nbsp;разом оповестить их&nbsp;в&nbsp;удобный день письмом. Например, участников курса:
+
+![Exact time](/img/automations/automation-with-workflows/workflow-blocks/exact-time1.png)
+
+В этом примере после попадания в список «Участники курса» (в результате изменения данных) подписчики получат первое письмо курса — в ближайшую пятницу, в 11:00.
+
+## Разделение
+
+Блок Разделение поможет офильтровать подписчиков в&nbsp;сценарии. Он&nbsp;проверяет соблюдение определенного условия:
+
+- Наличие подписчика в&nbsp;списке,
+- Совпадение данных подписчика.
+
+<p align="center">
+  <img width="50%" src={split} alt="Split" />
+</p>
+
+Таким образом можно разделить участников сценария на&nbsp;разные ветки. Другими словами, если условие Разделения выполнится, участники сценария пойдут по&nbsp;одной ветке, если нет&nbsp;&mdash; по&nbsp;другой:
+
+![Branching with split](/img/automations/automation-with-workflows/workflow-blocks/branching-with-split.png)
+
+[Разветвления Событий в сценарии](#разветвления-событий-в-сценарии)
+
+Чтобы настроить Разделение для разветвления веток в&nbsp;сценарии, нажмите плюс `+` под необходимым блоком и&nbsp;выберите нужное Разделение, настроив его параметры.
+
+### Виды Разделений
+
+**Наличие в списке** — участник сценария перейдёт на следующий шаг в зависимости от того, состоит он или нет в указанном списке. Здесь есть два варианта:
+
+<p align="center">
+  <img width="50%" src={listSplit} alt="List split" />
+</p>
+
+- **есть в&nbsp;списке**&nbsp;&mdash; подписчик перейдёт на&nbsp;следующий шаг сценария в&nbsp;текущей ветке, если он&nbsp;состоит в&nbsp;указанном списке. Если&nbsp;же участника нет в&nbsp;этом списке, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария;
+- **нет в&nbsp;списке**&nbsp;&mdash; участник перейдёт на&nbsp;следующий шаг в&nbsp;текущей ветке сценария, если его нет в&nbsp;указанном списке. Если участник состоит в&nbsp;этом списке, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария.
+
+**Совпадение данных подписчика**&nbsp;&mdash; подписчик перейдёт на&nbsp;следующий шаг сценария, если его данные соответствуют указанным. Таким образом в&nbsp;сценарии можно отфильтровать тех участников, чьи данные подходят под определенные значения:
+
+<p align="center">
+  <img width="50%" src={dataSplit} alt="Data split" />
+</p>
+
+Например, с&nbsp;помощью такого Разделения можно разделить базу на&nbsp;списки:
+
+![How to divide into lists by split](/img/automations/automation-with-workflows/workflow-blocks/how-to-divide-into-lists-by-split.png)
+
+## Сценарий
+
+С&nbsp;помощью блока Сценарий можно принудительно закончить текущий сценарий для его участников. Какие виды бывают:
+
+- Перейти в&nbsp;другой сценарий,
+- Выйти из&nbsp;сценария.
+
+<p align="center">
+  <img width="50%" src={workflow} alt="Workflow" />
+</p>
+
+Чтобы принудительно закончить текущий сценарий для его участников, нажмите плюс `+` под необходимым блоком и&nbsp;выберите нужный Сценарий.
+
+### Виды Cценариев
+
+**Перейти в&nbsp;другой сценарий** ([описание в API](https://sendsay.ru/api/api.html#Уйти-в-другую-последовательность))&nbsp;&mdash; текущий сценарий завершится для его участников и&nbsp;они перейдут на&nbsp;первый шаг в&nbsp;другом указанном сценарии, минуя Стартовое событие. Чтобы участник сценария мог перейти в&nbsp;другой указанный сценарий, нужно его активировать и&nbsp;включить приём подписчиков.
+
+<p align="center">
+  <img width="50%" src={switchAnotherWorkflow} alt="Switch to another workflow" />
+</p>
+
+[Стартовые события](#стартовые-события)
+
+:::tip Важно
+При переходе участников в&nbsp;другой сценарий важно, чтобы первый шаг в&nbsp;указанном сценарии имел только один вариант События или Действия&nbsp;&mdash; иначе система не&nbsp;распознает, какой из&nbsp;нескольких вариантов необходимо выполнить.
+:::
+
+Блок **Перейти в&nbsp;другой сценарий** может понадобиться, например, для реактивации подписчиков, если они долго не&nbsp;открывают письма:
+
+![Switch to another workflow](/img/automations/automation-with-workflows/workflow-blocks/switch-to-another-workflow1.png)
+
+**Выйти из&nbsp;сценария** ([описание в API](https://sendsay.ru/api/api.html#Остановить-последовательность))&nbsp;&mdash; сценарий принудительно завершится для его участников.
+
+<p align="center">
+  <img width="50%" src={getOutOfWorkflow} alt="Get out of the workflow" />
+</p>
+
+Это может понадобится, например, если в&nbsp;сценарии не&nbsp;выполняется какое-то условие при Разделении:
+
+![Get out of the workflow](/img/automations/automation-with-workflows/workflow-blocks/get-out-of-the-workflow1.png)
+
+**Читайте также:** [Гайд по работе со сценариями](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-guide/)
