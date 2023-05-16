@@ -270,7 +270,9 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
       "picture": [],
       "price": 7.88,
       "url": "url",
-      "vendor": "vendor"
+      "vendor": "vendor",
+      "category_id": 777,
+      "category_paths": []
     }
   ]);
   // или с доп. параметрами
@@ -288,6 +290,8 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
         "price": 7.88,
         "url": "url",
         "vendor": "vendor"
+        "category_id": 777,
+        "category_paths": []
       }
     ],
     { email: 'name@domain.ru' }
@@ -343,7 +347,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
             "price": 5.88 //обязательно
-            //остальные поля о товаре желательны, но не обязательны
+            "description": "description",
+            "model": "model",
+            "name": "name",
+            "old_price": 5.99,
+            "picture": [],
+            "url": "url",
+            "vendor": "vendor",
+            "category_id": 777,
+            "category_paths": []
+            //вы можете использовать любые доступные поля описания товара
           }
         ]
       }
@@ -408,7 +421,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
             "price": 5.88 //обязательно
-            //остальные поля о товаре желательны, но не обязательны
+            "description": "description",
+            "model": "model",
+            "name": "name",
+            "old_price": 5.99,
+            "picture": [],
+            "url": "url",
+            "vendor": "vendor",
+            "category_id": 777,
+            "category_paths": []
+            //вы можете использовать любые доступные поля описания товара
           }
         ]
       }
