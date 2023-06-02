@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 import image from '/img/faq/how-to-get-the-source-code/how-to-get-the-source-code-outlook-2016.png'
