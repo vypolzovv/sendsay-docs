@@ -203,6 +203,13 @@ a.card:hover {
   padding-bottom: 32px;
 }
 
+.theme-doc-sidebar-container
+  nav.menu
+  > .theme-doc-sidebar-menu
+  > .theme-doc-sidebar-item-link:first-child {
+  margin-top: 1.5rem;
+}
+
 .menu__link--active:not(.menu__link--sublist) {
   color: var(--ifm-color-primary);
 }
@@ -397,7 +404,7 @@ p {
 }
 
 /* Hide tableOfContents */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   .col--3 {
     display: none;
   }
@@ -478,13 +485,14 @@ iframe:not(.no-border) {
   z-index: var(--ifm-z-index-overlay);
 }
 
-[data-iframed='true'] .navbar,
-[data-iframed='true'] .footer {
-  display: none;
-}
-
 [data-iframed='true'] {
   --ifm-navbar-height: 0;
+}
+
+[data-iframed='true'] .navbar,
+[data-iframed='true'] .footer,
+[data-iframed='true'] .theme-doc-footer {
+  display: none;
 }
 
 [data-iframed='true'] .theme-doc-breadcrumbs {
