@@ -482,3 +482,12 @@ iframe:not(.no-border) {
 [data-iframed='true'] .footer {
   display: none;
 }
+
+[data-iframed='true'] {
+  --ifm-navbar-height: 0;
+}
+
+[data-iframed='true'] .theme-doc-breadcrumbs {
+  margin-top: 1.5rem !important;
+  margin-bottom: 2rem !important;
+}
