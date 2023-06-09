@@ -54,16 +54,11 @@ import diagram from "/img/email-campaigns/personalization//how-to-add-diagram/di
 ```
 [% params = {
 "data_format" => "bygraph",
-
   "type" => "pie",
   "title" => "Состав фонда",
-
   "3d" => 0,
-
   "show_pie_labels" => 1,
-
   "show_pie_percent" => 1,
-
   "colors" => [
      "#FF0000",
      "#4169E1",

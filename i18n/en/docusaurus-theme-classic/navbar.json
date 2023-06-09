@@ -1,4 +1,8 @@
 {
+  "item.label.Главная": {
+    "message": "Main page",
+    "description": "Navbar item with label Главная"
+  },
   "item.label.Интеграции": {
     "message": "Integrations",
     "description": "Navbar item with label Интеграции"

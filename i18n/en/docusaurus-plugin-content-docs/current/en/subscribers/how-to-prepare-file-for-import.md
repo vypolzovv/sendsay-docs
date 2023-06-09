@@ -42,13 +42,13 @@ If you create a file for a manual import, field codes are unnecessary, as the fi
 
 In Excel, paste your data into the spreadsheet. In other file types, separate the data with commas, semicolons or tabs. Check that you use the same separator in each line.
 
-```
+```csv
 email1@gmail.com, Peter, Jones, Atlanta, 1970-01-21
 ```
 
 If some subscriber data is missing, place two consecutive separators (spaces between symbols are optional).
 
-```
+```csv
 email2@gmail.com, , Williams, , 1980-02-14
 ```
 
@@ -86,7 +86,7 @@ Phone numbers can include parentheses and spaces or contain digits only. For Rus
 
 If you do not want to import a particular subscriber, type # at the beginning of the line.
 
-```
+```csv
 #email5@gmail.com, Andrew, Prats, New York, 1989-01-01
 ```
 

@@ -12,7 +12,8 @@ sidebar_position: 2
 
 То что вы видите в веб-интерфейсе как статистику по выпуску получено из кэшированных данных, именно поэтому мы отдаем эти сведения моментально.
 
-```
+<!-- prettier-ignore -->
+```js
 {
 	"action": "stat.uni",
 	"result": "response",
@@ -36,7 +37,8 @@ sidebar_position: 2
 
 С помощью данного запроса вы получите список email-выпусков за апрель 2020 года со всей базовой информацией. Так как статистика по выпускам заранее посчитана, то вы можете спокойно запросить данные по всем отправленным выпускам за весь срок жизни вашего аккаунта, при необходимости.
 
-```
+<!-- prettier-ignore -->
+```js
 {
     "action": "stat.uni",
     "select": [
@@ -79,7 +81,8 @@ sidebar_position: 2
 
 ### Все выпуски, отправленные за сегодня для конкретного емейла
 
-```
+<!-- prettier-ignore -->
+```js
 {
     "action": "stat.uni",
     "result": "response",
@@ -107,7 +110,8 @@ sidebar_position: 2
 
 ### Количество кликов по каждой ссылке за сегодня для конкретного емейла
 
-```
+<!-- prettier-ignore -->
+```js
 {
     "action": "stat.uni",
     "result": "response",
@@ -148,13 +152,15 @@ sidebar_position: 2
 
 ### Сохранить в Файлы -> Отчеты -> stat.uni
 
-```
+<!-- prettier-ignore -->
+```js
 "result": "save"
 ```
 
 ### Сохранить результат запроса на внешний FTP в utf8
 
-```
+<!-- prettier-ignore -->
+```js
  	"result": [{
  		"to": "ftp://login:password@ftp.yourserver/path/",
  		"filename": "Clients",

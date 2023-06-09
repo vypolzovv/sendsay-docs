@@ -16,7 +16,7 @@ On the **Subscriber import** page, you can add the data manually into the text f
 
 In Excel, paste your data into the spreadsheet. In other file types, separate the data with commas, vertical bars or tabs. Check that you use the same separator in each line. If some subscriber data is missing, place two consecutive separators (spaces between symbols are optional). Below is an example of two subscribers, where the first line has complete set of data and the second is missing a name and a city:
 
-```
+```csv
 email1@gmail.com, Peter, Jones, Atlanta, 1970-01-21
 email2@gmail.com, , Williams, , 1980-10-18
 ```
@@ -25,7 +25,7 @@ The date format is YYYY-MM-DD. Phone numbers should consist of 10 or 11 digits. 
 
 If subscriber contacts contain typos or data does not correspond to the field format (e. g. the text is inserted in the numeric field), the subscriber will not be imported. Later, you can view an error list in the import report. If you do not want to import a particular subscriber, type # at the beginning of the line. For example:
 
-```
+```csv
 #email5@gmail.com, Andrew, Prats, New York, 1989-01-01
 ```
 

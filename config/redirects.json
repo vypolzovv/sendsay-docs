@@ -340,12 +340,12 @@
     "from": "/ru/articles/6139206-как-настроить-товарные-рекомендации-в-письме"
   },
   {
-    "to": "/integrations",
-    "from": "/ru/collections/2054377-интеграция-с-приложениями"
-  },
-  {
     "to": "/integrations/smtp-gate",
-    "from": "/ru/articles/6064720-отправка-рассылок-через-smtp-гейт"
+    "from": [
+      "/integrations",
+      "/ru/collections/2054377-интеграция-с-приложениями",
+      "/ru/articles/6064720-отправка-рассылок-через-smtp-гейт"
+    ]
   },
   {
     "to": "/integrations/integration-with-tilda",
@@ -412,8 +412,8 @@
     "from": "/ru/articles/2479524-доступ-к-анкетным-данным-и-переменным-в-proscript"
   },
   {
-    "to": "/videolessons",
-    "from": "/ru/collections/1411793-видеоуроки"
+    "to": "/videolessons/subscribers",
+    "from": ["/videolessons", "/ru/collections/1411793-видеоуроки"]
   },
   {
     "to": "/videolessons/subscribers/how-to-import-subscribers",
@@ -490,5 +490,9 @@
   {
     "to": "/sendsay-api/how-to-send-campaign-with-api",
     "from": "/ru/articles/4091121-как-отправить-рассылку-через-sendsay-api"
+  },
+  {
+    "to": "/updates/list",
+    "from": "/updates"
   }
 ]

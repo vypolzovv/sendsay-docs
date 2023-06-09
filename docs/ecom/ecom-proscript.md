@@ -9,7 +9,7 @@ sidebar_label: 'Шаблонизатор PROScript'
 
 Данные о корзине можно получить следующей функцией:
 
-```
+```html
 [% basket_list = ssecquery('basket') %]
 ```
 

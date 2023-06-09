@@ -9,7 +9,7 @@ interface CardLinkProps {
 }
 
 const CardLink = ({ item }: CardLinkProps) => {
-  const icon = isInternalUrl(item.href) ? '📄️' : '🔗';
+  const icon = isInternalUrl(item.href) ? '' : '🔗';
   const doc = useDocById(item.docId);
 
   return (

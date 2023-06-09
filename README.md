@@ -136,3 +136,24 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Working with articles
+
+### Adding a month update page
+
+1. add a new file with `.mdx` extension to the `/docs/updates/list`, `sidebar_position` should be in NEGATIVE REVERSE order (where `-1` is `January` and `-12` is `December`)
+
+2. change import in the root file `docs/updates/index.mdx` to a new article
+
+```
+import ChangeLog from './updates-may-2023.mdx';`
+```
+
+3. (optional) create previous year folder and move pages from past year -> add `_category_.json` file with position in REVERSE order (where `"position": 1000` is for `2022`)
+
+```
+{
+   "label": "2023",
+   "position": 999
+}
+```

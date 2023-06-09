@@ -53,28 +53,19 @@ import barGraph from "/img/email-campaigns/personalization//how-to-add-bar-graph
 
 ```
 [% params = {
-
 "data_format" => "bygraph",
-
   "type" => "bar",
-
   "title" => "Динамика расходов",
   "xname" => "Кварталы",
   "yname" => "Расходы",
-
   "graph" => [
-
      {"name" => "Одежда"},
      {"name" => "Продукты"},
      {"name" => "Кафе"},
      {"name" => "Авто"},
-
    ],
-
   "bar_width" => 4,
-
   "bar_spacing" => 3,
-
   "colors" => [
      "#FF0000",
      "#4169E1",

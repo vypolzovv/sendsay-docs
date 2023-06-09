@@ -19,6 +19,7 @@ const plugins = [
       redirects: require('./config/redirects.json'),
     },
   ],
+  require.resolve('docusaurus-plugin-image-zoom'),
 ];
 
 if (analyticsId) {

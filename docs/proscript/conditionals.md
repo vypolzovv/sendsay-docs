@@ -10,7 +10,6 @@ sidebar_position: 4
 [% IF anketa.base.name %]
    [% anketa.base.name %]
 [% END %]
-
 [% IF !anketa.base.name %]
    шаблонное значение #выводим если anketa.base.name не заполнено
 [% END %]
@@ -56,8 +55,9 @@ sidebar_position: 4
 
 А можно внутри одной ссылки подставлять разные адреса:
 
-```
-<a href="[% IF условие %] example.com [% ELSE %] example-2.com [% END %] " текст ссылки >
+<!-- prettier-ignore -->
+```html
+<a href="[% IF условие %] example.com [% ELSE %] example-2.com [% END %] " текст ссылки></a>
 ```
 
 ## SWITCH / CASE

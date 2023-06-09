@@ -1,9 +1,0 @@
-{
-  "label": "Видеоуроки",
-  "position": 12,
-  "link": {
-    "type": "generated-index",
-    "slug": "/videolessons",
-    "description": "Быстрый способ познакомиться с Sendsay"
-  }
-}

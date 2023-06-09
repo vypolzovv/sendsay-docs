@@ -23,7 +23,7 @@ const CardCategory = ({ item }: CardCategoryProps) => {
   return (
     <CardLayout
       href={href}
-      icon="🗃️"
+      icon=""
       title={item.label}
       description={translate(descriptionText, { count })}
     />

@@ -47,7 +47,8 @@ import segmentId from "/img/automations/automations-by-behaviour/product-recomme
 
 Выглядеть файл будет вот так:
 
-```
+<!-- prettier-ignore -->
+```html
 <offer id="123" type="vendor.model" available="true" bid="1" group_id="136010368">
   <url>http://www.xxxxxx.ru/xxxx</url>
   <price>1749.0000</price>
@@ -136,7 +137,8 @@ import segmentId from "/img/automations/automations-by-behaviour/product-recomme
 1. Откройте API-консоль — её иконка находится на боковой панели сайта прямо над справочным центром.
 2. Отправьте следующий API-запрос:
 
-```
+<!-- prettier-ignore -->
+```js
 {
   "action": "group.filter.set",
   "id": "id сегмента",
@@ -166,6 +168,7 @@ import segmentId from "/img/automations/automations-by-behaviour/product-recomme
 
 Чтобы вставить таблицу с товарными рекомендациями, добавьте в текст шаблона следующий код:
 
+<!-- prettier-ignore -->
 ```
 [% external_extra('ссылка на ваш yml-файл','format','yml') %]
 <table cellpadding=1 border=1>

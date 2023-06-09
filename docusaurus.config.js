@@ -5,7 +5,6 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const plugins = require('./plugins');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'База знаний Sendsay',
@@ -60,26 +59,69 @@ const config = {
         },
         items: [
           {
-            to: '/integrations',
+            type: 'dropdown',
+            label: 'Главная',
+            labelMode: 'dynamic',
             position: 'left',
-            label: 'Интеграции',
-            activeBaseRegex: 'integrations/*',
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'docs',
+                label: 'Главная',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'integrations',
+                label: 'Интеграции',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'videolessons',
+                label: 'Видеоуроки',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'updates',
+                label: 'Обновления',
+              },
+            ],
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'docs',
+            label: 'Главная',
             displayedLocale: 'ru',
           },
           {
-            to: '/videolessons',
-            label: 'Видеоуроки',
+            type: 'docSidebar',
             position: 'left',
+            sidebarId: 'integrations',
+            label: 'Интеграции',
+            displayedLocale: 'ru',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'videolessons',
+            label: 'Видеоуроки',
+            displayedLocale: 'ru',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'updates',
+            label: 'Обновления',
             displayedLocale: 'ru',
           },
           {
             href: 'https://app.sendsay.ru',
-            label: 'Перейти в Sendsay',
+            label: 'Sendsay',
             position: 'right',
           },
           {
             href: 'https://sendsay.ru/api/api.html',
-            label: 'Sendsay API',
+            label: 'API',
             position: 'right',
           },
           {
@@ -98,6 +140,13 @@ const config = {
       },
       colorMode: {
         disableSwitch: true,
+      },
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
       },
     },
 };

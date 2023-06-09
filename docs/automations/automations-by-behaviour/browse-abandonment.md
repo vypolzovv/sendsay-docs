@@ -47,7 +47,7 @@ import segmentId from "/img/automations/automations-by-behaviour/browse-abandonm
 
 Выглядеть файл будет вот так:
 
-```
+```html
 <offer id="123" type="vendor.model" available="true" bid="1" group_id="136010368">
   <url>http://www.xxxxxx.ru/xxxx</url>
   <price>1749.0000</price>
@@ -159,7 +159,7 @@ import segmentId from "/img/automations/automations-by-behaviour/browse-abandonm
 1. Откройте API-консоль — её иконка находится на боковой панели сайта прямо над справочным центром.
 2. Отправьте следующий API-запрос:
 
-```
+```js
 {
   "action": "group.filter.set",
   "id": "id сегмента",

@@ -38,7 +38,8 @@ sidebar_position: 10
 
 ## Пример дополнительных данных в YML-файле
 
-```
+<!-- prettier-ignore -->
+```js
 {
 	"CATEGORY": {
 		"11": {

@@ -96,7 +96,8 @@ Content-Type
 
 Посмотреть 100 последних ошибок в SMTP-гейте можно в АПИ-консоли с помощью запроса:
 
-```
+<!-- prettier-ignore -->
+```js
 {
 	"filter": [{
 		"a": "delivstream.status",
