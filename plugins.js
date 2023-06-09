@@ -6,6 +6,7 @@ const yandexMetricaCounter = process.env.YANDEX_METRICA_COUNTER_ID;
 const gtagIds = [baseGTM, landingGTM].filter((id) => Boolean(id));
 
 const plugins = [
+  './src/plugins/iframe-detected',
   [
     'docusaurus-lunr-search',
     {

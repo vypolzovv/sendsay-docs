@@ -3,24 +3,36 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "docusaurus build",
+    "clear": "docusaurus clear",
+    "deploy": "./bin/deploy.sh",
     "docusaurus": "docusaurus",
+    "eslint": "eslint src/ ",
+    "eslint:fix": "yarn eslint --fix",
+    "fix": "node scripts/translate && yarn lint:fix",
+    "lint": "yarn pretify && yarn eslint",
+    "lint:fix": "yarn pretify:fix && yarn eslint:fix",
+    "pretify": "prettier -c src config scripts *.js **/*.md **/*.mdx",
+    "pretify:fix": "yarn pretify -w",
+    "serve": "docusaurus serve",
     "start": "docusaurus start",
     "start:en": "docusaurus start --locale en",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
     "swiz": "docusaurus swizzle @docusaurus/theme-classic --typescript",
-    "deploy": "./bin/deploy.sh",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations --locale en",
+    "swizzle": "docusaurus swizzle",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pretify": "prettier -c src config scripts *.js **/*.md **/*.mdx",
-    "lint": "yarn pretify && yarn eslint",
-    "eslint": "eslint src/ ",
-    "pretify:fix": "yarn pretify -w",
-    "eslint:fix": "yarn eslint --fix",
-    "lint:fix": "yarn pretify:fix && yarn eslint:fix",
-    "fix": "node scripts/translate && yarn lint:fix"
+    "write-translations": "docusaurus write-translations --locale en"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "@algolia/client-search": "^4.9.1",
@@ -56,18 +68,6 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.6.2",
     "typescript": "^4.7.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "engines": {
     "node": "^16.17.0 || >=18.0.0",

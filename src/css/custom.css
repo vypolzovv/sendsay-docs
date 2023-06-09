@@ -477,3 +477,8 @@ iframe:not(.no-border) {
 .medium-zoom-image--opened {
   z-index: var(--ifm-z-index-overlay);
 }
+
+[data-iframed='true'] .navbar,
+[data-iframed='true'] .footer {
+  display: none;
+}
