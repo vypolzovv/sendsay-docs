@@ -19,7 +19,6 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import type { Props } from '@theme/DocSidebarItem/Category';
 import { useLocation } from '@docusaurus/router';
-import { useResctrictedPath } from '../../hooks';
 
 // If we navigate to a category and it becomes active, it should automatically
 // expand itself
@@ -98,7 +97,6 @@ const DocSidebarItemCategory = ({
   index,
   ...props
 }: Props): JSX.Element => {
-  const { isRestricted } = useResctrictedPath(item);
   const { pathname } = useLocation();
   const { items, label, collapsible, className, href } = item;
   const {
@@ -153,10 +151,6 @@ const DocSidebarItemCategory = ({
       setCollapsed(true);
     }
   }, [collapsible, expandedItem, index, setCollapsed, autoCollapseCategories]);
-
-  if (isRestricted) {
-    return null;
-  }
 
   return (
     <li
