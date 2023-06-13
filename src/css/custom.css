@@ -14,6 +14,7 @@
   --ifm-font-weight-semibold: 600;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --doc-toc-width: 330px;
 
   --ss-dropdown-menu-shadow: -20px 20px 70px 5px rgba(0, 0, 0, 0.25);
 }
@@ -334,10 +335,15 @@ p {
   -webkit-font-smoothing: auto;
 }
 
-/* tableOfContents width */
+/* tableOfContent */
 
-.col--3 {
-  min-width: 330px;
+.row .col.col--3 {
+  flex-grow: 1;
+  max-width: var(--doc-toc-width) !important;
+}
+
+.theme-doc-toc-desktop {
+  margin-top: 1.3rem;
 }
 
 /* Code block styles */
@@ -404,11 +410,13 @@ p {
 }
 
 /* Hide tableOfContents */
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width: 1300px) {
   .col--3 {
     display: none;
   }
 }
+
 /* tableOfContents on mobile version */
 
 @media screen and (max-width: 996px) {
