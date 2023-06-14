@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+sidebar_label: 'Вставка круговой диаграммы'
 ---
 
 import diagram from "/img/email-campaigns/personalization//how-to-add-diagram/diagram.png";

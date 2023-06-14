@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Как подключить бота'
 ---
 
 import botToken from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-copy-the-token.png";

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: 'Файл для импорта'
 ---
 
 import fieldCode from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/field-code.png";

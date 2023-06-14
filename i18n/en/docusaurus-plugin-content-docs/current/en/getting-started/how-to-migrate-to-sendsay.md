@@ -2,6 +2,7 @@
 id: en-how-to-migrate-to-sendsay
 slug: /getting-started/how-to-migrate-to-sendsay
 sidebar_position: 2
+sidebar_label: 'How to migrate to Sendsay'
 ---
 
 # How to migrate your contacts and templates from another platform to Sendsay

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Отправка через SMTP-гейт'
 ---
 
 # Отправка рассылок через SMTP-гейт

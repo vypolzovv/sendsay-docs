@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+sidebar_label: 'Разделы в YML-файле'
 ---
 
 # Дополнительные разделы в YML-файле (category, gifts, promo)

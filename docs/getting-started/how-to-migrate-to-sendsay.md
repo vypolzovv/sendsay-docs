@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: 'Как перейти в Sendsay'
 ---
 
 import Tabs from '@theme/Tabs';

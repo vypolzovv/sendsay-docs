@@ -2,6 +2,7 @@
 id: en-drag-and-drop-editor
 slug: /email-campaigns/create-your-campaign/drag-and-drop-editor
 sidebar_position: 2
+sidebar_label: 'How to create an email'
 ---
 
 # How to create an email in the drag-and-drop editor

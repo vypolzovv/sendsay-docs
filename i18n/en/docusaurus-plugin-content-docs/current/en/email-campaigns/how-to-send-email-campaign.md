@@ -2,9 +2,10 @@
 id: en-how-to-send-email-campaign
 slug: /email-campaigns/create-your-campaign/how-to-send-email-campaign
 sidebar_position: 1
+sidebar_label: 'How to send an email'
 ---
 
-# How to create a regular email campaign
+# How to send a regular email campaign
 
 A campaign is an email message that you send to a group of subscribers. To get started, go to **Campaigns**, click **Create campaign** and select **Email**.
 

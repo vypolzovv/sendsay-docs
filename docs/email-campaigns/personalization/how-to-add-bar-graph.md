@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+sidebar_label: 'Как вставить гистограмму'
 ---
 
 import barGraph from "/img/email-campaigns/personalization//how-to-add-bar-graph/bar-graph.png";

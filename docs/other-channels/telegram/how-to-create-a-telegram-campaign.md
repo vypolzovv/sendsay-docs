@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: 'Как отправить рассылку'
 ---
 
 import campaignEditor from "/img/other-channels/telegram/how-to-create-a-telegram-campaign/telegram-campaign-editor.png";

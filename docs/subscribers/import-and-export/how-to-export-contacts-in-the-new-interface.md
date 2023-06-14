@@ -1,5 +1,6 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
+sidebar_label: 'Экспорт данных и контактов'
 ---
 
 # Как экспортировать контакты в новом интерфейсе

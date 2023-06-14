@@ -2,6 +2,7 @@
 id: en-getting-started-with-sendsay
 slug: /
 sidebar_position: 1
+sidebar_label: 'Getting started'
 ---
 
 # Getting started with Sendsay

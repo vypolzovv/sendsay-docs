@@ -1,6 +1,7 @@
 ---
 slug: /
 sidebar_position: 1
+sidebar_label: 'Начало работы'
 ---
 
 # Начало работы в Sendsay

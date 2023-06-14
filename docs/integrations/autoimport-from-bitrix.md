@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+sidebar_label: 'Настройка импорта из Bitrix24'
 ---
 
 import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-bitrix-subdomain.png";

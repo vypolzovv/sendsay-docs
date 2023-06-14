@@ -1,5 +1,6 @@
 ---
 sidebar_position: 9
+sidebar_label: 'Колонки в HTML-таблице'
 ---
 
 # Как сделать N колонок в HTML-таблице

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: 'Как отправить веб-пуш'
 ---
 
 import webpushElements from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-elements.png";

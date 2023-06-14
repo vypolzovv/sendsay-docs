@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Импорт подписчиков'
 ---
 
 import importDetails from "/img/subscribers/import-and-export/how-to-import-subscribers/import-details.png"

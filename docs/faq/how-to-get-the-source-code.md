@@ -1,5 +1,6 @@
 ---
 sidebar_position: 6
+sidebar_label: 'Исходник письма'
 ---
 
 import image from '/img/faq/how-to-get-the-source-code/how-to-get-the-source-code-outlook-2016.png'

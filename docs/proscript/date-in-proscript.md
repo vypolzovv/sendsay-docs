@@ -1,5 +1,6 @@
 ---
 sidebar_position: 7
+sidebar_label: 'Обработка даты'
 ---
 
 # Обработка даты в PROScript
