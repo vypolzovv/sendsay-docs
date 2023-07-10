@@ -27,9 +27,10 @@ import delist from '/img/automations/automation-with-workflows/workflow-blocks/d
 import callWebhook from '/img/automations/automation-with-workflows/workflow-blocks/call-webhook.png';
 import sendSms from '/img/automations/automation-with-workflows/workflow-blocks/send-sms.png';
 import sendWebPush from '/img/automations/automation-with-workflows/workflow-blocks/send-web-push.png';
-import split from '/img/automations/automation-with-workflows/workflow-blocks/split.png';
+import split from '/img/automations/automation-with-workflows/workflow-blocks/separation.png';
 import listSplit from '/img/automations/automation-with-workflows/workflow-blocks/list-split.png';
 import dataSplit from '/img/automations/automation-with-workflows/workflow-blocks/data-split.png';
+import percentageSplit from '/img/automations/automation-with-workflows/workflow-blocks/percentage-split.png';
 import timers from '/img/automations/automation-with-workflows/workflow-blocks/timers.png';
 import passedTime from '/img/automations/automation-with-workflows/workflow-blocks/passed-time.png';
 import exactTime from '/img/automations/automation-with-workflows/workflow-blocks/exact-time.png';
@@ -94,10 +95,10 @@ import Video from '@site/src/components/Video';
 Здесь есть две группы шаблонов: можно указать, что сценарий будет реагировать на&nbsp;открытие письма, отправленного в&nbsp;текущем сценарии; либо на&nbsp; открытие письма, отправленного в&nbsp;другом автоматическом сценарии. При выборе шаблона вы&nbsp;увидите его превью.
 
 :::tip Важно
-Если Событие **Подписчик открыл email** указано Стартовым, в&nbsp;качестве шаблона можно выбрать только письмо, отправленное вне сценария обычным способом.
+Если Событие **Подписчик открыл email** указано Стартовым, в&nbsp;качестве шаблона можно выбрать только письмо, отправленное в другом сценарии.
 :::
 
-При выборе События **Подписчик открыл email** можно создать шаблон письма, не&nbsp;выходя из&nbsp;редактора. Для этого в&nbsp;списке шаблонов выберите пункт **Создать шаблон**. Также можно отслеживать открытия указанного письма в&nbsp;других сценариях&nbsp;— для этого проставьте галочку в&nbsp;чекбоксе.
+С помощью этого События можно отслеживать открытия указанного письма в&nbsp;других сценариях&nbsp;— для этого проставьте галочку в&nbsp;чекбоксе.
 
 **Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть три варианта:
 
@@ -420,16 +421,17 @@ import Video from '@site/src/components/Video';
 
 ## Разделение
 
-Блок Разделение поможет офильтровать подписчиков в&nbsp;сценарии. Он&nbsp;проверяет соблюдение определенного условия:
+Блок Разделение поможет офильтровать подписчиков в&nbsp;сценарии. Он&nbsp;проверяет соблюдение определенного условия и делит участников сценария на&nbsp;разные ветки:
 
 - Наличие подписчика в&nbsp;списке,
-- Совпадение данных подписчика.
+- Совпадение данных подписчика,
+- Процентное разделение.
 
 <p align="center">
   <img width="50%" src={split} alt="Split" />
 </p>
 
-Таким образом можно разделить участников сценария на&nbsp;разные ветки. Другими словами, если условие Разделения выполнится, участники сценария пойдут по&nbsp;одной ветке, если нет&nbsp;&mdash; по&nbsp;другой:
+Если условие Разделения выполнится, участники сценария пойдут по&nbsp;одной ветке, если нет&nbsp;&mdash; по&nbsp;другой:
 
 ![Branching with split](/img/automations/automation-with-workflows/workflow-blocks/branching-with-split.png)
 
@@ -457,6 +459,16 @@ import Video from '@site/src/components/Video';
 Например, с&nbsp;помощью такого Разделения можно разделить базу на&nbsp;списки:
 
 ![How to divide into lists by split](/img/automations/automation-with-workflows/workflow-blocks/how-to-divide-into-lists-by-split.png)
+
+**Процентное разделение** — произвольно делит участников сценария на две ветки:
+
+<p align="center">
+  <img width="50%" src={percentageSplit} alt="Percentage split" />
+</p>
+
+Такой блок может понадобиться, например, если необходимо проверить какую-то гипотезу на небольшой части аудитории:
+
+![Separation](/img/automations/automation-with-workflows/workflow-blocks/separation-95-5.png)
 
 ## Сценарий
 
