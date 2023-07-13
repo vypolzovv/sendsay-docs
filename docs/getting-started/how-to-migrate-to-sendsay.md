@@ -263,6 +263,12 @@ import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-send
 
 [Как загрузить HTML-шаблон](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-upload-html-template)
 
+После переноса шаблонов проверьте данные персонализации, а также ссылки для отписки и веб-версии писем. В этом вам помогут наши материалы:
+
+- [Как персонализировать рассылку](https://docs.sendsay.ru/email-campaigns/personalization/how-to-personalize-campaign)
+- [Футер в письме](https://docs.sendsay.ru/email-campaigns/settings/campaign-footer)
+- [Веб-версия письма](https://docs.sendsay.ru/email-campaigns/create-your-campaign/web-version)
+
 Когда база контактов и&nbsp;шаблоны писем перенесены в&nbsp;Sendsay, переходите к&nbsp;следующему этапу миграции.
 
 ## Подготовка к&nbsp;работе
