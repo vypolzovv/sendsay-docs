@@ -13,12 +13,6 @@ sidebar_label: 'Инструкция для разработчиков'
 
 ## Настройка модуля
 
-### Общие настройки
-
-- Сайт клиента должен быть HTTPS.
-- Переходы на сайт должны идти через клиентский домен (сабдомен домена сайта), иначе будут проблемы с передачей куки в большинстве броузеров.
-- Поддомен для кликов должен быть HTTPS.
-
 ### Список клиентских ssec-событий
 
 | ID  | Константа события       | Событие                                       | Область в stat.uni    |
@@ -38,31 +32,31 @@ sidebar_label: 'Инструкция для разработчиков'
 
 ### Набор доступных полей
 
-| Имя поля при внесении (JS & API) | Имя поля в stat.uni    | Тип значения           | Доступность    | Аналог в YML |
-| :------------------------------- | :--------------------- | :--------------------- | :------------- | :----------- |
-| id                               | product.id             | String                 |                |              |
-| name                             | product.name           | String                 |                |              |
-| picture                          | product.picture        | Array(String)          |                |              |
-| url                              | product.url            | String                 |                |              |
-| available                        | product.available      | UInt8                  |                |              |
-| category_paths                   | product.category_paths | Array(String)          |                |              |
-| category_id                      | product.category_id    | Int64                  |                |              |
-| description                      | product.description    | String                 |                |              |
-| vendor                           | product.vendor         | String                 |                |              |
-| model                            | product.model          | String                 |                |              |
-| type                             | product.type           | String                 |                |              |
-| price                            | product.price          | Nullable(Decimal64(2)) |                |              |
-| old_price                        | product.old_price      | Nullable(Decimal64(2)) |                |              |
-| category                         | category               | String                 |                |              |
-| transaction_id                   | transaction.id         | String                 | Заказ, корзина |              |
-| delivery_dt                      | delivery.dt            | DateTime               | Заказ          |              |
-| delivery_price                   | delivery.price         | Nullable(Decimal64(2)) | Заказ          |              |
-| payment_dt                       | payment.dt             | DateTime               | Заказ          |              |
-| transaction_dt                   | transaction.dt         | DateTime               | Заказ, корзина |              |
-| transaction_status               | transaction.status     | Int64 DEFAULT 0        | Заказ, корзина |              |
-| transaction_discount             | transaction.discount   | Nullable(Decimal64(2)) | Заказ, корзина |              |
-| transaction_sum                  | transaction.sum        | Nullable(Decimal64(2)) | Заказ, корзина |              |
-| cp1…cp20                         | cp1…cp20               | String                 |                |              |
+| Имя поля при внесении (JS & API) | Имя поля в stat.uni    | Тип значения                          | Доступность    | Аналог в YML |
+| :------------------------------- | :--------------------- | :------------------------------------ | :------------- | :----------- |
+| id                               | product.id             | String                                |                |              |
+| name                             | product.name           | String                                |                |              |
+| picture                          | product.picture        | Array(String)<br/>(абсолютная ссылка) |                |              |
+| url                              | product.url            | String<br/>(абсолютная ссылка)        |                |              |
+| available                        | product.available      | UInt8                                 |                |              |
+| category_paths                   | product.category_paths | Array(String)                         |                |              |
+| category_id                      | product.category_id    | Int64                                 |                |              |
+| description                      | product.description    | String                                |                |              |
+| vendor                           | product.vendor         | String                                |                |              |
+| model                            | product.model          | String                                |                |              |
+| type                             | product.type           | String                                |                |              |
+| price                            | product.price          | Nullable(Decimal64(2))                |                |              |
+| old_price                        | product.old_price      | Nullable(Decimal64(2))                |                |              |
+| category                         | category               | String                                |                |              |
+| transaction_id                   | transaction.id         | String                                | Заказ, корзина |              |
+| delivery_dt                      | delivery.dt            | DateTime                              | Заказ          |              |
+| delivery_price                   | delivery.price         | Nullable(Decimal64(2))                | Заказ          |              |
+| payment_dt                       | payment.dt             | DateTime                              | Заказ          |              |
+| transaction_dt                   | transaction.dt         | DateTime                              | Заказ, корзина |              |
+| transaction_status               | transaction.status     | Int64 DEFAULT 0                       | Заказ, корзина |              |
+| transaction_discount             | transaction.discount   | Nullable(Decimal64(2))                | Заказ, корзина |              |
+| transaction_sum                  | transaction.sum        | Nullable(Decimal64(2))                | Заказ, корзина |              |
+| cp1…cp20                         | cp1…cp20               | String                                |                |              |
 
 #### Статусы заказа
 
@@ -112,9 +106,9 @@ Ssec-события всегда передаются в Sendsay как масс
 ```json
 [
   {
-    "transaction_id": "x1", // обязательно
-    "transaction_dt": "2022-07-25 23:25:13", // обязательно для заказа
-    "transaction_sum": 100.9, // желательно
+    "transaction_id": "x1", //обязательно
+    "transaction_dt": "2022-07-25 23:25:13", //обязательно для заказа
+    "transaction_sum": 100.9, //желательно
     "payment_dt": "2022-07-25 23:25:13", //необязательно
     "delivery_dt": "2022-07-25 23:25:13", //необязательно
     "update": 1 | 0, //необязательно
@@ -136,8 +130,6 @@ Ssec-события всегда передаются в Sendsay как масс
 Идентификатор пользователя, которому должно добавиться событие вы можете передать самостоятельно в опциональном параметре, либо довериться нашему скрипту.
 
 В случае если пользователя определяет наш скрипт, то вместе с идентификатором (email, web-push, umid) придет информация о выпуске, из которого пользователь перешел на сайт.
-
-#### Проверка наличия
 
 #### JavaScript-синтаксис
 
@@ -242,11 +234,15 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 - использование сценария «Брошенный просмотр категории»
 - использование функций ProScript, в результате работы которых, вы получаете только ID товара, например, блоки рекомендаций типа «самое просматриваемое» или «самое покупаемое».
 
+:::tip Важно
+Выводить в письме данные из YML-файла возможно только в том случае, если ID товара в YML-файле будет совпадать с ID товара, передаваемого в событии.
+:::
+
 Подключение YML-файла к аккаунту осуществляется через личный кабинет при подключении сайта.
 Подключить данные из YML-файла к письму можно следующей командой ProScript:
 
 ```
-[% external_extra("rfs://upload/yandex.xml","method","get","ignore_error","1","format","yml") %]
+[% external_extra("https://mysite.ru/example.yml","method","get","ignore_error","1","format","yml") %]
 ```
 
 ## Клиентские события
@@ -270,15 +266,15 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
       "model": "model",
       "name": "name",
       "old_price": 5.99,
-      "picture": [],
+      "picture": [], //абсолютные ссылки в массиве
       "price": 7.88,
-      "url": "url",
+      "url": "url", //абсолютная ссылка
       "vendor": "vendor",
       "category_id": 777,
       "category_paths": []
     }
   ]);
-  // или с доп. параметрами
+  //или с доп. параметрами
   sndsyApi.ssecEvent(
     'VIEW_PRODUCT',
     [
@@ -289,15 +285,15 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture": [],
+        "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
-        "url": "url",
+        "url": "url", //абсолютная ссылка
         "vendor": "vendor"
         "category_id": 777,
         "category_paths": []
       }
     ],
-    { email: 'name@domain.ru' }
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом  
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -320,7 +316,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "category_id": INT, //Число идентификатор из YML
       }
     ],
-    { email: 'name@domain.ru' }
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -329,6 +325,27 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 ### Действия с корзиной
 
 Для запуска сценария «Брошенная корзина» вы можете передавать Sendsay состояние корзины пользователя.
+
+Настроить передачу событий корзины необходимо во всех точках сайта, где происходит взаимодействие клиента с корзиной. Для каждого сайта набор таких точек будет индивидуальный.
+
+Чек-лист для проверки настройки корзины:
+
+- добавление товара в корзину из галереи каталога,
+- изменение количества товаров (+/- шт) из галереи каталога,
+- добавление товаров в корзину из карточки товаров,
+- изменение количества товаров (+/- шт) из карточки товаров,
+- добавление товаров в корзину из окна быстрого просмотра,
+- изменение количества товаров (+/- шт) из окна быстрого просмотра,
+- изменение количества товаров (+/- шт) из корзины,
+- удаление товаров из корзины,
+- очистка корзины при удалении последнего товара,
+- очистка корзины при оформлении заказа (если не передаются заказы с сайта).
+
+При тестировании корзины рекомендуем проверять, совпадают ли товары в режиме предпросмотра шаблона сценария «Брошенная корзина» с адресом, для которого вы изменяете корзину на своем сайте (см. [Тестирование модуля](https://docs.sendsay.ru/ecom/how-to-configure-data-transfer/how-to-configure-data-transfer#тестирование-модуля)).
+
+:::tip Важно
+Если в Sendsay не будут передаваться все обновления корзины, то данные у клиента в Sendsay и в письмах сценария могут быть неактуальными.
+:::
 
 #### Обновление корзины
 
@@ -343,8 +360,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
       {
         "transaction_id": "x1", //необязательно
         "transaction_dt": "2022-07-25 23:25:13", //необязательно
-        "transaction_sum": 100.9, // желательно
-        "update_per_item": 1|0 // необязательно (по умолчанию 0)
+        "transaction_sum": 100.9, //желательно
+        "update_per_item": 1|0 //необязательно (по умолчанию 0)
         "items": [ //обязательно
           {           
             "id": "product1", //обязательно
@@ -354,8 +371,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "model": "model",
             "name": "name",
             "old_price": 5.99,
-            "picture": [],
-            "url": "url",
+            "picture": [], //абсолютные ссылки в массиве
+            "url": "url", //абсолютная ссылка
             "vendor": "vendor",
             "category_id": 777,
             "category_paths": []
@@ -364,7 +381,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         ]
       }
     ],
-    { email: 'name@domain.ru' }
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -407,15 +424,15 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 <!-- prettier-ignore -->
 ```js
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
-  // Call methods with params
+  //Call methods with params
   sndsyApi.ssecEvent(
     'ORDER',
     [
       {
-        "transaction_id": "x1", // обязательно
-        "transaction_status": 1, // обязательно
-        "transaction_dt": "2022-07-25 23:25:13", // обязательно YYYY-MM-DD hh:mm:ss
-        "transaction_sum": 100.9, // желательно
+        "transaction_id": "x1", //обязательно
+        "transaction_status": 1, //обязательно
+        "transaction_dt": "2022-07-25 23:25:13", //обязательно YYYY-MM-DD hh:mm:ss
+        "transaction_sum": 100.9, //желательно, для отображения статистики по заказам
         "payment_dt": "2022-07-25 23:25:13", //необязательно
         "delivery_dt": "2022-07-25 23:25:13", //необязательно
         "update": 1 | 0, //необязательно
@@ -428,8 +445,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "model": "model",
             "name": "name",
             "old_price": 5.99,
-            "picture": [],
-            "url": "url",
+            "picture": [], //абсолютные ссылки в массиве
+            "url": "url", //абсолютная ссылка
             "vendor": "vendor",
             "category_id": 777,
             "category_paths": []
@@ -438,7 +455,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         ]
       }
     ],
-    { email: 'name@domain.ru' }
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -462,7 +479,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "description": "поисковая строка",
       }
     ],
-    { email: 'name@domain.ru' }
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -481,15 +498,15 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture": [],
+        "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
-        "url": "url",
+        "url": "url", //абсолютная ссылка
         "vendor": "vendor"
       }
     ],
     extraData = {
-      email: 'some@domain.com',
-    };
+      email: 'АДРЕС КЛИЕНТА',
+    }; //необязательно, при отсутствии email будет распознаваться нашим скриптом
 
   sndsyApi.ssecEvent(
     'SUBSCRIBE_PRODUCT_PRICE',
@@ -537,15 +554,15 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture": [],
+        "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
-        "url": "url",
+        "url": "url", //абсолютная ссылка
         "vendor": "vendor"
       }
     ],
     extraData = {
-      email: 'some@domain.com',
-    };
+      email: 'АДРЕС КЛИЕНТА',
+    }; //необязательно, при отсутствии email будет распознаваться нашим скриптом
 
   sndsyApi.ssecEvent(
     'SUBSCRIBE_PRODUCT_ISA',
@@ -593,15 +610,15 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture": [],
+        "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
-        "url": "url",
+        "url": "url", //абсолютная ссылка
         "vendor": "vendor"
       }
     ],
     extraData = {
-      email: 'some@domain.com',
-    };
+      email: 'АДРЕС КЛИЕНТА',
+    }; //необязательно, при отсутствии email будет распознаваться нашим скриптом
 
   sndsyApi.ssecEvent(
     'FAVORITE',
@@ -649,15 +666,15 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "model": "model",
         "name": "name",
         "old_price": 5.99,
-        "picture": [],
+        "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
-        "url": "url",
+        "url": "url", //абсолютная ссылка
         "vendor": "vendor"
       }
     ],
     extraData = {
-      email: 'some@domain.com',
-    };
+      email: 'АДРЕС КЛИЕНТА',
+    }; //необязательно, при отсутствии email будет распознаваться нашим скриптом
 
   sndsyApi.ssecEvent(
     'PREORDER',
@@ -691,3 +708,19 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 ```
+
+## Тестирование модуля
+
+Чтобы проверить, правильно ли настроена передача данных в Sendsay, рекомендуем выполнить следующие действия:
+
+1. Перейдите на сайт из любой рассылки, отправленной на свой адрес из аккаунта Sendsay (тестовая копия в данном случае не подойдет). Это необходимо, чтобы установились cookie для вашего адреса, иначе события будут записываться за анонимным контактом.
+2. Перейдите на страницу товара, если у вас настроена передача события **Просмотр товара**.
+3. Откройте любую категорию, если у вас настроена передача события **Просмотр категории**.
+4. Проверьте поступление событий в разделе **События сайта**. Если вы не видите событий, отфильтруйте таблицу по Анонимным контактам и выполните п. 1.
+   ![Event view](/img/ecom/how-to-configure-data-transfer/event-view.png)
+5. Добавьте товар в корзину из галереи и из карточки товара, измените количество, удалите товар из корзины (см. [Действие с корзиной](https://docs.sendsay.ru/ecom/how-to-configure-data-transfer#действия-с-корзиной)).
+6. Проверьте совпадение товаров в корзине на сайте с теми, которые выводятся в предпросмотре шаблона сценария «Брошенная корзина» для вашего адреса:
+   ![How to view email](/img/ecom/ecom-triggers/how-to-view-email1.gif)
+7. Удалите все товары из корзины на сайте и убедитесь, что корзина очищена и в Sendsay — в шаблоне сценария в блоке товаров должно быть пусто.
+8. При оформлении заказа также проверьте, очищается ли корзина. Если вы передаете данные о заказах с сайта, корзина будет очищаться при поступлении заказа автоматически. В остальных случаях необходимо передавать событие Очистка корзины.
+9. Для тестирования других событий выполните действия на сайте и проверьте отображение событий в разделе **События сайта**.
