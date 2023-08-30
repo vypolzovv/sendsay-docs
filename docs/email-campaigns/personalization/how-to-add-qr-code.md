@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 import qrCode from "/img/email-campaigns/personalization//how-to-add-qr-code/qr-code.png";

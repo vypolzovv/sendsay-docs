@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 import graph from "/img/email-campaigns/personalization//how-to-add-graph/graph.png";
