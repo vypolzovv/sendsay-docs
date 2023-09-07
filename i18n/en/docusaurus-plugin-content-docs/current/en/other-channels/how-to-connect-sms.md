@@ -16,7 +16,7 @@ If you already have the contract, you’ll have to sign an addendum.
 
 Mobile operators register an individual sender name for every account. For registration send us the following information:
 
-**The sender name.** It must be in English, consist of 3 to 10 characters and affiliate with your brand. It can also contain numbers, underscore characters and periods, but cannot start with them.
+**The sender name.** It must be in English, consist of 3 to 11 characters and affiliate with your brand. It can also contain numbers, underscore characters and periods, but cannot start with them.
 
 **Any document that proves the sender name is affiliated with your brand.** For example, it can be a certificate of domain registration (if the sender name coincides with your domain) or trademark registration.
 
