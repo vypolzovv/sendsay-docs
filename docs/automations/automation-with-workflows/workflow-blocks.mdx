@@ -2,11 +2,15 @@
 sidebar_position: 3
 ---
 
+import sendConfirmationEmail from '/img/automations/automation-with-workflows/workflow-blocks/send-confirmation-email.png';
+import emailDelivered from '/img/automations/automation-with-workflows/workflow-blocks/email-delivered.png';
+import withoutStartEvent from '/img/automations/automation-with-workflows/workflow-blocks/without-start-event.png';
 import startEvent from '/img/automations/automation-with-workflows/workflow-blocks/start-event.png';
 import startEvent1 from '/img/automations/automation-with-workflows/workflow-blocks/start-event1.png';
 import subscriberOpenedEmail from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-opened-the-email.png';
 import changeSubscriberData from '/img/automations/automation-with-workflows/workflow-blocks/change-of-subscriber-data.png';
 import clickOnLink from '/img/automations/automation-with-workflows/workflow-blocks/click-on-the-link.png';
+import additionalSettings from '/img/automations/automation-with-workflows/workflow-blocks/additional-settings.png';
 import subscriptionConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/subscription-confirmation.png';
 import subscriberAddedUnconfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-unconfirmed.png';
 import subscriberAddedConfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-confirmed.png';
@@ -30,6 +34,7 @@ import sendWebPush from '/img/automations/automation-with-workflows/workflow-blo
 import split from '/img/automations/automation-with-workflows/workflow-blocks/separation.png';
 import listSplit from '/img/automations/automation-with-workflows/workflow-blocks/list-split.png';
 import dataSplit from '/img/automations/automation-with-workflows/workflow-blocks/data-split.png';
+import ABTest from '/img/automations/automation-with-workflows/workflow-blocks/AB-test.png';
 import percentageSplit from '/img/automations/automation-with-workflows/workflow-blocks/percentage-split.png';
 import timers from '/img/automations/automation-with-workflows/workflow-blocks/timers.png';
 import passedTime from '/img/automations/automation-with-workflows/workflow-blocks/passed-time.png';
@@ -66,7 +71,9 @@ import Video from '@site/src/components/Video';
 
 Какие бывают Стартовые события:
 
+- Без стартового события,
 - Подписчик открыл email,
+- Email доставлен,
 - Изменение данных подписчика,
 - Клик по&nbsp;ссылке,
 - Подтверждение подписки,
@@ -86,7 +93,13 @@ import Video from '@site/src/components/Video';
 
 ### Виды Событий в сценариях
 
-**Подписчик открыл email** ([описание в API](https://sendsay.ru/api/api.html#Чтения-письма))&nbsp;&mdash; подписчик открыл письмо, отправленное по&nbsp;любому или указанному шаблону.
+**Без стартового события** ([описание в API](https://sendsay.ru/api/api.html#Никогда)) — подписчик станет участником сценария, если его туда добавят принудительно. Например, с помощью [блока Сценария **Перейти в другой сценарий**](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks#варианты-выхода-из-сценария) или через **Управление участниками**:
+
+<p align="center">
+  <img width="50%" src={withoutStartEvent} alt="Without start event" />
+</p>
+
+**Подписчик открыл email** ([описание в API](https://sendsay.ru/api/api.html#Чтения-письма))&nbsp;&mdash; подписчик открыл транзакционное письмо, отправленное по&nbsp;любому или указанному шаблону.
 
 <p align="center">
   <img width="50%" src={subscriberOpenedEmail} alt="Subscriber opened the email" />
@@ -94,11 +107,23 @@ import Video from '@site/src/components/Video';
 
 Здесь есть две группы шаблонов: можно указать, что сценарий будет реагировать на&nbsp;открытие письма, отправленного в&nbsp;текущем сценарии; либо на&nbsp; открытие письма, отправленного в&nbsp;другом автоматическом сценарии. При выборе шаблона вы&nbsp;увидите его превью.
 
+С помощью этого События можно отслеживать открытие указанного письма в&nbsp;других сценариях&nbsp;— для этого проставьте галочку в&nbsp;чекбоксе.
+
 :::tip Важно
 Если Событие **Подписчик открыл email** указано Стартовым, в&nbsp;качестве шаблона можно выбрать только письмо, отправленное в другом сценарии.
 :::
 
-С помощью этого События можно отслеживать открытия указанного письма в&nbsp;других сценариях&nbsp;— для этого проставьте галочку в&nbsp;чекбоксе.
+**Email доставлен** — сработает, когда письмо, отправленное по указанному шаблону, будет успешно доставлено.
+
+<p align="center">
+  <img width="50%" src={emailDelivered} alt="Email delivered" />
+</p>
+
+Чтобы Событие сработало, необходимо проставить галочку у пункта **После доставки запускать событие «Email доставлен» для сценариев** в дополнительных настройках шаблона:
+
+<p align="center">
+  <img width="80%" src={additionalSettings} alt="Additional settings" />
+</p>
 
 **Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть три варианта:
 
@@ -251,6 +276,7 @@ import Video from '@site/src/components/Video';
 Какие бывают Действия:
 
 - Отправить подписчику email,
+- Отправить email подтверждения,
 - Добавить в&nbsp;список,
 - Изменить данные подписчика,
 - Исключить из&nbsp;списка,
@@ -275,6 +301,16 @@ import Video from '@site/src/components/Video';
 :::tip Важно
 В&nbsp;шаблоне должны быть заполнены поля **Адрес отправителя** и&nbsp;**Тема письма**, иначе письмо не&nbsp;отправится.
 :::
+
+**Отправить email подтверждения** ([описание в API](https://sendsay.ru/api/api.html#Выслать-письмо-подтверждения)) — система отправит участнику сценария в статусе «Неподтверждённый» выбранное письмо подтверждения. Если подтверждение не требуется, шаг будет игнорирован.
+
+<p align="center">
+  <img width="50%" src={sendConfirmationEmail} alt="Send confirmation email" />
+</p>
+
+В шаблоне письма должна быть указана специальная ссылка, при клике на которую пользователь подтвердит свою подписку на рассылку.
+
+[Активация через письмо подтверждения](https://docs.sendsay.ru/subscribers/contacts/how-to-activate-inactive-contacts/#активация-через-письмо-подтверждения)
 
 **Добавить в&nbsp;список** ([описание в API](https://sendsay.ru/api/api.html#Внести-в-группу-список))&nbsp;&mdash; подписчик будет добавлен в&nbsp;указанный список, если его там ещё нет.
 
@@ -324,7 +360,7 @@ import Video from '@site/src/components/Video';
   <img width="50%" src={callWebhook} alt="Call webhook" />
 </p>
 
-Когда участник сценария окажется на&nbsp;шаге **Вызвать Webhook**, сервер Sendsay отправит HTTP-запрос методом `GET` на&nbsp;указанный вами URL-адрес. После этого данные отправятся на&nbsp;этот URL-адрес в&nbsp;указанном формате. Если необходимо передать данные участника сценария, нужно указать в&nbsp;URL-адресе [команду подстановки ProScript](https://docs.sendsay.ru/proscript/access-to-data/).
+Здесь можно выбрать вариант отправки HTTP-запроса — методом `GET` или методом `POST`. Когда участник сценария окажется на&nbsp;шаге **Вызвать Webhook**, сервер Sendsay отправит HTTP-запрос на&nbsp;указанный вами URL-адрес. После этого данные отправятся на&nbsp;этот URL-адрес в&nbsp;указанном формате. Если необходимо передать данные участника сценария, нужно указать в&nbsp;URL-адресе [команду подстановки ProScript](https://docs.sendsay.ru/proscript/access-to-data/).
 
 **Отправить SMS** ([описание в API](https://sendsay.ru/api/api.html#Выслать-письмо))&nbsp;&mdash; система отправит смс-сообщение по&nbsp;указанному шаблону на&nbsp;его телефонный номер.
 
@@ -425,7 +461,8 @@ import Video from '@site/src/components/Video';
 
 - Наличие подписчика в&nbsp;списке,
 - Совпадение данных подписчика,
-- Процентное разделение.
+- Процентное разделение,
+- A/B тест.
 
 <p align="center">
   <img width="50%" src={split} alt="Split" />
@@ -469,6 +506,16 @@ import Video from '@site/src/components/Video';
 Такой блок может понадобиться, например, если необходимо проверить какую-то гипотезу на небольшой части аудитории:
 
 ![Separation](/img/automations/automation-with-workflows/workflow-blocks/separation-95-5.png)
+
+**A/B тест** — позволяет разделить участников сценария на равные группы и отправить каждую на свою ветку — с помощью этого блока можно создать от 2 до 5 веток.
+
+<p align="center">
+  <img width="50%" src={ABTest} alt="A/B-test" />
+</p>
+
+Например, с помощью этого блока можно отправить разным группам одно и тоже письмо, но с разной темой. Результаты такого тестирования помогут лучше понимать, какие маркетинговые кампании работают эффективнее.
+
+[Подробнее про A/B-тестирование](https://docs.sendsay.ru/email-campaigns/create-your-campaign/a-b-testing)
 
 ## Сценарий
 
