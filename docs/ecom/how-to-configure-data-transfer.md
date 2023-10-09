@@ -29,6 +29,8 @@ sidebar_label: 'Инструкция для разработчиков'
 | 12  | PREORDER                | Предварительный заказ                         | ssec_product_preorder |
 | 13  | PRODUCT_ISA             | Товар появился                                |                       |
 | 15  | PRODUCT_PRICE_CHANGED   | Стоимость товара изменилась                   |                       |
+| 28  | REGISTRATION            | Регистрация                                   |                       |
+| 29  | AUTHORIZATION           | Авторизация                                   |                       |
 
 ### Набор доступных полей
 
@@ -246,6 +248,32 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 ```
 
 ## Клиентские события
+
+### Регистрация
+
+<!-- prettier-ignore -->
+```js
+(window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
+  sndsyApi.ssecEvent(
+    'REGISTRATION',    
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
+  );
+});
+typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
+```
+
+### Авторизация
+
+<!-- prettier-ignore -->
+```js
+(window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
+  sndsyApi.ssecEvent(
+    'AUTHORIZATION',    
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
+  );
+});
+typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
+```
 
 ### Просмотр карточки товара
 
