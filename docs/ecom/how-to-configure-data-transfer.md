@@ -256,7 +256,7 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   sndsyApi.ssecEvent(
     'REGISTRATION',    
-    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
+    { email: 'АДРЕС КЛИЕНТА' } //обязательно
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -269,7 +269,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   sndsyApi.ssecEvent(
     'AUTHORIZATION',    
-    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
+    { email: 'АДРЕС КЛИЕНТА' } //обязательно
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -316,7 +316,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "picture": [], //абсолютные ссылки в массиве
         "price": 7.88,
         "url": "url", //абсолютная ссылка
-        "vendor": "vendor"
+        "vendor": "vendor",
         "category_id": 777,
         "category_paths": []
       }
@@ -394,7 +394,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
           {           
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
-            "price": 5.88 //обязательно
+            "price": 5.88, //обязательно
             "description": "description",
             "model": "model",
             "name": "name",
@@ -460,7 +460,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "transaction_id": "x1", //обязательно
         "transaction_status": 1, //обязательно
         "transaction_dt": "2022-07-25 23:25:13", //обязательно YYYY-MM-DD hh:mm:ss
-        "transaction_sum": 100.9, //желательно, для отображения статистики по заказам
+        "transaction_sum": 100.9, //обязательно
         "payment_dt": "2022-07-25 23:25:13", //необязательно
         "delivery_dt": "2022-07-25 23:25:13", //необязательно
         "update": 1 | 0, //необязательно
@@ -468,7 +468,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
           {           
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
-            "price": 5.88 //обязательно
+            "price": 5.88, //обязательно
             "description": "description",
             "model": "model",
             "name": "name",
@@ -750,8 +750,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
    В этой же таблице **Просмотр событий** проверьте, все ли нужные вам данные передаются в Sendsay — например, ссылки на товары. Для этого настройте нужные поля в таблице и посмотрите, все ли данные отображаются.
 
 5. Добавьте товар в корзину из галереи и из карточки товара, измените количество, удалите товар из корзины (см. [Действие с корзиной](https://docs.sendsay.ru/ecom/how-to-configure-data-transfer#действия-с-корзиной)).
-6. Проверьте совпадение товаров в корзине на сайте с теми, которые выводятся в предпросмотре шаблона сценария «Брошенная корзина» для вашего адреса:
+6. Проверьте совпадение товаров в корзине на сайте с теми, которые выводятся в карточке подписчика в разделе Продажи/Корзина или в предпросмотре шаблона сценария «Брошенная корзина» для вашего адреса:
    ![How to view email](/img/ecom/ecom-triggers/how-to-view-email1.gif)
-7. Удалите все товары из корзины на сайте и убедитесь, что корзина очищена и в Sendsay — в шаблоне сценария в блоке товаров должно быть пусто.
+7. Удалите все товары из корзины на сайте и убедитесь, что корзина очищена и в Sendsay — в карточке подписчика в корзине должно быть пусто.
 8. При оформлении заказа также проверьте, очищается ли корзина. Если вы передаете данные о заказах с сайта, корзина будет очищаться при поступлении заказа автоматически. В остальных случаях необходимо передавать событие Очистка корзины.
 9. Для тестирования других событий выполните действия на сайте и проверьте отображение событий в разделе **События сайта**.
