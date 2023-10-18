@@ -139,12 +139,47 @@ Ssec-события всегда передаются в Sendsay как масс
 
 <!-- prettier-ignore -->
 ```js
-(window["sndsyApiOnReady"] = window["sndsyApiOnReady"] || []).push(function() {
-  sndsyApi.ssecEvent(<event_type>, <[ items_array ]>, { email: 'name@domain.ru' });
-});typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
+<script type="text/javascript">
+  (window["sndsyApiOnReady"] = window["sndsyApiOnReady"] || []).push(function() {
+    sndsyApi.ssecEvent(<event_type>, <[ items_array ]>, { email: 'name@domain.ru' });
+  });typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
+</script>
 ```
 
 Также вы можете вызывать функцию `sndsyApi.ssecEvent()` в нужный вам момент из любого места вашего JS-кода.
+
+#### Изменение анкетных данных контакта через JS-функции добавления событий
+
+Одновременно с передачей любых событий можно добавлять, изменять, удалять анкетные данные контакта, для которого вы передаете событие.
+
+<!-- prettier-ignore -->
+```js
+(window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
+  sndsyApi.ssecEvent(
+    'REGISTRATION',
+    {
+      email: 'АДРЕС КЛИЕНТА',
+      extra: { // любые данные которые будут включены в корень запроса
+        dk: [["base.name","set","Andrey"]] // анкетные данные
+      }
+    }
+  );
+});
+typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
+```
+
+_Формат параметра dk:_
+
+<!-- prettier-ignore -->
+```js
+[
+  [ "base.name", "set", "Vladimir"],
+  [ "client_data.pets", "push", [{"pet_type":"dog","age":1}]],
+  [ "client_data", "merge", {"type":"GOLD","orders_count":55,"prefered_item":"shopping bag"}]
+]
+```
+
+Полное описание возможностей работы с данными и режимов можно найти в [документации АПИ](https://sendsay.ru/api/api.html#C%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%87%D0%B8%D0%BA%D0%B0-%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%87%D0%B8%D0%BA%D0%B0-%D0%9A%D0%94).
 
 ### Добавление данных через Sendsay API
 
@@ -255,7 +290,7 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 ```js
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   sndsyApi.ssecEvent(
-    'REGISTRATION',    
+    'REGISTRATION',
     { email: 'АДРЕС КЛИЕНТА' } //обязательно
   );
 });
@@ -268,7 +303,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 ```js
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   sndsyApi.ssecEvent(
-    'AUTHORIZATION',    
+    'AUTHORIZATION',
     { email: 'АДРЕС КЛИЕНТА' } //обязательно
   );
 });
@@ -321,7 +356,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "category_paths": []
       }
     ],
-    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом  
+    { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
 typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
@@ -391,7 +426,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "transaction_sum": 100.9, //желательно
         "update_per_item": 1|0 //необязательно (по умолчанию 0)
         "items": [ //обязательно
-          {           
+          {
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
             "price": 5.88, //обязательно
@@ -465,7 +500,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
         "delivery_dt": "2022-07-25 23:25:13", //необязательно
         "update": 1 | 0, //необязательно
         "items": [  //обязательно при update != 1
-          {           
+          {
             "id": "product1", //обязательно
             "qnt": 2, //обязательно
             "price": 5.88, //обязательно
