@@ -29,8 +29,8 @@ sidebar_label: 'Инструкция для разработчиков'
 | 12  | PREORDER                | Предварительный заказ                         | ssec_product_preorder |
 | 13  | PRODUCT_ISA             | Товар появился                                |                       |
 | 15  | PRODUCT_PRICE_CHANGED   | Стоимость товара изменилась                   |                       |
-| 28  | REGISTRATION            | Регистрация                                   |                       |
-| 29  | AUTHORIZATION           | Авторизация                                   |                       |
+| 28  | REGISTRATION            | Регистрация на сайте                          |                       |
+| 29  | AUTHORIZATION           | Авторизация на сайте                          |                       |
 
 ### Набор доступных полей
 
