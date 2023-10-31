@@ -9,7 +9,7 @@ const plugins = require('./plugins');
 const config = {
   title: 'База знаний Sendsay',
   tagline: 'Советы и ответы от команды Sendsay',
-  url: 'https://sendsay.ru',
+  url: 'https://docs.sendsay.ru',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
