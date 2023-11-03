@@ -1,0 +1,66 @@
+name: Review PR
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  designAwesome:
+    if: ${{ github.event.review.state == 'approved' && github.event.organization.login == 'sendsay-ru' && github.event.review.body == 'Design awesome' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Add label Design Awesome
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Design Awesome 👌
+  
+      - name: Remove label Needs Design Review
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Needs Design Review 😱
+  
+      - name: Remove label Needs Redesign
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Needs Redesign
+
+      - name: Automerge
+        env:
+          GH_TOKEN: ${{ secrets.GH_SENDSAY_TOKEN }}
+        run: gh pr merge --merge --auto "${{ github.event.pull_request.number }}"
+
+  needsRedesign:
+    if: ${{ github.event.review.state == 'approved' && github.event.organization.login == 'sendsay-ru' && github.event.review.body == 'Needs redesign' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Add label Needs Redesign
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Needs Redesign
+
+      - name: Remove label Design Awesome
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Design Awesome 👌
+
+      - name: Remove label Needs Design Review
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          number: ${{ github.event.pull_request.number }}
+          labels: |
+            PR: Needs Design Review 😱
