@@ -14,6 +14,7 @@ import additionalSettings from '/img/automations/automation-with-workflows/workf
 import subscriptionConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/subscription-confirmation.png';
 import subscriberAddedUnconfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-unconfirmed.png';
 import subscriberAddedConfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-confirmed.png';
+import addingToListOnImport from '/img/automations/automation-with-workflows/workflow-blocks/adding-to-the-list-on-import.png';
 import targetPageOpening from '/img/automations/automation-with-workflows/workflow-blocks/target-page-opening.png';
 import formConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/form-confirmation.png';
 import formFilling from '/img/automations/automation-with-workflows/workflow-blocks/form-filling.png';
@@ -32,6 +33,7 @@ import callWebhook from '/img/automations/automation-with-workflows/workflow-blo
 import sendSms from '/img/automations/automation-with-workflows/workflow-blocks/send-sms.png';
 import sendWebPush from '/img/automations/automation-with-workflows/workflow-blocks/send-web-push.png';
 import split from '/img/automations/automation-with-workflows/workflow-blocks/separation.png';
+import segmentSplit from '/img/automations/automation-with-workflows/workflow-blocks/segment-split.png';
 import listSplit from '/img/automations/automation-with-workflows/workflow-blocks/list-split.png';
 import dataSplit from '/img/automations/automation-with-workflows/workflow-blocks/data-split.png';
 import ABTest from '/img/automations/automation-with-workflows/workflow-blocks/AB-test.png';
@@ -79,6 +81,7 @@ import Video from '@site/src/components/Video';
 - Подтверждение подписки,
 - Подписчик добавлен неподтверждённым,
 - Подписчик добавлен подтверждённым,
+- Добавление в список при импорте,
 - Открытие целевой страницы,
 - Подтверждение формы,
 - Заполнение формы,
@@ -93,7 +96,7 @@ import Video from '@site/src/components/Video';
 
 ### Виды Событий в сценариях
 
-**Без стартового события** ([описание в API](https://sendsay.ru/api/api.html#Никогда)) — подписчик станет участником сценария, если его туда добавят принудительно. Например, с помощью [блока Сценария **Перейти в другой сценарий**](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks#варианты-выхода-из-сценария) или через **Управление участниками**:
+**Без стартового события** ([описание в API](https://sendsay.ru/api/api.html#Никогда)) — подписчик станет участником сценария, если его туда добавят принудительно. Например, с помощью [блока Сценария **Перейти в другой сценарий**](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks#варианты-выхода-из-сценария) или через действие **Добавить участников**:
 
 <p align="center">
   <img width="50%" src={withoutStartEvent} alt="Without start event" />
@@ -174,6 +177,17 @@ import Video from '@site/src/components/Video';
 Событие **Подписчик добавлен подтверждённым** можно указать только в&nbsp;блоке Стартовое событие&nbsp;&mdash; например, в&nbsp;сценарии приветственной цепочки.
 
 [Как настроить приветственную серию писем: пошаговая инструкция](https://docs.sendsay.ru/automations/automation-with-workflows/welcome-series-with-workflow)
+
+**Добавление в список при импорте** — сработает, только при включенной галочке «Учитывать изменение данных для запуска сценариев» в дополнительных настройках импорта, когда:
+
+- подписчик добавляется впервые через «Добавление подписчика» или форму подписки;
+- либо через «Добавление подписчика» или форму подписки приходят новые данные уже добавленного подписчика.
+
+<p align="center">
+  <img width="50%" src={addingToListOnImport} alt="Adding to the list on import" />
+</p>
+
+Событие **Добавление в список при импорте** можно указать только в качестве Стартового.
 
 **Открытие целевой страницы** ([описание в API](https://sendsay.ru/api/api.html#Целевая-страница-достигнута))&nbsp;&mdash; Событие произойдёт, если подписчик посетит страницу сайта, на&nbsp;которой размещен **код универсального счётчика**. С&nbsp;помощью такого счётчика можно отслеживать посетителей сайта и&nbsp;путь подписчиков, которые перешли на&nbsp;сайт из&nbsp;email-рассылок.
 
@@ -459,7 +473,8 @@ import Video from '@site/src/components/Video';
 
 Блок Разделение поможет офильтровать подписчиков в&nbsp;сценарии. Он&nbsp;проверяет соблюдение определенного условия и делит участников сценария на&nbsp;разные ветки:
 
-- Наличие подписчика в&nbsp;списке,
+- Есть / нет в&nbsp;списке,
+- Есть / нет в сегменте,
 - Совпадение данных подписчика,
 - Процентное разделение,
 - A/B тест.
@@ -478,7 +493,7 @@ import Video from '@site/src/components/Video';
 
 ### Виды Разделений
 
-**Наличие в списке** — участник сценария перейдёт на следующий шаг в зависимости от того, состоит он или нет в указанном списке. Здесь есть два варианта:
+**Есть / нет в списке** — участник сценария перейдёт на следующий шаг в зависимости от того, состоит он в указанном списке или нет. Здесь есть два варианта:
 
 <p align="center">
   <img width="50%" src={listSplit} alt="List split" />
@@ -486,6 +501,17 @@ import Video from '@site/src/components/Video';
 
 - **есть в&nbsp;списке**&nbsp;&mdash; подписчик перейдёт на&nbsp;следующий шаг сценария в&nbsp;текущей ветке, если он&nbsp;состоит в&nbsp;указанном списке. Если&nbsp;же участника нет в&nbsp;этом списке, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария;
 - **нет в&nbsp;списке**&nbsp;&mdash; участник перейдёт на&nbsp;следующий шаг в&nbsp;текущей ветке сценария, если его нет в&nbsp;указанном списке. Если участник состоит в&nbsp;этом списке, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария.
+
+**Есть / нет в сегменте** — участник перейдёт на следующий шаг сценария в зависимости от того, попадает ли он под условия указанного сегменте или нет.
+
+<p align="center">
+  <img width="50%" src={segmentSplit} alt="Segment split" />
+</p>
+
+Есть два варианта разделения:
+
+- **есть в&nbsp;сегменте**&nbsp;&mdash; подписчик перейдёт на&nbsp;следующий шаг сценария в&nbsp;текущей ветке, если он&nbsp;попадает под условия указанного сегмента. Если&nbsp;же участник не попадает под эти условия, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария;
+- **нет в&nbsp;сегменте**&nbsp;&mdash; участник перейдёт на&nbsp;следующий шаг в&nbsp;текущей ветке сценария, если он не попадает под условия указанного сегмента. Если участник попадает в&nbsp;этот сегмент, он&nbsp;перейдёт на&nbsp;соседнюю ветку сценария.
 
 **Совпадение данных подписчика**&nbsp;&mdash; подписчик перейдёт на&nbsp;следующий шаг сценария, если его данные соответствуют указанным. Таким образом в&nbsp;сценарии можно отфильтровать тех участников, чьи данные подходят под определенные значения:
 

@@ -26,9 +26,14 @@ import secondStepOfTheWorkflow from '/img/automations/automation-with-workflows/
 
 3. Под Стартовым событием нажмите на&nbsp;кнопку плюса `+` и&nbsp;добавьте в&nbsp;сценарий нужные блоки Событий, Действий, Условий, Таймеров или Сценариев:
 
-<p align="center">
-  <img src={secondStepOfTheWorkflow} alt="Second step of the workflow" />
-</p>
+   <p align="center">
+     <img src={secondStepOfTheWorkflow} alt="Second step of the workflow" />
+   </p>
+
+   Для замены какого-либо События или Действия в сценарии нажмите на соответствующий блок и выберите новое Событие или Действие:<br/><br/>
+   ![How to replace the block](/img/automations/automation-with-workflows/workflow-guide/how-to-replace-block.gif)<br/><br/>
+   Чтобы переместить какой-либо блок — например, на другую ветку сценария, — выберите его и перетяните в нужную часть экрана:<br/><br/>
+   ![How to move block](/img/automations/automation-with-workflows/workflow-guide/how-to-move-block.gif)
 
 4. Когда сценарий готов, нажмите синюю кнопку &laquo;Сохранить&raquo; в&nbsp;правом верхнем углу визуального редактора:
 
@@ -44,17 +49,21 @@ import secondStepOfTheWorkflow from '/img/automations/automation-with-workflows/
    Редактировать активный сценарий, по&nbsp;которому уже идут подписчики,&nbsp;&mdash; **нежелательно**. Это может привести к&nbsp;ошибкам прохождения сценария его участниками.
    :::
 
-6. Протестируйте сценарий перед запуском. Это необязательный пункт, но&nbsp;так вы&nbsp;убедитесь, что сценарий работает так, как вы&nbsp;ожидаете.
+6. Выберите типы контактов, которые будут попадать в сценарий. Для этого нажмите «Настроить фильтр контактов» на странице сценария, выберите нужные типы и нажмите «Сохранить»:
+
+   ![Filter by contact type](/img/automations/automation-with-workflows/workflow-guide/filter-by-contact-type.gif)
+
+7. Протестируйте сценарий перед запуском. Это необязательный пункт, но&nbsp;так вы&nbsp;убедитесь, что сценарий работает так, как вы&nbsp;ожидаете.
 
    Чтобы проверить корректность работы сценария, используйте собственный email-адрес. Для этого необходимо добавить его в&nbsp;базу контактов.
 
    [Как протестировать сценарий](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation/#как-протестировать-сценарий)
 
-7. Включите приём подписчиков, чтобы они начали попадать в&nbsp;сценарий после того, как сработает Стартовое событие:
+8. Включите приём подписчиков, чтобы они начали попадать в&nbsp;сценарий после того, как сработает Стартовое событие:
 
    ![How to turn on subscriber reception](/img/automations/automation-with-workflows/workflow-guide/how-to-turn-on-subscriber-reception.png)
 
-8. Отключите повторные прохождения&nbsp;&mdash; если нужно, чтобы участники сценария прошли его только один раз:
+9. Отключите повторные прохождения&nbsp;&mdash; если нужно, чтобы участники сценария прошли его только один раз:
 
    ![How to turn off-re-passing](/img/automations/automation-with-workflows/workflow-guide/how-to-turn-off-re-passing.png)
 
@@ -84,21 +93,20 @@ import secondStepOfTheWorkflow from '/img/automations/automation-with-workflows/
 
 Чтобы добавить или исключить участников сценария:
 
-1. На&nbsp;странице сценария нажмите кнопку &laquo;Действия&raquo; и&nbsp;выберите пункт **Управление участниками**:
+1. На&nbsp;странице сценария нажмите кнопку &laquo;Действия&raquo; и&nbsp;выберите пункт **Добавить участников** или **Исключить участников**:
 
    ![Member Management](/img/automations/automation-with-workflows/workflow-guide/member-management.png)
 
-2. В&nbsp;появившемся окне выберите нужную вкладку&nbsp;&mdash; добавить или исключить участников:
+2. В&nbsp;появившемся окне выберите нужную вкладку:
 
    ![Member Management](/img/automations/automation-with-workflows/workflow-guide/member-management-1.png)
 
-3. Выберите нужное действие:
-
-   - **указать вручную**, если хотите добавить подписчиков из базы или исключить конкретных участников сценария. Затем введите нужные адреса контактов, либо нажмите ссылку «Выбрать из...» внизу поля;
+   - **указать вручную**, если хотите добавить подписчиков из базы или исключить конкретных участников сценария. Затем введите нужные адреса контактов, либо нажмите ссылку «Выбрать из базы подписчиков» внизу поля;
+     ![How to add subscribers from base](/img/automations/automation-with-workflows/workflow-guide/how-to-add-subscribers-from-base.png)
    - **список или сегмент**, если хотите добавить или исключить всех участников одной группы. Выберите нужный канал и&nbsp;конкретный список/сегмент, либо пункт **Создать список** — и создайте список, не выходя из редактора;
    - **всех участников**, если хотите исключить из&nbsp;сценария всех текущих участников.
 
-4. Нажмите синюю кнопку &laquo;Добавить&raquo; или &laquo;Исключить&raquo; в&nbsp;зависимости от&nbsp;выбранного действия.
+3. Нажмите синюю кнопку &laquo;Добавить&raquo; или &laquo;Исключить&raquo; в&nbsp;зависимости от&nbsp;выбранного действия.
 
 ## Как создать копию сценария
 
