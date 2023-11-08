@@ -25,3 +25,41 @@ jobs:
 
       - name: Prettier
         run: yarn pretify
+
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_NAME: sendsay-docs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+
+      - name: URL
+        id: url
+        shell: bash
+        run: echo "link=https://deploy-preview-${{ github.event.pull_request.number }}--${{ env.DEPLOY_NAME }}.netlify.app" >> $GITHUB_OUTPUT
+
+      - name: Run Playwright tests
+        env:
+          BASE_URL: ${{ steps.url.outputs.link }}
+        run: yarn e2e
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            playwright-artifacts
+          retention-days: 30

@@ -17,14 +17,14 @@ jobs:
           number: ${{ github.event.pull_request.number }}
           labels: |
             PR: Design Awesome 👌
-  
+
       - name: Remove label Needs Design Review
         uses: actions-ecosystem/action-remove-labels@v1
         with:
           number: ${{ github.event.pull_request.number }}
           labels: |
             PR: Needs Design Review 😱
-  
+
       - name: Remove label Needs Redesign
         uses: actions-ecosystem/action-remove-labels@v1
         with:

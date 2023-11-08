@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const analyticsId = process.env.GTM_ANALYTICS_ID;
 const baseGTM = process.env.GTM_SCRIPTS_ID;
 const landingGTM = process.env.GTM_LANDING_GROUP_COUNTER_ID;
