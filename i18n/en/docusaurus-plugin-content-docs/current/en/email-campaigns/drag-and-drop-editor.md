@@ -56,15 +56,17 @@ There are seven types of elements in the drag-and-drop editor:
 - social follow content block
 - HTML block
 
+:::tip NOTE
+The recommended image formats for email are JPEG and PNG. You can also use GIF and SVG, but such images may not be displayed in some email clients.
+
+For images to display well on retina-displays, it is better to use images with a width of no more than **1200 px**. Images weighing up to **1 MB** can be used without loss in display speed
+:::
+
 To add an element, click and drag it to the corresponding section. If you want to delete it, drag it to the recycle bin (it will appear if you click the element and hold the left mouse button).
 
 ![How to add an element](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/how-to-add-an-element-en.gif) <br/>
 
 Each element has its own settings. Click the element to open it.
-
-:::tip NOTE
-There are restrictions on uploading images to the template. **600 px** - maximum image width, because this is the maximum width of the email. There is also a restriction of image weight: images up **to 1 MB** can be used without loss in display speed.
-:::
 
 ![Element settings](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/element-settings-en.gif) <br/>
 
