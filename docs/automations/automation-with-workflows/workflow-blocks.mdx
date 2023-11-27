@@ -10,6 +10,7 @@ import startEvent1 from '/img/automations/automation-with-workflows/workflow-blo
 import subscriberOpenedEmail from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-opened-the-email.png';
 import changeSubscriberData from '/img/automations/automation-with-workflows/workflow-blocks/change-of-subscriber-data.png';
 import clickOnLink from '/img/automations/automation-with-workflows/workflow-blocks/click-on-the-link.png';
+import segmentСhange from '/img/automations/automation-with-workflows/workflow-blocks/segment-change.png';
 import additionalSettings from '/img/automations/automation-with-workflows/workflow-blocks/additional-settings.png';
 import subscriptionConfirmation from '/img/automations/automation-with-workflows/workflow-blocks/subscription-confirmation.png';
 import subscriberAddedUnconfirmed from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-added-unconfirmed.png';
@@ -76,6 +77,7 @@ import Video from '@site/src/components/Video';
 - Без стартового события,
 - Подписчик открыл email,
 - Email доставлен,
+- Смена сегмента,
 - Изменение данных подписчика,
 - Клик по&nbsp;ссылке,
 - Подтверждение подписки,
@@ -128,13 +130,30 @@ import Video from '@site/src/components/Video';
   <img width="80%" src={additionalSettings} alt="Additional settings" />
 </p>
 
-**Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть три варианта:
+**Смена сегмента** — сработает, когда подписчик покинет или попадёт под условия указанного сегмента **в результате изменения данных**. При этом данные должны быть указаны в условиях сегмента.
+
+<p align="center">
+  <img width="50%" src={segmentСhange} alt="Segment Сhange" />
+</p>
+
+Здесь можно указать:
+
+- какой сегмент покинул подписчик,
+- к какому сегменту присоединился подписчик,
+- какой сегмент покинул и к какому сегменту присоединился подписчик в результате изменения данных.
+
+:::tip Важно
+Если подписчик попал под условия сегмента не по причине изменения данных, событие **Смена сегмента** не сработает.
+:::
+
+[Что такое сегмент контактов](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment)
+
+**Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть два варианта:
 
 <p align="center">
   <img width="50%" src={changeSubscriberData} alt="Change of subscriber data" />
 </p>
 
-- **Список**&nbsp;&mdash; Событие наступит, когда подписчик покинет или присоединится к&nbsp;указанному списку в&nbsp;результате изменения данных. При выборе этого варианта можно создать список, не&nbsp;выходя из&nbsp;редактора: для этого выберите пункт **Создать список**.
 - **Значение поля анкеты**&nbsp;&mdash; сработает, если изменились данные в&nbsp;анкете подписчика. При этом неважно, что именно изменилось&nbsp;&mdash; главное, что новые данные отличаются от&nbsp;предыдущих.
 - **Значения поля и&nbsp;данные анкеты (точное)**&nbsp;&mdash; произойдёт, когда данные в&nbsp;анкете подписчика изменятся на&nbsp;указанное значение.
 
@@ -178,7 +197,7 @@ import Video from '@site/src/components/Video';
 
 [Как настроить приветственную серию писем: пошаговая инструкция](https://docs.sendsay.ru/automations/automation-with-workflows/welcome-series-with-workflow)
 
-**Добавление в список при импорте** — сработает, только при включенной галочке «Учитывать изменение данных для запуска сценариев» в дополнительных настройках импорта, когда:
+**Добавление в список при импорте** — сработает при импорте подписчика в указанный список, когда:
 
 - подписчик добавляется впервые через «Добавление подписчика» или форму подписки;
 - либо через «Добавление подписчика» или форму подписки приходят новые данные уже добавленного подписчика.
@@ -187,7 +206,11 @@ import Video from '@site/src/components/Video';
   <img width="50%" src={addingToListOnImport} alt="Adding to the list on import" />
 </p>
 
-Событие **Добавление в список при импорте** можно указать только в качестве Стартового.
+Событие **Добавление в список при импорте** можно указать только в качестве Стартового. Оно сработает, если в дополнительных настройках импорта будет включена галочка «Учитывать изменение данных для запуска триггеров»:
+
+![Subscriber import](/img/automations/automation-with-workflows/workflow-blocks/subscriber-import.png)
+
+[Как импортировать подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-import-subscribers/)
 
 **Открытие целевой страницы** ([описание в API](https://sendsay.ru/api/api.html#Целевая-страница-достигнута))&nbsp;&mdash; Событие произойдёт, если подписчик посетит страницу сайта, на&nbsp;которой размещен **код универсального счётчика**. С&nbsp;помощью такого счётчика можно отслеживать посетителей сайта и&nbsp;путь подписчиков, которые перешли на&nbsp;сайт из&nbsp;email-рассылок.
 
