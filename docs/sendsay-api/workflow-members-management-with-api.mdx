@@ -1,0 +1,134 @@
+---
+sidebar_position: 5
+sidebar_label: 'Участники сценария'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Управление участниками сценария через API
+
+При работе с [автоматическими сценариями](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation) вы можете управлять их участниками с помощью [Sendsay API](https://sendsay.ru/api/api.html).
+
+:::tip Важно
+Перед началом работы убедитесь, что ваш сценарий активирован, а&nbsp;приём подписчиков включён.
+
+[Как настроить и активировать сценарий](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-guide#как-настроить-и-активировать-сценарий)
+:::
+
+При добавлении подписчиков в сценарий указанные пользователи начнут его прохождение, минуя [Стартовое событие](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks/#стартовые-события). Если первый шаг состоит из&nbsp;нескольких вариантов событий, никто из&nbsp;указанных подписчиков не&nbsp;попадёт в&nbsp;сценарий.
+
+## Как добавить или исключить подписчика из&nbsp;сценария
+
+Перейдите [в API-консоль](https://app.sendsay.ru/api/console) и введите запрос:
+
+<Tabs>
+<TabItem value="key1" label="Добавление подписчика">
+
+```
+{
+  "action": "sequence.member.start",
+  "id": "id сценария",
+  "email": "email подписчика"
+}
+```
+
+</TabItem>
+<TabItem value="key2" label="Исключение подписчика">
+
+```
+{
+  "action": "sequence.member.stop",
+  "id": "id сценария",
+  "email": "email подписчика"
+}
+```
+
+</TabItem>
+</Tabs>
+
+где `email подписчика` — адрес добавляемого подписчика, `id сценария` — ID&nbsp;активированного сценария, его можно посмотреть на&nbsp;странице сценария:
+
+![Workflow ID](/img/sendsay-api/workflow-members-management-with-api/workflow-id.png)
+
+Нажмите «Выполнить».
+
+## Как добавить или исключить из&nbsp;сценария нескольких подписчиков
+
+Перейдите [в API-консоль](https://app.sendsay.ru/api/console) и введите запрос:
+
+<Tabs>
+<TabItem value="key1" label="Добавление подписчиков">
+
+```
+{
+  "action": "sequence.member.start",
+  "id": "id сценария",
+  "list" : [
+            "email подписчика",
+            "email подписчика",
+            "email подписчика",
+           ]
+}
+```
+
+</TabItem>
+<TabItem value="key2" label="Исключение подписчиков">
+
+```
+{
+  "action": "sequence.member.stop",
+  "id": "id сценария",
+  "list" : [
+            "email подписчика",
+            "email подписчика",
+            "email подписчика",
+           ]
+}
+```
+
+</TabItem>
+</Tabs>
+
+где `id сценария` — ID активированного сценария, `email подписчика` — адреса подписчиков, которых необходимо добавить в сценарий. Внутри `list` может быть сколько угодно адресов, указанных через запятую.
+
+Нажмите «Выполнить».
+
+## Как добавить или исключить из&nbsp;сценария список или сегмент подписчиков
+
+Перейдите [в API-консоль](https://app.sendsay.ru/api/console) и введите запрос:
+
+<Tabs>
+<TabItem value="key1" label="Добавление списка или сегмента">
+
+```
+{
+  "action": "sequence.member.start",
+  "id": "id_сценария",
+  "group": "id списка или сегмента"
+}
+```
+
+</TabItem>
+<TabItem value="key2" label="Исключение списка или сегмента">
+
+```
+{
+  "action": "sequence.member.stop",
+  "id": "id_сценария",
+  "group": "id списка или сегмента"
+}
+```
+
+</TabItem>
+</Tabs>
+
+где `id сценария` — ID активированного сценария, `id списка или сегмента` — ID списка или сегмента c подписчиками, который можно посмотреть на его странице:
+
+![List ID](/img/sendsay-api/workflow-members-management-with-api/list-id.png)
+
+Нажмите «Выполнить».
+
+[Описание в документации к API](https://sendsay.ru/api/api.html#Начать-прохождение-последовательности)
+
+**Читайте также:** [Гайд по работе со сценариями](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-guide)
