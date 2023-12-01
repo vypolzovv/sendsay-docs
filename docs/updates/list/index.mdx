@@ -6,11 +6,11 @@ sidebar_position: 2
 hide_title: true
 ---
 
-import ChangeLog from './updates-november-2023.mdx';
-import DocCardList from '@site/src/theme/DocCardList';
+import ChangeLog, { toc as changeLogToc } from './updates-november-2023.mdx';
+import PreviosUpdates, { toc as previosUpdatesToc } from './previous-updates.mdx';
 
 <ChangeLog />
 
-## Предыдущие обновления
+<PreviosUpdates />
 
-<DocCardList className="DocCardList-updatesPage" />
+export const toc = [...changeLogToc, ...previosUpdatesToc];
