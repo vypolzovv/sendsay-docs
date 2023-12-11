@@ -14,6 +14,7 @@ jobs:
       GTM_ANALYTICS_ID: ${{ secrets.GTM_ANALYTICS_ID }}
       GTM_LANDING_GROUP_COUNTER_ID: ${{ secrets.GTM_LANDING_GROUP_COUNTER_ID }}
       YANDEX_METRICA_COUNTER_ID: ${{ secrets.YANDEX_METRICA_COUNTER_ID }}
+      GOOGLE_VERIFICATION_CODE: ${{ secrets.GOOGLE_VERIFICATION_CODE }}
 
     steps:
       - name: Checkout

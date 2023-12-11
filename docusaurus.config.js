@@ -5,6 +5,8 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const plugins = require('./plugins');
+const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'База знаний Sendsay',
@@ -148,6 +150,12 @@ const config = {
           dark: 'rgb(50, 50, 50)',
         },
       },
+      metadata: [
+        {
+          name: 'google-site-verification',
+          content: googleVerificationCode,
+        },
+      ],
     },
 };
 
