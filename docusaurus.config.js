@@ -6,6 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const plugins = require('./plugins');
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
+const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -154,6 +155,10 @@ const config = {
         {
           name: 'google-site-verification',
           content: googleVerificationCode,
+        },
+        {
+          name: 'yandex-verification',
+          content: yandexVerificationCode,
         },
       ],
     },
