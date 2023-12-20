@@ -7,6 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const plugins = require('./plugins');
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
+const noIndex = process.env.NO_PAGE_INDEXING === 'true';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,10 +19,8 @@ const config = {
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.svg',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Sendsay Inc.', // Usually your GitHub org/user name.
-  projectName: 'sendsay-docs', // Usually your repo name.
+  // We don't want any develop page being indexed by browsers
+  noIndex, //
 
   i18n: {
     defaultLocale: 'ru',
