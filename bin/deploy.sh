@@ -6,6 +6,8 @@ export RELEASE_NAME=$(git log -1 --pretty=format:"%s %h %an")
 export MESSAGE=$RELEASE_NAME
 export BUILD_REPO=sendsay-docs-build
 
+echo git@github.com:sendsay-ru/$BUILD_REPO.git
+
 git clone git@github.com:sendsay-ru/$BUILD_REPO.git /tmp/$BUILD_REPO
 
 yarn run build
