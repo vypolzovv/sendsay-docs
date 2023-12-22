@@ -20,7 +20,8 @@ const config = {
   favicon: 'img/favicon.svg',
 
   // We don't want any develop page being indexed by browsers
-  noIndex, //
+  noIndex,
+  staticDirectories: noIndex ? ['static', 'netlify-static'] : ['static'],
 
   i18n: {
     defaultLocale: 'ru',
