@@ -21,7 +21,6 @@ const config = {
 
   // We don't want any develop page being indexed by browsers
   noIndex,
-  staticDirectories: noIndex ? ['static', 'netlify-static'] : ['static'],
 
   i18n: {
     defaultLocale: 'ru',
