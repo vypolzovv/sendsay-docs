@@ -10,7 +10,7 @@
     "e2e": "yarn playwright test",
     "eslint": "eslint src/ ",
     "eslint:fix": "yarn eslint --fix",
-    "fix": "node scripts/translate && yarn lint:fix",
+    "fix": "node scripts/translate.mjs && yarn lint:fix",
     "lint": "yarn pretify && yarn eslint",
     "lint:fix": "yarn pretify:fix && yarn eslint:fix",
     "pretify": "prettier -c src config scripts *.js **/*.md **/*.mdx",
@@ -37,29 +37,29 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.9.1",
-    "@docusaurus/core": "2.4.0",
-    "@docusaurus/plugin-client-redirects": "2.4.0",
-    "@docusaurus/preset-classic": "2.4.0",
-    "@mdx-js/react": "^1.6.22",
+    "@docusaurus/core": "3.0.1",
+    "@docusaurus/plugin-client-redirects": "3.0.1",
+    "@docusaurus/preset-classic": "3.0.1",
+    "@mdx-js/react": "^3.0.0",
     "clsx": "^1.1.1",
-    "docusaurus-lunr-search": "^2.3.2",
+    "docusaurus-lunr-search": "^3.3.0",
     "docusaurus-plugin-image-zoom": "^1.0.1",
-    "docusaurus-plugin-yandex-metrica": "^1.1.0",
+    "docusaurus-plugin-yandex-metrica": "^1.2.0",
     "glob": "^8.0.3",
-    "prism-react-renderer": "^1.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "prism-react-renderer": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.4.0",
-    "@docusaurus/types": "^2.4.0",
+    "@docusaurus/module-type-aliases": "3.0.1",
+    "@docusaurus/types": "^3.0.1",
     "@playwright/test": "^1.39.0",
-    "@tsconfig/docusaurus": "^1.0.5",
+    "@docusaurus/tsconfig": "^3.0.1",
     "@types/node": "^20.8.10",
-    "@types/react": "17.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "chalk": "^4.1.2",
+    "@types/react": "18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "chalk": "^5.3.0",
     "dotenv": "16.3.1",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -71,10 +71,10 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.6.2",
-    "typescript": "^4.7.2"
+    "typescript": "^5.3.3"
   },
   "engines": {
-    "node": "^16.17.0 || >=18.0.0",
+    "node": ">=18.0.0",
     "yarn": ">=1.22.10"
   }
 }

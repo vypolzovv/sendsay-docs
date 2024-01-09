@@ -1,7 +1,3 @@
 ---
-slug: /exclude-from-search/how-to-migrate-to-sendsay
+draft: true
 ---
-
-import {Redirect} from '@docusaurus/router';
-
-<Redirect to="/404" />;

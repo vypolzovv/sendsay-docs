@@ -1,7 +1,3 @@
 ---
-slug: /exclude-from-search/signup-forms
+draft: true
 ---
-
-import {Redirect} from '@docusaurus/router';
-
-<Redirect to="/404" />;

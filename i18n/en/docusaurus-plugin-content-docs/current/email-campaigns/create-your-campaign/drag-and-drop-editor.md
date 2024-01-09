@@ -1,7 +1,3 @@
 ---
-slug: /exclude-from-search/drag-and-drop-editor
+draft: true
 ---
-
-import {Redirect} from '@docusaurus/router';
-
-<Redirect to="/404" />;

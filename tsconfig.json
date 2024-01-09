@@ -1,7 +1,7 @@
 {
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-  },
+    "esModuleInterop": true
+  }
 }

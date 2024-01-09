@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 
 const CHALK_COLOR = {
   red: 'red',
@@ -28,4 +28,4 @@ const logger = (text) => {
   console.log(message);
 };
 
-module.exports = logger;
+export default logger;

@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-const logger = require('./logger');
+import fs from 'fs';
+import path from 'path';
+import glob from 'glob';
+import logger from './logger.mjs';
 
 const TEMPLATE_PATH = 'config/templates/redirectTemplate.md';
 const TRANSLATED_DOCS_PATH = 'i18n/en/docusaurus-plugin-content-docs/current/';

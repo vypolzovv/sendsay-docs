@@ -9,9 +9,11 @@ test('Smoke test', async ({ page }) => {
     await page.getByRole('link', { name: 'Sendsay docs' }).click();
   }
 
-  await page.getByLabel("Свернуть/развернуть категорию 'Часто задаваемые вопросы'").click();
-  await page.getByLabel("Свернуть/развернуть категорию 'Работа с подписчиками'").click();
-  await page.getByLabel("Свернуть/развернуть категорию 'Импорт и экспорт'").click();
+  await page
+    .getByLabel("Toggle the collapsible sidebar category 'Часто задаваемые вопросы'")
+    .click();
+  await page.getByLabel("Toggle the collapsible sidebar category 'Работа с подписчиками'").click();
+  await page.getByLabel("Toggle the collapsible sidebar category 'Импорт и экспорт'").click();
   await page.getByRole('link', { name: 'Импорт подписчиков' }).click();
   await page.getByRole('link', { name: 'Файл для импорта', exact: true }).click();
   await page.getByRole('link', { name: 'Экспорт в старом интерфейсе', exact: true }).click();

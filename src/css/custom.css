@@ -36,6 +36,12 @@
   height: 42px;
 }
 
+/* v3 update: https://github.com/facebook/docusaurus/issues/9462#issuecomment-1783409767 */
+img {
+  width: auto;
+  height: auto;
+}
+
 /* REDESIGN */
 
 /* Header */

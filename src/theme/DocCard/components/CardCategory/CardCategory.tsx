@@ -1,6 +1,6 @@
 import React from 'react';
 import type { PropSidebarItemCategory } from '@docusaurus/plugin-content-docs';
-import { findFirstCategoryLink } from '@docusaurus/theme-common/internal';
+import { findFirstSidebarItemLink } from '@docusaurus/theme-common/internal';
 import { translate } from '@docusaurus/Translate';
 import { CardLayout } from '../CardLayout';
 import { getDescriptionObj } from '../../utils';
@@ -11,7 +11,7 @@ interface CardCategoryProps {
 }
 
 const CardCategory = ({ item }: CardCategoryProps) => {
-  const href = findFirstCategoryLink(item);
+  const href = findFirstSidebarItemLink(item);
 
   if (!href) {
     return null;

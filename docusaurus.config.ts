@@ -1,16 +1,13 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import type { Config } from '@docusaurus/types';
+import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
+import { themes } from 'prism-react-renderer'
+import plugins from './plugins';
 
-const plugins = require('./plugins');
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
 const noIndex = process.env.NO_PAGE_INDEXING === 'true';
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'База знаний Sendsay',
   tagline: 'Советы и ответы от команды Sendsay',
   url: 'https://docs.sendsay.ru',
@@ -32,7 +29,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         docs: {
           routeBasePath: '/',
@@ -46,12 +42,11 @@ const config = {
         sitemap: {
           ignorePatterns: require('./config/sitemapIgnorePatterns'),
         },
-      },
+      } satisfies Options,
     ],
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       navbar: {
         logo: {
@@ -137,8 +132,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Sendsay.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: themes.github,
+        darkTheme: themes.dracula,
       },
       colorMode: {
         disableSwitch: true,
@@ -160,7 +155,7 @@ const config = {
           content: yandexVerificationCode,
         },
       ],
-    },
+    } satisfies ThemeConfig,
 };
 
 module.exports = config;

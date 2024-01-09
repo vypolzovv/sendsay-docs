@@ -240,6 +240,12 @@
   "search.placeholder.pending": {
     "message": "Loading..."
   },
+  "search.placeholder.readyMac": {
+    "message": "Search ⌘+K"
+  },
+  "search.placeholder.readyWindows": {
+    "message": "Search Ctrl+K"
+  },
   "search.result.not.found": {
     "message": "No results found for query <b>\"{{query}}\"</b>"
   },
