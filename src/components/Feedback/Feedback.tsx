@@ -22,15 +22,15 @@ const enum SubmitStatus {
 const FeedbackSubmitted = ({ isHidden }: { isHidden: boolean }) => (
   <div
     className={clsx(
-      'feedback-card max-w-md w-80 lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex h-[54px] mx-auto',
+      'feedback-card max-w-md w-80 lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col',
       {
         'transition-all opacity-0': isHidden,
       }
     )}
   >
-    <span className="w-full font-bold text-primary text-sm me-4 leading-[inherit]">
+    <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit]">
       {translate({ id: 'feedback.thanks.widget', message: 'Спасибо за заполнение!' })}
-    </span>
+    </div>
   </div>
 );
 
@@ -44,9 +44,7 @@ export const Feedback = () => {
   const onSubmit = (feedbackValue: FeedbackStatus) => {
     setSubmittedStatus(SubmitStatus.Submitted);
 
-    window.dataLayer = window.dataLayer || [];
-
-    window.dataLayer.push({
+    window.dataLayer?.push?.({
       event: {
         article_id: id,
         title,
@@ -67,10 +65,10 @@ export const Feedback = () => {
   return (
     <BrowserOnly>
       {() => (
-        <div className="feedback-card max-w-[420px] w-80 lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex h-[54px] mx-auto">
-          <span className="w-full font-bold text-primary text-sm me-4 leading-[inherit]">
+        <div className="feedback-card max-w-[420px] w-full lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col items-center gap-y-2">
+          <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit] flex items-center">
             {translate({ id: 'feedback.question', message: 'Вы нашли ответ на свой вопрос?' })}
-          </span>
+          </div>
 
           <div className="flex gap-1">
             <button

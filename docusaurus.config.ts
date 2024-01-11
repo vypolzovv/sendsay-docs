@@ -28,8 +28,12 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
+        gtag: {
+          trackingID: 'GTM-MP43XM',
+          anonymizeIP: true,
+        },
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
