@@ -22,6 +22,17 @@ const plugins = [
     },
   ],
   require.resolve('docusaurus-plugin-image-zoom'),
+  async function tailwindPlugin() {
+    return {
+      name: 'docusaurus-tailwindcss',
+      configurePostCss(postcssOptions) {
+        postcssOptions.plugins.push(require('tailwindcss'));
+        postcssOptions.plugins.push(require('autoprefixer'));
+
+        return postcssOptions;
+      },
+    };
+  },
 ];
 
 if (analyticsId) {
