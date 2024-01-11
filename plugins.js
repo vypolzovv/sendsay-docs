@@ -7,6 +7,7 @@ const gtagIds = [baseGTM, landingGTM].filter((id) => Boolean(id));
 
 const plugins = [
   './src/plugins/iframe-detected',
+  './src/plugins/gtag/index.ts',
   [
     'docusaurus-lunr-search',
     {
