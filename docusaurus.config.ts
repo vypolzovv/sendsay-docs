@@ -5,6 +5,8 @@ import plugins from './plugins';
 
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
+const baseGTM = process.env.GTM_SCRIPTS_ID;
+const landingGA = process.env.GTM_LANDING_GROUP_COUNTER_ID;
 const noIndex = process.env.NO_PAGE_INDEXING === 'true';
 
 const config: Config = {
@@ -30,6 +32,13 @@ const config: Config = {
     [
       '@docusaurus/preset-classic',
       {
+        gtag: {
+          trackingID: landingGA,
+          anonymizeIP: true,
+        },
+        googleTagManager: {
+          containerId: baseGTM,
+        },
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
