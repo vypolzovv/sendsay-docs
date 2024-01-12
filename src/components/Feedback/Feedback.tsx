@@ -45,10 +45,12 @@ export const Feedback = () => {
     setSubmittedStatus(SubmitStatus.Submitted);
 
     window.dataLayer?.push?.({
-      event: {
+      event: 'Docs-Article-SendReview',
+      data: {
         article_id: id,
         title,
         event_value: feedbackValue,
+        should_open_chat: feedbackValue === FeedbackStatus.Negative,
       },
       eventDate: Date.now(),
     });

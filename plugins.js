@@ -7,7 +7,7 @@ const gtagIds = [baseGTM, landingGTM].filter((id) => Boolean(id));
 
 const plugins = [
   './src/plugins/iframe-detected',
-  './src/plugins/gtag/index.ts',
+  ['./src/plugins/gtag/index.ts', { trackingID: baseGTM }],
   [
     'docusaurus-lunr-search',
     {
@@ -44,8 +44,8 @@ if (yandexMetricaCounter) {
   ]);
 }
 
-// if (gtagIds.length) {
-//   plugins.push(['@docusaurus/plugin-google-gtag', { trackingID: gtagIds, anonymizeIP: true }]);
-// }
+if (gtagIds.length) {
+  plugins.push(['@docusaurus/plugin-google-gtag', { trackingID: gtagIds, anonymizeIP: true }]);
+}
 
 module.exports = plugins;

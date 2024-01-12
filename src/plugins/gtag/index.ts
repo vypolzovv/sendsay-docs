@@ -1,10 +1,17 @@
-import type { Plugin } from '@docusaurus/types';
+import type { LoadContext, Plugin } from '@docusaurus/types';
 
-export default function GTAGPlugin(): Plugin {
+interface PluginGoogleTagManagerOptions {
+  trackingID: string;
+}
+
+export default function pluginGoogleTagManager(
+  _: LoadContext,
+  { trackingID }: PluginGoogleTagManagerOptions
+): Plugin {
   const isProd = process.env.NODE_ENV === 'production';
 
   return {
-    name: 'noscript-gtag',
+    name: 'plugin-google-tag-manager',
 
     injectHtmlTags() {
       if (!isProd) {
@@ -20,7 +27,7 @@ export default function GTAGPlugin(): Plugin {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-MP43XM')
+              })(window,document,'script','dataLayer','${trackingID}');
             `,
           },
         ],
@@ -28,7 +35,7 @@ export default function GTAGPlugin(): Plugin {
           {
             tagName: 'noscript',
             innerHTML: `
-              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP43XM"
+              <iframe src="https://www.googletagmanager.com/ns.html?id=${trackingID}"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
             `,
           },
