@@ -34,7 +34,7 @@ const config: Config = {
       {
         gtag: {
           trackingID: landingGA,
-          anonymizeIP: true,
+          anonymizeIP: false,
         },
         googleTagManager: {
           containerId: baseGTM,
