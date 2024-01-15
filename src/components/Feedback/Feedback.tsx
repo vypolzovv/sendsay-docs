@@ -6,7 +6,7 @@ import { useDoc } from '@docusaurus/theme-common/internal';
 import { PositiveFeedbackIcon } from './PositiveFeedbackIcon';
 import { NegativeFeedbackIcon } from './NegativeFeedbackIcon';
 
-const THANKS_MESSAGE_DELAY = 1000;
+const THANKS_MESSAGE_DELAY = 1500;
 
 const enum FeedbackStatus {
   Positive = 'like_btn',
@@ -22,13 +22,13 @@ const enum SubmitStatus {
 const FeedbackSubmitted = ({ isHidden }: { isHidden: boolean }) => (
   <div
     className={clsx(
-      'feedback-card max-w-md w-80 lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col',
+      'feedback-card max-w-[420px] w-full lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col',
       {
         'transition-all opacity-0': isHidden,
       }
     )}
   >
-    <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit]">
+    <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit] min-h-[30px] flex items-center justify-center">
       {translate({ id: 'feedback.thanks.widget', message: 'Спасибо за заполнение!' })}
     </div>
   </div>
@@ -68,7 +68,7 @@ export const Feedback = () => {
     <BrowserOnly>
       {() => (
         <div className="feedback-card max-w-[420px] w-full lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col items-center gap-y-2">
-          <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit] flex items-center">
+          <div className="w-full font-bold text-primary text-sm me-4 leading-[inherit] flex items-center sm:justify-start justify-center min-h-[30px]">
             {translate({ id: 'feedback.question', message: 'Вы нашли ответ на свой вопрос?' })}
           </div>
 

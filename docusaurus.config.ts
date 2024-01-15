@@ -1,7 +1,10 @@
+import dotenv from 'dotenv'
 import type { Config } from '@docusaurus/types';
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
 import { themes } from 'prism-react-renderer'
 import plugins from './plugins';
+
+dotenv.config()
 
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
