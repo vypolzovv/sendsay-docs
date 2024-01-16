@@ -176,11 +176,12 @@ IN NS gns195a.sendsay.ru.
 - Настроить домен самостоятельно, указав в `CNAME`:
 
 ```
-link.mail.CLIENT.TLD CNAME link.sendsay.ru *.link.mail.CLIENT.TLD CNAME link.sendsay.ru
+link.mail.CLIENT.TLD CNAME link.sendsay.ru
+*.link.mail.CLIENT.TLD CNAME link.sendsay.ru
 ```
 
 После настройки можно проверить домен по ссылке. Если всё настроено правильно, необходимо «повесить» на этот домен SSL-сертификат.
 
-В случае, если ссылки-редиректы будут идти через `link.sendsay.ru`, то как минимум в Safari наш скрипт не будет получать информацию о подписчике.
+В случае, если ссылки-редиректы будут идти через `link.sendsay.ru`, то как минимум в Safari и на мобильных устройствах с iOS наш скрипт не будет получать информацию о подписчике.
 
 **Читайте также:** [Руководство по триггерным сценариям для онлайн-продаж](https://docs.sendsay.ru/ecom/ecom-triggers)
