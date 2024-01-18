@@ -3,6 +3,7 @@ const yandexMetricaCounter = process.env.YANDEX_METRICA_COUNTER_ID;
 
 const plugins = [
   './src/plugins/iframe-detected',
+  './src/plugins/tailwind',
   [
     'docusaurus-lunr-search',
     {
@@ -17,17 +18,6 @@ const plugins = [
     },
   ],
   require.resolve('docusaurus-plugin-image-zoom'),
-  async function tailwindPlugin() {
-    return {
-      name: 'docusaurus-tailwindcss',
-      configurePostCss(postcssOptions) {
-        postcssOptions.plugins.push(require('tailwindcss'));
-        postcssOptions.plugins.push(require('autoprefixer'));
-
-        return postcssOptions;
-      },
-    };
-  },
 ];
 
 if (yandexMetricaCounter) {

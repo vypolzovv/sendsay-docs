@@ -3,8 +3,8 @@ import clsx from 'clsx';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { translate } from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/theme-common/internal';
-import { PositiveFeedbackIcon } from './PositiveFeedbackIcon';
-import { NegativeFeedbackIcon } from './NegativeFeedbackIcon';
+import { PositiveFeedbackIcon, NegativeFeedbackIcon } from '../../ui/icons';
+import { pushAnalytics } from '../../utils/analytics';
 
 const THANKS_MESSAGE_DELAY = 1500;
 
@@ -19,7 +19,11 @@ const enum SubmitStatus {
   Hidden = 'hidden',
 }
 
-const FeedbackSubmitted = ({ isHidden }: { isHidden: boolean }) => (
+interface FeedbackSubmittedProps {
+  isHidden: boolean;
+}
+
+const FeedbackSubmitted = ({ isHidden }: FeedbackSubmittedProps) => (
   <div
     className={clsx(
       'feedback-card max-w-[420px] w-full lg:w-auto py-3 rounded-lg my-5 bg-white px-4 flex mx-auto sm:flex-row flex-col',
@@ -44,7 +48,7 @@ export const Feedback = () => {
   const onSubmit = (feedbackValue: FeedbackStatus) => {
     setSubmittedStatus(SubmitStatus.Submitted);
 
-    window.dataLayer?.push?.({
+    pushAnalytics({
       event: 'Docs-Article-SendReview',
       data: {
         article_id: id,
