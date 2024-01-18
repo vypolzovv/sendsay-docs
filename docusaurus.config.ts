@@ -1,10 +1,15 @@
+import dotenv from 'dotenv'
 import type { Config } from '@docusaurus/types';
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
 import { themes } from 'prism-react-renderer'
 import plugins from './plugins';
 
+dotenv.config()
+
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
+const baseGTM = process.env.GTM_SCRIPTS_ID;
+const landingGA = process.env.GTM_LANDING_GROUP_COUNTER_ID;
 const noIndex = process.env.NO_PAGE_INDEXING === 'true';
 
 const config: Config = {
@@ -28,8 +33,15 @@ const config: Config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       {
+        gtag: {
+          trackingID: landingGA,
+          anonymizeIP: false,
+        },
+        googleTagManager: {
+          containerId: baseGTM,
+        },
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
