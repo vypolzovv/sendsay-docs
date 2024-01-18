@@ -37,7 +37,7 @@
 }
 
 /* v3 update: https://github.com/facebook/docusaurus/issues/9462#issuecomment-1783409767 */
-img {
+img:not([width]) {
   width: auto;
   height: auto;
 }
