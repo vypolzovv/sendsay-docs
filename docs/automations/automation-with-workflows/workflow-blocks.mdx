@@ -37,8 +37,10 @@ import split from '/img/automations/automation-with-workflows/workflow-blocks/se
 import segmentSplit from '/img/automations/automation-with-workflows/workflow-blocks/segment-split.png';
 import listSplit from '/img/automations/automation-with-workflows/workflow-blocks/list-split.png';
 import dataSplit from '/img/automations/automation-with-workflows/workflow-blocks/data-split.png';
+import DateTimeStamp from '/img/automations/automation-with-workflows/workflow-blocks/date-and-time-stamp.png';
 import ABTest from '/img/automations/automation-with-workflows/workflow-blocks/AB-test.png';
 import percentageSplit from '/img/automations/automation-with-workflows/workflow-blocks/percentage-split.png';
+import eventWithTimer from '/img/automations/automation-with-workflows/workflow-blocks/event-with-timer.png';
 import timers from '/img/automations/automation-with-workflows/workflow-blocks/timers.png';
 import passedTime from '/img/automations/automation-with-workflows/workflow-blocks/passed-time.png';
 import exactTime from '/img/automations/automation-with-workflows/workflow-blocks/exact-time.png';
@@ -442,7 +444,7 @@ import Video from '@site/src/components/Video';
 Какие Таймеры бывают:
 
 - Прошло время,
-- Наступила дата и&nbsp;время.
+- Наступление даты и&nbsp;времени.
 
 <p align="center">
   <img width="50%" src={timers} alt="Timers" />
@@ -452,7 +454,13 @@ import Video from '@site/src/components/Video';
 
 ![Timer in welcome series](/img/automations/automation-with-workflows/workflow-blocks/timer-in-welcome-series.png)
 
-Чтобы настроить время задержки для следующего шага сценария, нажмите плюс `+` под блоком Действия или События и&nbsp;выберите нужный Таймер, настроив в&nbsp;нём время.
+Чтобы настроить время задержки для следующего шага сценария, нажмите плюс `+` под блоком Действия или События и&nbsp;выберите нужный Таймер, настроив в&nbsp;нём время. Блок таймера можно также добавить к Событию по логике **ИЛИ**. Например:
+
+<p align="center">
+  <img width="50%" src={eventWithTimer} alt="Event with timer" />
+</p>
+
+[Как настроить блок Событий](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks#как-настроить-блок-событий)
 
 ### Виды Таймеров
 
@@ -479,6 +487,7 @@ import Video from '@site/src/components/Video';
 </p>
 
 - **Время**&nbsp;&mdash; участники сценария перейдут на&nbsp;следующий шаг после наступления установленного времени. Если участники сценария попадут на&nbsp;этот блок после указанного времени, то&nbsp;следующий шаг в&nbsp;сценарии для них наступит уже на&nbsp;следующий день.
+- **Число**&nbsp;&mdash; следующий шаг для участников сценария наступит в указанное число каждого месяца. Например, если установить время задержки на 15 число, то участники сценария перейдут на следующий шаг в ближайшее 15 число. В случае, когда участники сценария попадут на этот блок после указанного числа, то следующий шаг в сценарии для них наступит уже в следующем месяце.
 - **Дата**&nbsp;&mdash; следующий шаг для участников сценария наступит при наступлении установленной даты и&nbsp;времени. Если участники сценария попадут на&nbsp;этот блок после указанной даты, то&nbsp;следующий шаг для них не&nbsp;наступит и&nbsp;они &laquo;застрянут&raquo; на&nbsp;предыдущем шаге сценария.
 - **День недели**&nbsp;&mdash; следующий шаг сценария сработает в&nbsp;указанный день и&nbsp;время раз в&nbsp;неделю. Например, если установить время задержки на&nbsp;15:00&nbsp;во вторник, то&nbsp;участники сценария перейдут на&nbsp;следующий шаг в&nbsp;ближайший вторник в&nbsp;15:00. В&nbsp;случае, когда участники сценария попадут на&nbsp;этот блок после указанного времени и&nbsp;дня недели, то&nbsp;следующий шаг в&nbsp;сценарии для них наступит уже на&nbsp;следующей неделе.
 
@@ -499,6 +508,7 @@ import Video from '@site/src/components/Video';
 - Есть / нет в&nbsp;списке,
 - Есть / нет в сегменте,
 - Совпадение данных подписчика,
+- Совпадение даты и времени,
 - Процентное разделение,
 - A/B тест.
 
@@ -545,6 +555,14 @@ import Video from '@site/src/components/Video';
 Например, с&nbsp;помощью такого Разделения можно разделить базу на&nbsp;списки:
 
 ![How to divide into lists by split](/img/automations/automation-with-workflows/workflow-blocks/how-to-divide-into-lists-by-split.png)
+
+**Совпадение даты и времени** ([описание в API](https://sendsay.ru/api/api.html#Точное-время)) — участник сценария перейдёт на следующий шаг текущей ветки сценария, если попадёт на этот блок в указанную дату и время. Если дата и время попадания участника на шаг не совпадут с указанными, участник пойдёт по ветке «Нет».
+
+<p align="center">
+  <img width="50%" src={DateTimeStamp} alt="Date and time stamp" />
+</p>
+
+Здесь можно указать время, число месяца, конкретную дату или день недели. Например, если указана дата и время «До 20.02.2024 15:00», а участник сценария попадает на блок в 14:00 20 февраля 2024 года, он пойдёт дальше по текущей ветке сценария. Если же он попадёт на этот блок позже 15:00, он пойдёт по ветке «Нет».
 
 **Процентное разделение** — произвольно делит участников сценария на две ветки:
 
