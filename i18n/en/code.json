@@ -252,5 +252,17 @@
   "theme.docs.DocCard.categoryDescription": {
     "message": "{count} items",
     "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "feedback.question": {
+    "message": "Have you find the answer?"
+  },
+  "feedback.thanks.widget": {
+    "message": "Thank you for your feedback!"
+  },
+  "feedback.btn.positive": {
+    "message": "Yes"
+  },
+  "feedback.btn.negative": {
+    "message": "No"
   }
 }

@@ -1,4 +1,4 @@
-module.exports = function pluginIframeDetected() {
+export default function pluginIframeDetected() {
   return {
     name: 'plugin-iframe-detected',
 
@@ -14,4 +14,4 @@ module.exports = function pluginIframeDetected() {
       };
     },
   };
-};
+}
