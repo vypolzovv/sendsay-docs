@@ -9,6 +9,7 @@ import startEvent from '/img/automations/automation-with-workflows/workflow-bloc
 import startEvent1 from '/img/automations/automation-with-workflows/workflow-blocks/start-event1.png';
 import subscriberOpenedEmail from '/img/automations/automation-with-workflows/workflow-blocks/subscriber-opened-the-email.png';
 import changeSubscriberData from '/img/automations/automation-with-workflows/workflow-blocks/change-of-subscriber-data.png';
+import changeSubscriberData1 from '/img/automations/automation-with-workflows/workflow-blocks/change-of-subscriber-data1.png';
 import clickOnLink from '/img/automations/automation-with-workflows/workflow-blocks/click-on-the-link.png';
 import segmentСhange from '/img/automations/automation-with-workflows/workflow-blocks/segment-change.png';
 import additionalSettings from '/img/automations/automation-with-workflows/workflow-blocks/additional-settings.png';
@@ -150,16 +151,31 @@ import Video from '@site/src/components/Video';
 
 [Что такое сегмент контактов](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment)
 
-**Изменение данных** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся данные подписчика. Здесь есть два варианта:
+**Изменение данных подписчика** ([описание в API](https://sendsay.ru/api/api.html#Изменение-данных))&nbsp;&mdash; Событие сработает, когда изменятся указанные данные подписчика. При этом неважно, как изменились данные — главное, что они отличаются от предыдущих.
 
 <p align="center">
   <img width="50%" src={changeSubscriberData} alt="Change of subscriber data" />
 </p>
 
-- **Значение поля анкеты**&nbsp;&mdash; сработает, если изменились данные в&nbsp;анкете подписчика. При этом неважно, что именно изменилось&nbsp;&mdash; главное, что новые данные отличаются от&nbsp;предыдущих.
-- **Значения поля и&nbsp;данные анкеты (точное)**&nbsp;&mdash; произойдёт, когда данные в&nbsp;анкете подписчика изменятся на&nbsp;указанное значение.
+Чтобы отслеживать изменение точного значения данных, необходимо включить соответствующий свитчер:
 
-  [Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)
+<p align="center">
+  <img width="50%" src={changeSubscriberData1} alt="Change of subscriber data" />
+</p>
+
+- **Было до изменения** — Событие сработает, если указанное значение данных изменилось на любое.
+- **Стало после изменения** — сработает, если любое значение данных изменилось на указанное.
+- **Было до и стало после** — сработает, если значение данных, указанное «до», изменились на значение, указанное «после».
+
+Например, при указании таких условий:
+
+```
+Город → Стало после изменения → равно → Москва
+```
+
+Событие сработает, если значение поля `Город` в анкете подписчика изменится на `Москва`.
+
+[Анкеты и работа с данными](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups)
 
 **Клик по&nbsp;ссылке** ([описание в&nbsp;API](https://sendsay.ru/api/api.html#Клик-по-ссылке))&nbsp;&mdash; Событие наступит, когда подписчик кликнет по&nbsp;указанной ссылке в&nbsp;письме, отправленном в&nbsp;сценарии.
 
@@ -556,13 +572,13 @@ import Video from '@site/src/components/Video';
 
 ![How to divide into lists by split](/img/automations/automation-with-workflows/workflow-blocks/how-to-divide-into-lists-by-split.png)
 
-**Совпадение даты и времени** ([описание в API](https://sendsay.ru/api/api.html#Точное-время)) — участник сценария перейдёт на следующий шаг текущей ветки сценария, если попадёт на этот блок в указанную дату и время. Если дата и время попадания участника на шаг не совпадут с указанными, участник пойдёт по ветке «Нет».
+**Совпадение даты и времени** ([описание в API](https://sendsay.ru/api/api.html#Точное-время)) — участник сценария перейдёт на следующий шаг сценария текущей ветки, если попадёт на этот шаг в указанный диапазон времени. Если дата и время попадания участника на шаг не совпадут с указанными, участник пойдёт по дополнительной ветке.
 
 <p align="center">
   <img width="50%" src={DateTimeStamp} alt="Date and time stamp" />
 </p>
 
-Здесь можно указать время, число месяца, конкретную дату или день недели. Например, если указана дата и время «До 20.02.2024 15:00», а участник сценария попадает на блок в 14:00 20 февраля 2024 года, он пойдёт дальше по текущей ветке сценария. Если же он попадёт на этот блок позже 15:00, он пойдёт по ветке «Нет».
+Здесь можно указать диапазон времени, числа месяца, конкретной даты или дня недели. Например, если указан диапазон «До 9:00», а участник сценария попадает на блок в 8:00, он пойдёт дальше по ветке «Да». Если же он попадёт на этот блок позже 9:00, он пойдёт по ветке «Нет».
 
 **Процентное разделение** — произвольно делит участников сценария на две ветки:
 
