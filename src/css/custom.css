@@ -533,3 +533,14 @@ iframe:not(.no-border) {
   margin-top: 1.5rem !important;
   margin-bottom: 2rem !important;
 }
+
+/* carrot-quest-plugin */
+#chat-container {
+  margin-right: 33px;
+  margin-bottom: -10px;
+}
+
+#carrot-messenger-collapsed-frame,
+#carrot-messenger-frame {
+  outline: none !important;
+}
