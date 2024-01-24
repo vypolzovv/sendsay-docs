@@ -19,6 +19,7 @@ const VideoOverlay = ({ visible, handleClick }: VideoOverlayProps) => {
   };
 
   return (
+    // eslint-disable-next-line jsx-a11y/control-has-associated-label
     <div
       className="VideoOverlay"
       onClick={handleClick}
