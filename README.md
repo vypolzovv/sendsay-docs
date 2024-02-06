@@ -8,7 +8,14 @@
 
 # Working with articles
 
-### Adding a month update page
+## Edititng article with GitHub interface
+
+1. add `?edit=true` to the URL on any page you want to edit
+2. scroll to the bottom of the article to see `Edit this page` link
+
+<br>
+
+## Adding a month update page
 
 1. add a new file with `.mdx` extension to the `/docs/updates/list`, `sidebar_position` should be in NEGATIVE REVERSE order (where `-1` is `January` and `-12` is `December`)
 
@@ -121,47 +128,3 @@ This [doc](https://docusaurus.io/docs/sidebar/items#category-shorthand) might he
   },
 ]
 ```
-
-<br>
-
-# Website
-
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
-
-### Installation
-
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
