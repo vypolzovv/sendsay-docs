@@ -121,7 +121,7 @@ sidebar_position: 1
 
 [Данные об участниках сценария](https://docs.sendsay.ru/automations/automation-with-workflows/statistics/#данные-обучастниках-сценария)<br/>
 
-В&nbsp;случае если у&nbsp;вас подключен модуль Продажи, во&nbsp;вкладке **Сценарии** также будут выводиться триггерные сценарии онлайн-продаж с&nbsp;тегом «Продажи»:
+В&nbsp;случае если у&nbsp;вас подключен модуль «Sendsay Продажи», во&nbsp;вкладке **Сценарии** также будут выводиться триггерные сценарии онлайн-продаж с&nbsp;тегом «Продажи»:
 
 ![Ecom workflows](/img/subscribers/subscriber-data/subscriber-profile/ecom-workflows.png)
 
