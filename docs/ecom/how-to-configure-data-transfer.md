@@ -11,6 +11,8 @@ sidebar_label: 'Инструкция для разработчиков'
 
 Модуль работает на основе поступающих в Sendsay событий о действиях пользователя и генерации собственных событий на базе полученных данных.
 
+[Отправка событий на базе еcоmmеrсe-событий Google Analytics и Яндекс Метрики](#отправка-событий-на-базе-еcоmmеrсe-событий-google-analytics-и-яндекс-метрики)
+
 ## Настройка модуля
 
 ### Список клиентских ssec-событий
@@ -330,6 +332,61 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 ```
 [% external_extra("https://mysite.ru/example.yml","method","get","ignore_error","1","format","yml") %]
 ```
+
+### Отправка событий на базе еcоmmеrсe-событий Google Analytics и Яндекс Метрики
+
+Если вы уже настроили отправку еcоmmеrсe-событий в Google Analytics 4 или Яндекс Метрику, модуль «Sendsay Продажи» может собирать данные без дополнительных настроек. Просто установите на всех страницах сайта наш скрипт.
+
+:::tip Важно
+В случе если отправка событий в Яндекс Матрику настроена через Google Analytics 4, необходимо использовать схему данных событий Google Analytics 4 и указать код схемы в параметре `dataLayerScheme (dataLayerScheme: 'ga4')`.
+:::
+
+#### Настройка событий через Google Analytics 4
+
+Установите на сайт код:
+
+<!-- prettier-ignore -->
+```js
+<script type="text/javascript">(function(d,w,t,u,o,s,v) {w[o] = w[o] || function() {(w[o].q = w[o].q || []).push(arguments)};s = d.createElement("script");s.async = 1;s.src = u;v = d.getElementsByTagName(t)[0]; v.parentNode.insertBefore(s, v);})(document,window,"script","//image.sendsay.ru/js/target/tracking_v2.min.js","sndsy");sndsy("init", { fid: "ID АККАУНТА", v: "1.0", dataLayerWatch: true, dataLayerScheme: 'ga4' });sndsy("send", {});</script>
+```
+
+**Соответствие событий из Google Analytics 4 событиям модуля:**
+
+| Событие в Google Analytics 4 | Событие модуля «Sendsay Продажи» |
+| ---------------------------- | -------------------------------- |
+| view_item                    | VIEW_PRODUCT                     |
+| view_item_list               | VIEW_CATEGORY                    |
+| add_to_cart                  | BASKET_ADD                       |
+| remove_from_cart             | BASKET_ADD                       |
+| purchase                     | ORDER                            |
+| add_to_wishlist              | FAVORITE                         |
+
+[Документация Google Analytics 4](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?hl=ru&client_type=gtag)
+
+#### Настройка событий через Яндекс Метрику
+
+Установите на сайт код:
+
+<!-- prettier-ignore -->
+```js
+<script type="text/javascript">(function(d,w,t,u,o,s,v) {w[o] = w[o] || function() {(w[o].q = w[o].q || []).push(arguments)};s = d.createElement("script");s.async = 1;s.src = u;v = d.getElementsByTagName(t)[0]; v.parentNode.insertBefore(s, v);})(document,window,"script","//image.sendsay.ru/js/target/tracking_v2.min.js","sndsy");sndsy("init", { fid: "ID АККАУНТА", v: "1.0", dataLayerWatch: true, dataLayerScheme: 'ym' });sndsy("send", {});</script>
+```
+
+**Соответствие событий из Яндекс Метрики событиям модуля:**
+
+| Событие в Яндекс Метрике | Событие модуля «Sendsay Продажи» |
+| ------------------------ | -------------------------------- |
+| impressions              | VIEW_CATEGORY                    |
+| detail                   | VIEW_PRODUCT                     |
+| add                      | BASKET_ADD                       |
+| remove                   | BASKET_ADD                       |
+| purchase                 | ORDER                            |
+
+[Документация по Яндекс Метрике](https://yandex.ru/support/metrica/ecommerce/data.html)
+
+:::tip Внимание!
+Если события в Яндекс Матрику или Google Analytics 4 передаются в момент перехода посетителя на другую страницу сайта, то следующая страница может загрузиться раньше, чем код счётчика передаст данные в Метрику. В результате информация о событии будет потеряна и модуль не сможет её получить.
+:::
 
 ## Клиентские события
 
