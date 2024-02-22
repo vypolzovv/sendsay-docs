@@ -1,0 +1,121 @@
+---
+sidebar_position: 5
+sidebar_label: 'Управление участниками'
+---
+
+import login from '/img/automations/automation-with-workflows/workflow-members-management/login.png';
+import webhook from '/img/automations/automation-with-workflows/workflow-members-management/webhook.png';
+import webhook1 from '/img/automations/automation-with-workflows/workflow-members-management/webhook1.png';
+
+# Управление участниками сценария
+
+Некоторые возможности [Sendsay API](https://sendsay.ru/api/api.html) ещё не реализованы в редакторе сценариев. Но вы можете ими воспользоваться через действие **Вызвать Webhook**.
+
+[Действия в редакторе сценариев](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks/#действия)
+
+## Как исключить участника одного сценария из&nbsp;другого сценария
+
+### Задача
+
+Подписчик участвует в&nbsp;сценарии &laquo;А&raquo;. Необходимо, чтобы он&nbsp;покинул этот сценарий, когда станет участником другого сценария&nbsp;&mdash; &laquo;Б&raquo;. Сценарии &laquo;А&raquo; и&nbsp;&laquo;Б&raquo; созданы и&nbsp;активны.
+
+Например, сценарий &laquo;А&raquo;&nbsp;&mdash; это приветственная цепочка писем, где новому подписчику предлагается оплатить тариф. Сценарий &laquo;Б&raquo;&nbsp;&mdash; онбординг для тех, кто уже оплатил тариф. Необходимо исключить подписчика из&nbsp;сценария &laquo;А&raquo; после покупки тарифа и&nbsp;попадания в&nbsp;сценарий &laquo;Б&raquo;.
+
+### Решение
+
+1. В&nbsp;разделе **Автоматизации → Сценарии** перейдите на&nbsp;страницу сценария &laquo;Б&raquo; и&nbsp;нажмите &laquo;Остановить&raquo;.
+
+2. Перейдите в редактор сценария и&nbsp;добавьте блок действия **Вызвать Webhook** сразу после [стартового события](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-blocks/#стартовые-события).
+
+3. В действии выберите вкладку **POST-запрос**. В&nbsp;поле URL добавьте ссылку:
+
+   ```
+   https://api.sendsay.ru/general/api/v100/json/логин
+   ```
+
+   где `логин` — ваш логин в Sendsay. Посмотреть его можно в меню аккаунта:
+
+<p align="center">
+  <img width="40%" src={login} alt="Login" />
+</p>
+
+    Затем выберите опцию `application/json`, а&nbsp;в&nbsp;поле `data` вставьте запрос:
+
+    <!-- prettier-ignore -->
+    ```js
+    {
+      "action": "sequence.member.stop",
+      "id": "ID_сценария",
+      "email": "[% anketa.member.email %]",
+      "apikey":"API_ключ"
+    }
+    ```
+
+    где `ID_сценария` — ID сценария «А». Посмотреть его можно на&nbsp;странице сценария:
+
+    ![Workflow ID](/img/automations/automation-with-workflows/workflow-members-management/workflow-id.png)
+
+    `[% anketa.member.email %]` &mdash; источник email-адресов подписчиков, `API_ключ` &mdash; [ваш API-ключ](https://docs.sendsay.ru/sendsay-api/how-to-get-apikey).
+
+<p align="center">
+  <img width="60%" src={webhook} alt="Webhook" />
+</p>
+
+4. Нажмите «Сохранить», сохраните и&nbsp;затем активируйте сценарий.
+
+### Результат
+
+Когда участник сценария попадёт на&nbsp;блок **Вызвать Webhook** в&nbsp;сценарии &laquo;Б&raquo;, он&nbsp;будет исключён из&nbsp;сценария &laquo;А&raquo;.
+
+[Описание метода sequence.member.stop в Sendsay API](https://sendsay.ru/api/api.html#Прервать-прохождение-последовательности)
+
+## Как добавить участника сценария параллельно в&nbsp;другой сценарий
+
+### Задача
+
+Подписчик участвует в&nbsp;сценарии &laquo;А&raquo;. Необходимо, чтобы в&nbsp;процессе прохождения сценария для него параллельно запустился сценарий &laquo;Б&raquo;. Сценарии &laquo;А&raquo; и&nbsp;&laquo;Б&raquo; созданы и&nbsp;активны.
+
+Например, сценарий &laquo;А&raquo;&nbsp;&mdash; цепочка писем для участников курса, сценарий &laquo;Б&raquo;&nbsp;&mdash; для прогрева к&nbsp;другому курсу. Подписчик в&nbsp;сценарии &laquo;А&raquo; подходит к&nbsp;завершению обучения, нужно подключить его дополнительно к&nbsp;прогревающей цепочке писем.
+
+### Решение
+
+1. В&nbsp;разделе **Автоматизации → Сценарии** перейдите на&nbsp;страницу сценария &laquo;А&raquo; и&nbsp;нажмите &laquo;Остановить&raquo;.
+
+2. Перейдите в&nbsp;редактор сценария и&nbsp;добавьте блок действия **Вызвать Webhook** в&nbsp;том месте, где требуется запуск другого сценария.
+
+3. В&nbsp;действии выберите вкладку **POST-запрос**. В&nbsp;поле URL добавьте ссылку:
+
+   ```
+   https://api.sendsay.ru/general/api/v100/json/логин
+
+   ```
+
+   где `логин` — ваш логин в&nbsp;Sendsay.
+
+   Затем выберите опцию `application/json`, а&nbsp;в&nbsp;поле `data` вставьте запрос:
+
+   <!-- prettier-ignore -->
+   ```js
+    {
+      "action": "sequence.member.start",
+      "id": "ID_сценария",
+      "email": "[% anketa.member.email %]",
+      "apikey":"API_ключ"
+    }
+    ```
+
+   где `ID_сценария` — ID сценария «Б», `[% anketa.member.email %]` — источник email-адресов подписчиков, `API_ключ` — [ваш API-ключ](https://docs.sendsay.ru/sendsay-api/how-to-get-apikey/).
+
+<p align="center">
+  <img width="60%" src={webhook1} alt="Webhook" />
+</p>
+
+4. Нажмите «Сохранить», сохраните и&nbsp;затем активируйте сценарий.
+
+### Результат
+
+Когда участник попадёт на&nbsp;блок действия **Вызвать Webhook** в&nbsp;сценарии &laquo;А&raquo;, для него запустится сценарий &laquo;Б&raquo;.
+
+[Описание метода sequence.member.start в Sendsay API](https://sendsay.ru/api/api.html#Начать-прохождение-последовательности)
+
+**Читайте также:** [Управление участниками сценария через API](https://docs.sendsay.ru/sendsay-api/workflow-members-management-with-api/)
