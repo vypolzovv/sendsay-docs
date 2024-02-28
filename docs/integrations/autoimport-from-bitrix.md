@@ -16,7 +16,7 @@ import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-b
 
 ## 2. Создайте интеграцию в Sendsay
 
-1. Перейдите [в предыдущий интерфейс](https://sendsay.ru/account/).
+1. Перейдите перейдите в предыдущий интерфейс [по ссылке](https://sendsay.ru/account/#dashboard), либо откройте меню аккаунта в правом верхнем углу и выберите пункт **Предыдущий интерфейс**.
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **Bitrix24**.
 
 ![How to create integration with Bitrix](/img/integrations\autoimport-from-bitrix/how-to-create-integration-with-bitrix.gif) <br/>
