@@ -3,6 +3,8 @@ sidebar_position: 3
 sidebar_label: 'Обработка циклов'
 ---
 
+import foreachResult from '/img/proscript/cycles/foreach-result.png';
+
 # Обработка циклов в PROScript
 
 ## FOREACH
@@ -60,6 +62,12 @@ next()      возвращает следующий элемент в масси
 [% END%]
 [% END %]
 ```
+
+Результат:
+
+<p align="center">
+  <img width="50%" src={foreachResult} alt="Result" />
+</p>
 
 ## WHILE
 
