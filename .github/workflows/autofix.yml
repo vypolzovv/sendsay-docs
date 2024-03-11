@@ -1,0 +1,43 @@
+name: Autofix
+on:
+  push
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.repository != 'sendsay-ru/sendsay-docs' }}
+
+    env:
+      FORCE_COLOR: 1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup git
+        run: |
+          git config --global user.email "services@iprojects.ru"
+          git config --global user.name "sendsay-cat"
+
+      - name: Setup ssh-key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SENDSAY_CAT_KEY }}
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+  
+      - name: Install packages
+        run: yarn install --frozen-lockfile
+
+      - name: Autofix
+        run: yarn lint:fix
+
+      - name: Commit
+        run: |
+          git add .
+          git commit -m "autofix"
+          git push origin
