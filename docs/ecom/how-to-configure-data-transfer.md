@@ -338,7 +338,7 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 Если вы уже настроили отправку еcоmmеrсe-событий в Google Analytics 4 или Яндекс Метрику, модуль «Sendsay Продажи» может собирать данные без дополнительных настроек. Просто установите на всех страницах сайта наш скрипт.
 
 :::tip Важно
-В случе если отправка событий в Яндекс Матрику настроена через Google Analytics 4, необходимо использовать схему данных событий Google Analytics 4 и указать код схемы в параметре `dataLayerScheme (dataLayerScheme: 'ga4')`.
+В случае если отправка событий в Яндекс Метрику настроена через Google Analytics 4, необходимо использовать схему данных событий Google Analytics 4 и указать код схемы в параметре `dataLayerScheme (dataLayerScheme: 'ga4')`.
 :::
 
 #### Настройка событий через Google Analytics 4
