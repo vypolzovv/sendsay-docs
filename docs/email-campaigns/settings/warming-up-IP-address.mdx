@@ -3,7 +3,7 @@ sidebar_position: 7
 ---
 
 import numberOfUnsubscribes from '/img/email-campaigns/settings/warming-up-IP-address/the-number-of-unsubscribes.jpg';
-import emailInParts from '/img/email-campaigns/settings/warming-up-IP-address/how-to-send-email-in-parts.gif';
+import emailInParts from '/img/email-campaigns/settings/warming-up-IP-address/how-to-send-email-in-parts.png';
 
 # Прогрев IP-адресов
 
@@ -34,7 +34,7 @@ import emailInParts from '/img/email-campaigns/settings/warming-up-IP-address/ho
 
 ### 1. Настройте email-аутентификацию
 
-Пропишите [ключ DKIM, SPF-записи и&nbspDMARC-политику](https://docs.sendsay.ru/email-campaigns/settings/email-authentication/). Вы&nbsp;можете сделать это как самостоятельно, так и&nbsp;заказать полную настройку у&nbsp;специалистов Sendsay.
+Пропишите [ключ DKIM, SPF-записи и DMARC-политику](https://docs.sendsay.ru/email-campaigns/settings/email-authentication/). Вы&nbsp;можете сделать это как самостоятельно, так и&nbsp;заказать полную настройку у&nbsp;специалистов Sendsay.
 
 [Как настроить email-аутентификацию](https://docs.sendsay.ru/email-campaigns/settings/how-to-connect-domain/#способы-настройки-email-аутентификации)
 
@@ -109,14 +109,19 @@ import emailInParts from '/img/email-campaigns/settings/warming-up-IP-address/ho
 1. Создайте выпуск: в&nbsp;боковом меню перейдите в&nbsp;раздел **Рассылки &rarr; Черновики** и&nbsp;выберите заранее подготовленный черновик нейтрального письма для прогрева.
 2. На&nbsp;шаге Аудитория нажмите кнопку &laquo;Изменить&raquo; и&nbsp;выберите получателей рассылки.
 3. На&nbsp;шаге Письмо нажмите кнопку &laquo;Изменить&raquo; и&nbsp;заполните поля &laquo;Имя отправителя&raquo;, &laquo;Email отправителя&raquo; и&nbsp;&laquo;Тема письма&raquo;. После этого кликните по&nbsp;синей кнопке &laquo;Сохранить&raquo;.
-4. Откройте выпадающий список у&nbsp;кнопки &laquo;Отправить&raquo; и&nbsp;выберите пункт **Отправить по&nbsp;частям**.
-5. Настройте параметры отправки: пропишите количество писем для первого дня отправки, установите периодичность&nbsp;&mdash; один раз в&nbsp;сутки, а&nbsp;также поставьте галочку в&nbsp;пункте &laquo;Прогрессивно увеличивать размеры частей&raquo;, установив&nbsp;50% в&nbsp;раскрывающемся списке.
-6. Когда параметры отправки выпуска по&nbsp;частям заданы, нажмите синюю кнопку &laquo;Выпустить&raquo;.<br />
+4. На шаге Отправка выберите **Запланировать отправку** и нажмите «Далее».
+5. Настройте параметры отправки:
+
+   - укажите дату и время отправки первой части писем,
+   - установите галочку «Отправить выпуск по частям», пропишите количество писем для первого дня отправки и установите периодичность — 1 раз в сутки,
+   - установите галочку «Прогрессивное увеличение частей писем» и выберите 50% в раскрывающемся списке.
+
    <p align="center">
-     <img src={emailInParts} alt=" How to send email in parts" />
+     <img width="80%" src={emailInParts} alt=" How to send email in parts" />
    </p>
 
-[Как отправить массовую email-рассылку](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-send-email-campaign)
+6. Когда параметры отправки выпуска по&nbsp;частям заданы, нажмите синюю кнопку &laquo;Запланировать&raquo;.<br /><br />
+   [Как отправить массовую email-рассылку](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-send-email-campaign)
 
 ### 6. Отслеживайте показатели
 
