@@ -10,7 +10,7 @@ import noName from '/img/email-campaigns/create-your-campaign/web-version/no-nam
 
 # Веб-версия письма
 
-Веб-версия письма — вариант email-рассылки, которая открывается в браузере как отдельная веб-страница. Обычно это ссылка с именем «Веб-версия»: 
+Веб-версия письма — вариант email-рассылки, которая открывается в браузере как отдельная веб-страница. Обычно это ссылка с именем «Веб-версия»:
 
 ![Web version example](\img\email-campaigns\create-your-campaign\web-version\web-version-example.jpg) <br/>
 
@@ -58,7 +58,7 @@ import noName from '/img/email-campaigns/create-your-campaign/web-version/no-nam
 
 [Прехедер письма: что это, какие бывают и как их создать](https://docs.sendsay.ru/email-campaigns/create-your-campaign/preheader)
 
-Чтобы этого избежать, в&nbsp;блочном редакторе разместите в&nbsp;начале письма HTML-блок и&nbsp;используйте код ниже. Этот же код можно использовать в&nbsp;HTML-редакторе. 
+Чтобы этого избежать, в&nbsp;блочном редакторе разместите в&nbsp;начале письма HTML-блок и&nbsp;используйте код ниже. Этот же код можно использовать в&nbsp;HTML-редакторе.
 
 ![HTML-block for web version](\img\email-campaigns\create-your-campaign\web-version\html-block-for-web-version.jpg) <br/>
 
@@ -67,20 +67,27 @@ import noName from '/img/email-campaigns/create-your-campaign/web-version/no-nam
 
 ```html
 <div id="preheader">
-	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-		<tr>
-			<td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">
-				Видимый
-			</td>
-			<td style="font-size:0;line-height:0;">
-				<span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
-				<!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
-			</td>
-			<td style="text-align: right">
-				<a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
-			</td>
-		</tr>
-	</table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td
+        style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400"
+      >
+        Видимый
+      </td>
+      <td style="font-size:0;line-height:0;">
+        <span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a
+          target="_blank"
+          href="[% param.issue_archive_url %]"
+          style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400"
+          >Посмотреть веб-версию письма</a
+        >
+      </td>
+    </tr>
+  </table>
 </div>
 ```
 
@@ -89,18 +96,23 @@ import noName from '/img/email-campaigns/create-your-campaign/web-version/no-nam
 
 ```html
 <div id="preheader">
-	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-		<tr>
-			<td style="font-size:0;line-height:0;">Невидимый</td>
-			<td style="font-size:0;line-height:0;">
-				<span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
-				<!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
-			</td>
-			<td style="text-align: right">
-				<a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
-			</td>
-		</tr>
-	</table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="font-size:0;line-height:0;">Невидимый</td>
+      <td style="font-size:0;line-height:0;">
+        <span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a
+          target="_blank"
+          href="[% param.issue_archive_url %]"
+          style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400"
+          >Посмотреть веб-версию письма</a
+        >
+      </td>
+    </tr>
+  </table>
 </div>
 ```
 
@@ -109,17 +121,22 @@ import noName from '/img/email-campaigns/create-your-campaign/web-version/no-nam
 
 ```html
 <div id="preheader">
-	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-		<tr>
-			<td style="font-size:0;line-height:0;">
-				<span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
-				<!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
-			</td>
-			<td style="text-align: right">
-				<a target="_blank" href="[% param.issue_archive_url %]" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400">Посмотреть веб-версию письма</a>
-			</td>
-		</tr>
-	</table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="font-size:0;line-height:0;">
+        <span>&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;&#10240;</span>
+        <!-- продублируйте не менее 11 раз строку выше, чтобы скрыть контент письма в прехедере -->
+      </td>
+      <td style="text-align: right">
+        <a
+          target="_blank"
+          href="[% param.issue_archive_url %]"
+          style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; font-weight: 400"
+          >Посмотреть веб-версию письма</a
+        >
+      </td>
+    </tr>
+  </table>
 </div>
 ```
 
