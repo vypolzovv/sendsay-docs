@@ -3,7 +3,7 @@ sidebar_position: 3
 sidebar_label: 'Настройка импорта из Bitrix24'
 ---
 
-import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-bitrix-subdomain.png";
+import copyBitrixSubdomain from '/img/integrations/autoimport-from-bitrix/copy-bitrix-subdomain.png';
 
 # Как настроить автоматический импорт из «Битрикса»
 
@@ -19,7 +19,7 @@ import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-b
 1. Перейдите перейдите в предыдущий интерфейс [по ссылке](https://sendsay.ru/account/#dashboard), либо откройте меню аккаунта в правом верхнем углу и выберите пункт **Предыдущий интерфейс**.
 2. Откройте раздел **Подписчики → Интеграции** и выберите пункт **Bitrix24**.
 
-![How to create integration with Bitrix](/img/integrations\autoimport-from-bitrix/how-to-create-integration-with-bitrix.gif) <br/>
+![How to create integration with Bitrix](/img/integrations\autoimport-from-bitrix/how-to-create-integration-with-bitrix.gif) <br />
 
 ## 3. Настройте интеграцию
 
@@ -31,12 +31,12 @@ import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-b
 2. Введите поддомен из адреса вашего Битрикса. Адрес поддомена можно скопировать в адресной строке:
 
 <p align="center">
-    <img src={copyBitrixSubdomain} alt="Copy Bitrix subdomain" />
+  <img src={copyBitrixSubdomain} alt="Copy Bitrix subdomain" />
 </p>
 
 3. Нажмите «Продолжить».
 
-![How to connect Bitrix](/img/integrations\autoimport-from-bitrix/how-to-connect-bitrix.gif) <br/>
+![How to connect Bitrix](/img/integrations\autoimport-from-bitrix/how-to-connect-bitrix.gif) <br />
 
 ### Выберите список для подписчиков
 
@@ -54,10 +54,12 @@ import copyBitrixSubdomain from "/img/integrations/autoimport-from-bitrix/copy-b
 
 Есть два варианта загрузки контактов:
 
-**1. Импортировать один раз** — для этого нужно нажать «Загрузить адреса из Битрикс24».<br/>
+**1. Импортировать один раз** — для этого нужно нажать «Загрузить адреса из Битрикс24».<br />
 
 **2. Настроить автоматический импорт.** Для этого нажмите «Создать автоимпорт», введите название и нажмите «Создать автоимпорт» ещё раз. Это сгенерирует и активирует действие по расписанию — контакты будут импортироваться ежедневно в 00:00 по московскому времени. Чтобы изменить настройки, нажмите на автоимпорт — откроется страница с параметрами загрузки.
 
 :::tip Важно
+
 Не создавайте список при настройке автоматического импорта, иначе при каждой загрузке контактов список будет дублироваться
+
 :::
