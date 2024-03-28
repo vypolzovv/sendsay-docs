@@ -48,6 +48,12 @@ import formTypes from "/img/forms/signup-forms/form-types.png";
 
 [Как создавать поля](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups#как-создать-поле)
 
+В форму можно добавить скрытые поля: подписчики их не увидят, но эти поля можно заполнить нужными данными при отправке формы — например, URL-адресом страницы, c которой заполнили форму.
+
+![Hidden fields](/img/forms/signup-forms/hidden-fields.gif)
+
+[Как заполнить скрытые поля формы](https://docs.sendsay.ru/forms/scripts#как-заполнить-скрытые-поля-формы)
+
 ## Как установить форму на сайт
 
 1. Зайдите в раздел **Формы** и откройте форму, которую хотите установить.

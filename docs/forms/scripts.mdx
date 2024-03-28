@@ -1,0 +1,95 @@
+---
+sidebar_position: 4
+sidebar_label: 'Скрипты для форм'
+---
+
+# Скрипты для форм
+
+:::tip Важно
+Для работы со скриптами необходимы навыки работы с HTML и JavaScript. Обратитесь к разработчику или вебмастеру вашего сайта, если не обладаете такими навыками.
+:::
+
+Формы на сайте, созданные в новом интерфейсе Sendsay, запускают следующие JavaScript-события:
+
+### sendsay-form-show
+
+Срабатывает при появлении формы на экране.
+
+Структура `event.detail`:
+
+- `formId` [string] — ID формы
+- `account` [string] — аккаунт
+
+### sendsay-form-sent
+
+Срабатывает при успешной отправке формы.
+
+Структура `event.detail` :
+
+- `formId` [string] — ID формы
+- `account` [string] — аккаунт
+- `extra` [object] — данные формы
+
+## Как отслеживать отправку форм в&nbsp;Яндекс&nbsp;Метрике
+
+При установке на сайт счётчика Яндекс Метрики цель **Отправка формы** создаётся автоматически, если в настройках счётчика включена опция **Автоматические цели**. Отправка формы засчитывается в эту автоцель без дополнительных действий:
+
+![Yandex target](/img/forms/scripts/yandex-target.png)
+
+Вы также можете создать свою цель с типом `JavaScript-событие` и выполнять её при каждой отправке формы. В этом случае на сайт необходимо добавить скрипт:
+
+```js
+<script type="text/javascript">
+    window.addEventListener(
+        "sendsay-form-sent",
+        () => {
+            ym(XXXXXX, "reachGoal", "TARGET");
+        },
+        true
+    );
+</script>
+```
+
+где `XXXXXX` — номер вашего счётчика, а `TARGET` — идентификатор цели.
+
+[Как создать цель «JavaScript-событие» в Яндекс Метрике](https://metrika.yandex.ru/support/metrica/general/goal-js-event.html#create-goal)
+
+Если на вашем сайте установлено несколько форм Sendsay, вы можете добавить условие, по которому будет выполняться цель только при заполнении конкретной формы:
+
+```js
+<script type="text/javascript">
+    window.addEventListener(
+        "sendsay-form-sent",
+        (event) => {
+            if (event.detail.formId === "555") {
+                ym(XXXXXX, "reachGoal", "TARGET");
+            }
+        },
+        true
+    );
+</script>
+```
+
+где `XXXXXX` — номер вашего счётчика, `555` — ID формы, а `TARGET` — идентификатор цели.
+
+## Как заполнить скрытые поля формы
+
+Если в вашей форме есть скрытые поля, их можно заполнять какими-либо данными. Например, записать URL-адрес страницы, с которой заполнили форму.
+
+Для этого необходимо подписаться на событие появления формы, добавив скрипт на сайт:
+
+```js
+<script type="text/javascript">
+    window.addEventListener(
+        "sendsay-form-show",
+        (event) => {
+            if (event.detail.formId === "555") {
+                document.querySelector('[name="q280"]').setAttribute("value", location.host);
+            }
+        },
+        true
+    );
+</script>
+```
+
+где `555` — ID формы, а `q280` — ID скрытого поля.
