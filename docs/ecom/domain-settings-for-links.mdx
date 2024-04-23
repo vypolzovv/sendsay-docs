@@ -15,24 +15,13 @@ sidebar_label: 'Настройка домена для ссылок'
 
 2. Необходимо [подключить домен к Sendsay](https://docs.sendsay.ru/email-campaigns/settings/how-to-connect-domain/#как-самостоятельно-подключить-домен) и настроить DKIM-подпись.
 
-3. Ссылки для перелинковки должны быть не в домене `link.sendsay.ru`, а в сабдомене сайта, и тоже использовать SSL-сертификат. Это можно сделать двумя способами:
-
-   - настроить домен самостоятельно, указав в `CNAME`:
+3. Ссылки для перелинковки должны быть не в домене `link.sendsay.ru`, а в сабдомене сайта, и тоже использовать SSL-сертификат. Для этого добавьте запись `CNAME` в настройках DNS:
 
    ```
    link.mail.CLIENT.TLD CNAME ACCOUNT.dlink.sendsay.ru
    ```
 
    где `link.mail.CLIENT.TLD` — ваш домен для ссылок, `ACCOUNT` — ваш основной логин в Sendsay. После настройки откройте домен в браузере — чтобы проверить, что он настроен.
-
-   - [делегировать домен нам](https://docs.sendsay.ru/email-campaigns/settings/how-to-delegate-subdomain), прописав в `NS DNS` следующее:
-
-   ```
-   IN NS gns194b.sendsay.ru.
-   IN NS gns194a.sendsay.ru.
-   IN NS gns195b.sendsay.ru.
-   IN NS gns195a.sendsay.ru.
-   ```
 
 4. Если всё настроено правильно, необходимо «повесить» на этот домен SSL-сертификат. Вы можете прислать нам готовый сертификат или запросить у нас бесплатный сертификат Let's Encrypt.
 
