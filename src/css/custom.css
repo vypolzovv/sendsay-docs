@@ -525,6 +525,7 @@ iframe:not(.no-border) {
 
 [data-iframed='true'] .navbar,
 [data-iframed='true'] .footer,
+[data-iframed='true'] #carrotquest-messenger-collapsed-container,
 [data-iframed='true'] .theme-doc-footer {
   display: none;
 }

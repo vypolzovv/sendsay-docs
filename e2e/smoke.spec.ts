@@ -4,7 +4,7 @@ test('Smoke test', async ({ page }) => {
   await page.goto('/');
 
   if (process.env.CI) {
-    await page.getByPlaceholder('Поиск').fill('рассылки');
+    await page.getByPlaceholder('Поиск Ctrl+K').fill('рассылки');
     await page.getByText('Email-рассылки Email-рассылки Email-рассылки Email-рассылки').click();
     await page.getByRole('link', { name: 'Sendsay docs' }).click();
   }
@@ -14,7 +14,7 @@ test('Smoke test', async ({ page }) => {
     .click();
   await page.getByLabel("Toggle the collapsible sidebar category 'Работа с подписчиками'").click();
   await page.getByLabel("Toggle the collapsible sidebar category 'Импорт и экспорт'").click();
-  await page.getByRole('link', { name: 'Импорт подписчиков' }).click();
+  await page.getByRole('link', { name: 'Импорт подписчиков', exact: true }).click();
   await page.getByRole('link', { name: 'Файл для импорта', exact: true }).click();
   await page.getByRole('link', { name: 'Экспорт в старом интерфейсе', exact: true }).click();
   await page.getByRole('link', { name: 'Экспорт данных и контактов', exact: true }).click();
