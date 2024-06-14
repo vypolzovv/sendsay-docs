@@ -9,6 +9,7 @@ const plugins = [
     {
       languages: ['ru', 'en'],
       excludeRoutes: require('./config/searchExcludeRoutes.json'),
+      maxHits: 30,
     },
   ],
   [

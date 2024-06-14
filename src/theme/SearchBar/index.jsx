@@ -73,6 +73,7 @@ const Search = (props) => {
           highlightState: { wordToHighlight },
         });
       },
+      maxHits: options.maxHits,
     });
   };
 

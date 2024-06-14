@@ -36,14 +36,13 @@
     ]
   },
   "dependencies": {
-    "@algolia/client-search": "^4.9.1",
     "@docusaurus/core": "3.0.1",
     "@docusaurus/plugin-client-redirects": "3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
     "@mdx-js/react": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "clsx": "^1.1.1",
-    "docusaurus-lunr-search": "^3.3.0",
+    "docusaurus-lunr-search": "3.4.0",
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "docusaurus-plugin-yandex-metrica": "^1.2.0",
     "glob": "^8.0.3",
@@ -78,7 +77,8 @@
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.19"
   },
   "packageManager": "yarn@1.22.19"
 }

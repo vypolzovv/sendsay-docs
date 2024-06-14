@@ -23,6 +23,7 @@ class DocSearch {
     handleSelected = false,
     enhancedSearchInput = false,
     layout = 'column',
+    maxHits = 5,
   }) {
     this.input = DocSearch.getInputFromSelector(inputSelector);
     this.queryDataCallback = queryDataCallback || null;
@@ -40,7 +41,7 @@ class DocSearch {
 
     this.isSimpleLayout = layout === 'simple';
 
-    this.client = new LunrSearchAdapter(searchDocs, searchIndex, baseUrl);
+    this.client = new LunrSearchAdapter(searchDocs, searchIndex, baseUrl, maxHits);
 
     if (enhancedSearchInput) {
       this.input = DocSearch.injectSearchBox(this.input);
