@@ -98,7 +98,7 @@ sidebar_label: 'Обработка даты'
 Использовать дату выпуска, как базовую дату:
 
 ```
-[% date.format(datetime(param.issue.dt).add("days","+7"),"%d.%m.%Y") %]
+[% date.format(datetime(param.issue.date).add("days","+7"),"%d.%m.%Y") %]
 ```
 
 Использовать анкетные данные, как базовую дату:
