@@ -48,6 +48,9 @@ import exactTime from '/img/automations/automation-with-workflows/workflow-block
 import workflow from '/img/automations/automation-with-workflows/workflow-blocks/workflow.png';
 import switchAnotherWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/switch-to-another-workflow.png';
 import getOutOfWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/get-out-of-the-workflow.png';
+import getOutAnotherWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/get-out-of-another-workflow.png';
+import parallelWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/parallel-workflow.png';
+import restartWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/restart-the-workflow.png';
 import createSeveralBranches from '@site/static/video/automations/automation-with-workflows/workflow-blocks/createSeveralBranches.mp4';
 import Video from '@site/src/components/Video';
 
@@ -602,10 +605,13 @@ import Video from '@site/src/components/Video';
 
 ## Сценарий
 
-С&nbsp;помощью блока Сценарий можно принудительно закончить текущий сценарий для его участников. Какие виды бывают:
+С&nbsp;помощью блока Сценарий можно принудительно закончить или перезапустить текущий сценарий для его участников. Какие виды бывают:
 
+- Перезапустить сценарий,
+- Запустить параллельный сценарий,
 - Перейти в&nbsp;другой сценарий,
-- Выйти из&nbsp;сценария.
+- Выйти из&nbsp;этого сценария,
+- Выйти из другого сценария.
 
 <p align="center">
   <img width="50%" src={workflow} alt="Workflow" />
@@ -613,7 +619,19 @@ import Video from '@site/src/components/Video';
 
 Чтобы принудительно закончить текущий сценарий для его участников, нажмите плюс `+` под необходимым блоком и&nbsp;выберите нужный Сценарий.
 
-### Варианты выхода из сценария
+### Варианты действий в сценарии
+
+**Перезапустить сценарий** — запускает прохождение текущего сценария заново для тех участников, кто дошёл до этого шага:
+
+<p align="center">
+  <img width="50%" src={restartWorkflow} alt="Restart the workflow" />
+</p>
+
+**Запустить параллельный сценарий** ([описание в API](https://sendsay.ru/api/api.html#Запустить-параллельно-ещё-последовательность))— запускает указанный сценарий параллельно для тех участников, кто дошёл до этого шага:
+
+<p align="center">
+  <img width="50%" src={parallelWorkflow} alt="Parallel workflow" />
+</p>
 
 **Перейти в&nbsp;другой сценарий** ([описание в API](https://sendsay.ru/api/api.html#Уйти-в-другую-последовательность))&nbsp;&mdash; текущий сценарий завершится для его участников и&nbsp;они перейдут на&nbsp;первый шаг в&nbsp;другом указанном сценарии, минуя Стартовое событие. Чтобы участник сценария мог перейти в&nbsp;другой указанный сценарий, нужно его активировать и&nbsp;включить приём подписчиков.
 
@@ -631,7 +649,7 @@ import Video from '@site/src/components/Video';
 
 ![Switch to another workflow](/img/automations/automation-with-workflows/workflow-blocks/switch-to-another-workflow1.png)
 
-**Выйти из&nbsp;сценария** ([описание в API](https://sendsay.ru/api/api.html#Остановить-последовательность))&nbsp;&mdash; сценарий принудительно завершится для его участников.
+**Выйти из&nbsp;этого сценария** ([описание в API](https://sendsay.ru/api/api.html#Остановить-последовательность))&nbsp;&mdash; сценарий принудительно завершится для его участников.
 
 <p align="center">
   <img width="50%" src={getOutOfWorkflow} alt="Get out of the workflow" />
@@ -640,5 +658,11 @@ import Video from '@site/src/components/Video';
 Это может понадобится, например, если в&nbsp;сценарии не&nbsp;выполняется какое-то условие при Разделении:
 
 ![Get out of the workflow](/img/automations/automation-with-workflows/workflow-blocks/get-out-of-the-workflow1.png)
+
+**Выйти из другого сценария** — участники сценария, которые дошли до этого шага, покинут указанный сценарий:
+
+<p align="center">
+  <img width="50%" src={getOutAnotherWorkflow} alt="Get out of another workflow" />
+</p>
 
 **Читайте также:** [Гайд по работе со сценариями](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-guide/)
