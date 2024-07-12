@@ -142,3 +142,6 @@ sidebar_position: 2
 В конце сохраните сегмент.
 
 ![Segment for inactive subscribers](/img/subscribers/lists-and-segments\what-is-segment/segment-for-inactive-subscribers.gif) <br/>
+
+**Смотрите также:**<br/>
+Видеоурок [Как создать сегмент контактов](https://docs.sendsay.ru/videolessons/subscribers/how-to-create-a-segment)

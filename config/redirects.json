@@ -444,10 +444,6 @@
     "from": "/ru/articles/2439864-как-персонализировать-рассылку"
   },
   {
-    "to": "/videolessons/email-campaigns/how-to-create-a-confirmation-email",
-    "from": "/ru/articles/2439929-как-создать-письмо-подтверждения-double-opt-in"
-  },
-  {
     "to": "/videolessons/email-campaigns/how-to-conduct-a-poll",
     "from": "/ru/articles/2439871-как-провести-опрос-в-письме-понравился-выпуск-или-нет"
   },
@@ -458,10 +454,6 @@
   {
     "to": "/videolessons/automations/how-to-create-welcome-series",
     "from": "/ru/articles/2439900-как-настроить-приветственную-серию-писем"
-  },
-  {
-    "to": "/videolessons/automations/how-to-automate-confirmation-emails",
-    "from": "/ru/articles/2439924-как-автоматизировать-отправку-писем-подтверждения-double-opt-in"
   },
   {
     "to": "/videolessons/automations/how-to-set-autoimport",

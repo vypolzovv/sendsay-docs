@@ -60,7 +60,7 @@ sidebar_label: 'Как создать письмо'
 
 ![Element settings](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/element-settings.gif) <br/>
 :::tip Важно
-Ошибки в вёрстке в HTML-блоке могут поломать отображение всего остального.
+В базе знаний также есть видеоурок [Как добавить в письмо блок с HTML-кодом](https://docs.sendsay.ru/videolessons/email-campaigns/how-to-add-html-code-to-email-campaign). Ошибки в вёрстке в HTML-блоке могут поломать отображение всего остального.
 :::
 
 ## 4. Задайте настройки письма
