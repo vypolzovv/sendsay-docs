@@ -1,6 +1,7 @@
 {
   "label": "Мобильные пуши",
   "position": 2,
+  "customProps": {"restrictedAccessHref": "mobile-push"},
   "link": {
     "type": "generated-index",
     "slug": "other-channels/mobile-push"

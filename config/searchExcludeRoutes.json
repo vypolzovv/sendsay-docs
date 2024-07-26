@@ -2,9 +2,6 @@
   "/automations/automations-by-event/welcome-series",
   "/videolessons/automations/how-to-create-welcome-series",
   "/updates/HVG123РЕ97E",
-  "/other-channels/mobile-push/how-to-connect-mobile-push.mdx",
-  "/other-channels/mobile-push/how-to-create-mobile-push-campaign.mdx",
-  "/other-channels/mobile-push/how-to-create-mobile-push-campaign.mdx",
-  "/other-channels/mobile-push/statistics.mdx",
-  "/automations/automations-by-time/how-to-automate-mobile-push-campaign.mdx"
+  "/automations/automations-by-time/how-to-automate-mobile-push-campaign",
+  "/other-channels/mobile-push/**"
 ]
