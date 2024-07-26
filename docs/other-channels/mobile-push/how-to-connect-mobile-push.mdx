@@ -1,0 +1,287 @@
+---
+sidebar_position: 1
+sidebar_label: 'Как подключить приложение'
+description: 'Что такое мобильные пуши и как их подключить'
+sidebar_custom_props:
+  { restrictedAccessHref: 'other-channels/mobile-push/how-to-connect-mobile-push' }
+---
+
+import Details from '@theme/Details';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Mobile Push уведомления: что это и как подключить приложение
+
+**Mobile Push уведомления** (мобильные пуши) — это короткие сообщения от мобильного приложения, которые отображаются на главном экране смартфона пользователя приложения.
+
+Такие уведомления обычно содержат заголовок, текст и изображение, информируя подписчиков о каких-либо событиях или действиях в приложении:
+
+![Example](/img/other-channels/mobile-push/how-to-connect-mobile-push/mobile-push.png)
+
+Отправлять такие уведомления можно всем, кто установил приложение на свой смартфон или планшет и дал разрешение на отправку уведомлений.
+
+<Details summary='Разрешение на получение уведомлений'>
+
+Пока пользователь не предоставит разрешение на показ уведомлений вашему приложению, мобильные пуш-уведомления показываться не будут.
+
+На устройствах с операционными системами iOS и HarmonyOS пользователь должен дать явное разрешение на показ уведомлений от приложения.
+
+Если пользователь устанавливает ваше приложение на устройство под управлением Android 13 или выше, показ уведомлений от вашего приложения тоже будет по умолчанию отключён. Пользователям более ранних версий Android не нужно давать разрешение на показ уведомлений.
+
+</Details>
+
+Задача мобильных пуш-уведомлений — привлечь внимание получателя и вернуть его в приложение. Уведомление показывается даже на заблокированном устройстве: чтобы прочитать его, пользователю не нужно ничего нажимать дополнительно — сообщение показывается сразу.
+
+При нажатии на уведомление открывается приложение. Чтобы мобильные пуши выполняли свои маркетинговые цели, рекомендуем настроить реакцию приложения при нажатии на уведомление — для этого обратитесь к разработчику вашего мобильного приложения.
+
+## Подключение мобильного приложения
+
+:::tip Важно
+Для подключения приложения необходимы навыки работы с мобильными приложениями. Обратитесь к разработчику вашего приложения, если не обладаете такими навыками.
+:::
+
+Мобильные пуш-уведомления доставляются через сервисы пуш-уведомлений, которые выступают в качестве посредника между отправителями сообщений и пользователями приложения:
+
+- [Firebase Cloud Messaging](https://firebase.google.com/products/cloud-messaging) (FCM) — для приложений на Android и iOS,
+- [Apple Push Notification Service](https://developer.apple.com/notifications/) (APNS) — для приложений на iOS.
+- [HUAWEI Push Kit](https://developer.huawei.com/consumer/ru/hms/huawei-pushkit/) (HMS) — для приложений на Android, iOS и HarmonyOS.
+
+В самом начале необходимо зарегистрировать мобильное приложение в одном из сервисов пуш-уведомлений.
+
+:::tip Важно
+В интерфейсе Sendsay вы можете управлять мобильным приложением, зарегистрированным в Firebase. Управление приложениями через APNS или HMS осуществляется через [API Sendsay](https://sendsay.ru/api/api.html).
+:::
+
+К одному аккаунту Sendsay можно подключить только одно мобильное приложение. При необходимости вы можете подключить приложение через несколько сервисов пуш-уведомлений: например, если вы хотите отправлять уведомления на iOS-устройства не через Firebase, добавьте отдельное APNS-подключение.
+
+### Параметры подключения
+
+После регистрации приложения в сервисе пуш-уведомлений, получите параметры подключения, которые доступны в консоли управления приложением:
+
+<Tabs>
+<TabItem value="key1" label="FCM">
+
+Параметры подключения можно найти в [консоли Firebase](https://console.firebase.google.com/):
+
+- `Project ID` — уникальный идентификатор вашего проекта Firebase. Его можно найти в настройках проекта: **Project Settings → General → Project ID**.
+
+- `Service account key` — ключ учётной записи в Firebase. Чтобы его сгенерировать, перейдите в раздел **Project Settings → Cloud Messaging → Service Account → Google Cloud Console**, затем в разделе **Service Account\* нажмите на нужный аккаунт, выберите вкладку **Keys\*\* и создайте ключ в формате JSON.
+
+[Документация Firebase](https://firebase.google.com/docs)
+
+</TabItem>
+<TabItem value="key2" label="APNS">
+
+Для отправки мобильных пуш-уведомлений через APNS рекомендуется использовать ключи аутентификации (.p8) вместо сертификатов с паролями для APNS. Это упрощает процесс аутентификации и делает его более безопасным. Параметры подключения можно найти в [Apple Developer Console](https://icloud.developer.apple.com/dashboard/notifications):
+
+- `app ID` — уникальный идентификатор приложения, может быть `Bundle ID`. Чтобы сгенерировать App ID, в аккаунте Apple Developer перейдите в раздел **Identifiers** и создайте новый App ID для вашего приложения.
+
+  Убедитесь, что в настройках App ID включена опция **Push Notifications** для поддержки мобильных пуш-уведомлений.
+
+- `topic` — Bundle ID или App ID вашего приложения.
+
+- `production` — принимает значение `true` или `false` при использовании приложения в режиме разработки.
+
+- `key` — сертификат Production Push Certificate в Base64. Его можно получить в **Apple Developer Console → Certificates, Identifiers & Profiles → Keys → Ваше приложение**. Если вы уже создавали и скачивали сертификат, но нигде не сохранили, его возможно только перевыпустить.
+
+- `key_type` — тип ключа, принимает значение `pem`, `p12` или `p8`.
+
+- `password` — пароль к сертификату. Необходим в случае, если вы используете тип ключа `pem` или `p12`.
+
+- `team_id` — идентификатор вашей команды (Team ID, только для `"key_type":"p8"`), который можно найти на главной странице вашего аккаунта в Apple Developer Console.
+
+[Документация на сайте Apple](https://developer.apple.com/documentation/usernotifications)
+
+</TabItem>
+<TabItem value="key3" label="HMS">
+
+Параметры для подключения можно найти в **[AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/) → My projects → Project settings → General information → App information**:
+
+- `App_id` — уникальный идентификатор вашего приложения, который генерируется при его создании.
+- `Client secret` — секретный ключ вашего приложения, обязательный параметр.
+
+[Документация Huawei Developer](https://developer.huawei.com/consumer/en/doc/HMSCore-Guides/service-introduction-0000001050040060)
+
+</TabItem>
+</Tabs>
+
+### Как подключить приложение в интерфейсе Sendsay
+
+В интерфейсе Sendsay вы можете управлять мобильным приложением, зарегистрированным в Firebase.
+
+[Как подключить приложение через API Sendsay](#как-подключить-приложение-через-api-sendsay)
+
+Чтобы подключить мобильное приложение:
+
+1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **Firebase** в качестве сервиса пуш-уведомлений.
+2. Введите название приложения и нажмите «Далее».
+3. Укажите **Project ID** и **Service account key** в формате JSON:
+
+![Firebase](/img/other-channels/mobile-push/how-to-connect-mobile-push/firebase.png)
+
+Затем нажмите «Подключить».
+
+После подключения нажмите «Перейти к настройкам» и импортируйте пользователей приложения, чтобы отправлять им мобильные пуш-уведомления.
+
+[Как импортировать Mobile Push подписчиков](https://docs.sendsay.ru/other-channels/mobile-push/import-mobile-push-subscribers)
+
+### Как подключить приложение через API Sendsay
+
+Для подключения мобильного приложения к Sendsay используйте **[API-консоль](https://app.sendsay.ru/api/console)** или предоставьте [параметры подключения](#параметры-подключения) вашему аккаунт-менеджеру.
+
+Управление мобильными приложениями осуществляется при помощи [внешних аутентификаций API Sendsay](https://sendsay.ru/api/api.html#Внешние-аутентификации). Чтобы подключить приложение к Sendsay, создайте внешнюю аутентификацию с нужным сервисом пуш-уведомлений:
+
+<Tabs>
+<TabItem value="key1" label="FCM">
+
+```
+{
+    "action": "authext.create",
+    "login": "AUTH_NAME",
+    "type": 16,
+    "auth": {
+        "fcm": {
+            "project_id": "Project ID",
+            "key_json": "Service account key"
+        }
+    }
+}
+```
+
+где `AUTH_NAME` — название внешней аутентификации в Sendsay. В ответе вы получите `id` — идентификатор созданной внешней аутентификации.
+
+</TabItem>
+<TabItem value="key2" label="APNS">
+
+```
+{
+   "action": "authext.create",
+   "login": "AUTH_NAME",
+   "type": 16,
+   "auth": {
+     "apns": {
+        "topic": topic приложения iOS,
+        "production": true / false,
+        "key": сертификат или authkey в Base64,
+        "key_type": "pem" | "p12" | "p8",
+        "key_id": key_id, // только для "key_type": "p8"
+        "team_id": team_id, // только для "key_type": "p8"
+        "password": пароль к сертификату, // кроме "key_type": "p8"
+      }
+    }
+}
+
+```
+
+где `AUTH_NAME` — название внешней аутентификации в Sendsay. В ответе вы получите `id` — идентификатор созданной внешней аутентификации.
+
+</TabItem>
+<TabItem value="key3" label="HMS">
+
+```
+{
+  "action": "authext.create",
+   "login": "AUTH_NAME",
+   "type": 16,
+   "auth": {
+      "hms": {
+          "hms_app_id": "App_id",
+          "key": "Client secret"
+      }
+   }
+}
+```
+
+где `AUTH_NAME` — название внешней аутентификации в Sendsay. В ответе вы получите `id` — идентификатор созданной внешней аутентификации.
+
+</TabItem>
+</Tabs>
+
+[Создание внешней аутентификации в API Sendsay](https://sendsay.ru/api/api.html#Создание-внешней-аутентификации)
+
+В случае если в вашем аккаунте уже подключен какой-то сервис, необходимо обновить внешнюю аутентификацию с указанием ID уже существующей аутентификации.
+
+Чтобы получить ID, выполните запрос в **[API-консоли](https://app.sendsay.ru/api/console)**:
+
+```
+{
+    "action": "authext.list",
+    "filter": [
+        {
+            "a": "authext.type",
+            "op": "==",
+            "v": "16"
+        }
+    ]
+}
+```
+
+После этого [измените внешнюю аутентификацию](https://sendsay.ru/api/api.html#Изменение-внешней-аутентификации):
+
+<Tabs>
+<TabItem value="key1" label="FCM">
+
+```
+{
+    "action": "authext.set",
+    "auth": {
+        "fcm": {
+            "app_id": "Project ID",
+            "key": "Server key"
+        }
+    },
+    "id": authext_id
+}
+```
+
+где `authext_id` — id существующей аутентификации.
+
+</TabItem>
+<TabItem value="key2" label="APNS">
+
+```
+{
+    "action": "authext.set",
+    "auth": {
+        "apns": {
+            "app_id": "app ID",
+            "topic": "topic",
+            "key_type": "key_type",
+            "key": "XXX...",
+            "production": true / false,
+            "key_id": "key_id", //  только для "key_type": "p8"
+            "team_id": "team_id" // только для "key_type": "p8"
+        }
+    },
+    "id": authext_id
+}
+```
+
+где `authext_id` — id существующей аутентификации.
+
+</TabItem>
+<TabItem value="key3" label="HMS">
+
+```
+{
+  "action": "authext.set",
+   "auth": {
+      "hms": {
+        "hms_app_id": "App_id",
+        "key":  "Client secret"
+      }
+   },
+   "id": authext_id
+}
+```
+
+где `authext_id` — id существующей аутентификации.
+
+</TabItem>
+</Tabs>
+
+После подключения вы попадёте во вкладку настроек импорта на странице приложения. Импортируйте пользователей приложения, чтобы отправлять им пуш-уведомления.
+
+**Читайте также:**<br/>
+[Файл для импорта Mobile Push подписчиков](https://docs.sendsay.ru/subscribers/import-and-export/how-to-prepare-file-for-import#файл-для-импорта-mobile-push-подписчиков)<br/>
+[Как импортировать Mobile Push подписчиков](https://docs.sendsay.ru/other-channels/mobile-push/import-mobile-push-subscribers)
