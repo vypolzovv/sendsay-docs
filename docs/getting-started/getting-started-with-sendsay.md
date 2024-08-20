@@ -6,9 +6,9 @@ sidebar_label: 'Начало работы'
 
 import Details from '@theme/Details';
 
-# Начало работы в Sendsay
+## Начало работы в Sendsay
 
-Sendsay — маркетинговая CDP для коммуникации с клиентами. Здесь можно:
+Sendsay один два три — маркетинговая CDP для коммуникации с клиентами. Здесь можно:
 
 - создавать и отправлять красивые письма клиентам без ручной вёрстки и программирования,
 - следить за статистикой и улучшать показатели,
@@ -76,7 +76,7 @@ Sendsay — маркетинговая CDP для коммуникации с к
 
 Контакты и данные подписчиков хранятся в базе контактов. У каждого подписчика есть своя карточка, где собраны контакты, персональные данные и статистика по получению писем. Посмотреть карточку любого подписчика можно в разделе [**Подписчики → Просмотр подписчиков**](https://app.sendsay.ru/subscribers/contacts), либо с помощью строки поиска — для этого введите адрес подписчика:
 
-![How to find the subscriber](/img/getting-started/getting-started-with-semdsay/how-to-find-the-subscriber.gif)
+![How to find the subscriber](\img\getting-started\getting-started-with-semdsay\how-to-find-the-subscriber.gif)
 
 [Карточка подписчика](https://docs.sendsay.ru/subscribers/subscriber-data/subscriber-profile)
 
