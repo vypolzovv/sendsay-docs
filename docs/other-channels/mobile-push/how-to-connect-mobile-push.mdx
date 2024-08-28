@@ -44,13 +44,11 @@ import TabItem from '@theme/TabItem';
 - [Apple Push Notification Service](https://developer.apple.com/notifications/) (APNS) — для приложений на iOS.
 - [HUAWEI Push Kit](https://developer.huawei.com/consumer/ru/hms/huawei-pushkit/) (HMS) — для приложений на Android, iOS и HarmonyOS.
 
-В самом начале необходимо зарегистрировать мобильное приложение в одном из сервисов пуш-уведомлений.
+В самом начале необходимо зарегистрировать мобильное приложение в одном из сервисов пуш-уведомлений. При необходимости вы можете подключить приложение через несколько сервисов пуш-уведомлений: например, если вы хотите отправлять уведомления на iOS-устройства не через Firebase, добавьте отдельное APNS-подключение.
 
 :::tip Важно
 В интерфейсе Sendsay вы можете управлять мобильным приложением, зарегистрированным в Firebase и APNS. Управление приложениями через HMS осуществляется через [API Sendsay](https://sendsay.ru/api/api.html).
 :::
-
-К одному аккаунту Sendsay можно подключить только одно мобильное приложение. При необходимости вы можете подключить приложение через несколько сервисов пуш-уведомлений: например, если вы хотите отправлять уведомления на iOS-устройства не через Firebase, добавьте отдельное APNS-подключение.
 
 ### Параметры подключения
 
@@ -95,8 +93,8 @@ import TabItem from '@theme/TabItem';
 
 Параметры для подключения можно найти в **[AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html#/) → My projects → Project settings → General information → App information**:
 
-- `App_id` — уникальный идентификатор вашего приложения, который генерируется при его создании.
-- `Client secret` — секретный ключ вашего приложения, обязательный параметр.
+- `client_id` — уникальный идентификатор вашего приложения, который генерируется при его создании.
+- `client_secret` — секретный ключ вашего приложения, обязательный параметр.
 
 [Документация Huawei Developer](https://developer.huawei.com/consumer/en/doc/HMSCore-Guides/service-introduction-0000001050040060)
 
@@ -200,8 +198,8 @@ import TabItem from '@theme/TabItem';
    "type": 16,
    "auth": {
       "hms": {
-          "hms_app_id": "App_id",
-          "key": "Client secret"
+          "client_secret": "123qwerty",
+          "client_id": "1234567890"
       }
    }
 }
@@ -282,8 +280,8 @@ import TabItem from '@theme/TabItem';
   "action": "authext.set",
    "auth": {
       "hms": {
-        "hms_app_id": "App_id",
-        "key":  "Client secret"
+        "client_secret": "123qwerty",
+        "client_id": "1234567890"
       }
    },
    "id": authext_id
