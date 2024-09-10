@@ -5,7 +5,7 @@ sidebar_label: 'Импорт подписчиков'
 
 import importDetails from "/img/subscribers/import-and-export/how-to-import-subscribers/import-details.png"
 
-# Как импортировать подписчиков 1123
+# Как импортировать подписчиков
 
 Импорт — это загрузка контактов и персональных данных подписчиков в Sendsay.
 
