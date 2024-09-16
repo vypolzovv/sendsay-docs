@@ -6,6 +6,7 @@ sidebar_label: 'Как перейти в Sendsay'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
+import Details from '@theme/Details';
 import exportContactsSendpulse from '/img/getting-started/how-to-migrate-to-sendsay/export-contacts-from-sendpulse.png';
 import exportContactsUnisender from '/img/getting-started/how-to-migrate-to-sendsay/export-contacts-from-unisender.png';
 import exportContactsMailchimp from '/img/getting-started/how-to-migrate-to-sendsay/export-contacts-from-mailchimp.png';
@@ -197,6 +198,26 @@ import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-send
 </TabItem>
 <TabItem value="key7" label="В Unisender">
 
+В Unisender есть две версии интерфейса редактора кампании: старая и новая.
+
+В новой версии для экспорта шаблонов и писем вы можете скопировать HTML-код шаблона и перенести его в Sendsay.
+
+Для этого в левом меню перейдите в раздел **Рассылки** → **Письма**, затем выберите нужное письмо и зайдите в его карточку:
+
+![Export template from unisender new mails](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-unisender-new-mails.png)
+
+Перейдите к шагу **Дизайн письма**:
+
+![Export template from unisender new design](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-unisender-new-design.png)
+
+Нажмите на кнопку **Режим кода** и скопируйте содержимое письма из правой части страницы. Сохраните скопированный текст, например, в Блокноте.
+
+![Export template from unisender new code](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-unisender-new-code.gif)
+
+<Details summary='Экспорт в старом интерфейсе Unisender'>
+
+Если вы хотите экспортировать шаблон из старой версии интерфейса — отправьте архив письма себе на почту.
+
 В&nbsp;левом меню перейдите в&nbsp;раздел **Рассылки &rarr; Письма**, затем выберите нужное письмо и&nbsp;зайдите в&nbsp;его карточку:
 
 <p align="center">
@@ -216,6 +237,8 @@ import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-send
 :::
 
 Если вы&nbsp;хотите перенести несколько писем, нужно экспортировать каждое отдельно.
+
+</Details>
 
 </TabItem>
 <TabItem value="key8" label="В Mailchimp">
@@ -246,11 +269,13 @@ import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-send
 </TabItem>
 <TabItem value="key10" label="В DashaMail">
 
-У&nbsp;DashaMail нет возможности экспорта шаблонов и&nbsp;писем, но&nbsp;вы&nbsp;можете скопировать HTML-код шаблона и&nbsp;перенести его в&nbsp;Sendsay. Для этого в&nbsp;верхнем меню перейдите в&nbsp;раздел **Шаблоны**, выберите нужный макет и&nbsp;нажмите &laquo;Редактировать&raquo;.
+У&nbsp;DashaMail нет возможности экспорта шаблонов и&nbsp;писем, но&nbsp;вы&nbsp;можете скопировать HTML-код шаблона и&nbsp;перенести его в&nbsp;Sendsay. Для этого в&nbsp;верхнем меню перейдите в&nbsp;раздел **Шаблоны**, выберите нужный макет и&nbsp;нажмите «Посмотреть макет».
 
-<p align="center">
-  <img src={exportTemplateDashamail} alt="Export the template from DashaMail" />
-</p>
+![Export template from Dashamail](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-Dashamail.png)
+
+Кликните правой кнопкой мыши в любом месте открывшейся страницы с макетом и откройте исходный код страницы.
+
+![Export template from Dashamail code](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-Dashamail-code.gif)
 
 Скопируйте содержимое письма во&nbsp;вкладке **HTML-код** и&nbsp;сохраните его, например, в&nbsp;Блокноте.
 
