@@ -271,11 +271,11 @@ import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-send
 
 У&nbsp;DashaMail нет возможности экспорта шаблонов и&nbsp;писем, но&nbsp;вы&nbsp;можете скопировать HTML-код шаблона и&nbsp;перенести его в&nbsp;Sendsay. Для этого в&nbsp;верхнем меню перейдите в&nbsp;раздел **Шаблоны**, выберите нужный макет и&nbsp;нажмите «Посмотреть макет».
 
-![Export template from Dashamail](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-Dashamail.png)
+![Export template from dashamail](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-dashamail.png)
 
 Кликните правой кнопкой мыши в любом месте открывшейся страницы с макетом и откройте исходный код страницы.
 
-![Export template from Dashamail code](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-Dashamail-code.gif)
+![Export template from dashamail code](/img/getting-started\how-to-migrate-to-sendsay/export-template-from-dashamail-code.gif)
 
 Скопируйте содержимое письма во&nbsp;вкладке **HTML-код** и&nbsp;сохраните его, например, в&nbsp;Блокноте.
 
