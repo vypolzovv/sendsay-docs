@@ -19,7 +19,6 @@ import exportTemplateUnisender1 from '/img/getting-started/how-to-migrate-to-sen
 import exportTemplateUnisender2 from '/img/getting-started/how-to-migrate-to-sendsay/export-template-from-unisender2.png';
 import exportTemplateMailchimp from '/img/getting-started/how-to-migrate-to-sendsay/export-template-from-mailchimp.png';
 import exportTemplateGetresponse from '/img/getting-started/how-to-migrate-to-sendsay/export-template-from-getresponse.png';
-import exportTemplateDashamail from '/img/getting-started/how-to-migrate-to-sendsay/export-template-from-dashamail.png';
 
 # Как перейти в Sendsay из другого сервиса рассылок
 
