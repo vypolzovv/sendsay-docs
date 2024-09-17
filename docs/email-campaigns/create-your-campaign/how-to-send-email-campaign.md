@@ -10,7 +10,7 @@ import SupportLink from '@site/src/components/SupportLink';
 
 Выпуск рассылки — это письмо, отправленное группе подписчиков.
 
-Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип «Email».
+Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип **Email**.
 
 ![How to create email campaign](/img/email-campaigns/create-your-campaign/how-to-send-email-campaign/how-to-create-campaign.gif) <br/>
 
