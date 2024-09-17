@@ -11,7 +11,7 @@ import SupportLink from '@site/src/components/SupportLink';
 
 [Как подключить сообщество ВКонтакте](https://docs.sendsay.ru/other-channels/vk/how-to-connect-vk-community)
 
-Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип «VK».
+Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите тип **VK**.
 
 ![How to create VK campaign](/img/other-channels/vk/how-to-create-vk-campaign/how-to-create-vk-campaign.gif) <br/>
 Подготовка выпуска к отправке проходит в четыре шага:
