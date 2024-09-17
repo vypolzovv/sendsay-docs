@@ -45,22 +45,18 @@ import SupportLink from '@site/src/components/SupportLink';
 
 Мобильные пуш-уведомления доставляются через сервисы пуш-уведомлений, которые выступают в качестве посредника между отправителями сообщений и пользователями приложения:
 
-- [Firebase Cloud Messaging](https://firebase.google.com/products/cloud-messaging) (FCM) — для приложений на Android и iOS,
+- [Firebase Cloud Messaging](https://firebase.google.com/products/cloud-messaging) (Firebase) — для приложений на Android и iOS,
 - [Apple Push Notification Service](https://developer.apple.com/notifications/) (APNS) — для приложений на iOS.
 - [HUAWEI Push Kit](https://developer.huawei.com/consumer/ru/hms/huawei-pushkit/) (HMS) — для приложений на Android, iOS и HarmonyOS.
 
 В самом начале необходимо зарегистрировать мобильное приложение в одном из сервисов пуш-уведомлений. При необходимости вы можете подключить приложение через несколько сервисов пуш-уведомлений: например, если вы хотите отправлять уведомления на iOS-устройства не через Firebase, добавьте отдельное APNS-подключение.
-
-:::tip Важно
-В интерфейсе Sendsay вы можете управлять мобильным приложением, зарегистрированным в Firebase и APNS. Управление приложениями через HMS осуществляется через [API Sendsay](https://sendsay.ru/api/api.html).
-:::
 
 ### Параметры подключения
 
 После регистрации приложения в сервисе пуш-уведомлений получите параметры подключения, которые доступны в консоли управления приложением:
 
 <Tabs>
-<TabItem value="key1" label="FCM">
+<TabItem value="key1" label="Firebase">
 
 Параметры подключения можно найти в [консоли Firebase](https://console.firebase.google.com/):
 
@@ -108,18 +104,16 @@ import SupportLink from '@site/src/components/SupportLink';
 
 ### Как подключить приложение в интерфейсе Sendsay
 
-В интерфейсе Sendsay вы можете управлять мобильным приложением, зарегистрированным в Firebase и APNS.
-
-[Как подключить приложение через API Sendsay](#как-подключить-приложение-через-api-sendsay)
-
-<Tabs>
-<TabItem value="key1" label="FCM">
-
 Чтобы подключить мобильное приложение:
 
-1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **Firebase** в качестве сервиса пуш-уведомлений и нажмите «Подключить».
-2. Введите название приложения и нажмите «Далее».
-3. Укажите **Project ID** и **Service account key** в формате JSON:<br/><br/>
+<Tabs>
+<TabItem value="key1" label="Firebase">
+
+1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **Firebase** в качестве сервиса пуш-уведомлений и нажмите «Подключить». Введите название приложения и нажмите «Далее».
+
+   Если ваше мобильное приложение уже подключено к Sendsay через другой сервис пуш-уведомлений, перейдите на его страницу. Во вкладке **Настройки приложения и импорта** выберите **Firebase** и нажмите «Подключить».
+
+2. Укажите **Project ID** и **Service account key** в формате JSON:<br/><br/>
    ![Firebase](/img/other-channels/mobile-push/how-to-connect-mobile-push/firebase.png)
 
    Затем нажмите «Подключить».
@@ -127,12 +121,24 @@ import SupportLink from '@site/src/components/SupportLink';
 </TabItem>
 <TabItem value="key2" label="APNS">
 
-Чтобы подключить мобильное приложение:
+1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **APNS** в качестве сервиса пуш-уведомлений и нажмите «Подключить». Введите название приложения и нажмите «Далее».
 
-1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **APNS** в качестве сервиса пуш-уведомлений и нажмите «Подключить».
-2. Введите название приложения и нажмите «Далее».
-3. Укажите [необходимые параметры](#параметры-подключения) для подключения:<br/><br/>
+   Если ваше мобильное приложение уже подключено к Sendsay через другой сервис пуш-уведомлений, перейдите на его страницу. Во вкладке **Настройки приложения и импорта** выберите **APNS** и нажмите «Подключить».
+
+2. Укажите [необходимые параметры](#параметры-подключения) для подключения:<br/><br/>
    ![APNS](/img/other-channels/mobile-push/how-to-connect-mobile-push/APNS.png)
+
+   Затем нажмите «Подключить».
+
+</TabItem>
+<TabItem value="key3" label="HMS">
+
+1. Перейдите в раздел **[Подписчики → Мобильное приложение](https://app.sendsay.ru/subscribers/apps)** и нажмите «Подключить», затем выберите **HMS** в качестве сервиса пуш-уведомлений и нажмите «Подключить». Введите название приложения и нажмите «Далее».
+
+   Если ваше мобильное приложение уже подключено к Sendsay через другой сервис пуш-уведомлений, перейдите на его страницу. Во вкладке **Настройки приложения и импорта** выберите **HMS** и нажмите «Подключить».
+
+2. Укажите **Client id** и **Client secret** для подключения:<br/><br/>
+   ![HMS](/img/other-channels/mobile-push/how-to-connect-mobile-push/HMS.png)
 
    Затем нажмите «Подключить».
 
@@ -150,7 +156,7 @@ import SupportLink from '@site/src/components/SupportLink';
 Управление мобильными приложениями осуществляется при помощи [внешних аутентификаций API Sendsay](https://sendsay.ru/api/api.html#Внешние-аутентификации). Чтобы подключить приложение к Sendsay, создайте внешнюю аутентификацию с нужным сервисом пуш-уведомлений:
 
 <Tabs>
-<TabItem value="key1" label="FCM">
+<TabItem value="key1" label="Firebase">
 
 ```
 {
@@ -237,7 +243,7 @@ import SupportLink from '@site/src/components/SupportLink';
 После этого [измените внешнюю аутентификацию](https://sendsay.ru/api/api.html#Изменение-внешней-аутентификации):
 
 <Tabs>
-<TabItem value="key1" label="FCM">
+<TabItem value="key1" label="Firebase">
 
 ```
 {

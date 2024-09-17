@@ -143,5 +143,7 @@ sidebar_position: 2
 
 ![Segment for inactive subscribers](/img/subscribers/lists-and-segments\what-is-segment/segment-for-inactive-subscribers.gif) <br/>
 
-**Смотрите также:**<br/>
+**Читайте также:**<br/>
+[Как настроить сегменты по данным продаж](https://docs.sendsay.ru/ecom/segmentation-by-ecom-data)<br/>
+[Как настроить сегменты подписчиков мобильного приложения](https://docs.sendsay.ru/other-channels/mobile-push/segmentation)<br/>
 Видеоурок [Как создать сегмент контактов](https://docs.sendsay.ru/videolessons/subscribers/how-to-create-a-segment)
