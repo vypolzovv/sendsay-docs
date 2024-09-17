@@ -1,0 +1,150 @@
+---
+sidebar_position: 8
+sidebar_label: 'Как добавить в письмо событие календаря'
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Как добавить в письмо событие календаря
+
+Если вы хотите сообщить подписчикам о предстоящем мероприятии — в письмо можно добавить файл с событием календаря. Получатели смогут узнать основную информацию о мероприятии из рассылки и сразу добавить его в свой личный календарь. Это удобный инструмент, который экономит время подписчиков и поможет увеличить посещаемость ваших мероприятий.
+
+Вот пример того, как увидят ваше событие получатели:
+
+![Calendar event example](/img/email-campaigns/personalization\how-to-add-calendar-event/calendar-event-example.png)
+
+Добавить событие календаря в письмо можно, используя команду подстановки. Команда создаст и прикрепит к письму файл с расширением .ics. Это формат, который используется во всех цифровых календарях.
+
+Для добавления события в свой календарь подписчику нужно будет скачать и открыть приложенный файл. В некоторых случаях почтовый клиент может сам распознать событие и предложит добавить его автоматически.
+
+Чтобы добавить событие календаря в письмо:
+
+<ol>
+<li> Используйте команду подстановки:</li><br/>
+
+```
+[% calendar_event(...) %]
+```
+
+В параметрах через запятую укажите пары в формате:
+
+```
+'название аргумента', 'значение'
+```
+
+- `name` — название;
+- `description` — описание;
+- `start_date` — дата и время начала события в формате `ГГГГ‑ММ‑ДД ЧЧ:ММ:СС`;
+- `end_date` — дата и время окончания, если они известны. Записываются в формате `ГГГГ‑ММ‑ДД ЧЧ:ММ:СС`;
+- `location` — адрес места проведения;
+- `organizer` — название организатора;
+- `organizer_email` — email организатора;
+- `url` — ссылка на подробную информацию.
+
+<br />
+Например, так выглядит команда подстановки для распродажи, которая пройдет с 28.08.2024 по 01.09.2024:
+
+```
+[% calendar_event('name','Распродажа','start_date','2024-08-28 10:00:00','end_date','2024-09-01 18:00:00') %]
+```
+
+<li> Добавьте команду подстановки в письмо.</li>
+<br />
+
+  <Tabs>
+  <TabItem value="key1" label="В блочном редакторе" default>
+
+    Перетащите HTML-блок в любое место письма и укажите в нём команду подстановки. Получатели не увидят содержимое этого блока.
+
+    ![How to add calendar event](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-calendar-event.gif)
+
+  </TabItem>
+  <TabItem value="key2" label="В HTML-редакторе" default>
+    Вставьте команду подстановки в любое место письма. Получатели не увидят содержимое этого блока.
+
+    ![How to add calendar event html](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-calendar-event-html.gif)
+
+  </TabItem>
+  </Tabs>
+
+<li> [Протестируйте отправку выпуска](https://docs.sendsay.ru/email-campaigns/create-your-campaign/how-to-send-email-campaign/#4-отправьте-себе-тестовую-копию). Этот пункт необязательный, но тест поможет вам убедиться, что письмо в папке «Входящие» будет выглядеть именно так, как вы ожидаете.</li>
+</ol>
+## Как добавить ссылку на событие в Google Календаре
+
+Ещё один способ добавить событие в письмо — создать ссылку на событие в Google Календаре. Получатели, авторизованные в браузере через сервисы Google, смогут внести событие в свой календарь, перейдя по ссылке.
+
+![Google calendar events](/img/email-campaigns/personalization\how-to-add-calendar-event/google-calendar-events.gif)
+
+Чтобы добавить ссылку на событие Google Календаря в письмо:
+
+<ol>
+<li> Используйте команду подстановки:</li><br/>
+
+```
+[% calendar_event_gc_url(…) %]
+```
+
+В параметрах команды через запятую укажите пары в формате:
+
+```
+'название аргумента', 'значение'
+```
+
+- `name` — название;
+- `description` — описание;
+- `start_date` — дата и время начала события в формате `ГГГГ‑ММ‑ДД ЧЧ:ММ:СС`;
+- `end_date` — дата и время окончания, если они известны. Записываются в формате `ГГГГ‑ММ‑ДД ЧЧ:ММ:СС`;
+- `location` — адрес места проведения;
+- `organizer` — название организатора;
+- `organizer_email` — email организатора;
+- `url` — ссылка на подробную информацию.
+
+<br />
+Например, так выглядит команда подстановки ссылки для вебинара, который пройдет 04.09.2024:
+
+```
+[% calendar_event_gc_url('name','Вебинар','start_date','2024-09-04 10:00:00','description','Вебинар для всех желающих') %]
+```
+
+<li> Добавьте команду подстановки в письмо.</li>
+<br />
+
+  <Tabs>
+  <TabItem value="key1" label="В блочном редакторе" default>
+
+    Прикрепите команду к кнопке или тексту, используя элемент «Ссылка».
+
+    ![How to add google calendar event button](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-google-calendar-event-button.gif)
+
+    Прикрепляя команду к тексту, в качестве протокола выберите вариант **другой**.
+
+    ![How to add google calendar event textblock](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-google-calendar-event-textblock.gif)
+
+  </TabItem>
+
+  <TabItem value="key2" label="В HTML-редакторе" default>
+
+    Прикрепите команду к кнопке или добавьте в виде ссылки.
+
+    Чтобы прикрепить команду к кнопке, кликните по элементу в письме и вставьте команду в тег `<a href="#">` вместо символа `#`.
+
+    ![How to add google calendar event html button](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-google-calendar-event-html-button.gif)
+
+    Чтобы добавить команду в виде ссылки, «оберните» команду подстановки в тег и вставьте получившийся код в место, где будет располагаться ссылка:
+
+    ```
+      <a href="[% calendar_event_gc_url('name','Вебинар','start_date','2024-09-04 10:00:00','description','Вебинар для всех желающих') %]"> Добавить событие в календарь </a>
+    ```
+
+    ![How to add google calendar event html](/img/email-campaigns/personalization\how-to-add-calendar-event/how-to-add-google-calendar-event-html.gif)
+
+    </TabItem>
+    </Tabs>
+    </ol>
+
+**Читайте также:**<br/>
+[Сценарий рассылок к мероприятию](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-for-event/)<br/>
+[Как добавить таймер обратного отсчёта в письмо](https://docs.sendsay.ru/email-campaigns/create-your-campaign/countdown-timer/)<br/>
+[Как вставить QR-код в письмо](https://docs.sendsay.ru/email-campaigns/personalization/how-to-add-qr-code/)<br/>
+[Как вставить график в письмо](https://docs.sendsay.ru/email-campaigns/personalization/how-to-add-graph/)<br/>

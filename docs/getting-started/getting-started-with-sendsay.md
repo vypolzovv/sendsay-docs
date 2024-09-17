@@ -5,6 +5,7 @@ sidebar_label: 'Начало работы'
 ---
 
 import Details from '@theme/Details';
+import SupportLink from '@site/src/components/SupportLink';
 
 # Начало работы в Sendsay
 
@@ -127,7 +128,7 @@ Sendsay — маркетинговая CDP для коммуникации с к
 [Где следить за статистикой](https://docs.sendsay.ru/statistics/where-to-track-statistics)<br/>
 [Всё про статистические отчёты](https://docs.sendsay.ru/statistics/all-about-campaign-reports)
 
-После того как вы убедитесь, что всё работает именно так, как вы ожидаете, подключите домен и настройте email-аутентификацию для дальнейшей работы. Вы можете сделать это как самостоятельно, так и заказать полную настройку у специалистов Sendsay — для этого напишите в чат техподдержки.
+После того как вы убедитесь, что всё работает именно так, как вы ожидаете, подключите домен и настройте email-аутентификацию для дальнейшей работы. Вы можете сделать это как самостоятельно, так и заказать полную настройку у специалистов Sendsay — для этого <SupportLink>напишите в чат поддержки</SupportLink>.
 
 [Как подключить домен и настроить email-аутентификацию](https://docs.sendsay.ru/email-campaigns/settings/how-to-connect-domain/)<br/>
 [Из чего состоит email-аутентификация](https://docs.sendsay.ru/email-campaigns/settings/email-authentication)

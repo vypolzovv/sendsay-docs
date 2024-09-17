@@ -4,6 +4,7 @@ sidebar_label: 'Отправка рассылки через API'
 ---
 
 import login from '/img/sendsay-api/how-to-send-campaign-with-api/login.png';
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как отправить рассылку через Sendsay API
 
@@ -19,7 +20,7 @@ import login from '/img/sendsay-api/how-to-send-campaign-with-api/login.png';
 
    [Как добавить и подтвердить отправителя писем](https://docs.sendsay.ru/getting-started/#8-добавьте-иподтвердите-отправителя-писем)
 
-2. Если вы ещё не&nbsp;отправляли рассылки с&nbsp;текущего аккаунта, напишите в&nbsp;техподдержку, чтобы вам открыли доступ на&nbsp;отправку транзакционных писем через API.
+2. Если вы ещё не&nbsp;отправляли рассылки с&nbsp;текущего аккаунта, <SupportLink>напишите в чат поддержки</SupportLink>, чтобы вам открыли доступ на&nbsp;отправку транзакционных писем через API.
 
 3. Перейдите в&nbsp;раздел **API &rarr; API-консоль**:
 
