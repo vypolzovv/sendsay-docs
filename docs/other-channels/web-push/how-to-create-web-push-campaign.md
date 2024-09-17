@@ -6,6 +6,7 @@ sidebar_label: 'Как отправить веб-пуш'
 import webpushElements from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-elements.png";
 import verticalImage from "/img/other-channels/web-push/how-to-create-web-push-campaign/vertical-image-for-webpush.png";
 import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-push-campaign/webpush-preview-mode.gif"
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как отправить пуш-рассылку
 
@@ -101,7 +102,7 @@ import webPushPreviewMode from "/img/other-channels/web-push/how-to-create-web-p
 **Оптимизировать время выпуска** — выпуск отправляется каждому подписчику в то время, когда он с наибольшей вероятностью откроет уведомление (это определяет алгоритм). Способ эффективен после месяца активных рассылок: сначала нужно отправить несколько выпусков, чтобы накопить статистику по открытиям.
 
 :::tip Важно
-Функция оптимизации времени подключается отдельно — чтобы активировать её в аккаунте, напишите нам в чат
+Функция оптимизации времени подключается отдельно — чтобы активировать её в аккаунте, <SupportLink>напишите в чат поддержки</SupportLink>
 :::
 
 **Отправлять выпуск по частям** — выпуск отправляется небольшими пачками через одинаковые интервалы времени. Это поможет распределить нагрузку на колл-центр.

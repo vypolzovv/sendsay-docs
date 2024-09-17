@@ -9,6 +9,7 @@ import howToAddYml from "/img/automations/automations-by-behaviour/product-recom
 import ymlUpdate from "/img/automations/automations-by-behaviour/product-recommendations/yml-update.png";
 import templateRestrictions from "/img/automations/automations-by-behaviour/product-recommendations/add-restrictions-to-the-template.png";
 import segmentId from "/img/automations/automations-by-behaviour/product-recommendations/segment-id.png";
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как настроить товарные рекомендации в письме
 
@@ -112,7 +113,7 @@ import segmentId from "/img/automations/automations-by-behaviour/product-recomme
 
 ## 3. Напишите в службу поддержки
 
-Напишите нам в чат, что хотите подключить товарные рекомендации. Это нужно, чтобы мы начали собирать статистику по активностям пользователей ваших рассылок — так мы сможем впоследствии рекомендовать подходящие товары.
+<SupportLink>Напишите в чат поддержки</SupportLink>, что хотите подключить товарные рекомендации. Это нужно, чтобы мы начали собирать статистику по активностям пользователей ваших рассылок — так мы сможем впоследствии рекомендовать подходящие товары.
 
 Статистика собирается во время обычных рассылок. Время сбора данных зависит от размера базы:
 

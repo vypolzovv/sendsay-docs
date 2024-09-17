@@ -7,6 +7,7 @@ import exel2 from '/img/statistics/where-to-track-statistics/exel2.png';
 import exel3 from '/img/statistics/where-to-track-statistics/exel3.png';
 import exel4 from '/img/statistics/where-to-track-statistics/exel4.png';
 import Details from '@theme/Details';
+import SupportLink from '@site/src/components/SupportLink';
 
 # Где следить за статистикой
 
@@ -125,7 +126,7 @@ import Details from '@theme/Details';
 **Репутация IP-адреса** оценивает надёжность сервера, с которого отправляются рассылки. Она зависит от действий всех отправителей, которые пользуются общим IP-адресом.
 
 :::tip Важно
-За дополнительную плату предоставляем от двух выделенных IP-адресов — так вы будете уверены, что репутация чистая и зависит только от вас. Если хотите подключить выделенный IP-адрес, напишите в техподдержку.
+За дополнительную плату предоставляем от двух выделенных IP-адресов — так вы будете уверены, что репутация чистая и зависит только от вас. Если хотите подключить выделенный IP-адрес, <SupportLink>напишите в чат поддержки</SupportLink>.
 :::
 
 [Как прогреть новый IP-адрес](https://docs.sendsay.ru/email-campaigns/settings/warming-up-IP-address)

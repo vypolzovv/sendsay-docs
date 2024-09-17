@@ -5,6 +5,7 @@ sidebar_label: 'Как подключить домен'
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как подключить домен и настроить email-аутентификацию
 
@@ -179,7 +180,7 @@ DNS-серверы обновляются до суток, поэтому клю
 
 [Как передать права на управление поддоменом](https://docs.sendsay.ru/email-campaigns/settings/how-to-delegate-subdomain) <br/>
 
-3. Напишите в чат, что хотите провести полную настройку домена, — вам выставят счёт. После проверки NS-записей и оплаты счёта наши специалисты настроят:
+3. <SupportLink>Напишите в чат поддержки</SupportLink>, что хотите провести полную настройку домена, — вам выставят счёт. После проверки NS-записей и оплаты счёта наши специалисты настроят:
 
 - DKIM-подпись,
 - SPF-подпись,

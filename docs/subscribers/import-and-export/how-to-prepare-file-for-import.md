@@ -8,6 +8,7 @@ import fileForAutoimport from "/img/subscribers/import-and-export/how-to-prepare
 import fileForManualImport from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/file-for-manual-import.png";
 import listType from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/list-type.png";
 import Details from '@theme/Details';
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как подготовить файл для импорта
 
@@ -25,7 +26,7 @@ import Details from '@theme/Details';
     <img src={fieldCode} alt="Field code" />
 </p>
 
-При автоимпорте у подписчиков может быть только основной контакт (чтобы загружать дополнительные контакты, напишите нам в чат). Весь файл будет выглядеть вот так:
+При автоимпорте у подписчиков может быть только основной контакт. Чтобы загружать дополнительные контакты, <SupportLink>напишите в чат поддержки</SupportLink>. Весь файл будет выглядеть вот так:
 
 <p align="center">
     <img src={fileForAutoimport} alt="File for autoimport" />

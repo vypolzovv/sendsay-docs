@@ -6,6 +6,7 @@ sidebar_label: 'Как подключить бота'
 import botToken from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-copy-the-token.png";
 import connectBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-connect-a-bot.gif";
 import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-delete-a-bot.png";
+import SupportLink from '@site/src/components/SupportLink';
 
 # Как подключить бота в Телеграме
 
@@ -23,7 +24,7 @@ import deleteBot from "/img/other-channels/telegram/how-to-connect-a-bot/how-to-
 
 ### 2. Напишите в службу поддержки
 
-Напишите нам, что хотите перенести базу подписчиков телеграм-бота в Sendsay, к сообщению приложите файл с контактами.
+<SupportLink>Напишите в чат поддержки</SupportLink>, что хотите перенести базу подписчиков телеграм-бота в Sendsay, к сообщению приложите файл с контактами.
 
 ## Как подключить бота
 
