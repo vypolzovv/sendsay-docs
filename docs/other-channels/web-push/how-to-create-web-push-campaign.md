@@ -14,7 +14,7 @@ import SupportLink from '@site/src/components/SupportLink';
 
 [Как подключить веб-пуши на сайт](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push)
 
-Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите пункт «Web Push».
+Чтобы создать выпуск, зайдите в раздел **Рассылки → Выпуски**, нажмите «Создать выпуск» и выберите пункт **Web Push**.
 
 ![How to create a push campaign](/img/other-channels/web-push/how-to-create-web-push-campaign/how-to-create-a-push-campaign.gif) <br/>
 
