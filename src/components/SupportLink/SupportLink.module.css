@@ -1,11 +1,11 @@
 .supportLink {
+  background-color: transparent;
+  border: none;
   color: var(--ifm-link-color);
+  cursor: pointer;
   font-size: inherit;
   line-height: inherit;
-  cursor: pointer;
   padding: 0;
-  background-color: white;
-  border: none;
 }
 
 .supportLink:hover {
