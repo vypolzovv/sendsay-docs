@@ -80,6 +80,9 @@ sidebar_label: 'Как создать письмо'
 ![Preview mode](/img/email-campaigns/create-your-campaign/drag-and-drop-editor/preview-mode.gif) <br/>
 Помните, что все почтовые клиенты немного по-разному отображают письма. Если вы хотите точно знать, как подписчики увидят вашу рассылку, заведите ящики на основных доменах (Яндекс, Mail, Gmail, Outlook) и отправьте себе несколько тестовых копий. На бесплатных аккаунтах можно отправить только одну тестовую копию — на почту, на которую зарегистрирован аккаунт.
 
+:::tip Важно
+Отправить тестовую копию можно только контакту, который есть в базе со [статусом](https://docs.sendsay.ru/subscribers/contacts/contact-status) **Подтверждённый**.
+:::
 **Читайте также:**<br/>
 [Прехедер письма: что это, какие бывают и как их создать](https://docs.sendsay.ru/email-campaigns/create-your-campaign/preheader)<br/>
 [Футер в письме](https://docs.sendsay.ru/email-campaigns/settings/campaign-footer)
