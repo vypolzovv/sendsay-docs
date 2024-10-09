@@ -139,20 +139,21 @@ Sendsay — маркетинговая CDP для коммуникации с к
 ## Что дальше
 
 Автоматизировать работу с рассылками в Sendsay можно с помощью:<br/>
-— [сценариев](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation),<br/>
-— [автоматических рассылок по расписанию](https://docs.sendsay.ru/automations/automations-by-time/how-to-create-automation-by-time).
+– [сценариев](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation),<br/>
+– [автоматических рассылок по расписанию](https://docs.sendsay.ru/automations/automations-by-time/how-to-create-automation-by-time).
 
 Помимо email-писем, в Sendsay вы можете отправлять:<br/>
-— [смс](https://docs.sendsay.ru/other-channels/sms/how-to-connect-sms),<br/>
-— [пуши](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push),<br/>
-— [сообщения во ВКонтакте](https://docs.sendsay.ru/other-channels/vk/how-to-connect-vk-community),<br/>
-— [рассылки в Telegram через бота](https://docs.sendsay.ru/other-channels/telegram/how-to-connect-a-bot).
+– [смс](https://docs.sendsay.ru/other-channels/sms/how-to-connect-sms),<br/>
+– [мобильные пуш-уведомления](https://docs.sendsay.ru/other-channels/mobile-push),<br/>
+– [веб-пуши](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push),<br/>
+– [сообщения во ВКонтакте](https://docs.sendsay.ru/other-channels/vk/how-to-connect-vk-community),<br/>
+– [рассылки в Telegram через бота](https://docs.sendsay.ru/other-channels/telegram/how-to-connect-a-bot).
 
 Также есть готовые интеграции с другими системами:<br/>
-— [Tilda](https://docs.sendsay.ru/integrations/integration-with-tilda),<br/>
-— [Bitrix24](https://docs.sendsay.ru/integrations/autoimport-from-bitrix),<br/>
-— [amoCRM](https://docs.sendsay.ru/integrations/integration-with-amocrm),<br/>
-— [Email on Acid](https://docs.sendsay.ru/integrations/integration-with-email-on-acid).
+– [Tilda](https://docs.sendsay.ru/integrations/integration-with-tilda),<br/>
+– [Bitrix24](https://docs.sendsay.ru/integrations/autoimport-from-bitrix),<br/>
+– [amoCRM](https://docs.sendsay.ru/integrations/integration-with-amocrm),<br/>
+– [Email on Acid](https://docs.sendsay.ru/integrations/integration-with-email-on-acid).
 
 Рассылки необязательно создавать в интерфейсе Sendsay — с помощью Sendsay API можно настроить интеграцию с любой системой.
 
