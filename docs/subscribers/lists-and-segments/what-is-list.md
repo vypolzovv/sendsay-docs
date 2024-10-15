@@ -45,6 +45,18 @@ sidebar_position: 1
 
 ![How to add contacts from another list](/img/subscribers/lists-and-segments\what-is-list/how-to-add-contacts-from-another-list.png) <br/>
 
+### В разделе Просмотр подписчиков
+
+В разделе [**Подписчики → Просмотр подписчиков**](https://app.sendsay.ru/subscribers/contacts) поставьте галочки рядом с контактами, которые хотите добавить в список. Нажмите «Добавить в список» в левом верхнем углу таблицы.
+
+![How to add contacts in table](/img/subscribers/lists-and-segments\what-is-list/how-to-add-contacts-in-table.png)
+
+Если к таблице применён фильтр, вы можете добавить в список отфильтрованные контакты через меню экспорта:
+
+![How to add contacts in filter](/img/subscribers/lists-and-segments\what-is-list/how-to-add-contacts-in-filter.png)
+
+[Как настроить отображение данных при просмотре подписчиков](https://docs.sendsay.ru/subscribers/contacts/how-to-display-data/)
+
 ### В карточке подписчика
 
 В [карточке подписчика](https://docs.sendsay.ru/subscribers/subscriber-data/subscriber-profile/) перейдите во вкладку **Списки** и нажмите «Добавить в список». Затем выберите нужный контакт и список, в который хотите его включить.
