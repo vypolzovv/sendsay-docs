@@ -16,7 +16,7 @@ sidebar_position: 2
 - удалить подписчиков сегмента из базы,
 - удалить сегмент.
 
-  ![What is segment](/img/subscribers/lists-and-segments/what-is-segment/what-is-segment.png) <br/>
+![What is segment](/img/subscribers/lists-and-segments/what-is-segment/what-is-segment.png) <br/>
 
 ## Как создать сегмент
 
@@ -36,7 +36,7 @@ sidebar_position: 2
 
 ![How to create a segment in subscribers view](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-segment-in-subscribers-view.png)
 
-[Как настроить отображение данных при просмотре подписчиков](https://docs.sendsay.ru/subscribers/contacts/how-to-display-data/)
+[Как настроить фильтр](https://docs.sendsay.ru/subscribers/contacts/how-to-display-data#как-настроить-фильтр)
 
 ## Как настроить сегмент
 
