@@ -32,7 +32,7 @@ sidebar_position: 2
 
    ![How to create a segment](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-segment.gif) <br/>
 
-Вы также можете создать сегмент в разделе [**Подписчики → Просмотр подписчиков**](https://app.sendsay.ru/subscribers/contacts). Настройте фильтр и в меню экспорта создайте сегмент — в него попадут отфильтрованные контакты.
+Вы также можете создать сегмент в разделе [**Подписчики → Просмотр подписчиков**](https://app.sendsay.ru/subscribers/contacts). Настройте фильтр и в меню «Действия» создайте сегмент — в него попадут отфильтрованные контакты.
 
 ![How to create a segment in subscribers view](/img/subscribers/lists-and-segments\what-is-segment/how-to-create-a-segment-in-subscribers-view.png)
 

@@ -19,6 +19,8 @@ sidebar_label: 'Как настроить отображение'
 
 [Какие бывают статусы у контактов](https://docs.sendsay.ru/subscribers/contacts/contact-status/)
 
+## Как настроить колонки таблицы
+
 Количество и содержание колонок в таблице можно редактировать, чтобы выводить ту информацию, которая вам нужна. Для перехода к настройкам таблицы нажмите «Колонки и данные»:
 
 ![How to set up a table](/img/subscribers/contacts\how-to-display-data/how-to-set-up-a-table.gif)
@@ -69,7 +71,7 @@ sidebar_label: 'Как настроить отображение'
 
 4. Нажмите «Применить» — в таблице отобразятся подписчики, подходящие под заданные условия.
 
-Подписчиков, которые попали под условия фильтра, можно добавить в [список](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-list/) или создать из них [сегмент](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment/) контактов. Чтобы сделать это, откройте меню экспорта и выберите соответствующее действие:
+Подписчиков, которые попали под условия фильтра, можно добавить в [список](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-list/) или создать из них [сегмент](https://docs.sendsay.ru/subscribers/lists-and-segments/what-is-segment/) контактов. Чтобы сделать это, откройте меню «Действия» и выберите соответствующее действие:
 
 ![How to make a list](/img/subscribers/contacts\how-to-display-data/how-to-make-a-list.gif)
 
