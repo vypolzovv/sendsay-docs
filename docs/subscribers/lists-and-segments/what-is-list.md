@@ -51,7 +51,7 @@ sidebar_position: 1
 
 ![How to add contacts in table](/img/subscribers/lists-and-segments\what-is-list/how-to-add-contacts-in-table.png)
 
-Если к таблице применён фильтр, вы можете добавить в список отфильтрованные контакты через меню экспорта:
+Если к таблице применён фильтр, вы можете добавить в список отфильтрованные контакты через меню «Действия»:
 
 ![How to add contacts in filter](/img/subscribers/lists-and-segments\what-is-list/how-to-add-contacts-in-filter.png)
 
