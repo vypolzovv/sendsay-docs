@@ -328,16 +328,25 @@
     "from": "/ru/articles/5989326-как-автоматически-поздравлять-подписчиков-с-днём-рождения"
   },
   {
-    "to": "/automations/automations-by-behaviour/abandoned-cart",
-    "from": "/ru/articles/5989352-как-настроить-автоматизацию-брошенная-корзина"
+    "to": "/automations/triggers/abandoned-cart",
+    "from": [
+      "/ru/articles/5989352-как-настроить-автоматизацию-брошенная-корзина",
+      "/automations/automations-by-behaviour/abandoned-cart"
+    ]
   },
   {
-    "to": "/automations/automations-by-behaviour/browse-abandonment",
-    "from": "/ru/articles/5989278-как-настроить-автоматизацию-брошенный-просмотр"
+    "to": "/automations/triggers/browse-abandonment",
+    "from": [
+      "/ru/articles/5989278-как-настроить-автоматизацию-брошенный-просмотр",
+      "/automations/automations-by-behaviour/browse-abandonment"
+    ]
   },
   {
-    "to": "/automations/automations-by-behaviour/product-recommendations",
-    "from": "/ru/articles/6139206-как-настроить-товарные-рекомендации-в-письме"
+    "to": "/ecom/product-recommendations",
+    "from": [
+      "/ru/articles/6139206-как-настроить-товарные-рекомендации-в-письме",
+      "/automations/automations-by-behaviour/product-recommendations"
+    ]
   },
   {
     "to": "/integrations/smtp-gate",
