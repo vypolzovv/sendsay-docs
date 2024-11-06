@@ -51,6 +51,7 @@ import getOutOfWorkflow from '/img/automations/automation-with-workflows/workflo
 import getOutAnotherWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/get-out-of-another-workflow.png';
 import parallelWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/parallel-workflow.png';
 import restartWorkflow from '/img/automations/automation-with-workflows/workflow-blocks/restart-the-workflow.png';
+import mobilePush from '/img/automations/automation-with-workflows/workflow-blocks/mobile-push.png';
 import createSeveralBranches from '@site/static/video/automations/automation-with-workflows/workflow-blocks/createSeveralBranches.mp4';
 import Video from '@site/src/components/Video';
 import SupportLink from '@site/src/components/SupportLink';
@@ -341,7 +342,8 @@ import SupportLink from '@site/src/components/SupportLink';
 - Исключить из&nbsp;списка,
 - Вызвать Webhook,
 - Отправить SMS,
-- Отправить Web Push уведомление.
+- Отправить Web Push уведомление,
+- Отправить Mobile Push уведомление.
 
 **Если в&nbsp;сценарии нужно выполнить несколько действий подряд**, их&nbsp;можно добавить в&nbsp;одном блоке с&nbsp;помощью кнопки &laquo;Добавить&raquo;,&nbsp;&mdash; тогда каждое Действие сработает по&nbsp;очереди. Например, можно сначала исключить подписчиков из&nbsp;одного списка, а&nbsp;затем добавить в&nbsp;другой:
 
@@ -448,6 +450,16 @@ import SupportLink from '@site/src/components/SupportLink';
 Отправить веб-пуш участникам сценария можно, если у&nbsp;вас подключена и&nbsp;настроена такая опция.
 
 [Как подключить веб-пуши на&nbsp;сайт](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push)
+
+**Отправить Mobile Push уведомление** — система отправит мобильный пуш на экраны смартфонов пользователей.
+
+<p align="center">
+  <img width="50%" src={mobilePush} alt="Mobile Push" />
+</p>
+
+Отправлять мобильные пуши в сценариях можно при условии, что у вас подключено мобильное приложение, а токены пользователей импортированы в базу контактов.
+
+[Mobile Push уведомления: что это и как подключить приложение](https://docs.sendsay.ru/other-channels/mobile-push/how-to-connect-mobile-push)
 
 ### Мультиканальные сценарии
 

@@ -17,50 +17,50 @@ sidebar_label: 'Инструкция для разработчиков'
 
 ### Список клиентских ssec-событий
 
-| ID  | Константа события       | Событие                                       | Область в stat.uni    |
-| :-- | :---------------------- | :-------------------------------------------- | :-------------------- |
-| 0   | VIEW_PRODUCT            | Просмотр карточки товара                      | ssec_product_view     |
-| 1   | ORDER                   | Заказ                                         | ssec_order            |
-| 2   | VIEW_CATEGORY           | Просмотр категории товара                     | ssec_category_view    |
-| 3   | BASKET_ADD              | Добавление товаров в корзину                  | ssec_basket           |
-| 4   | BASKET_CLEAR            | Очистка корзины                               | ssec_basket_clear     |
-| 5   | SEARCH_PRODUCT          | Поиск товара                                  | ssec_product_search   |
-| 6   | SUBSCRIBE_PRODUCT_PRICE | Подписка на изменение стоимости товара        | ssec_product_price    |
-| 7   | SUBSCRIBE_PRODUCT_ISA   | Подписка на пинг о появлении товара в продаже | ssec_product_isa      |
-| 8   | FAVORITE                | Добавление товара в избранное                 | ssec_product_favorite |
-| 12  | PREORDER                | Предварительный заказ                         | ssec_product_preorder |
-| 13  | PRODUCT_ISA             | Товар появился                                |                       |
-| 15  | PRODUCT_PRICE_CHANGED   | Стоимость товара изменилась                   |                       |
-| 28  | REGISTRATION            | Регистрация на сайте                          |                       |
-| 29  | AUTHORIZATION           | Авторизация на сайте                          |                       |
+| ID  | Константа события       | Событие                                       | Область в stat.uni         |
+| :-- | :---------------------- | :-------------------------------------------- | :------------------------- |
+| 0   | VIEW_PRODUCT            | Просмотр карточки товара                      | ssec_product_view          |
+| 1   | ORDER                   | Заказ                                         | ssec_order                 |
+| 2   | VIEW_CATEGORY           | Просмотр категории товара                     | ssec_category_view         |
+| 3   | BASKET_ADD              | Добавление товаров в корзину                  | ssec_basket                |
+| 4   | BASKET_CLEAR            | Очистка корзины                               | ssec_basket_clear          |
+| 5   | SEARCH_PRODUCT          | Поиск товара                                  | ssec_product_search        |
+| 6   | SUBSCRIBE_PRODUCT_PRICE | Подписка на изменение стоимости товара        | ssec_product_price         |
+| 7   | SUBSCRIBE_PRODUCT_ISA   | Подписка на пинг о появлении товара в продаже | ssec_product_isa           |
+| 8   | FAVORITE                | Добавление товара в избранное                 | ssec_product_favorite      |
+| 12  | PREORDER                | Предварительный заказ                         | ssec_product_preorder      |
+| 13  | PRODUCT_ISA             | Товар появился                                | ssec_product_isa           |
+| 15  | PRODUCT_PRICE_CHANGED   | Стоимость товара изменилась                   | ssec_product_price_changed |
+| 28  | REGISTRATION            | Регистрация на сайте                          | ssec_registration          |
+| 29  | AUTHORIZATION           | Авторизация на сайте                          | ssec_authorization         |
 
 ### Набор доступных полей
 
-| Имя поля при внесении (JS & API) | Имя поля в stat.uni    | Тип значения                          | Доступность    | Аналог в YML |
-| :------------------------------- | :--------------------- | :------------------------------------ | :------------- | :----------- |
-| id                               | product.id             | String                                |                |              |
-| name                             | product.name           | String                                |                |              |
-| picture                          | product.picture        | Array(String)<br/>(абсолютная ссылка) |                |              |
-| url                              | product.url            | String<br/>(абсолютная ссылка)        |                |              |
-| available                        | product.available      | UInt8                                 |                |              |
-| category_paths                   | product.category_paths | Array(String)                         |                |              |
-| category_id                      | product.category_id    | Int64                                 |                |              |
-| description                      | product.description    | String                                |                |              |
-| vendor                           | product.vendor         | String                                |                |              |
-| model                            | product.model          | String                                |                |              |
-| type                             | product.type           | String                                |                |              |
-| price                            | product.price          | Nullable(Decimal64(2))                |                |              |
-| old_price                        | product.old_price      | Nullable(Decimal64(2))                |                |              |
-| category                         | category               | String                                |                |              |
-| transaction_id                   | transaction.id         | String                                | Заказ, корзина |              |
-| delivery_dt                      | delivery.dt            | DateTime                              | Заказ          |              |
-| delivery_price                   | delivery.price         | Nullable(Decimal64(2))                | Заказ          |              |
-| payment_dt                       | payment.dt             | DateTime                              | Заказ          |              |
-| transaction_dt                   | transaction.dt         | DateTime                              | Заказ, корзина |              |
-| transaction_status               | transaction.status     | Int64 DEFAULT 0                       | Заказ, корзина |              |
-| transaction_discount             | transaction.discount   | Nullable(Decimal64(2))                | Заказ, корзина |              |
-| transaction_sum                  | transaction.sum        | Nullable(Decimal64(2))                | Заказ, корзина |              |
-| cp1…cp20                         | cp1…cp20               | String                                |                |              |
+| Имя поля при внесении (JS & API) | Имя поля в stat.uni    | Тип значения                          | Доступность                        | Аналог в YML |
+| :------------------------------- | :--------------------- | :------------------------------------ | :--------------------------------- | :----------- |
+| id                               | product.id             | String                                |                                    |              |
+| name                             | product.name           | String                                |                                    |              |
+| picture                          | product.picture        | Array(String)<br/>(абсолютная ссылка) |                                    |              |
+| url                              | product.url            | String<br/>(абсолютная ссылка)        |                                    |              |
+| available                        | product.available      | UInt8                                 |                                    |              |
+| category_paths                   | product.category_paths | Array(String)                         |                                    |              |
+| category_id                      | product.category_id    | Int64                                 |                                    |              |
+| category                         | category               | String                                |                                    |              |
+| description                      | product.description    | String                                |                                    |              |
+| vendor                           | product.vendor         | String                                |                                    |              |
+| model                            | product.model          | String                                |                                    |              |
+| type                             | product.type           | String                                |                                    |              |
+| price                            | product.price          | Decimal64(2)                          |                                    |              |
+| old_price                        | product.old_price      | Decimal64(2)                          |                                    |              |
+| transaction_id                   | transaction.id         | String                                | Заказ, корзина                     |              |
+| transaction_dt                   | transaction.dt         | DateTime                              | Заказ, корзина                     |              |
+| transaction_status               | transaction.status     | Int64 (1-12)                          | Заказ, корзина                     |              |
+| transaction_discount             | transaction.discount   | Decimal64(2)                          | Заказ, корзина                     |              |
+| transaction_sum                  | transaction.sum        | Decimal64(2)                          | Заказ, корзина                     |              |
+| delivery_dt                      | delivery.dt            | DateTime                              | Заказ                              |              |
+| delivery_price                   | delivery.price         | Decimal64(2)                          | Заказ                              |              |
+| payment_dt                       | payment.dt             | DateTime                              | Заказ                              |              |
+| cp1…cp20                         | cp1…cp20               | String                                | Поля для дополнительных параметров |              |
 
 #### Статусы заказа
 
@@ -84,7 +84,7 @@ sidebar_label: 'Инструкция для разработчиков'
 Ssec-события всегда передаются в Sendsay как массив объектов. Если вам надо передать одно событие, то это будет массив с одним объектом.
 
 <!-- prettier-ignore -->
-```json
+```js
 [
   {
     "id": "product1",  //обязательно
@@ -97,8 +97,7 @@ Ssec-события всегда передаются в Sendsay как масс
     "price":  7.88,
     "url": "url",
     "vendor": "vendor",
-    "event_type": 1,
-    "event_site": 1
+    "event_type": 1
     ...
   }
 ]
@@ -107,7 +106,7 @@ Ssec-события всегда передаются в Sendsay как масс
 Так как в заказе или корзине может быть более одного товара, то структура передачи к нам таких событий отличается от стандартной. Это все так же массив объектов, но все сведения о товарах содержатся в массиве `items`:
 
 <!-- prettier-ignore -->
-```json
+```js
 [
   {
     "transaction_id": "x1", //обязательно
@@ -131,7 +130,7 @@ Ssec-события всегда передаются в Sendsay как масс
 
 Если вам нужно передавать в корзину (заказ) разные товары с одним и тем же product.id (например, что-то с разным размером или объемом), то вам нужно передать дополнительный параметр для создания нового первичного ключа, отличного от product.id.
 
-В принимаемых данных о товаре мы ожидаем поле `uniq`, в значении которого должно передаваться имя поля с дополнением для нового первичного ключа.
+В принимаемых данных о товаре мы ожидаем поле `uniq`, в значении которого должно передаваться имя поля с дополнением для нового первичного ключа. Например, если у товара различается название, но id одинаковый, дополнительно можно передать `"uniq": "name"`. Если у товара есть несколько размеров, но id одинаковый, то передавайте размер в дополнительном параметре cp1 и указывайте `"uniq": "cp1"`.
 
 Поле `uniq`- необязательно, при его отсутствии в качестве первичного ключа используется значение product.id.
 
@@ -180,7 +179,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 
 Все события могут быть переданы в Sendsay с вашего сайта через вызов соответствующей JS-функции.
 
-Идентификатор пользователя, которому должно добавиться событие вы можете передать самостоятельно в опциональном параметре, либо довериться нашему скрипту.
+Идентификатор пользователя, которому должно добавиться событие, вы можете передать самостоятельно в опциональном параметре, либо довериться нашему скрипту.
 
 В случае если пользователя определяет наш скрипт, то вместе с идентификатором (email, web-push, umid) придет информация о выпуске, из которого пользователь перешел на сайт.
 
@@ -244,7 +243,7 @@ https://ssec.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID
 
 ACCOUNT_ID надо заменить идентификатор (логин) вашего аккаунта Sendsay (не email).
 
-Пример API-запроса:
+Пример API-запроса для события изменения заказа:
 
 ```bash
 curl --location --request POST 'https://ssec.sendsay.ru/general/ssec/v100/json/ACCOUNT_ID' \
@@ -254,23 +253,33 @@ curl --location --request POST 'https://ssec.sendsay.ru/general/ssec/v100/json/A
         {
           "email": "АДРЕС_ПОДПИСЧИКА",
           "addr_type": "email",
-          "transaction_id": "x1",
-          "transaction_dt": "2022-07-25 23:25:13",
-          "transaction_sum": 11.98,
-          "transaction_discount": 1.59,
-          "transaction_status": 1,
+          "transaction_id": "x1", //обязательно, формат String
+          "transaction_status": 1, //обязательно, формат UInt8
+          "transaction_dt": "2022-07-25 23:25:13", //обязательно, формат даты YYYY-MM-DD hh:mm:ss
+          "transaction_sum": 100.9, //обязательно, формат Decimal64(2)
+          "payment_dt": "2022-07-25 23:25:13", //необязательно
+          "delivery_dt": "2022-07-25 23:25:13", //необязательно
+          "update": 1 | 0, //необязательно, формат UInt8
           "items": [
             {
-              "id": 50,
-              "name": "Artefact 1.9",
-              "price": 5.99,
-              "qnt": 2
+              "id": "product1", //обязательно, формат String
+              "name": "name", //рекомендуется, формат String
+              "price": 7.88, //рекомендуется, формат Decimal64(2)
+              "qnt": 2, //формат UInt8
+              "model": "model", //формат String
+              "vendor": "vendor", //формат String
+              "category_id": 777, //рекомендуется для товарных подборок и сегментации, формат Int64
+              "category": "category name", //рекомендуется для сегментации, формат String
             },
             {
-              "id": 52,
-              "name": "Renegat 12.1",
-              "price": 7.65,
-              "qnt": 2
+              "id": "product2", //обязательно, формат String
+              "name": "name", //рекомендуется, формат String
+              "price": 7.88, //рекомендуется, формат Decimal64(2)
+              "qnt": 1, //формат UInt8
+              "model": "model", //формат String
+              "vendor": "vendor", //формат String
+              "category_id": 777, //рекомендуется для товарных подборок и сегментации, формат Int64
+              "category": "category name", //рекомендуется для сегментации, формат String
             }
           ],
           "event_type": 1,
@@ -295,18 +304,17 @@ curl --location --request GET 'https://ssec.sendsay.ru/general/ssec/v100/json/AC
 --header 'Content-Type: application/json' \
 --header 'Authorization: sendsay apikey=API_KEY' \
 --data-raw '[{
-  "id": 1111,
-  "description": "description",
-  "available": 1,
-  "model": "model",
-  "name": "name",
-  "old_price": 5.99,
-  "picture": ["https://domain.com/image.jpg"],
-  "price":  7.88,
-  "url": "url",
-  "vendor": "vendor",
-  "event_type": 13,
-  "event_site": 1
+      "id": "product1", //обязательно, формат String
+      "name": "name", //рекомендуется, формат String
+      "price": 7.88, //обязательно, формат Decimal64(2)
+      "old_price": 5.99,//обязательно для события PRODUCT_PRICE_CHANGED, формат Decimal64(2)
+      "description": "description", //формат String
+      "picture": [], //абсолютные ссылки в массиве
+      "url": "url", //формат String, абсолютная ссылка
+      "model": "model", //формат String
+      "vendor": "vendor", //формат String
+      "category_id": 777, //формат Int64
+      "category": "category name", //формат String
 }]'
 ```
 
@@ -429,39 +437,20 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   sndsyApi.ssecEvent('VIEW_PRODUCT', [
     {
-      "id": "product1", //обязательно
-      "description": "description",
-      "available": 1 | 0,
-      "model": "model",
-      "name": "name",
-      "old_price": 5.99,
-      "picture": [], //абсолютные ссылки в массиве
-      "price": 7.88,
-      "url": "url", //абсолютная ссылка
-      "vendor": "vendor",
-      "category_id": 777,
-      "category_paths": []
-    }
-  ]);
-  //или с доп. параметрами
-  sndsyApi.ssecEvent(
-    'VIEW_PRODUCT',
-    [
-      {
-        "id": "product1", //обязательно
-        "description": "description",
-        "available": 1 | 0,
-        "model": "model",
-        "name": "name",
-        "old_price": 5.99,
+        "id": "product1", //обязательно, формат String
+        "available": 1 | 0, //формат UInt8
+        "name": "name", //рекомендуется, формат String
+        "price": 7.88, //рекомендуется, формат Decimal64(2)
+        "old_price": 5.99,//формат Decimal64(2)
+        "description": "description", //формат String
         "picture": [], //абсолютные ссылки в массиве
-        "price": 7.88,
-        "url": "url", //абсолютная ссылка
-        "vendor": "vendor",
-        "category_id": 777,
-        "category_paths": []
-      }
-    ],
+        "url": "url", //формат String, абсолютная ссылка
+        "model": "model", //формат String
+        "vendor": "vendor", //формат String
+        "category_id": 777, //рекомендуется для товарных подборок и сегментации, формат Int64
+        "category": "category name", //рекомендуется для сегментации, формат String
+    }
+  ],
     { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
   );
 });
@@ -481,8 +470,8 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
     'VIEW_CATEGORY',
     [
       {
-        "category": "", //Cтрока - путь до товарных категорий для события просмотр категории
-        "category_id": INT, //Число идентификатор из YML
+        "category": "", //Cтрока - наименование категории, формат String
+        "category_id": INT, //формат Int64, идентификатор из YML
       }
     ],
     { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
@@ -527,24 +516,24 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
     'BASKET_ADD',
     [
       {
-        "transaction_id": "x1", //необязательно
-        "transaction_dt": "2022-07-25 23:25:13", //необязательно
-        "transaction_sum": 100.9, //желательно
-        "update_per_item": 1|0 //необязательно (по умолчанию 0)
+        "transaction_id": "x1", //необязательно, формат String
+        "transaction_dt": "2022-07-25 23:25:13", //необязательно, формат даты YYYY-MM-DD hh:mm:ss
+        "transaction_sum": 100.9, //рекомендуется
+        "update_per_item": 1|0, //необязательно (по умолчанию 0)
         "items": [ //обязательно
           {
-            "id": "product1", //обязательно
-            "qnt": 2, //обязательно
-            "price": 5.88, //обязательно
-            "description": "description",
-            "model": "model",
-            "name": "name",
-            "old_price": 5.99,
+            "id": "product1", //обязательно, формат String
+            "available": 1 | 0, //формат UInt8
+            "name": "name", //рекомендуется, формат String
+            "price": 7.88, //рекомендуется, формат Decimal64(2)
+            "old_price": 5.99,//формат Decimal64(2)
+            "description": "description", //формат String
             "picture": [], //абсолютные ссылки в массиве
-            "url": "url", //абсолютная ссылка
-            "vendor": "vendor",
-            "category_id": 777,
-            "category_paths": []
+            "url": "url", //формат String, абсолютная ссылка
+            "model": "model", //формат String
+            "vendor": "vendor", //формат String
+            "category_id": 777, //рекомендуется для товарных подборок и сегментации, формат Int64
+            "category": "category name", //рекомендуется для сегментации, формат String
             //вы можете использовать любые доступные поля описания товара
           }
         ]
@@ -598,27 +587,27 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
     'ORDER',
     [
       {
-        "transaction_id": "x1", //обязательно
-        "transaction_status": 1, //обязательно
-        "transaction_dt": "2022-07-25 23:25:13", //обязательно YYYY-MM-DD hh:mm:ss
-        "transaction_sum": 100.9, //обязательно
+        "transaction_id": "x1", //обязательно, формат String
+        "transaction_status": 1, //обязательно, формат UInt8
+        "transaction_dt": "2022-07-25 23:25:13", //обязательно, формат даты YYYY-MM-DD hh:mm:ss
+        "transaction_sum": 100.9, //обязательно, формат Decimal64(2)
         "payment_dt": "2022-07-25 23:25:13", //необязательно
         "delivery_dt": "2022-07-25 23:25:13", //необязательно
-        "update": 1 | 0, //необязательно
+        "update": 1 | 0, //необязательно, формат UInt8
         "items": [  //обязательно при update != 1
           {
-            "id": "product1", //обязательно
-            "qnt": 2, //обязательно
-            "price": 5.88, //обязательно
-            "description": "description",
-            "model": "model",
-            "name": "name",
-            "old_price": 5.99,
+            "id": "product1", //обязательно, формат String
+            "available": 1 | 0, //формат UInt8
+            "name": "name", //рекомендуется, формат String
+            "price": 7.88, //рекомендуется, формат Decimal64(2)
+            "old_price": 5.99,//формат Decimal64(2)
+            "description": "description", //формат String
             "picture": [], //абсолютные ссылки в массиве
-            "url": "url", //абсолютная ссылка
-            "vendor": "vendor",
-            "category_id": 777,
-            "category_paths": []
+            "url": "url", //формат String, абсолютная ссылка
+            "model": "model", //формат String
+            "vendor": "vendor", //формат String
+            "category_id": 777, //рекомендуется для товарных подборок и сегментации, формат Int64
+            "category": "category name", //рекомендуется для сегментации, формат String
             //вы можете использовать любые доступные поля описания товара
           }
         ]
@@ -645,7 +634,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
     'SEARCH_PRODUCT',
     [
       {
-        "description": "поисковая строка",
+        "description": "поисковая строка", //формат String
       }
     ],
     { email: 'АДРЕС КЛИЕНТА' } //необязательно, при отсутствии email будет распознаваться нашим скриптом
@@ -661,16 +650,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   var productData = [
       {
-        "description": "description",
-        "id": "product1", //обязательно
-        "available": 1 | 0,
-        "model": "model",
-        "name": "name",
-        "old_price": 5.99,
+        "id": "product1", //обязательно, формат String
+        "available": 1 | 0, //формат UInt8
+        "name": "name", //рекомендуется, формат String
+        "price": 7.88, //рекомендуется, формат Decimal64(2)
         "picture": [], //абсолютные ссылки в массиве
-        "price": 7.88,
-        "url": "url", //абсолютная ссылка
-        "vendor": "vendor"
+        "url": "url", //формат String, абсолютная ссылка
+        "model": "model", //формат String
+        "vendor": "vendor", //формат String
+        "category_id": 777, //формат Int64
+        "category": "category name", //формат String
       }
     ],
     extraData = {
@@ -717,16 +706,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   var productData = [
       {
-        "description": "description",
-        "id": "product1", //обязательно
-        "available": 1 | 0,
-        "model": "model",
-        "name": "name",
-        "old_price": 5.99,
-        "picture": [], //абсолютные ссылки в массиве
-        "price": 7.88,
-        "url": "url", //абсолютная ссылка
-        "vendor": "vendor"
+            "id": "product1", //обязательно, формат String
+            "available": 1 | 0, //формат UInt8
+            "name": "name", //рекомендуется, формат String
+            "price": 7.88, //рекомендуется, формат Decimal64(2)
+            "picture": [], //абсолютные ссылки в массиве
+            "url": "url", //формат String, абсолютная ссылка
+            "model": "model", //формат String
+            "vendor": "vendor", //формат String
+            "category_id": 777, //формат Int64
+            "category": "category name", //формат String
       }
     ],
     extraData = {
@@ -773,16 +762,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   var productData = [
       {
-        "description": "description",
-        "id": "product1", //обязательно
-        "available": 1 | 0,
-        "model": "model",
-        "name": "name",
-        "old_price": 5.99,
+        "id": "product1", //обязательно, формат String
+        "available": 1 | 0, //формат UInt8
+        "name": "name", //рекомендуется, формат String
+        "price": 7.88, //рекомендуется, формат Decimal64(2)
         "picture": [], //абсолютные ссылки в массиве
-        "price": 7.88,
-        "url": "url", //абсолютная ссылка
-        "vendor": "vendor"
+        "url": "url", //формат String, абсолютная ссылка
+        "model": "model", //формат String
+        "vendor": "vendor", //формат String
+        "category_id": 777, //формат Int64
+        "category": "category name", //формат String
       }
     ],
     extraData = {
@@ -829,16 +818,16 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
 (window['sndsyApiOnReady'] = window['sndsyApiOnReady'] || []).push(function () {
   var productData = [
       {
-        "description": "description",
-        "id": "product1", //обязательно
-        "available": 1 | 0,
-        "model": "model",
-        "name": "name",
-        "old_price": 5.99,
+        "id": "product1", //обязательно, формат String
+        "available": 1 | 0, //формат UInt8
+        "name": "name", //рекомендуется, формат String
+        "price": 7.88, //рекомендуется, формат Decimal64(2)
         "picture": [], //абсолютные ссылки в массиве
-        "price": 7.88,
-        "url": "url", //абсолютная ссылка
-        "vendor": "vendor"
+        "url": "url", //формат String, абсолютная ссылка
+        "model": "model", //формат String
+        "vendor": "vendor", //формат String
+        "category_id": 777, //формат Int64
+        "category": "category name", //формат String
       }
     ],
     extraData = {
