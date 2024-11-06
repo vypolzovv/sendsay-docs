@@ -9,7 +9,7 @@ sidebar_label: 'Статусы контактов'
 
 ![Status in subscriber profile](/img/subscribers/contacts\contact-status/status-in-subscriber-profile.png) <br/>
 
-Также в разделе **Подписчики → Просмотр подписчиков** контакты можно выводить по статусу — для этого нажмите на выпадающее меню над списком подписчиков и выберите нужный статус.
+Также в разделе [**Подписчики → Просмотр подписчиков**](https://app.sendsay.ru/subscribers/contacts) контакты можно выводить по статусу — для этого нажмите на выпадающее меню над списком подписчиков и выберите нужный статус.
 
 ![Status in View subscribers](/img/subscribers/contacts\contact-status/status-in-view-subscribers.png) <br/>
 
