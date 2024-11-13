@@ -74,3 +74,11 @@ import formTypes from "/img/forms/signup-forms/form-types.png";
 
 </TabItem>
 </Tabs>
+
+:::tip Важно
+
+Чтобы форма корректно работала и отображалась, перейдите в настройки сайта, найдите заголовок **Content-Security-Policy** и проверьте, что в директиву **connect-src** добавлены значения:
+
+- `https://image.sendsay.ru`
+- `https://sendsay.ru`
+  :::
