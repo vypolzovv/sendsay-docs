@@ -525,9 +525,9 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "id": "product1", //обязательно, формат String
             "available": 1 | 0, //формат UInt8
             "name": "name", //рекомендуется, формат String
+            "qnt": 1, //обязательно, формат Int64
             "price": 7.88, //рекомендуется, формат Decimal64(2)
             "old_price": 5.99,//формат Decimal64(2)
-            "description": "description", //формат String
             "picture": [], //абсолютные ссылки в массиве
             "url": "url", //формат String, абсолютная ссылка
             "model": "model", //формат String
@@ -601,6 +601,7 @@ typeof sndsyApi != 'undefined' && sndsyApi.runQueue();
             "name": "name", //рекомендуется, формат String
             "price": 7.88, //рекомендуется, формат Decimal64(2)
             "old_price": 5.99,//формат Decimal64(2)
+            "qnt": 1, //обязательно, формат Int64
             "description": "description", //формат String
             "picture": [], //абсолютные ссылки в массиве
             "url": "url", //формат String, абсолютная ссылка
