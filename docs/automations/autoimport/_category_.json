@@ -1,5 +1,5 @@
 {
-  "label": "Импорт по расписанию",
+  "label": "Регулярный импорт и экспорт",
   "position": 2,
   "link": {
     "type": "generated-index",
