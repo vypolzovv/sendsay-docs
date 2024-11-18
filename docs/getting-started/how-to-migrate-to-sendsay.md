@@ -31,7 +31,7 @@ import SupportLink from '@site/src/components/SupportLink';
 - настроить email-аутентификацию;
 - при необходимости отключить API-интеграцию со&nbsp;старым сервисом рассылок и&nbsp;настроить интеграцию с&nbsp;Sendsay.
 
-Теперь пошагово, как всё это сделать:
+В этой статье пошагово рассказываем, как перенести в Sendsay данные и шаблоны из популярных сервисов рассылок — SendPulse, Unisender, Mailchimp, GetResponse и DashaMail:
 
 ## Перенос и&nbsp;настройка базы
 
