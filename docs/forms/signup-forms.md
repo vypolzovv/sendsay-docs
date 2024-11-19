@@ -83,7 +83,7 @@ import formTypes from "/img/forms/signup-forms/form-types.png";
 :::
 </ol>
 
-У сайтов Tilda есть собственный конструктор для создания форм. Чтобы получать и использовать данные из таких форм, их можно связать с Sendsay.
+У сайтов на Tilda есть собственный конструктор для создания форм. Чтобы получать и использовать данные из таких форм, их нужно связать с Sendsay.
 
 [Как связать форму Sendsay с формой Tilda](https://docs.sendsay.ru/integrations/integration-with-tilda#как-связать-форму-sendsay-с-формой-tilda)
 
