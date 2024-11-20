@@ -9,6 +9,8 @@ import TabItem from '@theme/TabItem';
 
 # Интеграция с Tilda
 
+У сайтов на Tilda есть собственный конструктор для создания форм сбора подписчиков. Данные из таких форм можно автоматически импортировать в Sendsay, сохранять в анкетах и использовать в работе с рассылками.
+
 ## Как настроить автоматический импорт данных
 
 В Sendsay можно настроить автоматический импорт данных, которые посетители сайтов на Tilda оставляют в формах. Это можно сделать в пять шагов:
@@ -81,9 +83,9 @@ import TabItem from '@theme/TabItem';
 
 Одну или несколько форм Tilda можно связать с формой Sendsay. Это полезно, если вы хотите:
 
-- использовать заполнение формы как событие в сценариях или триггерах,
-- собирать данные из нескольких форм в одну анкету,
-- подтверждать подписчиков и их данные,
+- использовать заполнение формы как событие в [сценариях](https://docs.sendsay.ru/automations/automation-with-workflows/workflow-creation) или триггерах,
+- собирать данные из нескольких форм в одну [анкету](https://docs.sendsay.ru/subscribers/subscriber-data/data-groups),
+- подтверждать подписчиков и их данные, отправляя письма подтверждения,
 - отслеживать статистику заполнения форм.
 
 Связать формы можно за 4 шага:
@@ -100,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 ### 2. Создайте и активируйте форму в Sendsay
 
-В Sendsay создайте новую форму и назовите её в формате: `tilda_<название формы Tilda>`.
+В Sendsay создайте новую форму и назовите её в формате: `tilda_<название формы Tilda>`.
 
 ![How to create sendsay form](/img/integrations/integration-with-tilda/how-to-create-sendsay-form.gif)
 
@@ -121,7 +123,17 @@ import TabItem from '@theme/TabItem';
 Есть два способа узнать id полей формы:
 
 <Tabs>
-<TabItem value="key1" label="Через API-консоль" default>
+<TabItem value="key1" label="Через интерфейс" default>
+
+1. Перейдите в раздел [**Подписчики → Анкеты**](https://app.sendsay.ru/subscribers/schemas).
+2. Откройте анкету, поля из которой вы добавляли в форму.
+   ![How to open questionnaire](/img/integrations/integration-with-tilda/how-to-open-questionnaire.gif)
+
+3. Напротив каждого поля анкеты есть команда подстановки, в которой указан id поля.
+   ![Field if in questionnaire](/img/integrations/integration-with-tilda/field-id-in-questionnaire.png)
+
+</TabItem>
+<TabItem value="key2" label="Через API-консоль">
 
 Чтобы узнать id полей формы, необходимо сначала узнать id анкеты, куда будут сохраняться данные.
 
@@ -154,16 +166,6 @@ import TabItem from '@theme/TabItem';
 ![Api form field id](/img/integrations/integration-with-tilda/api-form-field-id.png)
 
 </TabItem>
-<TabItem value="key2" label="Через интерфейс">
-
-1. Перейдите в раздел [**Подписчики → Анкеты**](https://app.sendsay.ru/subscribers/schemas).
-2. Откройте анкету, поля из которой вы добавляли в форму.
-   ![How to open questionnaire](/img/integrations/integration-with-tilda/how-to-open-questionnaire.gif)
-
-3. Напротив каждого поля анкеты есть команда подстановки, в которой указан id поля.
-   ![Field if in questionnaire](/img/integrations/integration-with-tilda/field-id-in-questionnaire.png)
-
-</TabItem>
 </Tabs>
 
 Полученные id полей формы Sendsay нужно указать в настройках соответствующих полей в Tilda.
@@ -178,7 +180,7 @@ import TabItem from '@theme/TabItem';
 
 Чтобы получить ссылку:
 
-1. В предыдущем интерфейсе перейдите в раздел [**Подписчики → Интеграции**](https://sendsay.ru/account/#subscribers/integrations) и выберите пункт **Tilda**.
+1. В [предыдущем интерфейсе](https://sendsay.ru/account/#dashboard) перейдите в раздел [**Подписчики → Интеграции**](https://sendsay.ru/account/#subscribers/integrations) и выберите пункт **Tilda**.
 2. [Заполните необходимые](#2-выберите-настройки-интеграции-и-получите-ссылку) параметры и нажмите «Получить ссылку для Tilda».
 
 Для активации вебхука вставьте [полученную ссылку](#3-вставьте-ссылку-в-настройках-формы) в настройках формы Tilda.
