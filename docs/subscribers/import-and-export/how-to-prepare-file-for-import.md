@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: 'Файл для импорта'
+description: Как подготовить файл для импорта контактов и других данных подписчиков
 ---
 
 import fieldCode from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/field-code.png";
@@ -9,6 +10,7 @@ import fileForManualImport from "/img/subscribers/import-and-export/how-to-prepa
 import listType from "/img/subscribers/import-and-export/how-to-prepare-file-for-import/list-type.png";
 import Details from '@theme/Details';
 import SupportLink from '@site/src/components/SupportLink';
+import authextId from '/img/subscribers/import-and-export/how-to-prepare-file-for-import/authext-id.png';
 
 # Как подготовить файл для импорта
 
@@ -112,7 +114,11 @@ token@platform.os.authext_id
 - `token` — токен пользователя приложения, содержит от 64 символов,
 - `platform` указывает, через какой сервис пуш-уведомлений будут отправляться уведомления — `apns`, `fcm` или `hms`,
 - `os` — операционная система приложения — `ios`, `android` или `huawei`,
-- `authext_id` — идентификатор внешней авторизации.
+- `authext_id` — идентификатор внешней аутентификации, который можно взять из адресной строки на странице приложения:
+
+<p align="center">
+  <img width="70%" src={authextId} alt="Authext id" />
+</p>
 
 Например:
 
