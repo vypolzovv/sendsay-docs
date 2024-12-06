@@ -15,7 +15,7 @@ Sendsay — маркетинговая CDP для коммуникации с к
 - следить за статистикой и улучшать показатели,
 - сегментировать аудиторию для более точного попадания в ЦА,
 - персонализировать письма, подставляя данные клиента в письмо,
-- отправлять рассылки в другие каналы — смс, пуш-уведомления, Telegram-рассылки и сообщения во ВКонтакте,
+- отправлять рассылки в другие каналы — смс, пуш-уведомления, Telegram-рассылки, Viber-рассылки и сообщения во ВКонтакте,
 - автоматизировать сбор подписчиков через формы,
 - автоматизировать рассылки с помощью триггерных сценариев.
 
@@ -147,6 +147,7 @@ Sendsay — маркетинговая CDP для коммуникации с к
 – [мобильные пуш-уведомления](https://docs.sendsay.ru/other-channels/mobile-push),<br/>
 – [веб-пуши](https://docs.sendsay.ru/other-channels/web-push/how-to-connect-web-push),<br/>
 – [сообщения во ВКонтакте](https://docs.sendsay.ru/other-channels/vk/how-to-connect-vk-community),<br/>
+– [рассылки в Viber](https://docs.sendsay.ru/other-channels/sms/viber-campaigns),<br/>
 – [рассылки в Telegram через бота](https://docs.sendsay.ru/other-channels/telegram/how-to-connect-a-bot).
 
 Также есть готовые интеграции с другими системами:<br/>
