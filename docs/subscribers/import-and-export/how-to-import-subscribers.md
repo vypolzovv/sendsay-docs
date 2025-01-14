@@ -163,6 +163,8 @@ pochta2@gmail.com, , Фёдоров, , 1980-10-18
 
 В окне с результатами импорта можно скачать отчёт в одном из форматов: XLSX, CSV или JSON. Во вкладке **Ответ API** выводятся данные отчёта в виде ответа от API.
 
+**Смотрите также:**<br/>
+[Как импортировать подписчиков (видеоурок)](https://docs.sendsay.ru/videolessons/subscribers/how-to-import-subscribers)<br/><br/>
 **Читайте также:** <br/>
 [Как настроить автоматический импорт из файла по расписанию](https://docs.sendsay.ru/automations/autoimport/how-to-set-autoimport/)<br/>
 [Как подготовить файл для импорта](https://docs.sendsay.ru/subscribers/import-and-export/how-to-prepare-file-for-import/)<br/>
