@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 Создание PDF-вложений в рассылке удобно ещё и тем, что не нужно заранее готовить персонализированные файлы для каждого подписчика: достаточно добавить команды персонализации в HTML-шаблон, и нужные данные подставятся в документ.
 
-[Персонализация в HTML](https://docs.sendsay.ru/email-campaigns/personalization/how-to-personalize-campaign)
+[Персонализация в HTML](https://docs.sendsay.ru/email-campaigns/personalization/how-to-personalize-campaign/#персонализация-в-html)
 
 :::tip Важно
 Генерация PDF-вложений — это дополнительная возможность, которая подключается и оплачивается отдельно. Для уточнения подробностей <SupportLink>напишите в чат поддержки</SupportLink>.
