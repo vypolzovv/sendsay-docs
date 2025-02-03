@@ -1,10 +1,10 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type { Options, ThemeConfig } from '@docusaurus/preset-classic';
-import { themes } from 'prism-react-renderer'
+import { themes } from 'prism-react-renderer';
 import plugins from './plugins';
 
-dotenv.config()
+dotenv.config();
 
 const googleVerificationCode = process.env.GOOGLE_VERIFICATION_CODE;
 const yandexVerificationCode = process.env.YANDEX_VERIFICATION_CODE;
@@ -42,12 +42,8 @@ const config: Config = {
         googleTagManager: {
           containerId: baseGTM,
         },
-        docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: ({ docPath }) =>
-            `https://github.com/sendsay-ru/sendsay-docs/edit/stable/docs/${docPath}`,
-        },
+        // we use extended version to get recently updated articles
+        docs: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -58,116 +54,115 @@ const config: Config = {
     ],
   ],
 
-  themeConfig:
-    {
-      navbar: {
-        logo: {
-          alt: 'Sendsay docs',
-          src: 'img/logo.svg',
-          className: 'no-border',
-        },
-        items: [
-          {
-            type: 'dropdown',
-            label: 'Главная',
-            labelMode: 'dynamic',
-            position: 'left',
-            items: [
-              {
-                type: 'docSidebar',
-                sidebarId: 'docs',
-                label: 'Главная',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'integrations',
-                label: 'Интеграции',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'videolessons',
-                label: 'Видеоуроки',
-              },
-              {
-                type: 'docSidebar',
-                sidebarId: 'updates',
-                label: 'Обновления',
-              },
-            ],
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'docs',
-            label: 'Главная',
-            displayedLocale: 'ru',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'integrations',
-            label: 'Интеграции',
-            displayedLocale: 'ru',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'videolessons',
-            label: 'Видеоуроки',
-            displayedLocale: 'ru',
-          },
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'updates',
-            label: 'Обновления',
-            displayedLocale: 'ru',
-          },
-          {
-            href: 'https://app.sendsay.ru',
-            label: 'Sendsay',
-            position: 'right',
-          },
-          {
-            href: 'https://sendsay.ru/api/api.html',
-            label: 'API',
-            position: 'right',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-        ],
+  themeConfig: {
+    navbar: {
+      logo: {
+        alt: 'Sendsay docs',
+        src: 'img/logo.svg',
+        className: 'no-border',
       },
-      footer: {
-        style: 'light',
-        copyright: `Copyright © ${new Date().getFullYear()} Sendsay.`,
-      },
-      prism: {
-        theme: themes.github,
-        darkTheme: themes.dracula,
-      },
-      colorMode: {
-        disableSwitch: true,
-      },
-      zoom: {
-        selector: '.markdown img',
-        background: {
-          light: 'rgb(255, 255, 255)',
-          dark: 'rgb(50, 50, 50)',
-        },
-      },
-      metadata: [
+      items: [
         {
-          name: 'google-site-verification',
-          content: googleVerificationCode,
+          type: 'dropdown',
+          label: 'Главная',
+          labelMode: 'dynamic',
+          position: 'left',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'docs',
+              label: 'Главная',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'integrations',
+              label: 'Интеграции',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'videolessons',
+              label: 'Видеоуроки',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'updates',
+              label: 'Обновления',
+            },
+          ],
         },
         {
-          name: 'yandex-verification',
-          content: yandexVerificationCode,
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'docs',
+          label: 'Главная',
+          displayedLocale: 'ru',
+        },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'integrations',
+          label: 'Интеграции',
+          displayedLocale: 'ru',
+        },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'videolessons',
+          label: 'Видеоуроки',
+          displayedLocale: 'ru',
+        },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'updates',
+          label: 'Обновления',
+          displayedLocale: 'ru',
+        },
+        {
+          href: 'https://app.sendsay.ru',
+          label: 'Sendsay',
+          position: 'right',
+        },
+        {
+          href: 'https://sendsay.ru/api/api.html',
+          label: 'API',
+          position: 'right',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
       ],
-    } satisfies ThemeConfig,
+    },
+    footer: {
+      style: 'light',
+      copyright: `Copyright © ${new Date().getFullYear()} Sendsay.`,
+    },
+    prism: {
+      theme: themes.github,
+      darkTheme: themes.dracula,
+    },
+    colorMode: {
+      disableSwitch: true,
+    },
+    zoom: {
+      selector: '.markdown img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)',
+      },
+    },
+    metadata: [
+      {
+        name: 'google-site-verification',
+        content: googleVerificationCode,
+      },
+      {
+        name: 'yandex-verification',
+        content: yandexVerificationCode,
+      },
+    ],
+  } satisfies ThemeConfig,
 };
 
 module.exports = config;

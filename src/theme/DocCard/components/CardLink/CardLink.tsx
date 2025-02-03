@@ -1,6 +1,6 @@
 import React from 'react';
 import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
-import { useDocById } from '@docusaurus/theme-common/internal';
+import { useDocById } from '@docusaurus/plugin-content-docs/client';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { CardLayout } from '../CardLayout';
 

@@ -1,0 +1,1 @@
+export { RecentlyUpdatedArticlesIframe } from './RecentlyUpdatedArticlesIframe';
