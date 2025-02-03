@@ -4,8 +4,10 @@ sidebar_position: 2
 
 import tildaLink from '/img/integrations/integration-with-tilda/tilda-link.png';
 import howToPublushTildaForm from '/img/integrations/integration-with-tilda/how-to-publish-tilda-form.png';
+import additionalSettings from '/img/integrations/integration-with-tilda/additional-settings.jpg';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
 
 # Интеграция с Tilda
 
@@ -38,6 +40,25 @@ import TabItem from '@theme/TabItem';
      <img src={tildaLink} alt="Tilda link" />
    </p>
 
+<Details summary='Как добавлять подписчиков неподтверждёнными'>
+Если вы хотите добавлять подписчиков неподтверждёнными, то ссылку для вёбхука нужно получить через [API-консоль](https://app.sendsay.ru/api/console). Для получения ссылки используйте запрос:
+```
+{
+"action": "sys.settings.get",
+"list": [
+"integration.tilda"
+],
+"params": {
+"integration.tilda": {
+"mode": "B",
+"group.id": "код группы",
+"newbie.confirm": 1
+}
+}
+}
+```
+</Details>
+
 ### 3. Вставьте ссылку в настройках формы
 
 1. Войдите в аккаунт на Tilda и откройте сайт, откуда вы хотите импортировать подписчиков.
@@ -51,6 +72,14 @@ import TabItem from '@theme/TabItem';
 4. Нажмите «Сохранить».
 
    ![Connect Sendsay link to Tilda](/img/integrations\integration-with-tilda/connect-sendsay-link-to-tilda.gif) <br/>
+
+:::tip Важно
+Чтобы данные передавались корректно, проверьте, что в дополнительных настройках Webhook в Tilda не активна галочка «Передавать данные по товарам в заказе — массивом».
+
+<p align="center">
+  <img src={additionalSettings} alt="Additional settings" />
+</p>
+:::
 
 ### 4. Настройте название формы
 
@@ -108,7 +137,7 @@ import TabItem from '@theme/TabItem';
 
 [Как создать форму](https://docs.sendsay.ru/forms/signup-forms/#как-создать-форму)
 
-Поля в форме должны дублировать поля формы Tilda.
+Поля в форме должны дублировать поля формы Tilda. Для поля с адресом укажите один из вариантов названия: `Email`, `email` или `EMAIL`.
 
 [Как настроить дизайн формы в редакторе](https://docs.sendsay.ru/forms/signup-forms/#как-настроить-дизайн-формы-в-редакторе)
 
