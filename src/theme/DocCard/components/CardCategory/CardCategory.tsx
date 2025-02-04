@@ -1,6 +1,6 @@
 import React from 'react';
 import type { PropSidebarItemCategory } from '@docusaurus/plugin-content-docs';
-import { findFirstSidebarItemLink } from '@docusaurus/theme-common/internal';
+import { findFirstSidebarItemLink } from '@docusaurus/plugin-content-docs/client';
 import { translate } from '@docusaurus/Translate';
 import { CardLayout } from '../CardLayout';
 import { getDescriptionObj } from '../../utils';

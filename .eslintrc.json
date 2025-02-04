@@ -40,6 +40,7 @@
         "prev": ["const", "let", "var"],
         "next": ["const", "let", "var"]
       }
-    ]
+    ],
+    "jsx-a11y/click-events-have-key-events": "off"
   }
 }

@@ -51,6 +51,56 @@ Disallow: /automations/automations-by-event/welcome-series/
 
 <br>
 
+# Custom fields in front matter:
+
+[Official documentation about front matter](https://docusaurus.io/docs/markdown-features#front-matter)<br>
+[Recent-arcticles page in production](https:docs.sendsay.ru/updates/recent-articles)
+
+There are 2 types of tags in articles: <br>
+
+1. `updated` - edited<br>
+
+```
+---
+recent_article:
+  theses:
+    - Добавили перевод
+    - Удалили лишний абзац
+---
+```
+
+2. `published` - just published<br>
+
+```
+---
+recent_article:
+  new: true
+---
+```
+
+<br>
+
+Also front matter has 2 more custom options<br>
+
+- hide feedback section at the end of an article
+
+```
+---
+feedback_ignore: true
+---
+```
+
+- hide tag with date of last update
+
+```
+---
+recent_article:
+  ignore: true
+---
+```
+
+<br>
+
 # How to translate a new article
 
 There is a couple of pathes for each translated file:

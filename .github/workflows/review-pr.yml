@@ -6,7 +6,7 @@ on:
 jobs:
   designAwesome:
     if: ${{ github.event.review.state == 'approved' && github.event.organization.login == 'sendsay-ru' && github.event.review.body == 'Design awesome' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,7 +39,7 @@ jobs:
 
   needsRedesign:
     if: ${{ github.event.review.state == 'approved' && github.event.organization.login == 'sendsay-ru' && github.event.review.body == 'Needs redesign' }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
