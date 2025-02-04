@@ -3,7 +3,7 @@ on: [pull_request]
 
 jobs:
   checks:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     env:
       FORCE_COLOR: 1
@@ -27,7 +27,7 @@ jobs:
         run: yarn pretify
 
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       DEPLOY_NAME: sendsay-docs
     steps:
