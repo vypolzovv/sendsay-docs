@@ -50,17 +50,17 @@ import Details from '@theme/Details';
 Если вы хотите добавлять подписчиков [неподтверждёнными](https://docs.sendsay.ru/subscribers/contacts/how-to-activate-inactive-contacts), то ссылку для интеграции нужно получить через [API-консоль](https://app.sendsay.ru/api/console). Для получения ссылки используйте запрос:
 ```
 {
-"action": "sys.settings.get",
-"list": [
-"integration.tilda"
-],
-"params": {
-"integration.tilda": {
-"mode": "B",
-"group.id": "код группы",
-"newbie.confirm": 1
-}
-}
+  "action": "sys.settings.get",
+  "list": [
+    "integration.tilda"
+  ],
+  "params": {
+    "integration.tilda": {
+      "mode": "B",
+      "group.id": "код группы",
+      "newbie.confirm": 1
+    }
+  }
 }
 ```
 </Details>
