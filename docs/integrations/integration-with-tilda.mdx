@@ -1,5 +1,11 @@
 ---
 sidebar_position: 2
+recent_article:
+  new: false
+  theses:
+    - Как добавлять подписчиков неподтверждёнными
+    - Как предотвратить ошибку передачи данных
+    - Как назвать поле с адресом на форме
 ---
 
 import tildaLink from '/img/integrations/integration-with-tilda/tilda-link.png';
@@ -41,7 +47,7 @@ import Details from '@theme/Details';
    </p>
 
 <Details summary='Как добавлять подписчиков неподтверждёнными'>
-Если вы хотите добавлять подписчиков неподтверждёнными, то ссылку для вёбхука нужно получить через [API-консоль](https://app.sendsay.ru/api/console). Для получения ссылки используйте запрос:
+Если вы хотите добавлять подписчиков неподтверждёнными, то ссылку для интеграции нужно получить через [API-консоль](https://app.sendsay.ru/api/console). Для получения ссылки используйте запрос:
 ```
 {
 "action": "sys.settings.get",
