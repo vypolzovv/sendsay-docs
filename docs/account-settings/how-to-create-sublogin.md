@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 'Как создать саблогин для нового пользователя'
+sidebar_label: 'Как создать саблогин'
 ---
 
 import mainLogin from '/img/account-settings/how-to-create-sublogin/main-login.png';
