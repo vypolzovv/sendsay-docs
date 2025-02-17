@@ -1,8 +1,17 @@
 ---
 sidebar_position: 8
 sidebar_label: 'Журнал заданий'
+description: Инструкция по работе с разделом Журнал заданий
+recent_article:
+  new: false
+  theses:
+    - Актуализировали изображения в статье
+    - Добавили информацию об ошибках, возникающих в заданиях
+    - Расширили информацию о настройках отображения таблицы
 ---
 
+import Details from '@theme/Details';
+import SupportLink from '@site/src/components/SupportLink';
 import howToSetConditionsInAFilter from '/img/faq/queue/how-to-set-conditions-in-a-filter.png';
 
 # Журнал заданий
@@ -23,11 +32,30 @@ import howToSetConditionsInAFilter from '/img/faq/queue/how-to-set-conditions-in
 
 ![Download result](/img/faq/queue/download-result.gif)
 
+<Details summary='Описание ошибок'>
+
+Если при выполнении задания возникнут проблемы, его статус в таблице изменится на «Ошибка». В этом случае, в деталях задания можно будет увидеть ответ от API с информацией об ошибке, а также короткое описание её причин.
+
+![Error discription](/img/faq/queue/error-discription.png)
+
+Разным типам заданий свойственны разные ошибки. Например, для заданий импорта подписчиков ошибки могут выглядеть так:
+
+- `"manage/member/import/probe/cant_get_url"` — означает, что файл импорта недоступен,
+- `"manage/member/import/found_duplicate"` — значит, что вы пытаетесь загрузить повторно одни и те же данные. Необходимо дождаться окончания предыдущего импорта.
+
+Если с причинами ошибки не удаётся разобраться самостоятельно, <SupportLink>напишите в чат поддержки</SupportLink>.
+
+</Details>
+
 ## Как настроить отображение таблицы
 
 Отображение данных в таблице можно настроить по времени, статусам заданий и пользователю, который ставил задание.
 
 ![Table settings](/img/faq/queue/table-settings.png)
+
+По умолчанию в таблице видны задания, которые были изменены или созданы за последние 24 часа. Настроить отображение по дате можно в календаре.
+
+![Set up calendar](/img/faq/queue/set-up-calendar.png)
 
 Чтобы увидеть, какие процессы сейчас запущены, откройте выпадающее меню статусов и выберите «Запущено».
 
