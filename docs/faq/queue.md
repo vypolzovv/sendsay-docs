@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 sidebar_label: 'Журнал заданий'
-description: Инструкция по работе с разделом Журнал заданий
+description: Как работать с Журналом заданий
 recent_article:
   new: false
   theses:
@@ -42,6 +42,11 @@ import howToSetConditionsInAFilter from '/img/faq/queue/how-to-set-conditions-in
 
 - `"manage/member/import/probe/cant_get_url"` — означает, что файл импорта недоступен,
 - `"manage/member/import/found_duplicate"` — значит, что вы пытаетесь загрузить повторно одни и те же данные. Необходимо дождаться окончания предыдущего импорта.
+
+В заданиях по массовым выпускам проблемы зачастую могут быть связаны с настройками письма. В этом случае вы можете увидеть такие ошибки:
+
+- `"error/draft/emptyfromemail"` — в черновике выпуска пустой адрес,
+- `"error/email/badchar"` — в адресе использован недопустимый символ.
 
 Если с причинами ошибки не удаётся разобраться самостоятельно, <SupportLink>напишите в чат поддержки</SupportLink>.
 
