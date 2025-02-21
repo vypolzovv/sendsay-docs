@@ -1,11 +1,14 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Где смотреть статистику'
+description: Статистика в Sendsay, кастомные отчёты через API, постмастеры и сервисы аналитики
+recent_article:
+  new: false
+  theses:
+    - Актуализировали инструкцию по настройке отображения выпусков в разделе Статистика
+    - Заменили скриншоты на актуальные
 ---
 
-import exel from '/img/statistics/where-to-track-statistics/exel.png';
-import exel2 from '/img/statistics/where-to-track-statistics/exel2.png';
-import exel3 from '/img/statistics/where-to-track-statistics/exel3.png';
-import exel4 from '/img/statistics/where-to-track-statistics/exel4.png';
 import Details from '@theme/Details';
 import SupportLink from '@site/src/components/SupportLink';
 
@@ -41,42 +44,15 @@ import SupportLink from '@site/src/components/SupportLink';
 
 В таблице также можно настроить отображение метрик — какие показатели и в каком порядке будут выводиться. Для этого:
 
-1. Нажмите на иконку с плюсом в верхней строке.
+1. Нажмите «Колонки» в верхней строке.
 2. Во всплывающем окне отметьте метрики, которые будут отображаться в таблице.
-3. Чтобы изменить порядок отображения, зажмите точки слева от метрики и перетащите её. Вверх — чтобы передвинуть столбец в таблице влево, вниз — чтобы передвинуть столбец вправо. У разных каналов метрики могут отличаться.
+3. Чтобы изменить порядок колонок, зажмите иконку перемещения рядом с нужной метрикой и перетащите её. Вверх — чтобы передвинуть столбец в таблице влево, вниз — чтобы передвинуть столбец вправо. У разных каналов метрики могут отличаться.
 
-![Manage reports](/img/statistics\where-to-track-statistics/manage-reports.gif)
+   ![Manage reports](/img/statistics\where-to-track-statistics/manage-reports.gif)
 
-Таблицу можно экспортировать в формате XLSX или CSV — для этого нажмите «Экспорт» и выберите нужный формат.
+Для более гибкой настройки отображаемых данных используйте кнопку «Фильтр». Таблицу также можно экспортировать в форматах XLSX, CSV и JSON — для этого нажмите «Экспорт» и выберите нужный формат.
 
-#### Как открыть файл формата CSV в MS Excel
-
-1. Откройте MS Excel и создайте новый файл.
-2. Нажмите вкладку «Данные», выберите **Получить данные (Rower Query) → Из текста.**
-
-<p align="center">
-  <img width="70%" src={exel} alt="How to open CSV in MS Excel" />
-</p>
-  
-Выберите нужный файл в формате CSV и нажмите «Получить данные».
-
-3. В **Мастере текстов** выберите опцию **C разделителями** и укажите формат файла **Unicode (UTF-8)**. Нажмите «Далее».
-
-<p align="center">
-  <img width="80%" src={exel2} alt="Text Wizard" />
-</p>
-  
-4. На втором шаге в качестве символа разделителя укажите запятую. Нажмите «Готово».
-
-<p align="center">
-  <img width="80%" src={exel3} alt="Text Wizard" />
-</p>
-
-5. Выберите, куда импортировать данные — в текущий лист или в новый. Если выбираете текущий лист, укажите адрес ячейки, с которой начнётся содержимое. Если выбираете новый лист, указывать ячейку не нужно. Нажмите «Импорт».
-
-<p align="center">
-  <img width="60%" src={exel4} alt="Text Wizard" />
-</p>
+[Как открыть файл CSV в Exel](https://docs.sendsay.ru/faq/how-to-open-csv-in-excel)
 
 ### Статистика по показателям за период времени
 
